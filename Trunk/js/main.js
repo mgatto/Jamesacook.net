@@ -11,16 +11,27 @@ $(document).ready(function() {
 		case "sculpture":
 			uri = "/jamesacook.net/sculpture/index.html";
 			break;
+		case "spiel":
+			uri = "/jamesacook.net/sculpture/spiel.html";
+			break;
 		default:
 			uri = "";
 	}
 
-//console.log(uri);
 	$("ul#navigation li a[href=\""+uri+"\"]").parent().addClass("active");
 	$("ul#navigation li a[href=\""+uri+"\"]").addClass("active_link");   
-						   
-	//$('a.email').nospam({
-	//  	replaceText: true,
-	//  	filterLevel: 'low'
-	//});
+
+	$('img.art').colorbox({
+		rel:'group', 
+		photo:true, 
+		transition: 'fade',
+		href:function(){ return this.src; }
+	}); 
+	
+	//$('img#nav1').hover(function() {
+	//$(this).attr("src","/images/headerNav/1-over.gif");
+	//	}, function() {
+	//$(this).attr("src","/images/headerNav/1.gif");
 });
+
+//<img src="1.gif" id="nav1" />

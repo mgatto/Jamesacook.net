@@ -60,7 +60,7 @@ body {
 				.active {
 					background-image: url(../media/artwork/circle.gif);
 					background-repeat:no-repeat;
-					background-position: 2px 2px;
+					background-position: 2px 3px;
 				}
 				.active_link {
 					color: #FFF !important;
