@@ -6,13 +6,16 @@
         <title>Conundrum Abode | James A. Cook | Tucson Artist</title>
         
 	<!-- InstanceEndEditable -->
-        
+
         <!-- Meta data -->
         <meta name="description" content="" />
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <meta name="language" content="en" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <meta http-equiv="Content-language" content="en" />
         <link rel="canonical" href="http://jamesacook.net" />
+        
+        <link rel="icon" type="image/vnd.microsoft.icon" href="/favicon.ico" />
+        <link rel="shortcut icon" href="/favicon.ico" />
         
         <!-- Stylesheets -->
         <link rel="stylesheet" type="text/css" href="../css/lib/screen.css" media="screen" />
@@ -22,25 +25,6 @@
         <![endif]-->
         <link rel="stylesheet" type="text/css" href="../css/lib/print.css" media="print" />
         <link rel="stylesheet" type="text/css" href="../css/lib/colorbox.css" media="screen" />
-        
-        <!-- Scripts -->
-        <script type="text/javascript" src="../js/lib/jquery-1.4.2.min.js"></script>
-        <script type="text/javascript" src="../js/lib/jquery.nospam.js"></script>
-        <script type="text/javascript" src="../js/lib/jquery.colorbox-min.js"></script>
-        <script type="text/javascript" src="../js/main.js"></script>
-        <script type="text/javascript" src="../js/nav.js"></script>
-        <script type="text/javascript">		
-		  <!--// Google Analytics -->
-		  var _gaq = _gaq || [];
-		  _gaq.push(['_setAccount', 'UA-']);
-		  _gaq.push(['_trackPageview']);
-
-		  (function() {
-			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-		  })();
-		</script>
         <!-- InstanceBeginEditable name="head" -->
 		
 	<!-- InstanceEndEditable -->
@@ -68,37 +52,47 @@
                 <li class="span-4 last"><a href="/jamesacook.net/spiel/index.html">Spiel</a></li>
             </ul>
             
-            <div class="span-22 prepend-1 append-1 last">
-                	<div id="text" class="span-8">
-                		<h2><!-- InstanceBeginEditable name="name" -->
+            <div class="span-23 prepend-1 last">
+                <div id="text" class="span-8">
+                    <h2><!-- InstanceBeginEditable name="name" -->
 		Conundrum Abode (adobe) 
 	<!-- InstanceEndEditable --></h2>
-              
-                        <p class="prepend-top"><!-- InstanceBeginEditable name="description" -->
+                    <p class="prepend-top materials"><!-- InstanceBeginEditable name="description" -->
 		
 		Adobe, steel, LCD monitor, DVD player,  video recording  
 		<br />
 		48&Prime; &times; 22&Prime; &times; 22&Prime;
 		
 	<!-- InstanceEndEditable --></p>
-                    </div>
-<div class="span-1 thumbnail" style="text-align:right;padding-right:-10px;">&nbsp;</div>
-                	<div class="span-8 thumbnail">
-                    	<img src="
+    				<!-- InstanceBeginEditable name="extended" -->
+                    <p class="prepend-top description"></p>
+                    <p class="prepend-top description"></p>
+					<!-- InstanceEndEditable -->
+                </div>
+				<div class="span-1" style="padding-right:-10px;">&nbsp;</div>
+                <div class="span-13">
+                    <div class="span-8 thumbnail">
+                        <img src="
    		../media/images/conundrum-adobe-abode-1.jpg
 	" width="300" class="art" alt="" title="Main View" rel="group"  />
-</div>
-                	<div class="span-4 thumbnail last">
-                    	<img src="
+    </div>
+                    <div class="span-4 thumbnail">
+                        <img src="
 		../media/images/conundrum-adobe-abode-2.jpg
 	" width="137" class="art" alt="" title="Detail View" rel="group"  />
                     </div>
-                	<div class="span-4 thumbnail last prepend-top">
-                    	<img src="
+                    <div class="span-4 thumbnail prepend-top">
+                        <img src="
 		../media/images/conundrum-adobe-abode-detail-3.jpg
 	" width="137" class="art" alt="" title="Detail View" rel="group"  />
                     </div>
+                    <!-- InstanceBeginEditable name="video" -->
+                    <div id="media" class="span-8 thumbnail prepend-top">
+                        <a href="/media/videos/xyz-640.f4v" id="player" alt="" style="display:block;width:460px;height:340px;margin-left:1.9em;"></a>
+                    </div>
+                    <!-- InstanceEndEditable -->
                 </div>
+            </div>
                 
             <div id="footer" class="span-24 prepend-top">
 	            <p id="attribution"></p>
@@ -109,5 +103,41 @@
                 </p>
             </div>
         </div>
+        
+        <!-- Scripts -->
+        <script type="text/javascript" src="../js/lib/jquery-1.4.2.min.js"></script>
+        <script type="text/javascript" src="../js/lib/jquery.colorbox-min.js"></script>
+        <script type="text/javascript" src="../js/main.js"></script>
+        <!-- InstanceBeginEditable name="flowplayer" -->
+		<script type="text/javascript" src="/js/lib/flowplayer-3.2.2.min.js"></script>
+        <script type="text/javascript">		
+			$(document).ready(function() {
+				flowplayer("player", {src: '/media/flash/lib/flowplayer-3.2.2.swf', wmode:'opaque' }, {
+					clip : {
+						autoPlay: false,
+						autoBuffering: false
+					},
+					plugins: {
+						controls: {	
+							url: '/media/flash/lib/flowplayer.controls-3.2.1.swf',
+							bottom:0
+						}
+					}
+				});
+			});
+		</script>
+        <!-- InstanceEndEditable -->
+        <script type="text/javascript">	
+		  	<!--// Google Analytics -->
+	        var _gaq = _gaq || [];
+		    _gaq.push(['_setAccount', 'UA-']);
+		 	_gaq.push(['_trackPageview']);
+
+		    (function() {
+			    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		    })();
+		</script>
     </body>
 <!-- InstanceEnd --></html>
