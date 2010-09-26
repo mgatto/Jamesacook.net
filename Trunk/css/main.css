@@ -38,13 +38,9 @@ body {
 			color:#FFF;
 		}
 			ul#navigation li{
-				/*display:inline;*/
 				list-style-type:none;
-				text-align:left; /*right*/
+				text-align:left;
 				border-left: 1px solid #B3B3B3;
-				/*margin-left:0em;
-				margin-right:2em;
-				padding-right:1em;*/
 			}
 				ul#navigation li a {
 					color:#B3B3B3;
@@ -55,10 +51,9 @@ body {
 					border-left: 1px solid #B3B3B3;
 					margin-left:1.5em;
 					padding-left:0.8em;
-					/*font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;*/
 				}
 				.active {
-					background-image: url(../media/artwork/circle.gif);
+					background-image: url(/jamesacook.net/artwork/circle.gif);
 					background-repeat:no-repeat;
 					background-position: 2px 3px;
 				}
@@ -83,19 +78,33 @@ body {
 					color: #B3B3B3;
 					font-variant:small-caps;
 				}
+				div#text p.materials {}
+				div#text p.description {
+					text-indent:0.75em;
+				}
+				div#text a {
+					text-decoration:none;
+					border-bottom:1px dotted #006;
+				}
 				div#media {
 					text-align:right;
 				}
-				div#media img {
+				div#media img, div#media a {
 					border:1px solid #FFCC33;
-					padding: 3px;
+					padding:1px;
 				}
 				div.thumbnail {				
+				}
+				div.thumbnail > a {
+					display:block;
+					text-align: center;
+					text-decoration:none;
+					border-bottom:0;
 				}
 				div.thumbnail > img, div.thumbnail > a > img {
 					margin-left:1.9em;
 					border:1px solid #FFCC33;
-					padding: 1px;				
+					padding:1px;				
 				}
 			div#footer {
 				font-size:0.7em;
