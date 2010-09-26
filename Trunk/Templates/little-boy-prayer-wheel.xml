@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<templateItems template="/Templates/SculptureDetail.dwt" codeOutsideHTMLIsLocked="false">
+   	<parameter name="meta_description" type="text" passthrough="false"></parameter>
+   	<parameter name="main_image_src" type="text" passthrough="false">
+   		<![CDATA[../media/images/little-boy-prayer-wheel-1.jpg]]>
+	</parameter>
+	<parameter name="another_view_1_src" type="text" passthrough="false">
+		<![CDATA[../media/images/little-boy-prayer-wheel-3.jpg]]>
+	</parameter>
+	<parameter name="another_view_2_src" type="text" passthrough="false">
+		<![CDATA[../media/images/little-boy-prayer-wheel-4.jpg]]>
+	</parameter>
+    <item name="doctitle">
+		<![CDATA[
+        <title>Little Boy Prayer Wheel | James A. Cook | Tucson Artist</title>
+        ]]>
+	</item>
+   	<item name="description">
+		<![CDATA[
+		Aluminum drum, automotive paint, steel, electric motor, DVD player, DV projector, video recording, speakers<br />
+		45&Prime; &times; 52&Prime; &times; 28&Prime;
+		]]>
+	</item>
+   	<item name="head">
+		<![CDATA[]]>
+	</item>
+   	<item name="name">
+		<![CDATA[Little Boy Prayer Wheel]]>
+	</item>
+</templateItems>

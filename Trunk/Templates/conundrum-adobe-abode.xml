@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<templateItems template="/Templates/SculptureDetail.dwt" codeOutsideHTMLIsLocked="false">
+   	<parameter name="meta_description" type="text" passthrough="false"></parameter>
+   	<parameter name="main_image_src" type="text" passthrough="false">
+   		<![CDATA[../media/images/conundrum-adobe-abode-1.jpg]]>
+	</parameter>
+	<parameter name="another_view_1_src" type="text" passthrough="false">
+		<![CDATA[../media/images/conundrum-adobe-abode-2.jpg]]>
+	</parameter>
+	<parameter name="another_view_2_src" type="text" passthrough="false">
+		<![CDATA[../media/images/conundrum-adobe-abode-detail-3.jpg]]>
+	</parameter>
+    <item name="doctitle">
+		<![CDATA[
+        <title>Conundrum Abode | James A. Cook | Tucson Artist</title>
+        ]]>
+	</item>
+   	<item name="description">
+		<![CDATA[
+		Adobe, steel, LCD monitor, DVD player,  video recording  
+		<br />
+		48&Prime; &times; 22&Prime; &times; 22&Prime;
+		]]>
+	</item>
+   	<item name="head">
+		<![CDATA[]]>
+	</item>
+   	<item name="name">
+		<![CDATA[Conundrum Abode (adobe) ]]>
+	</item>
+</templateItems>

@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<templateItems template="/Templates/SculptureDetail.dwt" codeOutsideHTMLIsLocked="false">
+   	<parameter name="meta_description" type="text" passthrough="false"></parameter>
+   	<parameter name="main_image_src" type="text" passthrough="false">
+   		<![CDATA[../media/images/conundrum-stumped-1.jpg]]>
+	</parameter>
+	<parameter name="another_view_1_src" type="text" passthrough="false">
+		<![CDATA[../media/images/conundrum-stumped-2.jpg]]>
+	</parameter>
+	<parameter name="another_view_2_src" type="text" passthrough="false">
+		<![CDATA[../media/images/conundrum-stumped-3.jpg]]>
+	</parameter>
+    <item name="doctitle">
+		<![CDATA[
+        <title>Conundrum Stump(ed) | James A. Cook | Tucson Artist</title>
+        ]]>
+	</item>
+   	<item name="description">
+		<![CDATA[
+		 Alder trunk, alder wedges, color DV monitor, DVD player  
+		 <br />
+		 49&rime; &times; 32&prime; &times; 27&prime;
+
+(ME: Embedded video goes here)
+		]]>
+	</item>
+   	<item name="head">
+		<![CDATA[]]>
+	</item>
+   	<item name="name">
+		<![CDATA[Conundrum Stump(ed)]]>
+	</item>
+</templateItems>
