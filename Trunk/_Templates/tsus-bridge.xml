@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<templateItems template="/Templates/SculptureDetail.dwt" codeOutsideHTMLIsLocked="false">
+   	<parameter name="meta_description" type="text" passthrough="false"></parameter>
+   	<parameter name="main_image_src" type="text" passthrough="false">
+   		<![CDATA[../media/images/tsus-bridge-1.jpg]]>
+	</parameter>
+	<parameter name="another_view_1_src" type="text" passthrough="false">
+		<![CDATA[../media/images/tsus-bridge-2.jpg]]>
+	</parameter>
+    <item name="doctitle">
+		<![CDATA[
+        <title>Tsu&rsquo;s Bridge | James A. Cook | Tucson Artist</title>
+        ]]>
+	</item>
+   	<item name="description">
+		<![CDATA[  
+			bronze, copper<br />
+			18&Prime; &times; 68&Prime; &times; 22&Prime;
+		]]>
+	</item>
+   	<item name="head">
+		<![CDATA[]]>
+	</item>
+   	<item name="name">
+		<![CDATA[Tsu&rsquo;s Bridge]]>
+	</item>
+</templateItems>

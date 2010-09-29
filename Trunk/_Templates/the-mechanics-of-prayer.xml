@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<templateItems template="/Templates/SculptureDetail.dwt" codeOutsideHTMLIsLocked="false">
+   	<parameter name="meta_description" type="text" passthrough="false"></parameter>
+   	<parameter name="main_image_src" type="text" passthrough="false">
+   		<![CDATA[../media/images/abod-mechanics-of-prayer-1.jpg]]>
+	</parameter>
+	<parameter name="another_view_1_src" type="text" passthrough="false">
+		<![CDATA[../media/images/abod-mechanics-of-prayer-detail-2.jpg]]>
+	</parameter>
+	<parameter name="another_view_2_src" type="text" passthrough="false">
+		<![CDATA[../media/images/abod-mechanics-of-prayer-detail-3.jpg]]>
+	</parameter>
+    <item name="doctitle">
+		<![CDATA[
+        <title>American Book of the Dead | James A. Cook | Tucson Artist</title>
+        ]]>
+	</item>
+   	<item name="description">
+		<![CDATA[
+			cast iron, steel, wood, mirror, copper, gold, rope<br />
+			122&Prime; &times; 103&Prime; &times; 38&Prime; &times; 
+		]]>
+	</item>
+   	<item name="head">
+		<![CDATA[]]>
+	</item>
+   	<item name="name">
+		<![CDATA[American Book of the Dead: The Mechanics of Prayer]]>
+	</item>
+</templateItems>
