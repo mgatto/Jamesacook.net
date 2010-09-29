@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<templateItems template="/Templates/VideoDetail.dwt" codeOutsideHTMLIsLocked="false">
+   <parameter name="meta_description" type="text" passthrough="false"></parameter>
+   <parameter name="video_src" type="URL" passthrough="false"><![CDATA[../media/videos/]]></parameter>
+   <item name="head"><![CDATA[  ]]></item>
+   <item name="doctitle"><![CDATA[ <title>Tokyo Bardo | James A. Cook | Tucson Artist</title> ]]></item>
+   <item name="name"><![CDATA[Tokyo Bardo]]></item>
+   <item name="materials"><![CDATA[ Single-channel video ]]></item>
+   <item name="description"><![CDATA[  ]]></item>
+</templateItems>
