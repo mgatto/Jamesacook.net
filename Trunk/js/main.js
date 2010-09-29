@@ -28,12 +28,14 @@ $(document).ready(function() {
 	$("ul#navigation li a[href=\""+uri+"\"]").addClass("active_link");
 	
 	//Colorbox
-	$('img.art').colorbox({
-		rel:'group', 
-		photo:true, 
-		transition: 'fade',
-		href: function(){ 
-			return this.src; 
-		}
-	});
+	if(jQuery().colorbox) {	
+		$('img.art').colorbox({
+			rel:'group', 
+			photo:true, 
+			transition: 'fade',
+			href: function(){ 
+				return this.src; 
+			}
+		});
+	}
 });
