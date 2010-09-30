@@ -20,6 +20,9 @@
         	<link rel="stylesheet" type="text/css" href="/jamesacook.net/css/lib/ie.css" media="screen" />
         <![endif]-->
         <link rel="stylesheet" type="text/css" href="/jamesacook.net/css/lib/print.css" media="print" />
+        
+        <link rel="stylesheet" type="text/css" media="screen" href="superfish.css" /> 
+        <link rel="stylesheet" type="text/css" media="screen" href="superfish-navbar.css" /> 
     </head>
     <body>
     	<div id="body" class="container">
@@ -61,7 +64,16 @@
         <!-- Scripts -->
         <script type="text/javascript" src="/jamesacook.net/js/lib/jquery-1.4.2.min.js"></script>
         <script type="text/javascript" src="/jamesacook.net/js/main.js"></script>
-        <script type="text/javascript">	
+		<script type="text/javascript" src="superfish.js"></script> 
+        <script type="text/javascript">
+			$(document).ready(function(){ 
+				$("ul#navigation").superfish({ 
+					//pathClass: 'current',
+				    autoArrows: false,
+				    dropShadows: false
+				}); 
+			}); 
+		
 		  	<!--// Google Analytics -->
 	        var _gaq = _gaq || [];
 		    _gaq.push(['_setAccount', 'UA-']);
