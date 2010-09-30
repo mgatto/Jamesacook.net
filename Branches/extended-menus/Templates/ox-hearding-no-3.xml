@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<templateItems template="/Templates/SculptureDetail.dwt" codeOutsideHTMLIsLocked="false">
+   	<parameter name="meta_description" type="text" passthrough="false"></parameter>
+   	<parameter name="main_image_src" type="text" passthrough="false">
+   		<![CDATA[../media/images/oxherding-sea-of-teeth-salt-in-water-3.jpg]]>
+	</parameter>
+    <item name="doctitle">
+		<![CDATA[
+        <title>Ox Herding / No. 3 (Salt in Water) | James A. Cook | Tucson Artist</title>
+        ]]>
+	</item>
+   	<item name="description">
+		<![CDATA[
+			Bronze, beeswax, wood, pigment<br />
+	        18&Prime; &times; 22&Prime; &times; 9&Prime;
+		]]>
+	</item>
+   	<item name="head">
+		<![CDATA[]]>
+	</item>
+   	<item name="name">
+		<![CDATA[Ox Herding / No. 3 (Salt in Water)]]>
+	</item>
+</templateItems>
