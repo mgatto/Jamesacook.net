@@ -1,0 +1,6 @@
+## No file robbery
+#RewriteEngine on
+# Options +FollowSymlinks
+#RewriteCond %{HTTP_REFERER} !^$
+#RewriteCond %{HTTP_REFERER} !^http://(www\.)?jamesacook.net/.*$ [NC]
+#RewriteRule \.(jpg|gif|png)$ - [F]
