@@ -71,7 +71,7 @@ body {
 					color: #B3B3B3;
 					font-variant:small-caps;
 				}
-				div#text p {
+				div#text p, div#text li {
 					font-family:AurulentSansBold;
 					font-size:0.9em;
 					font-weight: bold;
@@ -79,7 +79,7 @@ body {
 					font-variant:small-caps;
 				}
 				div#text p.materials {}
-				div#text p.description {
+				div#text p.description, div.spiel p {
 					text-indent:0.75em;
 				}
 				div#text a {
