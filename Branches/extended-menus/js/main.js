@@ -6,19 +6,19 @@ $(document).ready(function() {
 	var uri = "";
 	switch (loc) {
 		case "jamesacook.net":
-			uri = "/jamesacook.net/index.html";
+			uri = "/index.html";
 			break;
 		case "sculpture":
-			uri = "/jamesacook.net/sculpture/index.html";
+			uri = "/sculpture/index.html";
 			break;
 		case "mediated-sculpture":
-			uri = "/jamesacook.net/mediated-sculpture/index.html";
+			uri = "/mediated-sculpture/index.html";
 			break;
 		case "video":
-			uri = "/jamesacook.net/video/index.html";
+			uri = "/video/index.html";
 			break;
 		case "spiel":
-			uri = "/jamesacook.net/spiel/index.html";
+			uri = "/spiel/index.html";
 			break;
 		default:
 			uri = "";

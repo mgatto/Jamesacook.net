@@ -8,33 +8,45 @@
         <meta name="language" content="en" />
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <meta http-equiv="Content-language" content="en" />
-        <link rel="canonical" href="http://jamesacook.net" />
+        <link rel="canonical" href="http:/" />
         
-		<link rel="icon" type="image/vnd.microsoft.icon" href="/jamesacook.net/favicon.ico" />
-        <link rel="shortcut icon" href="/jamesacook.net/favicon.ico" />
+		<link rel="icon" type="image/vnd.microsoft.icon" href="/favicon.ico" />
+        <link rel="shortcut icon" href="/favicon.ico" />
         
         <!-- Stylesheets -->
-        <link rel="stylesheet" type="text/css" href="/jamesacook.net/css/lib/screen.css" media="screen" />
-        <link rel="stylesheet" type="text/css" href="/jamesacook.net/css/main.css" media="screen" />
-        <!--[if IE]>
-        	<link rel="stylesheet" type="text/css" href="/jamesacook.net/css/lib/ie.css" media="screen" />
-        <![endif]-->
-        <link rel="stylesheet" type="text/css" href="/jamesacook.net/css/lib/print.css" media="print" />
+        <link rel="stylesheet" type="text/css" href="/css/lib/screen.css" media="screen" />
         
-        <link rel="stylesheet" type="text/css" media="screen" href="superfish.css" /> 
-        <link rel="stylesheet" type="text/css" media="screen" href="superfish-navbar.css" /> 
+        <link rel="stylesheet" type="text/css" media="screen" href="/css/lib/superfish.css" /> 
+        <link rel="stylesheet" type="text/css" media="screen" href="/css/lib/superfish-navbar.css" /> 
+        
+        <link rel="stylesheet" type="text/css" href="/css/main.css" media="screen" />
+        <!--[if IE]>
+        	<link rel="stylesheet" type="text/css" href="/css/lib/ie.css" media="screen" />
+        <![endif]-->
+        <link rel="stylesheet" type="text/css" href="/css/lib/print.css" media="print" />
+        
     </head>
     <body>
     	<div id="body" class="container">
         	<div id="banner" class="span-24 last">
             	<h1>James A. Cook, Sculptor</h1>
             </div>
-            <ul id="navigation" class="span-22 prepend-1 append-1 prepend-top last">
-                <li class="span-4 first"><a href="/jamesacook.net/index.html">James A. Cook</a></li>
-                <li class="span-5"><a href="/jamesacook.net/mediated-sculpture/index.html">MediatedSculpture</a></li>
-                <li class="span-4"><a href="/jamesacook.net/sculpture/index.html">Sculpture</a></li>
-                <li class="span-4"><a href="/jamesacook.net/video/index.html">Video</a></li>
-                <li class="span-4 last"><a href="/jamesacook.net/spiel/index.html">Spiel</a></li>
+            <ul id="navigation" class="span-22 prepend-1 append-1 prepend-top last sf-menu sf-navbar">
+                <li class="span-4 first">
+                	<a href="/index.html">James A. Cook</a>
+                </li>
+                <li class="span-5">
+                	<a href="/mediated-sculpture/index.html">MediatedSculpture</a>
+                </li>
+                <li class="span-4">
+                	<a href="/sculpture/index.html">Sculpture</a>
+                </li>
+                <li class="span-4">
+                	<a href="/video/index.html">Video</a>
+                </li>
+                <li class="span-4 last">
+                	<a href="/spiel/index.html">Spiel</a>
+                </li>
             </ul>
             
             <div id="content" class="span-23 prepend-1 prepend-top last">
@@ -48,7 +60,7 @@
 					</p>
                 </div>
                 <div id="media" class="span-14 prepend-3 last">
-                	<img src="media/images/vertical-inclination-1.jpg" width="540" alt="" />
+                	<img src="media/images/vertical-inclination-1.jpg" width="540" alt="" title="" />
                 </div>
             </div>
             <div id="footer" class="span-24 prepend-top">
@@ -62,13 +74,14 @@
         </div>
         
         <!-- Scripts -->
-        <script type="text/javascript" src="/jamesacook.net/js/lib/jquery-1.4.2.min.js"></script>
-        <script type="text/javascript" src="/jamesacook.net/js/main.js"></script>
-		<script type="text/javascript" src="superfish.js"></script> 
+        <script type="text/javascript" src="/js/lib/jquery-1.4.2.min.js"></script>
+		<script type="text/javascript" src="/js/lib/superfish.js"></script>
+        <script type="text/javascript" src="/js/main.js"></script> 
         <script type="text/javascript">
 			$(document).ready(function(){ 
-				$("ul#navigation").superfish({ 
-					//pathClass: 'current',
+				$("ul#navigation").superfish({
+					pathLevels: 2,
+					delay: 1600,
 				    autoArrows: false,
 				    dropShadows: false
 				}); 

@@ -3,16 +3,16 @@
 
 @font-face {
 	font-family: 'AurulentSansRegular';
-	src: url('../media/fonts/AurulentSans-Regular-webfont.eot');
-	src: url('../media/fonts/AurulentSans-Regular-webfont.woff') format('woff'), url('../media/fonts/AurulentSans-Regular-webfont.ttf') format('truetype'), url('../media/fonts/AurulentSans-Regular-webfont.svg#webfont8XBZZzyb') format('svg');
+	src: url('/media/fonts/AurulentSans-Regular-webfont.eot');
+	src: url('/media/fonts/AurulentSans-Regular-webfont.woff') format('woff'), url('/media/fonts/AurulentSans-Regular-webfont.ttf') format('truetype'), url('/media/fonts/AurulentSans-Regular-webfont.svg#webfont8XBZZzyb') format('svg');
 	font-weight: normal;
 	font-style: normal;
 }
 
 @font-face {
 	font-family: 'AurulentSansBold';
-	src: url('../media/fonts/AurulentSans-Bold-webfont.eot');
-	src: url('../media/fonts/AurulentSans-Bold-webfont.woff') format('woff'), url('../media/fonts/AurulentSans-Bold-webfont.ttf') format('truetype'), url('../media/fonts/AurulentSans-Bold-webfont.svg#webfontfq5mClxr') format('svg');
+	src: url('/media/fonts/AurulentSans-Bold-webfont.eot');
+	src: url('/media/fonts/AurulentSans-Bold-webfont.woff') format('woff'), url('/media/fonts/AurulentSans-Bold-webfont.ttf') format('truetype'), url('/media/fonts/AurulentSans-Bold-webfont.svg#webfontfq5mClxr') format('svg');
 	font-weight: normal;
 	font-style: normal;
 }
@@ -53,12 +53,18 @@ body {
 					padding-left:0.8em;
 				}
 				.active {
-					background-image: url(/jamesacook.net/artwork/circle.gif);
+					background-image: url(/artwork/circle.gif);
 					background-repeat:no-repeat;
 					background-position: 2px 3px;
 				}
 				.active_link {
 					color: #FFF !important;
+				}
+				ul#navigation li ul li {
+					border-left: 0;
+				}
+				ul#navigation li ul li a {
+					font-size:0.8em;
 				}
 			div#content {}
 				div#text {
