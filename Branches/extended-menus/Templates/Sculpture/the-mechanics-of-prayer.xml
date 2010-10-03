@@ -6,7 +6,7 @@
 	<parameter name="another_view_1" type="boolean" passthrough="false">true</parameter>
 	<parameter name="another_view_1_src" type="text" passthrough="false"><![CDATA[ /media/images/abod-mechanics-of-prayer-detail-2.jpg]]></parameter>
 	<parameter name="another_view_2" type="boolean" passthrough="false">true</parameter>
-	<parameter name="another_view_2_src" type="text" passthrough="false"><![CDATA[/media/images/abod-mechanics-of-prayer-detail-3.jpg]]</parameter>
+	<parameter name="another_view_2_src" type="text" passthrough="false"><![CDATA[/media/images/abod-mechanics-of-prayer-detail-3.jpg]]></parameter>
 	<parameter name="video" type="boolean" passthrough="false">true</parameter>
 	<parameter name="video_src" type="text" passthrough="false"><![CDATA[/media/videos/the-mechanics-of-prayer-640.f4v]]></parameter>
    	<item name="materials"><![CDATA[
