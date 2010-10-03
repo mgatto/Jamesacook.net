@@ -62,39 +62,54 @@
 						<p>For the past ten years Cook&quot;s work has shifted from solitary objects to video/sound embedded assemblages, installations, video projections, and interactive situations.</p>
 					</div>
 				</div>
-            </div>
-            <div id="footer" class="span-24 prepend-top">
-	            <p id="attribution"></p>
-            	<p id="designed_by">
-                	Design by: <a href="http://boeltssdesign.com/" rel="designer">Boelts Design</a>
-                    <br />
-                	Programming by: <a href="http://www.lisantra.com/" rel="programmer">Lisantra Technologies, LLC</a>
-                </p>
-            </div>
-        </div>
-        <!-- Scripts -->
-        <script type="text/javascript" src="../js/lib/jquery-1.4.2.min.js"></script>
-        <script type="text/javascript" src="../js/lib/jquery.nospam.js"></script>
-        <script type="text/javascript" src="../js/main.js"></script>
-        <script type="text/javascript">
-			$(document).ready(function(){
+			</div>
+				
+			<div id="footer" class="span-24 prepend-top">
+				<!-- #BeginLibraryItem "/Library/Footer HTML.lbi" -->
+				<p id="attribution"></p>
+				<p id="designed_by"> Design by: <a href="http://boeltssdesign.com/" rel="designer">Boelts Design</a> <br />
+					Programming by: <a href="http://www.lisantra.com/" rel="programmer">Lisantra Technologies, LLC</a> </p>
+				<!-- #EndLibraryItem -->
+			</div>
+		</div>
+
+		<!-- Scripts -->
+		<script type="text/javascript" src="/js/lib/jquery-1.4.2.min.js"></script>
+		<script type="text/javascript" src="/js/lib/superfish.js"></script>
+		<script type="text/javascript" src="/js/lib/jquery.nospam.js"></script>
+		<script type="text/javascript" src="/js/main.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function(){ 
+				$("ul#navigation").superfish({
+					pathLevels: 2,
+					delay: 1600,
+				    autoArrows: false,
+				    dropShadows: false,
+					onBeforeShow: function() {
+                    	$("#spiel-menu").css("left",-200); 
+						// in this case shifts the last sub menu  to avoid extending beyond  main container
+                	}
+				});
+				
 				$('a.email').nospam({
 				  	replaceText: true,
 					filterLevel: 'low'
 				});
 			});
-        </script>
-        <script type="text/javascript">
-		  <!--// Google Analytics -->
-		  var _gaq = _gaq || [];
-		  _gaq.push(['_setAccount', 'UA-']);
-		  _gaq.push(['_trackPageview']);
-
+		</script>
+		<!-- #BeginLibraryItem "/Library/Google Analytics JS.lbi" -->
+		<script type="text/javascript">	
+			<!--// Google Analytics -->
+			var _gaq = _gaq || [];
+			_gaq.push(['_setAccount', 'UA-']);
+			_gaq.push(['_trackPageview']);
+		
 		  (function() {
 			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
 			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
 			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
 		  })();
 		</script>
-    </body>
-</html>
+		<!-- #EndLibraryItem -->
+	</body>
+<!-- InstanceEnd --></html>

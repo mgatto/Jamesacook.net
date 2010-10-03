@@ -74,31 +74,56 @@
                     <p>Both aural and visual information will be gathered, as well as transcriptive data from memory and note-taking. The type of information gathered will be drawn from the traditional metal casting process carried out by the sthapatis , specifically concerning the liturgical iconometry and image formulation and the material techiques entailed in the development of a bronze sculpture.</p>
                 
                 	<p>&raquo; <a href="../media/documents/essay.pdf">Download Essay</a> (PDF Format, KB)</p>
-                 </div>
-            </div>
-            <div id="footer" class="span-24 prepend-top">
-	            <p id="attribution"></p>
-            	<p id="designed_by">
-                	Design by: <a href="http://boeltssdesign.com/" rel="designer">Boelts Design</a>
-                    <br />
-                	Programming by: <a href="http://www.lisantra.com/" rel="programmer">Lisantra Technologies, LLC</a>
-                </p>
-            </div>
-        </div>
-        <!-- Scripts -->
-        <script type="text/javascript" src="../js/lib/jquery-1.4.2.min.js"></script>
-        <script type="text/javascript" src="../js/main.js"></script>
-        <script type="text/javascript">
-		  <!--// Google Analytics -->
-		  var _gaq = _gaq || [];
-		  _gaq.push(['_setAccount', 'UA-']);
-		  _gaq.push(['_trackPageview']);
+		<!-- InstanceEndEditable -->
+				</div>
+			</div>
+				
+			<div id="footer" class="span-24 prepend-top">
+				<!-- #BeginLibraryItem "/Library/Footer HTML.lbi" -->
+				<p id="attribution"></p>
+				<p id="designed_by"> Design by: <a href="http://boeltssdesign.com/" rel="designer">Boelts Design</a> <br />
+					Programming by: <a href="http://www.lisantra.com/" rel="programmer">Lisantra Technologies, LLC</a> </p>
+				<!-- #EndLibraryItem -->
+			</div>
+		</div>
 
-		  (function() {
-			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-		  })();
+		<!-- Scripts -->
+		<script type="text/javascript" src="/js/lib/jquery-1.4.2.min.js"></script>
+		<script type="text/javascript" src="/js/lib/superfish.js"></script>
+		<script type="text/javascript" src="/js/lib/jquery.nospam.js"></script>
+		<script type="text/javascript" src="/js/main.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function(){ 
+				$("ul#navigation").superfish({
+					pathLevels: 2,
+					delay: 1600,
+				    autoArrows: false,
+				    dropShadows: false,
+					onBeforeShow: function() {
+                    	$("#spiel-menu").css("left",-200); 
+						// in this case shifts the last sub menu  to avoid extending beyond  main container
+                	}
+				});
+				
+				$('a.email').nospam({
+				  	replaceText: true,
+					filterLevel: 'low'
+				});				
+			});
 		</script>
-    </body>
-</html>
+		<!-- #BeginLibraryItem "/Library/Google Analytics JS.lbi" -->
+		<script type="text/javascript">	
+			<!--// Google Analytics -->
+			var _gaq = _gaq || [];
+			_gaq.push(['_setAccount', 'UA-']);
+			_gaq.push(['_trackPageview']);
+		
+			(function() {
+				var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+				ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+				var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+			})();
+		</script>
+		<!-- #EndLibraryItem -->
+	</body>
+<!-- InstanceEnd --></html>
