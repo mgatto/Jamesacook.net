@@ -94,12 +94,11 @@
             </div>
                 
             <div id="footer" class="span-24 prepend-top">
-	            <p id="attribution"></p>
-            	<p id="designed_by">
-                	Design by: <a href="http://boeltssdesign.com/" rel="designer">Boelts Design</a>
-                    <br />
-                	Programming by: <a href="http://www.lisantra.com/" rel="programmer">Lisantra Technologies, LLC</a>
-                </p>
+	            <!-- #BeginLibraryItem "/Library/Footer HTML.lbi" -->
+				<p id="attribution"></p>
+				<p id="designed_by"> Design by: <a href="http://boeltssdesign.com/" rel="designer">Boelts Design</a> <br />
+					Programming by: <a href="http://www.lisantra.com/" rel="programmer">Lisantra Technologies, LLC</a> </p>
+				<!-- #EndLibraryItem -->
             </div>
         </div>
         
@@ -109,23 +108,26 @@
 		<script type="text/javascript" src="/js/lib/superfish.js"></script>
         <script type="text/javascript" src="/js/main.js"></script>
 		<!-- TemplateBeginIf cond="video" -->
-		<script type="text/javascript" src="/js/lib/flowplayer-3.2.2.min.js"></script>
-        <script type="text/javascript">
+		<!-- #BeginLibraryItem "/Library/Flowplayer JS.lbi" -->						
+		<script type="text/javascript" src="/js/lib/flowplayer-3.2.4.min.js"></script>
+		<script type="text/javascript">		
 			$(document).ready(function() {
-				flowplayer("player", {src: '/media/flash/lib/flowplayer-3.2.2.swf', wmode:'opaque' }, {
+				flowplayer("player", {src: '/media/flash/lib/flowplayer-3.2.5.swf', wmode:'opaque' }, {
 					clip : {
+						scaling: 'crop', //scales the video to fill all available space; should fix the black bars on James Cook's non-standard sized videos. Only available in 3.2.5+. 'scale' is the default.
 						autoPlay: false,
 						autoBuffering: true
 					},
 					plugins: {
 						controls: {	
-							url: '/media/flash/lib/flowplayer.controls-3.2.1.swf',
+							url: '/media/flash/lib/flowplayer.controls-3.2.3.swf',
 							bottom:0
 						}
 					}
 				});
 			});
 		</script>
+		<!-- #EndLibraryItem -->
 		<!-- TemplateEndIf -->
         <script type="text/javascript">	
 			$(document).ready(function() {
@@ -137,21 +139,25 @@
 					onBeforeShow: function() {
                     	$("ul#mediated-sculpture-menu").css({
 							left:'-200px',
-							width:'925px',]
+							width:'925px'
 						});
                 	}
 				});
 			});
-		  	<!--// Google Analytics -->
-	        var _gaq = _gaq || [];
-		    _gaq.push(['_setAccount', 'UA-']);
-		 	_gaq.push(['_trackPageview']);
-
-		    (function() {
-			    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-			    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-			    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-		    })();
 		</script>
+		<!-- #BeginLibraryItem "/Library/Google Analytics JS.lbi" -->
+		<script type="text/javascript">	
+			<!--// Google Analytics -->
+			var _gaq = _gaq || [];
+			_gaq.push(['_setAccount', 'UA-']);
+			_gaq.push(['_trackPageview']);
+		
+			(function() {
+				var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+				ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+				var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+			})();
+		</script>
+		<!-- #EndLibraryItem -->
     </body>
 </html>
