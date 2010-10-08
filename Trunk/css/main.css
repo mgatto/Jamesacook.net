@@ -36,12 +36,12 @@ body {
 			background-color:#666;
 			color:#FFF;
 		}
-			ul#navigation li{
+			#navigation li{
 				list-style-type:none;
 				text-align:left;
 				border-left: 1px solid #B3B3B3;
 			}
-				ul#navigation li a {
+				#navigation li a {
 					color:#B3B3B3;
 					font-size:1em;
 					text-decoration:none;
@@ -52,7 +52,7 @@ body {
 					padding-left:0.8em;
 				}
 				.active {
-					background-image: url(/artwork/circle.gif);
+					background-image: url('/artwork/circle.gif');
 					background-repeat:no-repeat;
 					background-position: 2px 3px;
 				}
@@ -62,7 +62,7 @@ body {
 			div#content {}
 				div#text {
 				}
-				div#text h2, div#text h3 {
+				#text h2, #text h3 {
 					/* parent styles were not cascading from div#text, so we repeat for h2 */
 					font-family:AurulentSansBold;
 					font-size:0.9em;
@@ -70,21 +70,21 @@ body {
 					color: #B3B3B3;
 					font-variant:small-caps;
 				}
-				div#text ul {
+				#text ul {
 					padding-left:1.3em;
 				}
-				div#text p, div#text li {
+				#text p, #text li {
 					font-family:AurulentSansBold;
 					font-size:0.9em;
 					font-weight: bold;
 					color: #B3B3B3;
 					font-variant:small-caps;
 				}
-				div#text p.materials {}
-				div#text p.description, div.spiel p {
+				#text p.materials {}
+				#text p.description, div.spiel p {
 					text-indent:0.75em;
 				}
-				div#text a {
+				#text a {
 					text-decoration:none;
 					border-bottom:1px dotted #B3B3B3;
 					color:#B3B3B3;
@@ -92,7 +92,7 @@ body {
 				div#media {
 					text-align:right;
 				}
-				div#media img, div#media a {
+				#media img, #media a {
 					border:1px solid #FFCC33;
 					padding:1px;
 				}
@@ -113,7 +113,7 @@ body {
 				font-size:0.7em;
 				text-align:center;
 			} 
-				div#footer a {
+				#footer a {
 					text-decoration:none;
 					border-bottom:1px dotted #B3B3B3;
 					color:#B3B3B3;
