@@ -22,8 +22,8 @@ body {
 	font-family:AurulentSansRegular;
 	letter-spacing:2px;
 }
-	div#body {}
-		div#banner {}
+	/*div#body {}
+		div#banner {}*/
 			h1 {
 				margin-left:-9999em;
 				line-height:0;
@@ -59,9 +59,8 @@ body {
 				.active_link {
 					color: #FFF !important;
 				}
-			div#content {}
-				div#text {
-				}
+			/*div#content {}
+				div#text {}*/
 				#text h2, #text h3 {
 					/* parent styles were not cascading from div#text, so we repeat for h2 */
 					font-family:AurulentSansBold;
@@ -80,7 +79,7 @@ body {
 					color: #B3B3B3;
 					font-variant:small-caps;
 				}
-				#text p.materials {}
+				/*#text p.materials {}*/
 				#text p.description, div.spiel p {
 					text-indent:0.75em;
 				}
@@ -96,8 +95,7 @@ body {
 					border:1px solid #FFCC33;
 					padding:1px;
 				}
-				div.thumbnail {				
-				}
+				/* div.thumbnail {} */
 				div.thumbnail > a {
 					display:block;
 					text-align: center;
