@@ -2,16 +2,18 @@
 @font-face {
 	font-family: 'AurulentSansRegular';
 	src: url('/media/fonts/AurulentSans-Regular-webfont.eot');
-	src: url('/media/fonts/AurulentSans-Regular-webfont.woff') format('woff'), url('/media/fonts/AurulentSans-Regular-webfont.ttf') format('truetype'), url('/media/fonts/AurulentSans-Regular-webfont.svg#webfont8XBZZzyb') format('svg');
+	src: local('☺'), url('/media/fonts/AurulentSans-Regular-webfont.woff') format('woff'), url('/media/fonts/AurulentSans-Regular-webfont.ttf') format('truetype'), url('/media/fonts/AurulentSans-Regular-webfont.svg#webfont8XBZZzyb') format('svg');
 	font-weight: normal;
 	font-style: normal;
+    font-variant:normal;
 }
 @font-face {
 	font-family: 'AurulentSansBold';
 	src: url('/media/fonts/AurulentSans-Bold-webfont.eot');
-	src: url('/media/fonts/AurulentSans-Bold-webfont.woff') format('woff'), url('/media/fonts/AurulentSans-Bold-webfont.ttf') format('truetype'), url('/media/fonts/AurulentSans-Bold-webfont.svg#webfontfq5mClxr') format('svg');
-	font-weight: normal;
+	src: local('☺'), url('/media/fonts/AurulentSans-Bold-webfont.woff') format('woff'), url('/media/fonts/AurulentSans-Bold-webfont.ttf') format('truetype'), url('/media/fonts/AurulentSans-Bold-webfont.svg#webfontfq5mClxr') format('svg');
+	font-weight: normal; /*shouldn't this be bold?*/
 	font-style: normal;
+    font-variant:normal;
 }
 
 body {
