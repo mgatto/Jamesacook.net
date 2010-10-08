@@ -1,4 +1,21 @@
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"><p id="attribution"></p>
+				<ul class="span-24 prepend-7">
+					<li class="span-2" style="margin-left:2em;">
+						<a href="/index.html">Home</a>
+					</li>
+					<li class="span-3">
+						<a href="/about-site.html">About this Site</a>
+					</li>
+					<li class="span-2">
+						<a href="/sitemap.html">Sitemap</a>
+					</li>
+					<li class="span-2">
+						<a href="/spiel/index.html#contact">Contact</a>
+					</li>
+				</ul>
+				
+				<p id="attribution">
+					&copy; 2010; James A Cook
+				</p>
 				<p id="designed_by">
 					Design by: <a href="http://boeltssdesign.com/" rel="designer">Boelts Design</a>
 					<br />

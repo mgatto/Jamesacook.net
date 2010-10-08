@@ -1,6 +1,4 @@
 @charset "utf-8";
-/* CSS Document */
-
 @font-face {
 	font-family: 'AurulentSansRegular';
 	src: url('/media/fonts/AurulentSans-Regular-webfont.eot');
@@ -8,7 +6,6 @@
 	font-weight: normal;
 	font-style: normal;
 }
-
 @font-face {
 	font-family: 'AurulentSansBold';
 	src: url('/media/fonts/AurulentSans-Bold-webfont.eot');
@@ -63,13 +60,16 @@ body {
 			div#content {}
 				div#text {
 				}
-				div#text h2 {
+				div#text h2, div#text h3 {
 					/* parent styles were not cascading from div#text, so we repeat for h2 */
 					font-family:AurulentSansBold;
 					font-size:0.9em;
 					font-weight: bold;
 					color: #B3B3B3;
 					font-variant:small-caps;
+				}
+				div#text ul {
+					padding-left:1.3em;
 				}
 				div#text p, div#text li {
 					font-family:AurulentSansBold;
@@ -110,4 +110,9 @@ body {
 			div#footer {
 				font-size:0.7em;
 				text-align:center;
-			}
+			} 
+				div#footer a {
+					text-decoration:none;
+					border-bottom:1px dotted #B3B3B3;
+					color:#B3B3B3;
+				}
