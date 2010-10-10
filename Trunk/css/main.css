@@ -80,8 +80,9 @@ body {
 					font-variant:small-caps;
 				}
 				/*#text p.materials {}*/
-				#text p.description, div.spiel p {
-					text-indent:0.75em;
+				/* http://webtypography.net/Rhythm_and_Proportion/Blocks_and_Paragraphs/2.3.2/ */
+				#text p.description + p, div.spiel p + p {
+					text-indent:1em;
 				}
 				#text a {
 					text-decoration:none;
