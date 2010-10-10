@@ -84,7 +84,8 @@
 				</div>
             </div>
                 
-            <div id="footer" class="span-24 prepend-top"><!-- #BeginLibraryItem "/Library/Footer HTML.lbi" -->				<ul class="span-24 prepend-7">
+            <div id="footer" class="span-24 prepend-top"><!-- #BeginLibraryItem "/Library/Footer HTML.lbi" -->
+				<ul class="span-24 prepend-7">
 					<li class="span-2" style="margin-left:2em;">
 						<a href="/index.html">Home</a>
 					</li>
@@ -112,7 +113,6 @@
         <!-- Scripts -->
         <script type="text/javascript" src="/js/lib/jquery-1.4.2.min.js"></script>
         <script type="text/javascript" src="/js/lib/jquery.colorbox-min.js"></script>
-		<script type="text/javascript" src="/js/lib/superfish.js"></script>
         <script type="text/javascript" src="/js/main.js"></script>
 		<!-- TemplateBeginIf cond="video" -->
 		<!-- #BeginLibraryItem "/Library/Flowplayer JS.lbi" -->						
