@@ -89,6 +89,11 @@ body {
 					border-bottom:1px dotted #B3B3B3;
 					color:#B3B3B3;
 				}
+				#text blockquote {
+					margin-top:0;
+					margin-bottom:0;
+					font-style:normal;
+				}
 				div#media {
 					text-align:right;
 				}
