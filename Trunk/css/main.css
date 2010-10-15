@@ -117,6 +117,9 @@ body {
 				font-size:0.7em;
 				text-align:center;
 			} 
+				#footer ul {
+					list-style-type:none;
+				}
 				#footer a {
 					text-decoration:none;
 					border-bottom:1px dotted #B3B3B3;
