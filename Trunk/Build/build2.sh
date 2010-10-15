@@ -57,7 +57,12 @@ rm -rf ./Templates
 rm -rf ./Library
 rm -rf ./Build
 
-# strip all comments and rewrite links if necessary
+# strip all comments
+#s|<!--[^>]*-->||g
+#or
+#s|<!--(.*?)-->||g
+
+# rewrite links if necessary
 echo "rewriting links, excluding binary files"
 find . -type f \( -name "*.html" -o -name "*.css" -o -name "*.js" \) | xargs sed -i \
         -e 's|href=\"/|href=\"/jamesacook.net/|g' \
@@ -66,8 +71,12 @@ find . -type f \( -name "*.html" -o -name "*.css" -o -name "*.js" \) | xargs sed
         -e "s|url(/|url(/jamesacook.net/|g" \
         -e "s|uri = \"/|uri = \"/jamesacook.net/|g" \
         -e "s|src: '|src: '/jamesacook.net/media/|g" \
-        -e "s|url: '|url: '/jamesacook.net/media/|g" \
-        -e "s|<!--(.*?)-->||g";
+        -e "s|url: '|url: '/jamesacook.net/media/|g";
+
+#Erase LibrayItem lines...
+#find . -type f -name "*.html" | xargs sed -i \
+#        -e "s|<!-- #EndLibraryItem -->||g" \
+#        -e "s|<!-- #BeginLibraryItem * -->||g";
 
 # reverse the link rewriting...
 #find . -type f \( -name "*.html" -o -name "*.css" -o -name "*.js" \) | xargs sed -i \
@@ -89,3 +98,18 @@ echo "Symlinking"
 ln -sfn $VERSION htdocs
 
 echo "Deployed!"
+
+# usage: set_owner user group
+set_owner() {
+    OWNER = $1
+    GROUP = $2
+    chown "{$USER}:{$GROUP}" . -R
+}
+
+symlink() {}
+get_from_svn() {}
+get_from_hg() {}
+get_from_tbz2() {}
+get_from_tar.bz2() {} #alias of get_from_tbz2()
+
+rewrite_links() {}
