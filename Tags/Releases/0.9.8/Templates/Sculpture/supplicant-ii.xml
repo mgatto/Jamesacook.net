@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<templateItems template="/Templates/SculptureDetail.dwt" codeOutsideHTMLIsLocked="false">
+   	<parameter name="name" type="text" passthrough="false"><![CDATA[Supplicant II]]></parameter>
+   	<parameter name="meta_description" type="text" passthrough="false"><![CDATA[The Mechanics of Prayer invites one to turn a large pulley wheel using a modified treadle.]]></parameter>
+   	<parameter name="main_image_src" type="text" passthrough="false"><![CDATA[/media/images/supplicant-II-1.jpg]]></parameter>
+	<parameter name="another_view_1" type="boolean" passthrough="false">true</parameter>
+	<parameter name="another_view_1_src" type="text" passthrough="false"><![CDATA[ /media/images/supplicant-II-another-view-2.jpg]]></parameter>
+	<parameter name="another_view_2" type="boolean" passthrough="false">false</parameter>
+	<parameter name="another_view_2_src" type="text" passthrough="false"></parameter>
+	<parameter name="video" type="boolean" passthrough="false">false</parameter>
+	<parameter name="video_src" type="text" passthrough="false"></parameter>
+   	<item name="materials"><![CDATA[
+				   	bronze, steel, cinnamon
+					<br />
+					88&Prime; &times; 40&Prime; &times; 40&Prime;
+		]]></item>
+	<item name="description"><![CDATA[
+					<p class="description">This is an assemblage of forms that in sum depict a figure kneeling over a bed of dry cinnamon sticks. The figure's torso is a rivoted drum out of which grows bamboo rhizomes and whose legs are skeletal. Shielding the figure is a tattered asian parasol. The dry aromatic fragrance of cinnamon inundates the space, perhaps a sweetness akin to the fruits of asceticism.</p>
+		]]></item>
+   	<item name="head"><![CDATA[]]></item>
+</templateItems>
