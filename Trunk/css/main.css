@@ -81,8 +81,9 @@ body {
 				}
 				/*#text p.materials {}*/
 				/* http://webtypography.net/Rhythm_and_Proportion/Blocks_and_Paragraphs/2.3.2/ */
-				#text p.description + p, div.spiel p + p {
+				div.spiel p + p {
 					text-indent:1em;
+					font-variant:normal;
 				}
 				#text a {
 					text-decoration:none;
