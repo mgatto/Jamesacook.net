@@ -5,7 +5,6 @@
 	src: local('☺'), url('/media/fonts/AurulentSans-Regular-webfont.woff') format('woff'), url('/media/fonts/AurulentSans-Regular-webfont.ttf') format('truetype'), url('/media/fonts/AurulentSans-Regular-webfont.svg#webfont8XBZZzyb') format('svg');
 	font-weight: normal;
 	font-style: normal;
-    font-variant:normal;
 }
 @font-face {
 	font-family: 'AurulentSansBold';
@@ -13,7 +12,6 @@
 	src: local('☺'), url('/media/fonts/AurulentSans-Bold-webfont.woff') format('woff'), url('/media/fonts/AurulentSans-Bold-webfont.ttf') format('truetype'), url('/media/fonts/AurulentSans-Bold-webfont.svg#webfontfq5mClxr') format('svg');
 	font-weight: normal; /*shouldn't this be bold?*/
 	font-style: normal;
-    font-variant:normal;
 }
 
 body {
@@ -81,7 +79,7 @@ body {
 				}
 				/*#text p.materials {}*/
 				/* http://webtypography.net/Rhythm_and_Proportion/Blocks_and_Paragraphs/2.3.2/ */
-				div.spiel p + p {
+				.spiel p + p {
 					text-indent:1em;
 					font-variant:normal;
 				}
