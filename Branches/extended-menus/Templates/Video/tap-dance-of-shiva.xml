@@ -2,7 +2,7 @@
 <templateItems template="/Templates/VideoDetail.dwt" codeOutsideHTMLIsLocked="false">
    	<parameter name="name" type="text" passthrough="false"><![CDATA[Tap Dance of Shiva]]></parameter>
    	<parameter name="meta_description" type="text" passthrough="false"><![CDATA[]]></parameter>
-	<parameter name="video_src" type="text" passthrough="false"><![CDATA[tap-dance-of-siva-640.f4v]]></parameter>
+	<parameter name="video_src" type="text" passthrough="false"><![CDATA[/media/videos/tap-dance-of-siva-640.f4v]]></parameter>
    	<item name="materials"><![CDATA[
 					 Three Channel Video (Time Hammer, Taps, Pashupatinath)
 		]]></item>
