@@ -1,0 +1,127 @@
+@charset "utf-8";
+@font-face {
+	font-family: 'AurulentSansRegular';
+	src: url('/media/fonts/AurulentSans-Regular-webfont.eot');
+	src: local('☺'), url('/media/fonts/AurulentSans-Regular-webfont.woff') format('woff'), url('/media/fonts/AurulentSans-Regular-webfont.ttf') format('truetype'), url('/media/fonts/AurulentSans-Regular-webfont.svg#webfont8XBZZzyb') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'AurulentSansBold';
+	src: url('/media/fonts/AurulentSans-Bold-webfont.eot');
+	src: local('☺'), url('/media/fonts/AurulentSans-Bold-webfont.woff') format('woff'), url('/media/fonts/AurulentSans-Bold-webfont.ttf') format('truetype'), url('/media/fonts/AurulentSans-Bold-webfont.svg#webfontfq5mClxr') format('svg');
+	font-weight: normal; /*shouldn't this be bold?*/
+	font-style: normal;
+}
+
+body {
+	background-color: #666;
+	color: #B3B3B3;
+	font-family:AurulentSansRegular;
+	letter-spacing:2px;
+}
+	/*div#body {}
+		div#banner {}*/
+			h1 {
+				margin-left:-9999em;
+				line-height:0;
+			}
+		ul#navigation {
+			border-top: 1px solid #B3B3B3;
+			border-bottom: 1px solid #B3B3B3;
+			padding-top: 5px;
+			padding-bottom: 5px;
+			background-color:#666;
+			color:#FFF;
+		}
+			#navigation li{
+				list-style-type:none;
+				text-align:left;
+				border-left: 1px solid #B3B3B3;
+			}
+				#navigation li a {
+					color:#B3B3B3;
+					font-size:1em;
+					text-decoration:none;
+					font-variant:small-caps;
+					display:block;
+					border-left: 1px solid #B3B3B3;
+					margin-left:1.5em;
+					padding-left:0.8em;
+				}
+				.active {
+					background-image: url('/artwork/circle.gif');
+					background-repeat:no-repeat;
+					background-position: 2px 2px;
+				}
+				.active_link {
+					color: #FFF !important;
+				}
+			/*div#content {}
+				div#text {}*/
+				#text h2, #text h3 {
+					/* parent styles were not cascading from div#text, so we repeat for h2 */
+					font-family:AurulentSansBold;
+					font-size:0.9em;
+					font-weight: bold;
+					color: #B3B3B3;
+					font-variant:small-caps;
+				}
+				#text ul {
+					padding-left:1.3em;
+				}
+				#text p, #text li {
+					font-family:AurulentSansBold;
+					font-size:0.9em;
+					font-weight: bold;
+					color: #B3B3B3;
+					font-variant:small-caps;
+				}
+				/*#text p.materials {}*/
+				/* http://webtypography.net/Rhythm_and_Proportion/Blocks_and_Paragraphs/2.3.2/ */
+				.spiel p + p {
+					text-indent:1em;
+					font-variant:normal;
+				}
+				#text a {
+					text-decoration:none;
+					border-bottom:1px dotted #B3B3B3;
+					color:#B3B3B3;
+				}
+				#text blockquote {
+					margin-top:0;
+					margin-bottom:0;
+					font-style:normal;
+				}
+				div#media {
+					text-align:right;
+				}
+				#media img, #media a {
+					border:1px solid #FFCC33;
+					padding:1px;
+				}
+				/* div.thumbnail {} */
+				div.thumbnail > a {
+					display:block;
+					text-align: center;
+					text-decoration:none;
+					border-bottom:0;
+				}
+				div.thumbnail > img, div.thumbnail > a > img {
+					margin-left:1.9em;
+					border:1px solid #FFCC33;
+					padding:1px;				
+				}
+			div#footer {
+				font-size:0.7em;
+				text-align:center;
+				padding-top:1em;
+			} 
+				#footer ul {
+					list-style-type:none;
+				}
+				#footer a {
+					text-decoration:none;
+					border-bottom:1px dotted #B3B3B3;
+					color:#B3B3B3;
+				}
