@@ -8,15 +8,18 @@ fi
 
 PROGNAME="$0"
 SHORTOPTS="f:t:c::d:v:"
-LONGOPTS="from:,to:,conf::,repository::,archive::,domain:,version:,rewrite,reverse-rewrite"
+LONGOPTS="from:,to:,conf::,repository::,archive::,domain:,version:,rewrite,reverse-rewrite,compress-css::,compress-js::"
 SVN=0
 ZIP=0
 TO="$PWD"
-CONF=""
+CONF="no"
 VERSION=""
 ARCHIVE=""
 REPOSITORY=""
-REWRITE=""
+REWRITE="no"
+COMPRESS="no"
+CSSFILES=""
+JSFILES=""
 
 ARGS=$(getopt -s bash --options $SHORTOPTS  \
   --longoptions $LONGOPTS --name $PROGNAME -- "$@" )
@@ -85,6 +88,30 @@ while true ; do
             REWRITE="REMOVE_DOMAIN"
             shift
             ;;
+        --compress-css)
+            echo "Option --compress-css, argument \`$2'" ;
+            case "$2" in
+                "")
+                    shift 2
+                    ;;
+                *)
+                    CSSFILES="$2" ;
+                    shift 2
+                    ;;
+            esac
+            ;;
+        --compress-js)
+            echo "Option --compress-js, argument \`$2'" ;
+            case "$2" in
+                "")
+                    shift 2
+                    ;;
+                *)
+                    JSFILES="$2" ;
+                    shift 2
+                    ;;
+            esac
+            ;;
         --repository)
             echo "Option --repository, argument \`$2'" ;
             case "$2" in
@@ -141,7 +168,11 @@ symlink() {
 get_from_svn() {
     svn export \
         $1 \
-        $TO/$VERSION
+        $TO/$VERSION;
+
+    # Get the videos which are not under VC
+    echo "Importing video files"
+    cp ./htdocs/media/video/*.f4v ./$VERSION/media/video/
 }
 
 get_from_zip() {
@@ -214,7 +245,56 @@ cleanup_files() {
 strip_comments() {
     echo "Stripping coments, including Dreamweaver Template commands"
     find . -type f \( -name "*.html" -o -name "*.css" -o -name "*.js" \) | xargs sed -i \
-            -e 's|<!--.*-->||g';
+        -e 's|<!--.*-->||g';
+}
+
+#depends on YUI Compressor in build dir
+combine_js() {
+    NAME="scripts-$VERSION.min.css"
+
+    #combine the named files
+    for jsfile in $JSFILES; do
+        cat $jsfile >> $NAME
+        rm -f $jsfile
+    end
+
+}
+
+combine_css() {
+    NAME="styles-$VERSION.min.css"
+
+    #combine the named files
+    for cssfile in $CSSFILES; do
+        cat $cssfile >> $NAME
+
+        # delete the lines in html with this css file and replace with $name
+        find . -type f -name "*.html" | xargs sed -i \
+            -e "$cssfile d"
+        &&
+        rm -f $cssfile
+    end
+
+    # now add in the new $NAME CSS link
+    find . -type f -name "*.html" | xargs sed -i \
+"
+<!--[if IE]> i\
+<link rel=\"stylesheet\" type=\"text/css\" href=\"/css/lib/$NAME\" media=\"screen\" \/>
+"
+}
+
+minify() {
+    find . -type f \( -name "*.js" -a -not name "jquery*" \) | sudo xargs -I {} \
+        java -jar $TO/build/yuicompressor-2.4.2.jar --type js {} -o {} --charset utf-8  --line-break 0
+
+    find . -type f -name "*.css" | sudo xargs -I {} \
+        java -jar $TO/build/yuicompressor-2.4.2.jar --type css {} -o {} --charset utf-8  --line-break 0
+}
+
+# depends on pngcrush
+optimize_img() {
+    pngcrush
+    jpegtran -optimize -progressive < original.jpg > optimized.jpg
+
 }
 
 usage()
@@ -281,17 +361,25 @@ if [ $ZIP -eq 1 -a $ARCHIVE != "" ]; then
         get_from_zip $ARCHIVE
 elif [ $SVN -eq 1 -a $REPOSITORY != ""]; then
         get_from_svn $REPOSITORY
+exit 0
 else
     echo "I don't know what to do next."
 fi
 
 # Shall we rewrite links and src?
-if [ $REWRITE != "" ]; then
+if [ $REWRITE != "no" ]; then
     rewrite_links $REWRITE
+fi
+
+# Shall we minify js or css, or both? Images, too?
+# This should always come after Rewriting of links, if any.
+if [ $COMPRESS != "no" ]; then
+    compress $COMPRESS
 fi
 
 cleanup_files
 strip_comments
+minify
 # symlink must come before set_owner_and_group so the htdocs symlink ist't stuck as owned by root
 symlink
 set_owner_and_group www-data www-data
