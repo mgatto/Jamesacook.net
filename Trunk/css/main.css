@@ -1,17 +1,44 @@
 @charset "utf-8";
+/* http://readableweb.com/mo-bulletproofer-font-face-css-syntax/
+Avoids IE6-8 erroneous HTTP request (and subsequent 404)
 @font-face {
-	font-family: 'AurulentSansRegular';
-	src: url('/media/fonts/AurulentSans-Regular-webfont.eot');
-	src: local('☺'), url('/media/fonts/AurulentSans-Regular-webfont.woff') format('woff'), url('/media/fonts/AurulentSans-Regular-webfont.ttf') format('truetype'), url('/media/fonts/AurulentSans-Regular-webfont.svg#webfont8XBZZzyb') format('svg');
+	font-family: 'PaddingtonSCPlainSmallCapsRom';
+	src: url('paddingtonsc-webfont.eot');
 	font-weight: normal;
 	font-style: normal;
 }
+
+@font-face {
+	font-family: 'PaddingtonSCPlainSmallCapsRom';
+	src: url(//:) format('no404'), url('paddingtonsc-webfont.woff') format('woff'), url('paddingtonsc-webfont.ttf') format('truetype'), url('paddingtonsc-webfont.svg#webfontCykG2Qou') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'PaddingtonSCPlainSmallCapsRom';
+	src: url('paddingtonsc-webfont.eot');
+	src: local('☺'), url('paddingtonsc-webfont.woff') format('woff'), url('paddingtonsc-webfont.ttf') format('truetype'), url('paddingtonsc-webfont.svg#webfontCykG2Qou') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+*/
+@font-face {
+	font-family: 'AurulentSansRegular';
+	font-weight: normal;
+	font-style: normal;
+	/* font-variant: normal; don't include this since webkit will ignore the whole rule: https://bugs.webkit.org/show_bug.cgi?id=25000 */
+	src: url('/media/fonts/AurulentSans-Regular-webfont.eot');
+	src: local('☺'), url('/media/fonts/AurulentSans-Regular-webfont.woff') format('woff'), url('/media/fonts/AurulentSans-Regular-webfont.ttf') format('truetype'), url('/media/fonts/AurulentSans-Regular-webfont.svg#webfont8XBZZzyb') format('svg');
+}
 @font-face {
 	font-family: 'AurulentSansBold';
+	font-weight: normal; /*shouldn't this be bold? No: http://doctype.com/font-showing-bold-only-chromesafari */
+	font-style: normal;
+	/* font-variant: normal; don't include this since webkit will ignore the whole rule: https://bugs.webkit.org/show_bug.cgi?id=25000 */
 	src: url('/media/fonts/AurulentSans-Bold-webfont.eot');
 	src: local('☺'), url('/media/fonts/AurulentSans-Bold-webfont.woff') format('woff'), url('/media/fonts/AurulentSans-Bold-webfont.ttf') format('truetype'), url('/media/fonts/AurulentSans-Bold-webfont.svg#webfontfq5mClxr') format('svg');
-	font-weight: normal; /*shouldn't this be bold?*/
-	font-style: normal;
 }
 
 body {
@@ -44,6 +71,7 @@ body {
 					font-size:1em;
 					text-decoration:none;
 					font-variant:small-caps;
+					/* without arulentsans-smallcaps, this borks the @font-face in Webkit: http://mwhenry.com/blog/2010/04/ugly-font-variant-bug/ */
 					display:block;
 					border-left: 1px solid #B3B3B3;
 					margin-left:1.5em;
