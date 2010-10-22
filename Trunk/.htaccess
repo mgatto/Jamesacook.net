@@ -4,3 +4,15 @@
 #RewriteCond %{HTTP_REFERER} !^$
 #RewriteCond %{HTTP_REFERER} !^http://(www\.)?jamesacook.net/.*$ [NC]
 #RewriteRule \.(jpg|gif|png)$ - [F]
+
+#DO NOT CACHE SWF; FLOWPLAYER WON'T WORK! BUT F4V/FLV CACHING IS FINE.
+
+AddType video/x-f4v	.f4v
+AddType video/x-flv	.flv
+
+Addtype font/opentype .otf
+Addtype font/eot .eot
+Addtype font/truetype .ttf
+AddType application/x-woff .woff 
+# AddType application/vnd.ms-fontobject .eot AddType application/octet-stream .otf .ttf
+AddOutputFilterByType DEFLATE font/opentype font/truetype font/eot
