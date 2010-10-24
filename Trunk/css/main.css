@@ -1,4 +1,27 @@
 @charset "utf-8";
+
+/*
+works for GTK-webkit
+<!--[if IE]>
+<style>
+  @font-face {
+    font-family: 'Graublau Web';
+    src: url('GraublauWeb.eot');
+  }
+</style>
+<![endif]-->
+
+<style>
+@font-face {
+  font-family: 'Graublau Web';
+  src: url(//:) format("no404"),
+    url("GraublauWeb.woff") format("woff"),
+    url("GraublauWeb.otf") format("opentype"),
+    url("GraublauWeb.svg#grablau") format("svg");
+}
+</style>
+*/
+
 /* http://readableweb.com/mo-bulletproofer-font-face-css-syntax/
 Avoids IE6-8 erroneous HTTP request (and subsequent 404)
 @font-face {
@@ -53,7 +76,7 @@ body {
 				margin-left:-9999em;
 				line-height:0;
 			}
-		ul#navigation {
+		/*ul*/#navigation {
 			border-top: 1px solid #B3B3B3;
 			border-bottom: 1px solid #B3B3B3;
 			padding-top: 5px;
@@ -75,7 +98,7 @@ body {
 					display:block;
 					border-left: 1px solid #B3B3B3;
 					margin-left:1.5em;
-					padding-left:0.8em;
+					padding-left:.8em;
 				}
 				.active {
 					background-image: url('/artwork/circle.gif');
@@ -90,8 +113,8 @@ body {
 				#text h2, #text h3 {
 					/* parent styles were not cascading from div#text, so we repeat for h2 */
 					font-family:AurulentSansBold;
-					font-size:0.9em;
-					font-weight: bold;
+					font-size:.9em;
+					font-weight: 700;
 					color: #B3B3B3;
 					font-variant:small-caps;
 				}
@@ -100,8 +123,8 @@ body {
 				}
 				#text p, #text li {
 					font-family:AurulentSansBold;
-					font-size:0.9em;
-					font-weight: bold;
+					font-size:.9em;
+					font-weight: 700;
 					color: #B3B3B3;
 					font-variant:small-caps;
 				}
@@ -121,27 +144,27 @@ body {
 					margin-bottom:0;
 					font-style:normal;
 				}
-				div#media {
+				/*div*/#media {
 					text-align:right;
 				}
 				#media img, #media a {
-					border:1px solid #FFCC33;
+					border:1px solid #FC3;
 					padding:1px;
 				}
 				/* div.thumbnail {} */
-				div.thumbnail > a {
+				/*div*/.thumbnail > a {
 					display:block;
 					text-align: center;
 					text-decoration:none;
 					border-bottom:0;
 				}
-				div.thumbnail > img, div.thumbnail > a > img {
+				/*div*/.thumbnail > img, /*div*/.thumbnail > a > img {
 					margin-left:1.9em;
-					border:1px solid #FFCC33;
+					border:1px solid #FC3;
 					padding:1px;				
 				}
-			div#footer {
-				font-size:0.7em;
+			/*div*/#footer {
+				font-size:.7em;
 				text-align:center;
 				padding-top:1em;
 			} 
