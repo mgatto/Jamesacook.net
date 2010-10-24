@@ -4,7 +4,7 @@
 		<title><!-- TemplateBeginEditable name="name" --><!-- TemplateEndEditable --> | James A. Cook | Tucson Artist</title>
 
 		<!-- Meta data -->
-		<meta name="description" content="" />
+		<meta name="description" content="@@(meta_description)@@" />
 		<meta name="language" content="en" />
 		<meta name="robots" content="index, follow" />
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -20,6 +20,10 @@
 			<link rel="stylesheet" type="text/css" href="/css/lib/ie.css" media="screen" />
 		<![endif]-->
 		<link rel="stylesheet" type="text/css" href="/css/lib/print.css" media="print" />
+        <!-- TemplateBeginEditable name="head" -->
+        <!-- TemplateEndEditable -->
+		<!-- TemplateParam name="meta_description" type="text" value="" -->
+		<!-- TemplateParam name="name" type="text" value="" -->
 	</head>
 	<body>
 		<div id="body" class="container">
