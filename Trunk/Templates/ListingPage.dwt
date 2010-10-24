@@ -25,7 +25,7 @@
 		<!-- TemplateParam name="meta_description" type="text" value="" -->
 		<!-- TemplateParam name="name" type="text" value="" -->
 	</head>
-	<body>
+	<body class="listing" id="@@(name)@@">
 		<div id="body" class="container">
 			<div id="banner" class="span-24 last">
 				<h1>James A Cook</h1>
