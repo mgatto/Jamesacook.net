@@ -91,7 +91,7 @@
 					<!-- TemplateEndIf -->
 					<!-- TemplateBeginIf cond="video" -->
 					<div id="media" class="span-8 thumbnail prepend-top">
-						<a href="@@(video_src)@@" id="player" style="display:block;width:445px;height:340px;margin-left:1.9em;"></a>
+						<a href="@@(video_src)@@" id="player"></a>
 					</div>
 					<!-- TemplateEndIf -->
 				</div>

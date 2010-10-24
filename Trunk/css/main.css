@@ -151,6 +151,12 @@ body {
 					border:1px solid #FC3;
 					padding:1px;
 				}
+				#player {
+					display:block;
+					width:445px;
+					height:340px;
+					margin-left:1.9em;
+				}
 				/* div.thumbnail {} */
 				/*div*/.thumbnail > a {
 					display:block;
