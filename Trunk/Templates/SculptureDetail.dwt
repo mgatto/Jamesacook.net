@@ -91,7 +91,7 @@
 					<!-- TemplateEndIf -->
 					<!-- TemplateBeginIf cond="video" -->
 					<div id="media" class="span-8 thumbnail prepend-top">
-						<a href="@@(video_src)@@" id="player" alt="Link to play a video of the sculpture" style="display:block;width:460px;height:340px;margin-left:1.9em;"></a>
+						<a href="@@(video_src)@@" id="player" style="display:block;width:445px;height:340px;margin-left:1.9em;"></a>
 					</div>
 					<!-- TemplateEndIf -->
 				</div>
