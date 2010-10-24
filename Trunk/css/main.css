@@ -67,7 +67,7 @@ Avoids IE6-8 erroneous HTTP request (and subsequent 404)
 body {
 	background-color: #666;
 	color: #B3B3B3;
-	font-family:AurulentSansRegular;
+	font-family:AurulentSansRegular, Arial;
 	letter-spacing:2px;
 }
 	/*div#body {}
@@ -112,7 +112,7 @@ body {
 				div#text {}*/
 				#text h2, #text h3 {
 					/* parent styles were not cascading from div#text, so we repeat for h2 */
-					font-family:AurulentSansBold;
+					font-family:AurulentSansBold,"Arial Bold",Arial;
 					font-size:.9em;
 					font-weight: 700;
 					color: #B3B3B3;
@@ -122,7 +122,7 @@ body {
 					padding-left:1.3em;
 				}
 				#text p, #text li {
-					font-family:AurulentSansBold;
+					font-family:AurulentSansBold,"Arial Bold",Arial;
 					font-size:.9em;
 					font-weight: 700;
 					color: #B3B3B3;
