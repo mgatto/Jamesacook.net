@@ -1,5 +1,4 @@
 @charset "utf-8";
-
 /*
 works for GTK-webkit
 <!--[if IE]>
@@ -38,36 +37,20 @@ Avoids IE6-8 erroneous HTTP request (and subsequent 404)
 	font-style: normal;
 }
 
-@font-face {
-	font-family: 'PaddingtonSCPlainSmallCapsRom';
-	src: url('paddingtonsc-webfont.eot');
-	src: local('☺'), url('paddingtonsc-webfont.woff') format('woff'), url('paddingtonsc-webfont.ttf') format('truetype'), url('paddingtonsc-webfont.svg#webfontCykG2Qou') format('svg');
-	font-weight: normal;
-	font-style: normal;
-}
-
 */
 @font-face {
-	font-family: 'AurulentSansRegular';
+	font-family: 'PaddingtonSCPlainSmallCapsRom';
+	src: url('/media/fonts/paddingtonsc-webfont.eot');
+	src: local('☺'), url('/media/fonts/paddingtonsc-webfont.woff') format('woff'), url('/media/fonts/paddingtonsc-webfont.ttf') format('truetype'), url('/media/fonts/paddingtonsc-webfont.svg#webfontCykG2Qou') format('svg');
 	font-weight: normal;
 	font-style: normal;
 	/* font-variant: normal; don't include this since webkit will ignore the whole rule: https://bugs.webkit.org/show_bug.cgi?id=25000 */
-	src: url('/media/fonts/AurulentSans-Regular-webfont.eot');
-	src: local('☺'), url('/media/fonts/AurulentSans-Regular-webfont.woff') format('woff'), url('/media/fonts/AurulentSans-Regular-webfont.ttf') format('truetype'), url('/media/fonts/AurulentSans-Regular-webfont.svg#webfont8XBZZzyb') format('svg');
-}
-@font-face {
-	font-family: 'AurulentSansBold';
-	font-weight: normal; /*shouldn't this be bold? No: http://doctype.com/font-showing-bold-only-chromesafari */
-	font-style: normal;
-	/* font-variant: normal; don't include this since webkit will ignore the whole rule: https://bugs.webkit.org/show_bug.cgi?id=25000 */
-	src: url('/media/fonts/AurulentSans-Bold-webfont.eot');
-	src: local('☺'), url('/media/fonts/AurulentSans-Bold-webfont.woff') format('woff'), url('/media/fonts/AurulentSans-Bold-webfont.ttf') format('truetype'), url('/media/fonts/AurulentSans-Bold-webfont.svg#webfontfq5mClxr') format('svg');
 }
 
 body {
 	background-color: #666;
 	color: #B3B3B3;
-	font-family:AurulentSansRegular, Arial;
+	font-family:PaddingtonSCPlainSmallCapsRom, Arial;
 	letter-spacing:2px;
 }
 	/*div#body {}
@@ -112,7 +95,7 @@ body {
 				div#text {}*/
 				#text h2, #text h3 {
 					/* parent styles were not cascading from div#text, so we repeat for h2 */
-					font-family:AurulentSansBold,"Arial Bold",Arial;
+					font-family:PaddingtonSCPlainSmallCapsRom,"Arial Bold",Arial;
 					font-size:.9em;
 					font-weight: 700;
 					color: #B3B3B3;
@@ -122,7 +105,7 @@ body {
 					padding-left:1.3em;
 				}
 				#text p, #text li {
-					font-family:AurulentSansBold,"Arial Bold",Arial;
+					font-family:PaddingtonSCPlainSmallCapsRom,"Arial Bold",Arial;
 					font-size:.9em;
 					font-weight: 700;
 					color: #B3B3B3;
