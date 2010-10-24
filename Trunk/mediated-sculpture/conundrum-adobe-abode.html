@@ -49,8 +49,12 @@
         	<div id="banner" class="span-24 last">
             	<h1>James A Cook</h1>
             </div>
+			
+			<!-- #BeginLibraryItem "/Library/Navigation.lbi" -->
             <ul id="navigation" class="span-22 prepend-1 append-1 prepend-top last">
-                <li class="span-4 first"><a href="/index.html">James A. Cook</a></li>
+                <li class="span-4 first">
+					<a href="/index.html">James A. Cook</a>
+				</li>
                 <li class="span-5">
 					<a href="/mediated-sculpture/index.html">MediatedSculpture</a>
 				</li>
@@ -63,9 +67,9 @@
                 <li class="span-4 last">
 					<a href="/spiel/index.html">Spiel</a>
 				</li>
-            </ul>
-            
-            <div class="span-23 prepend-1 last">
+            </ul><!-- #EndLibraryItem -->
+			
+			<div class="span-23 prepend-1 last">
                 <div id="text" class="span-8">
 					<h2>Conundrum Abode (adobe)</h2>
 					<p class="prepend-top materials"><!-- InstanceBeginEditable name="materials" -->
@@ -129,7 +133,8 @@
         <!-- Scripts -->
         <script type="text/javascript" src="/js/lib/jquery-1.4.2.min.js"></script>
         <script type="text/javascript" src="/js/lib/jquery.colorbox-min.js"></script>
-        <script type="text/javascript" src="/js/main.js"></script><!-- #BeginLibraryItem "/Library/Flowplayer JS.lbi" -->		
+        <script type="text/javascript" src="/js/main.js"></script>
+		<!-- #BeginLibraryItem "/Library/Flowplayer JS.lbi" -->		
 		<script type="text/javascript" src="/js/lib/flowplayer-3.2.4.min.js"></script>
 		<script type="text/javascript">		
 			$(document).ready(function() {
@@ -164,7 +169,7 @@
 							captionTarget: 'content'
 						},
 						content: {
-							url:'/media/flash/lib/flowplayer.content-3.2.0.swf',
+							url: '/media/flash/lib/flowplayer.content-3.2.0.swf',
 							bottom: 25,
 							width: '80%',
 							height:40,
@@ -182,14 +187,15 @@
 							}
 						},*/
 						gatracker: {
-							url: "/media/flash/lib/flowplayer.analytics-3.2.1.swf",
+							url: '/media/flash/lib/flowplayer.analytics-3.2.1.swf',
 							trackingMode: "Bridge",
 						}
 					}
 				});
 			});
 		</script>
-<!-- #EndLibraryItem --><!-- #BeginLibraryItem "/Library/Google Analytics JS.lbi" -->
+<!-- #EndLibraryItem -->
+		<!-- #BeginLibraryItem "/Library/Google Analytics JS.lbi" -->
 		<script type="text/javascript">	
 			<!--// Google Analytics -->
 			var _gaq = _gaq || [];

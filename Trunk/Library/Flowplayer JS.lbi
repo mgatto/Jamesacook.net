@@ -33,7 +33,7 @@
 							captionTarget: 'content'
 						},
 						content: {
-							url:'/media/flash/lib/flowplayer.content-3.2.0.swf',
+							url: '/media/flash/lib/flowplayer.content-3.2.0.swf',
 							bottom: 25,
 							width: '80%',
 							height:40,
@@ -51,7 +51,7 @@
 							}
 						},*/
 						gatracker: {
-							url: "/media/flash/lib/flowplayer.analytics-3.2.1.swf",
+							url: '/media/flash/lib/flowplayer.analytics-3.2.1.swf',
 							trackingMode: "Bridge",
 						}
 					}
