@@ -1,0 +1,60 @@
+		
+		<script type="text/javascript" src="/js/lib/flowplayer-3.2.4.min.js"></script>
+		<script type="text/javascript">		
+			$(document).ready(function() {
+				flowplayer("player", {
+					src: '/media/flash/lib/flowplayer-3.2.5.swf', 
+					wmode: 'opaque',
+					cachebusting: false,
+					// we need at least this Flash version
+					version: [9, 115],
+					// older versions will see a custom message
+					onFail: function()  {
+						document.getElementById("info").innerHTML =
+							"You need the latest Flash version to see F4V/MP4 movies. " +
+							"Your version is " + this.getVersion()
+						;
+					}
+				}, {
+					clip : {
+						scaling: 'crop', //scales the video to fill all available space; should fix the black bars on James Cook's non-standard sized videos. Only available in 3.2.5+. 'scale' is the default.
+						autoPlay: false,
+						autoBuffering: true
+						// this is the XML Timedtext file with captions info
+						//captionUrl: '/media/videos/xyz.timedtext.xml',
+					},
+					plugins: {
+						controls: {	
+							url: '/media/flash/lib/flowplayer.controls-3.2.3.swf',
+							bottom: 0
+						},
+						/*captions: {
+							url: '/media/flash/lib/flowplayer.captions-3.2.2.swf',
+							captionTarget: 'content'
+						},
+						content: {
+							url: '/media/flash/lib/flowplayer.content-3.2.0.swf',
+							bottom: 25,
+							width: '80%',
+							height:40,
+							backgroundColor: 'transparent',
+							backgroundGradient: 'low',
+							borderRadius: 4,
+							border: 0,
+							style: {
+								'body': {
+								fontSize: '14',
+								fontFamily: 'Arial',
+								textAlign: 'center',
+								color: '#000000'
+								}
+							}
+						},*/
+						gatracker: {
+							url: '/media/flash/lib/flowplayer.analytics-3.2.1.swf',
+							trackingMode: "Bridge",
+						}
+					}
+				});
+			});
+		</script>
