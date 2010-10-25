@@ -24,7 +24,7 @@
 		<!-- TemplateParam name="meta_description" type="text" value="" -->
 		<!-- TemplateParam name="name" type="text" value="" -->
 	</head>
-	<body>
+	<body class="spiel">
 		<div id="body" class="container">
 			<div id="banner" class="span-24 last">
 				<h1>James A Cook</h1>
@@ -42,7 +42,7 @@
 			
 			<div class="span-23 prepend-1 prepend-top last">
 				<div class="span-4">&nbsp;</div>
-                <div id="text" class="span-13 spiel">
+                <div id="text" class="span-13">
 					<!-- TemplateBeginEditable name="BodyText" --> <!-- TemplateEndEditable -->
 				</div>
 			</div>
