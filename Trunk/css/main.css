@@ -51,7 +51,7 @@ body {
 	background-color: #666;
 	color: #B3B3B3;
 	font-family:PaddingtonSCPlainSmallCapsRom, Arial;
-	letter-spacing:2px;
+	letter-spacing:1px;
 }
 	/*div#body {}
 		div#banner {}*/
@@ -74,9 +74,9 @@ body {
 			}
 				#navigation li a {
 					color:#B3B3B3;
-					font-size:1em;
+					font-size:1.2em;
 					text-decoration:none;
-					font-variant:small-caps;
+					/*font-variant:small-caps;*/
 					/* without arulentsans-smallcaps, this borks the @font-face in Webkit: http://mwhenry.com/blog/2010/04/ugly-font-variant-bug/ */
 					display:block;
 					border-left: 1px solid #B3B3B3;
@@ -86,7 +86,7 @@ body {
 				.active {
 					background-image: url('/artwork/circle.gif');
 					background-repeat:no-repeat;
-					background-position: 2px 2px;
+					background-position: 3px 4px;
 				}
 				.active_link {
 					color: #FFF !important;
@@ -96,26 +96,26 @@ body {
 				#text h2, #text h3 {
 					/* parent styles were not cascading from div#text, so we repeat for h2 */
 					font-family:PaddingtonSCPlainSmallCapsRom,"Arial Bold",Arial;
-					font-size:.9em;
-					font-weight: 700;
+					font-size:1.2em;
+					font-weight: normal;
 					color: #B3B3B3;
-					font-variant:small-caps;
+					/*font-variant:small-caps;*/
 				}
 				#text ul {
 					padding-left:1.3em;
 				}
 				#text p, #text li {
 					font-family:PaddingtonSCPlainSmallCapsRom,"Arial Bold",Arial;
-					font-size:.9em;
-					font-weight: 700;
+					font-size:1.2em;
+					font-weight: normal;
 					color: #B3B3B3;
-					font-variant:small-caps;
+					/*font-variant:small-caps;*/
 				}
 				/*#text p.materials {}*/
 				/* http://webtypography.net/Rhythm_and_Proportion/Blocks_and_Paragraphs/2.3.2/ */
 				p + p {
 					text-indent:1em;
-					font-variant:normal;
+					/*font-variant:normal;*/
 				}
 				#text a {
 					text-decoration:none;
@@ -138,7 +138,7 @@ body {
 					display:block;
 					width:445px;
 					height:340px;
-					margin-left:1.9em;
+					margin-left:22px;
 				}
 				/* div.thumbnail {} */
 				/*div*/.thumbnail > a {
@@ -148,12 +148,13 @@ body {
 					border-bottom:0;
 				}
 				/*div*/.thumbnail > img, /*div*/.thumbnail > a > img {
-					margin-left:1.9em;
+					margin-left:26px;
 					border:1px solid #FC3;
 					padding:1px;				
 				}
 			/*div*/#footer {
-				font-size:.7em;
+				font-family:PaddingtonSCPlainSmallCapsRom,"Arial Bold",Arial;
+				font-size:.8em;
 				text-align:center;
 				padding-top:1em;
 			} 
