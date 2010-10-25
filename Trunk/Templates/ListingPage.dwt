@@ -34,19 +34,26 @@
 		<div id="body" class="container">
 			<div id="banner" class="span-24 last">
 				<h1>James A Cook</h1>
-			</div>
-			
-			<!-- #BeginLibraryItem "/Library/Navigation.lbi" -->
+			</div><!-- #BeginLibraryItem "/Library/Navigation.lbi" -->
+            
 			<ul id="navigation" class="span-22 prepend-1 append-1 prepend-top last">
-				<li class="span-4 first"> <a href="/index.html" title="Home Page">James A. Cook</a> </li>
-				<li class="span-5"> <a href="/mediated-sculpture/index.html" title="Gallery of mediated sculptures by James A. Cook">Mediated Sculpture</a> </li>
-				<li class="span-4"> <a href="/sculpture/index.html" title="Gallery of sculptures by James A. Cook">Sculpture</a> </li>
-				<li class="span-4"> <a href="/video/index.html" title="Gallery of videos by James A. Cook">Video</a> </li>
-				<li class="span-4 last"> <a href="/spiel/index.html" title="About James A. Cook and Contact Information">Spiel</a> </li>
-			</ul>
-			<!-- #EndLibraryItem --> 
-			
-			<!-- TemplateBeginEditable name="BodyText" --><!-- TemplateEndEditable -->
+                <li class="span-4 first">
+					<a href="/index.html" title="Home Page">James A. Cook</a>
+				</li>
+                <li class="span-5">
+					<a href="/mediated-sculpture/index.html" title="Gallery of mediated sculptures by James A. Cook">Mediated Sculpture</a>
+				</li>
+				<li class="span-4">
+					<a href="/sculpture/index.html" title="Gallery of sculptures by James A. Cook">Sculpture</a>
+				</li>
+                <li class="span-4">
+					<a href="/video/index.html" title="Gallery of videos by James A. Cook">Video</a>
+				</li>
+                <li class="span-4 last">
+					<a href="/spiel/index.html" title="About James A. Cook and Contact Information">Spiel</a>
+				</li>
+            </ul>
+			<!-- #EndLibraryItem --><!-- TemplateBeginEditable name="BodyText" --><!-- TemplateEndEditable -->
 				
 			<div id="footer" class="span-24 prepend-top"><!-- #BeginLibraryItem "/Library/Footer HTML.lbi" -->
 				<ul class="span-17 prepend-7">
@@ -65,7 +72,7 @@
 				</ul>
 				
 				<p id="attribution">
-					&copy; 2010; James A Cook
+					&copy; 2010, James A Cook
 				</p>
 				<p id="designed_by">
 					Design by: <a href="http://boeltssdesign.com/" rel="designer">Boelts Design</a>
