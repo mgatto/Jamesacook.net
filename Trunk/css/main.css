@@ -49,7 +49,7 @@ Avoids IE6-8 erroneous HTTP request (and subsequent 404)
 
 body {
 	background-color: #666;
-	color: #B3B3B3;
+	color: #e3e3e3;
 	font-family:PaddingtonSCPlainSmallCapsRom, Arial;
 	letter-spacing:1px;
 }
@@ -60,8 +60,8 @@ body {
 				line-height:0;
 			}
 		/*ul*/#navigation {
-			border-top: 1px solid #B3B3B3;
-			border-bottom: 1px solid #B3B3B3;
+			border-top: 1px solid #e3e3e3;
+			border-bottom: 1px solid #e3e3e3;
 			padding-top: 5px;
 			padding-bottom: 5px;
 			background-color:#666;
@@ -70,16 +70,16 @@ body {
 			#navigation li{
 				list-style-type:none;
 				text-align:left;
-				border-left: 1px solid #B3B3B3;
+				border-left: 1px solid #e3e3e3;
 			}
 				#navigation li a {
-					color:#B3B3B3;
+					color:#e3e3e3  /*#B3B3B3*/;
 					font-size:1.2em;
 					text-decoration:none;
 					/*font-variant:small-caps;*/
 					/* without arulentsans-smallcaps, this borks the @font-face in Webkit: http://mwhenry.com/blog/2010/04/ugly-font-variant-bug/ */
 					display:block;
-					border-left: 1px solid #B3B3B3;
+					border-left: 1px solid #e3e3e3;
 					margin-left:1.5em;
 					padding-left:.8em;
 				}
@@ -98,7 +98,7 @@ body {
 					font-family:PaddingtonSCPlainSmallCapsRom,"Arial Bold",Arial;
 					font-size:1.2em;
 					font-weight: normal;
-					color: #B3B3B3;
+					color: #e3e3e3;
 					/*font-variant:small-caps;*/
 				}
 				#text ul {
@@ -108,7 +108,7 @@ body {
 					font-family:PaddingtonSCPlainSmallCapsRom,"Arial Bold",Arial;
 					font-size:1.2em;
 					font-weight: normal;
-					color: #B3B3B3;
+					color: #e3e3e3;
 					/*font-variant:small-caps;*/
 				}
 				/*#text p.materials {}*/
@@ -119,8 +119,8 @@ body {
 				}
 				#text a {
 					text-decoration:none;
-					border-bottom:1px dotted #B3B3B3;
-					color:#B3B3B3;
+					border-bottom:1px dotted #e3e3e3;
+					color:#e3e3e3;
 				}
 				#text blockquote {
 					margin-top:0;
@@ -163,6 +163,6 @@ body {
 				}
 				#footer a {
 					text-decoration:none;
-					border-bottom:1px dotted #B3B3B3;
-					color:#B3B3B3;
+					border-bottom:1px dotted #e3e3e3;
+					color:#e3e3e3;
 				}
