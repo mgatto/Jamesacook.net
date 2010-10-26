@@ -2,7 +2,7 @@
             
 			<ul id="navigation" class="span-22 prepend-1 append-1 prepend-top last">
                 <li class="span-4 first">
-					<a href="/index.html" title="Home Page">James A. Cook</a>
+					<a href="/index.html" title="Home Page" accesskey="1">James A. Cook</a>
 				</li>
                 <li class="span-5">
 					<a href="/mediated-sculpture/index.html" title="Gallery of mediated sculptures by James A. Cook">Mediated Sculpture</a>

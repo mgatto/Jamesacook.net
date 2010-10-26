@@ -77,6 +77,22 @@ body {
 				margin-left:-9999em;
 				line-height:0;
 			}
+			#skip a, #skip a:hover, #skip a:visited { 
+				position:absolute; 
+				left:0px; 
+				top:-500px; 
+				width:1px; 
+				height:1px; 
+				overflow:hidden;
+			}
+			#skip a:active, #skip a:focus { 
+				position:static; 
+				width:auto; 
+				height:auto; 
+				text-decoration:none;
+				border-bottom:1px dotted #e3e3e3;
+				color:#e3e3e3;
+			}
 		/*ul*/#navigation {
 			border-top: 1px solid #e3e3e3;
 			border-bottom: 1px solid #e3e3e3;
@@ -98,13 +114,13 @@ body {
 					/* without arulentsans-smallcaps, this borks the @font-face in Webkit: http://mwhenry.com/blog/2010/04/ugly-font-variant-bug/ */
 					display:block;
 					border-left: 1px solid #e3e3e3;
-					margin-left:1.5em;
+					margin-left:1.3em;
 					padding-left:.8em;
 				}
 				.active {
 					background-image: url('/artwork/circle.gif');
 					background-repeat:no-repeat;
-					background-position: 3px 4px;
+					background-position: 2px 4px;
 				}
 				.active_link {
 					color: #FFF !important;
@@ -115,7 +131,7 @@ body {
 					/* parent styles were not cascading from div#text, so we repeat for h2 */
 					font-family:PaddingtonSCPlainSmallCapsRom,"Arial Bold",Arial;
 					font-size:1.2em;
-					font-weight: bold;
+					/*font-weight: bold; this doesn't look good at all bolded*/
 					color: #e3e3e3;
 				}
 				#text ul {
@@ -170,7 +186,8 @@ body {
 					border-bottom:0;
 				}
 				/*div*/.thumbnail > img, /*div*/.thumbnail > a > img {
-					margin-left:26px;
+					margin-left:23px;
+					margin-right:2px;
 					border:1px solid #FC3;
 					padding:1px;				
 				}
