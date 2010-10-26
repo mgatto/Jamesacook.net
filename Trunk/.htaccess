@@ -1,8 +1,8 @@
 ## No file robbery
 #RewriteEngine on
 # Options +FollowSymlinks
-#RewriteCond %{HTTP_REFERER} !^$
-#RewriteCond %{HTTP_REFERER} !^http://(www\.)?jamesacook.net/.*$ [NC]
+#RewriteCond "%{HTTP_REFERER}" !=""
+#RewriteCond "%{HTTP_REFERER}" "!^http://([^/]*\.]?jamesacook.net/.*$" [NC]
 #RewriteRule \.(jpg|gif|png)$ - [F]
 
 # you probably want www.example.com to forward to example.com -- shorter URLs are sexier.
