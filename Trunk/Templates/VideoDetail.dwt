@@ -37,7 +37,7 @@
 		<!-- TemplateParam name="name" type="text" value="" -->
 		<!-- TemplateParam name="video_src" type="text" value="" -->
     </head>
-    <body class="video" id="">
+    <body class="video">
     	<div id="body" class="container">
         	<div id="banner" class="span-24 last">
             	<h1>James A Cook</h1>

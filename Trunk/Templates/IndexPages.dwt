@@ -29,7 +29,7 @@
 		<!-- TemplateParam name="meta_description" type="text" value="" -->
 		<!-- TemplateParam name="name" type="text" value="" -->
 	</head>
-	<body class="index" id="@@(name)@@">
+	<body class="index">
 		<div id="body" class="container">
 			<div id="banner" class="span-24 last">
 				<h1>James A Cook</h1>
