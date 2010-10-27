@@ -44,15 +44,18 @@
 		<!-- InstanceParam name="video" type="boolean" value="true" -->
 		<!-- InstanceParam name="video_src" type="text" value="/media/videos/as-above-so-below-640.f4v" -->
     </head> 
-    <body class="mediated" id="">
+    <body class="mediated">
     	<div id="body" class="container">
         	<div id="banner" class="span-24 last">
             	<h1>James A Cook</h1>
-            </div><!-- #BeginLibraryItem "/Library/Navigation.lbi" -->
+            </div>
+			<div id="skip">
+				<a href="#content" accesskey="7">Skip to Main Content</a>
+			</div><!-- #BeginLibraryItem "/Library/Navigation.lbi" -->
             
 			<ul id="navigation" class="span-22 prepend-1 append-1 prepend-top last">
                 <li class="span-4 first">
-					<a href="/index.html" title="Home Page">James A. Cook</a>
+					<a href="/index.html" title="Home Page" accesskey="1">James A. Cook</a>
 				</li>
                 <li class="span-5">
 					<a href="/mediated-sculpture/index.html" title="Gallery of mediated sculptures by James A. Cook">Mediated Sculpture</a>
@@ -67,8 +70,7 @@
 					<a href="/spiel/index.html" title="About James A. Cook and Contact Information">Spiel</a>
 				</li>
             </ul>
-			<!-- #EndLibraryItem -->
-			<div class="span-23 prepend-1 prepend-top last">
+			<!-- #EndLibraryItem --><div class="span-23 prepend-1 prepend-top last">
                 <div id="text" class="span-8">
 					<h2>As Above, So Below (Seven, Interpretations from the Ten Ox Herding Pictures)</h2>
 					<p class="materials"><!-- InstanceBeginEditable name="materials" -->
@@ -100,26 +102,29 @@
             </div>
                 
             <div id="footer" class="span-24 prepend-top"><!-- #BeginLibraryItem "/Library/Footer HTML.lbi" -->
-				<ul class="span-17 prepend-7">
-					<li class="span-2" style="margin-left:2em;">
-						<a href="/index.html">Home</a>
+				<ul class="span-17 prepend-5 last">
+					<li class="span-2" style="margin-left:0em;">
+						<a href="/index.html" accesskey="1">Home</a>
 					</li>
 					<li class="span-3">
-						<a href="/about-site.html">About this Site</a>
+						<a href="/about-site.html" accesskey="5">About this Site</a>
 					</li>
 					<li class="span-2">
-						<a href="/sitemap.html">Sitemap</a>
+						<a href="/sitemap.html" accesskey="3">Sitemap</a>
 					</li>
 					<li class="span-2">
-						<a href="/spiel/index.html#contact">Contact</a>
+						<a href="/spiel/index.html#contact" accesskey="9">Contact</a>
+					</li>
+					<li class="span-4 last">
+						<a href="/accessibility-statement.html" accesskey="0">Accessibility Statement</a>
 					</li>
 				</ul>
 				
-				<p id="attribution">
+				<p id="attribution" class="span-23 last">
 					&copy; 2010, James A Cook
 				</p>
-				<p id="designed_by">
-					Design by: <a href="http://boeltssdesign.com/" rel="designer">Boelts Design</a>
+				<p id="designed_by" class="span-23 last">
+					Design by: <a href="http://boeltsdesign.com/" rel="designer">Boelts Design, Inc</a>
 					<br />
 					Programming by: <a href="http://www.lisantra.com/" rel="programmer">Lisantra Technologies, LLC</a>
 				</p><!-- #EndLibraryItem --></div>
@@ -128,8 +133,7 @@
         <!-- Scripts -->
         <script type="text/javascript" src="/js/lib/jquery-1.4.2.min.js"></script>
         <script type="text/javascript" src="/js/lib/jquery.colorbox-min.js"></script>
-        <script type="text/javascript" src="/js/main.js"></script>
-		<!-- #BeginLibraryItem "/Library/Flowplayer JS.lbi" -->		
+        <script type="text/javascript" src="/js/main.js"></script><!-- #BeginLibraryItem "/Library/Flowplayer JS.lbi" -->		
 		<script type="text/javascript" src="/js/lib/flowplayer-3.2.4.min.js"></script>
 		<script type="text/javascript">		
 			$(document).ready(function() {
@@ -183,14 +187,13 @@
 						},*/
 						gatracker: {
 							url: '/media/flash/lib/flowplayer.analytics-3.2.1.swf',
-							trackingMode: "Bridge",
+							trackingMode: "Bridge"
 						}
 					}
 				});
 			});
 		</script>
-<!-- #EndLibraryItem -->
-		<!-- #BeginLibraryItem "/Library/Google Analytics JS.lbi" -->
+<!-- #EndLibraryItem --><!-- #BeginLibraryItem "/Library/Google Analytics JS.lbi" -->
 		<script type="text/javascript">	
 			<!--// Google Analytics -->
 			var _gaq = _gaq || [];
