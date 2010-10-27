@@ -1,20 +1,6 @@
-/* -----------------------------------------------------------------------
-
-
- Blueprint CSS Framework 1.0
- http://blueprintcss.org
-
-   * Copyright (c) 2007-Present. See LICENSE for more info.
-   * See README for instructions on how to use Blueprint.
-   * For credits and origins, see AUTHORS.
-   * This is a compressed file. See the sources in the 'src' directory.
-
------------------------------------------------------------------------ */
-
 /* reset.css */
 html {margin:0;padding:0;border:0;}
-body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, code, del, dfn, em, img, q, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, dialog, figure, footer, header, hgroup, nav, section {margin:0;padding:0;border:0;font-weight:inherit;font-style:inherit;font-size:100%;font-family:inherit;vertical-align:baseline;}
-article, aside, dialog, figure, footer, header, hgroup, nav, section {display:block;}
+body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, code, del, dfn, em, img, q, dl, dt, dd, ol, ul, li, fieldset, form, label, legend {margin:0;padding:0;border:0;font-weight:inherit;font-style:inherit;font-size:100%;font-family:inherit;vertical-align:baseline;}
 body {line-height:1.5;background:white;}
 table {border-collapse:separate;border-spacing:0;}
 caption, th, td {text-align:left;font-weight:normal;float:none !important;}
@@ -34,7 +20,6 @@ h3 {font-size:1.5em;line-height:1;margin-bottom:1em;}
 h4 {font-size:1.2em;line-height:1.25;margin-bottom:1.25em;}
 h5 {font-size:1em;font-weight:bold;margin-bottom:1.5em;}
 h6 {font-size:1em;font-weight:bold;}
-h1 img, h2 img, h3 img, h4 img, h5 img, h6 img {margin:0;}
 p {margin:0 0 1.5em;}
 .left {float:left !important;}
 p .left {margin:1.5em 1.5em 1.5em 0;padding:0;}
@@ -58,6 +43,11 @@ ol {list-style-type:decimal;}
 dl {margin:0 0 1.5em 0;}
 dl dt {font-weight:bold;}
 dd {margin-left:1.5em;}
+table {margin-bottom:1.4em;width:100%;}
+th {font-weight:bold;}
+thead th {background:#c3d9ff;}
+th, td, caption {padding:4px 10px 4px 5px;}
+tfoot {font-style:italic;}
 .small {font-size:.8em;margin-bottom:1.875em;line-height:1.875em;}
 .large {font-size:1.2em;line-height:2.5em;margin-bottom:1.25em;}
 .hide {display:none;}
@@ -73,7 +63,6 @@ dd {margin-left:1.5em;}
 
 /* grid.css */
 .container {width:950px;margin:0 auto;}
-.showgrid {background:url(src/grid.png);}
 .column, .span-1, .span-2, .span-3, .span-4, .span-5, .span-6, .span-7, .span-8, .span-9, .span-10, .span-11, .span-12, .span-13, .span-14, .span-15, .span-16, .span-17, .span-18, .span-19, .span-20, .span-21, .span-22, .span-23, .span-24 {float:left;margin-right:10px;}
 .last {margin-right:0;}
 .span-1 {width:30px;}
@@ -148,7 +137,7 @@ dd {margin-left:1.5em;}
 .prepend-23 {padding-left:920px;}
 .border {padding-right:4px;margin-right:5px;border-right:1px solid #ddd;}
 .colborder {padding-right:24px;margin-right:25px;border-right:1px solid #ddd;}
-.pull-1 {margin-left:-40px;}
+/*.pull-1 {margin-left:-40px;}
 .pull-2 {margin-left:-80px;}
 .pull-3 {margin-left:-120px;}
 .pull-4 {margin-left:-160px;}
@@ -197,7 +186,7 @@ dd {margin-left:1.5em;}
 .push-22 {margin:0 -880px 1.5em 880px;}
 .push-23 {margin:0 -920px 1.5em 920px;}
 .push-24 {margin:0 -960px 1.5em 960px;}
-.push-1, .push-2, .push-3, .push-4, .push-5, .push-6, .push-7, .push-8, .push-9, .push-10, .push-11, .push-12, .push-13, .push-14, .push-15, .push-16, .push-17, .push-18, .push-19, .push-20, .push-21, .push-22, .push-23, .push-24 {float:left;position:relative;}
+.push-1, .push-2, .push-3, .push-4, .push-5, .push-6, .push-7, .push-8, .push-9, .push-10, .push-11, .push-12, .push-13, .push-14, .push-15, .push-16, .push-17, .push-18, .push-19, .push-20, .push-21, .push-22, .push-23, .push-24 {float:left;position:relative;}*/
 div.prepend-top, .prepend-top {margin-top:1.5em;}
 div.append-bottom, .append-bottom {margin-bottom:1.5em;}
 .box {padding:1.5em;margin-bottom:1.5em;background:#e5eCf9;}
