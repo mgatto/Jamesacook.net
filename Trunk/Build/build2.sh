@@ -1,5 +1,11 @@
 #! /bin/bash -x
 
+#In a compound test, even quoting the string variable might not suffice. [ -n 
+#"$string" -o "$a" = "$b" ] may cause an error with some versions of Bash if 
+#$string is empty. The safe way is to append an extra character to possibly empty 
+#variables, [ "x$string" != x -o "x$a" = "x$b" ] (the "x's" cancel out).
+
+
 # must be run as root
 if [ ! "`whoami`" = "root" ]; then
     echo "Please run script as root."
@@ -248,6 +254,11 @@ cleanup_files() {
     find . -name ".git" -type d -exec rm -rf {} \;
     find . -name ".bzr" -type d -exec rm -rf {} \;
     find . -name "_notes" -type d -exec rm -rf {} \;
+}
+
+check_spelling() {
+    find . -type f -name "*.html" | sudo xargs -I {} \
+        apsell {}
 }
 
 #make sure everything is UTF-8
