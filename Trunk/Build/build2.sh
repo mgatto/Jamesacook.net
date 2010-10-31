@@ -1,8 +1,8 @@
 #! /bin/bash -x
 
-#In a compound test, even quoting the string variable might not suffice. [ -n 
-#"$string" -o "$a" = "$b" ] may cause an error with some versions of Bash if 
-#$string is empty. The safe way is to append an extra character to possibly empty 
+#In a compound test, even quoting the string variable might not suffice. [ -n
+#"$string" -o "$a" = "$b" ] may cause an error with some versions of Bash if
+#$string is empty. The safe way is to append an extra character to possibly empty
 #variables, [ "x$string" != x -o "x$a" = "x$b" ] (the "x's" cancel out).
 
 
@@ -18,6 +18,7 @@ LONGOPTS="from:,to:,conf::,repository::,archive::,domain:,version:,rewrite,rever
 SVN=0
 ZIP=0
 TO="$PWD"
+DOMAIN=
 CONF="no"
 VERSION=""
 ## although I want to use 0.9.9 and such, we must be careful to manually increment
