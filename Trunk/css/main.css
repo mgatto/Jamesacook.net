@@ -100,6 +100,7 @@ body {
 			padding-bottom: 5px;
 			background-color:#666;
 			color:#FFF;
+			margin-bottom:0.5em;
 		}
 			#navigation li{
 				list-style-type:none;
@@ -124,6 +125,19 @@ body {
 				}
 				.active_link {
 					color: #FFF !important;
+				}
+			#prev {
+				text-align:left;
+			}
+			#next {
+				text-align:right;
+			}
+				#next a, #prev a {
+					color:#e3e3e3  /*#B3B3B3*/;
+					font-size:0.8em;
+					text-decoration:none;
+					/*display:block;
+					margin-left:2.1em;*/
 				}
 			/*div#content {}
 				div#text {}*/

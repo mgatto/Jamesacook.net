@@ -36,6 +36,8 @@
 		<!-- InstanceParam name="meta_description" type="text" value="This short video suggests that perhaps an adjustment is in order regarding the historically inflated sense of self-importance ascribed by humans to our status on this planet and in the universe." -->
 		<!-- InstanceParam name="name" type="text" value="A Short History of the Human Race, Affectionately Within the Homeostasis of Geologic Time" -->
 		<!-- InstanceParam name="video_src" type="text" value="/media/videos/short-history-640.f4v" -->
+		<!-- InstanceParam name="next" type="text" value="" -->
+		<!-- InstanceParam name="prev" type="text" value="" -->
     </head>
     <body class="video">
     	<div id="body" class="container">
@@ -44,8 +46,8 @@
             </div>
 			<div id="skip">
 				<a href="#content" accesskey="7">Skip to Main Content</a>
-			</div><!-- #BeginLibraryItem "/Library/Navigation.lbi" -->
-            
+			</div>
+			<!-- #BeginLibraryItem "/Library/Navigation.lbi" -->
 			<ul id="navigation" class="span-22 prepend-1 append-1 prepend-top last">
                 <li class="span-4 first">
 					<a href="/index.html" title="Home Page" accesskey="1">James A. Cook</a>
@@ -63,7 +65,18 @@
 					<a href="/spiel/index.html" title="About James A. Cook and Contact Information">Spiel</a>
 				</li>
             </ul>
-			<!-- #EndLibraryItem --><div class="span-23 prepend-1 prepend-top last">
+			<!-- #EndLibraryItem -->
+			
+			<div class="span-24 last">
+				<div id="prev" class="span-2">
+					<a href="">&laquo; Previous</a>
+				</div>
+				<div id="next" class="span-2 prepend-20 last">
+					<a href="">Next &raquo;</a>
+				</div>
+			</div>
+			
+			<div class="span-23 prepend-1 prepend-top last">		
 				<div id="text" class="span-8">
                     <h2>A Short History of the Human Race, Affectionately Within the Homeostasis of Geologic Time</h2>
                     <p class="materials"><!-- InstanceBeginEditable name="materials" -->
@@ -114,7 +127,20 @@
         
         <!-- Scripts -->
         <script type="text/javascript" src="/js/lib/jquery-1.4.2.min.js"></script>
-        <script type="text/javascript" src="/js/main.js"></script><!-- #BeginLibraryItem "/Library/Flowplayer JS.lbi" -->		
+        <script type="text/javascript" src="/js/main.js"></script><!-- #BeginLibraryItem "/Library/Google Analytics JS.lbi" -->		
+		<script type="text/javascript">	
+			<!--// Google Analytics -->
+			var _gaq = _gaq || [];
+			_gaq.push(['_setAccount', 'UA-10459598-5']);
+			_gaq.push(['_trackPageview']);
+		
+			(function() {
+				var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+				ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+				var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+			})();
+		</script>
+<!-- #EndLibraryItem --><!-- #BeginLibraryItem "/Library/Flowplayer JS.lbi" -->		
 		<script type="text/javascript" src="/js/lib/flowplayer-3.2.4.min.js"></script>
 		<script type="text/javascript">		
 			$(document).ready(function() {
@@ -168,25 +194,12 @@
 						},*/
 						gatracker: {
 							url: '/media/flash/lib/flowplayer.analytics-3.2.1.swf',
-							trackingMode: "Bridge"
+							trackingMode: "Bridge",
+							googleId: "UA-10459598-5"
 						}
 					}
 				});
 			});
 		</script>
-<!-- #EndLibraryItem --><!-- #BeginLibraryItem "/Library/Google Analytics JS.lbi" -->
-		<script type="text/javascript">	
-			<!--// Google Analytics -->
-			var _gaq = _gaq || [];
-			_gaq.push(['_setAccount', 'UA-']);
-			_gaq.push(['_trackPageview']);
-		
-			(function() {
-				var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-				ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-				var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-			})();
-		</script>
-		<!-- #EndLibraryItem -->
-    </body>
+<!-- #EndLibraryItem --></body>
 <!-- InstanceEnd --></html>

@@ -52,7 +52,8 @@
 						},*/
 						gatracker: {
 							url: '/media/flash/lib/flowplayer.analytics-3.2.1.swf',
-							trackingMode: "Bridge"
+							trackingMode: "Bridge",
+							googleId: "UA-10459598-5"
 						}
 					}
 				});

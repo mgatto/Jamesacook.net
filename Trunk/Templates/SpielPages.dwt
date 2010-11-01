@@ -99,12 +99,11 @@
 					filterLevel: 'low'
 				});				
 			});
-		</script>
-		<!-- #BeginLibraryItem "/Library/Google Analytics JS.lbi" -->
+		</script><!-- #BeginLibraryItem "/Library/Google Analytics JS.lbi" -->		
 		<script type="text/javascript">	
 			<!--// Google Analytics -->
 			var _gaq = _gaq || [];
-			_gaq.push(['_setAccount', 'UA-']);
+			_gaq.push(['_setAccount', 'UA-10459598-5']);
 			_gaq.push(['_trackPageview']);
 		
 			(function() {
@@ -113,6 +112,5 @@
 				var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
 			})();
 		</script>
-		<!-- #EndLibraryItem -->
-	</body>
+<!-- #EndLibraryItem --></body>
 </html>
