@@ -4,14 +4,16 @@
 		<title>Ascension / Descension | James A. Cook | Tucson Artist</title>
 
         <!-- Meta data -->
+		<!-- Place charset at top per: 
+			 http://www.kylescholz.com/blog/2010/01/performance_implications_of_charset.html -->
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta http-equiv="Content-language" content="en" />
         <meta name="description" content="The sculpture has a strong verticality, a feeling of ascendancy. Two forelegs of a horse hover above a waterless font on a porcelain mount, all of which is fixed to a simple wooden box." />
         <meta name="language" content="en" />
 		<meta name="robots" content="index, follow" />
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-        <meta http-equiv="Content-language" content="en" />
         <link rel="canonical" href="http://jamesacook.net" />
         
-        <link rel="icon" type="image/vnd.microsoft.icon" href="/favicon.ico" />
+        <link rel="icon" href="/favicon.ico" type="image/vnd.microsoft.icon" />
         <link rel="shortcut icon" href="/favicon.ico" />
         
 		<link rel="home" title="Home" href="/index.html" />
@@ -21,18 +23,17 @@
 		<link rel="first" title="First in Collection" href="/mediated-sculpture/mesa-installation.html" />
 		<link rel="last" title="Last in Collection" href="/mediated-sculpture/water-compass.html" />
 		<!-- InstanceBeginEditable name="links" -->
-		<link rel="next" title="Next in Collection" href="/mediated-sculptures/" />
-		<link rel="prev" title="Previous in Collection" href="/mediated-sculptures/" />
+		<link rel="prev" title="Previous in Collection" href="/mediated-sculpture/as-above-so-below.html" />
+		<link rel="next" title="Next in Collection" href="/mediated-sculpture/conundrum-adobe-abode.html" />
         <!-- InstanceEndEditable -->
 		
         <!-- Stylesheets -->
-        <link rel="stylesheet" type="text/css" href="/css/lib/screen.css" media="screen" />
-        <link rel="stylesheet" type="text/css" href="/css/main.css" media="screen" />
+        <link rel="stylesheet" href="/css/lib/screen.css" type="text/css" media="screen" />
+        <link rel="stylesheet" href="/css/main.css" type="text/css" media="screen" />
         <!--[if IE]>
-        	<link rel="stylesheet" type="text/css" href="/css/lib/ie.css" media="screen" />
+        	<link rel="stylesheet" href="/css/lib/ie.css" type="text/css" media="screen" />
         <![endif]-->
-        <link rel="stylesheet" type="text/css" href="/css/lib/print.css" media="print" />
-        <link rel="stylesheet" type="text/css" href="/css/lib/colorbox.css" media="screen" />
+        <link rel="stylesheet" href="/css/lib/colorbox.css" type="text/css" media="screen" />
         <!-- InstanceBeginEditable name="head" --><!-- InstanceEndEditable -->
 		<!-- InstanceParam name="meta_description" type="text" value="The sculpture has a strong verticality, a feeling of ascendancy. Two forelegs of a horse hover above a waterless font on a porcelain mount, all of which is fixed to a simple wooden box." -->
 		<!-- InstanceParam name="name" type="text" value="Ascension / Descension" -->
@@ -43,6 +44,10 @@
 		<!-- InstanceParam name="another_view_2_src" type="text" value="/media/images/ascension-descension-detail-4.jpg" -->
 		<!-- InstanceParam name="video" type="boolean" value="true" -->
 		<!-- InstanceParam name="video_src" type="text" value="/media/videos/asc-desc-640.f4v" -->
+		<!-- InstanceParam name="has_next" type="boolean" value="true" -->
+		<!-- InstanceParam name="has_prev" type="boolean" value="true" -->
+		<!-- InstanceParam name="next" type="text" value="/mediated-sculpture/conundrum-adobe-abode.html" -->
+		<!-- InstanceParam name="prev" type="text" value="/mediated-sculpture/as-above-so-below.html" -->
     </head> 
     <body class="mediated">
     	<div id="body" class="container">
@@ -70,7 +75,18 @@
 					<a href="/spiel/index.html" title="About James A. Cook and Contact Information">Spiel</a>
 				</li>
             </ul>
-			<!-- #EndLibraryItem --><div class="span-23 prepend-1 prepend-top last">
+			<!-- #EndLibraryItem -->
+			
+			<div class="span-24 last">
+				<div id="prev" class="span-2">
+					<a href="/mediated-sculpture/as-above-so-below.html">&laquo; Previous</a>
+				</div>
+				<div id="next" class="span-2 prepend-20 last">
+					<a href="/mediated-sculpture/conundrum-adobe-abode.html">Next &raquo;</a>
+				</div>
+			</div>
+			
+			<div class="span-23 prepend-1 prepend-top last">
                 <div id="text" class="span-8">
 					<h2>Ascension / Descension</h2>
 					<p class="materials"><!-- InstanceBeginEditable name="materials" -->
@@ -130,9 +146,9 @@ The implications regarding our own transition at death&mdash;including ubiquitou
 					&copy; 2010, James A Cook
 				</p>
 				<p id="designed_by" class="span-23 last">
-					Design by: <a href="http://boeltsdesign.com/" rel="designer">Boelts Design, Inc</a>
+					<a href="http://boeltsdesign.com/" rel="designer">Design by: Boelts Design, Inc</a>
 					<br />
-					Programming by: <a href="http://www.lisantra.com/" rel="programmer">Lisantra Technologies, LLC</a>
+					<a href="http://www.lisantra.com/" rel="programmer">Programming by: Lisantra Technologies, LLC</a>
 				</p><!-- #EndLibraryItem --></div>
         </div>
         
@@ -161,49 +177,26 @@ The implications regarding our own transition at death&mdash;including ubiquitou
 						scaling: 'crop', //scales the video to fill all available space; should fix the black bars on James Cook's non-standard sized videos. Only available in 3.2.5+. 'scale' is the default.
 						autoPlay: false,
 						autoBuffering: true
-						// this is the XML Timedtext file with captions info
-						//captionUrl: '/media/videos/xyz.timedtext.xml',
 					},
 					plugins: {
 						controls: {	
 							url: '/media/flash/lib/flowplayer.controls-3.2.3.swf',
 							bottom: 0
 						},
-						/*captions: {
-							url: '/media/flash/lib/flowplayer.captions-3.2.2.swf',
-							captionTarget: 'content'
-						},
-						content: {
-							url: '/media/flash/lib/flowplayer.content-3.2.0.swf',
-							bottom: 25,
-							width: '80%',
-							height:40,
-							backgroundColor: 'transparent',
-							backgroundGradient: 'low',
-							borderRadius: 4,
-							border: 0,
-							style: {
-								'body': {
-								fontSize: '14',
-								fontFamily: 'Arial',
-								textAlign: 'center',
-								color: '#000000'
-								}
-							}
-						},*/
 						gatracker: {
 							url: '/media/flash/lib/flowplayer.analytics-3.2.1.swf',
-							trackingMode: "Bridge"
+							trackingMode: "Bridge",
+							googleId: "UA-10459598-5"
 						}
 					}
 				});
 			});
 		</script>
-<!-- #EndLibraryItem --><!-- #BeginLibraryItem "/Library/Google Analytics JS.lbi" -->
+<!-- #EndLibraryItem --><!-- #BeginLibraryItem "/Library/Google Analytics JS.lbi" -->		
 		<script type="text/javascript">	
 			<!--// Google Analytics -->
 			var _gaq = _gaq || [];
-			_gaq.push(['_setAccount', 'UA-']);
+			_gaq.push(['_setAccount', 'UA-10459598-5']);
 			_gaq.push(['_trackPageview']);
 		
 			(function() {
@@ -212,6 +205,5 @@ The implications regarding our own transition at death&mdash;including ubiquitou
 				var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
 			})();
 		</script>
-		<!-- #EndLibraryItem -->
-    </body>
+<!-- #EndLibraryItem --></body>
 <!-- InstanceEnd --></html>

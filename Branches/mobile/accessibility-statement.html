@@ -4,12 +4,14 @@
 		<title><!-- InstanceBeginEditable name="name" -->Accessibility Statement<!-- InstanceEndEditable --> | James A. Cook | Tucson Artist</title>
 
 		<!-- Meta data -->
-		<meta name="description" content="A guide to this site's accessibility features" />
-		<meta name="language" content="en" />
+		<!-- Place charset at top per: 
+			 http://www.kylescholz.com/blog/2010/01/performance_implications_of_charset.html -->
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 		<meta http-equiv="Content-language" content="en" />
+		<meta name="description" content="A guide to this site's accessibility features" />
+		<meta name="language" content="en" />
 		<link rel="canonical" href="http://jamesacook.net" />
-		<link rel="icon" type="image/vnd.microsoft.icon" href="/favicon.ico" />
+		<link rel="icon" href="/favicon.ico" type="image/vnd.microsoft.icon" />
 		<link rel="shortcut icon" href="/favicon.ico" />
 				
 		<!-- InstanceBeginEditable name="links" -->
@@ -18,12 +20,11 @@
 		<!-- InstanceEndEditable -->
 		
 		<!-- Stylesheets -->
-		<link rel="stylesheet" type="text/css" href="/css/lib/screen.css" media="screen" />
-		<link rel="stylesheet" type="text/css" href="/css/main.css" media="screen" />
+		<link rel="stylesheet" href="/css/lib/screen.css" type="text/css" media="screen" />
+		<link rel="stylesheet" href="/css/main.css" type="text/css" media="screen" />
 		<!--[if IE]>
-			<link rel="stylesheet" type="text/css" href="/css/lib/ie.css" media="screen" />
+			<link rel="stylesheet" href="/css/lib/ie.css" type="text/css" media="screen" />
 		<![endif]-->
-		<link rel="stylesheet" type="text/css" href="/css/lib/print.css" media="print" />
 		<!-- InstanceBeginEditable name="head" -->
 		<!-- InstanceEndEditable -->
 		<!-- InstanceParam name="meta_description" type="text" value="A guide to this site's accessibility features" -->
@@ -81,7 +82,7 @@
 							
 							<h4>Uses Only <abbr title="Cascading Style Sheets">CSS</abbr></h4>
 							<p>We use only <abbr title="Cascading Style Sheets">CSS</abbr> for the visual layout, typesetting and colors for this site. Relative font sizes are expressed in 'em's and are compatible with the user−specified "text size" option in visual browsers.
-							<p>If your browser or browsing device does not support stylesheets at all, the content of each page is still readable.</p>
+							</p><p>If your browser or browsing device does not support stylesheets at all, the content of each page is still readable.</p>
 						</div>
 						
 						<div class="span-7 prepend-top last">
@@ -102,7 +103,7 @@
 						
 						<div class="span-7 prepend-top last">
 							<h3>Access Keys for Links</h3>
-							<p>Most browsers support jumping to specific links by typing keys defined on the web site. On Windows, you can press <code>alt + an access key</code>; on Macintosh, you can press </code>control + an access key</code>.</p><!-- Windows users can navigate with the accesskey feature by typing ALT+Accesskey. On the Mac, you would use CTRL+Accesskey (not COMMAND+Accesskey, which can produce undesired effects). Internet Explorer users may also need to hit the “enter” key to activate a link.
+							<p>Most browsers support jumping to specific links by typing keys defined on the web site. On Windows, you can press <code>alt + an access key</code>; on Macintosh, you can press control + an access key.</p><!-- Windows users can navigate with the accesskey feature by typing ALT+Accesskey. On the Mac, you would use CTRL+Accesskey (not COMMAND+Accesskey, which can produce undesired effects). Internet Explorer users may also need to hit the “enter” key to activate a link.
 
 Windows users will find that accesskeys take precedence over application commands, which can still be accessed from the keyboard by first typing the menu shortcut key (usually ALT) followed by the letter corresponding to the desired menu item. -->
 							<table border="0">
@@ -111,14 +112,14 @@ Windows users will find that accesskeys take precedence over application command
 								</caption>
 								<thead>
 									<tr>
-										<th scope="column">Key</th>
-										<th scope="column">Meaning</th>
+										<th scope="column" id="key">Key</th>
+										<th scope="column" id="meaning">Meaning</th>
 									</tr>
 								</thead>
 								<tbody>
 									<tr>
-										<th scope="row">0</th>
-										<td>Accessibility Statement</td>
+										<th scope="row" id="zero">0</th>
+										<td headers="key zero meaning">Accessibility Statement</td>
 									</tr>
 									<tr>
 										<th scope="row">1</th>
@@ -197,20 +198,19 @@ Windows users will find that accesskeys take precedence over application command
 					&copy; 2010, James A Cook
 				</p>
 				<p id="designed_by" class="span-23 last">
-					Design by: <a href="http://boeltsdesign.com/" rel="designer">Boelts Design, Inc</a>
+					<a href="http://boeltsdesign.com/" rel="designer">Design by: Boelts Design, Inc</a>
 					<br />
-					Programming by: <a href="http://www.lisantra.com/" rel="programmer">Lisantra Technologies, LLC</a>
+					<a href="http://www.lisantra.com/" rel="programmer">Programming by: Lisantra Technologies, LLC</a>
 				</p><!-- #EndLibraryItem --></div>
 		</div>
 
 		<!-- Scripts -->
 		<script type="text/javascript" src="/js/lib/jquery-1.4.2.min.js"></script>
-		<script type="text/javascript" src="/js/main.js"></script>
-		<!-- #BeginLibraryItem "/Library/Google Analytics JS.lbi" -->
+		<script type="text/javascript" src="/js/main.js"></script><!-- #BeginLibraryItem "/Library/Google Analytics JS.lbi" -->		
 		<script type="text/javascript">	
 			<!--// Google Analytics -->
 			var _gaq = _gaq || [];
-			_gaq.push(['_setAccount', 'UA-']);
+			_gaq.push(['_setAccount', 'UA-10459598-5']);
 			_gaq.push(['_trackPageview']);
 		
 			(function() {
@@ -219,6 +219,5 @@ Windows users will find that accesskeys take precedence over application command
 				var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
 			})();
 		</script>
-		<!-- #EndLibraryItem -->
-	</body>
+<!-- #EndLibraryItem --></body>
 <!-- InstanceEnd --></html>
