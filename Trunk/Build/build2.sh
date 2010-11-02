@@ -5,7 +5,6 @@
 #$string is empty. The safe way is to append an extra character to possibly empty
 #variables, [ "x$string" != x -o "x$a" = "x$b" ] (the "x's" cancel out).
 
-
 # must be run as root
 if [ ! "`whoami`" = "root" ]; then
     echo "Please run script as root."
@@ -15,20 +14,21 @@ fi
 PROGNAME="$0"
 SHORTOPTS="f:t:c::d:v:h"
 LONGOPTS="from:,to:,conf::,repository::,archive::,domain:,version:,rewrite,reverse-rewrite,combine-css::,combine-js::help"
-SVN=0
-ZIP=0
+SVN=
+ZIP=
 TO="$PWD"
 DOMAIN=
-CONF="no"
-VERSION=""
+CONF=
+VERSION=
 ## although I want to use 0.9.9 and such, we must be careful to manually increment
 ## this so scripts-0.9.9.min.js is NOT shared between builds IF it changed, else it will be cached which we do NOT want
-ARCHIVE=""
-REPOSITORY=""
-REWRITE="no"
-COMBINE="no"
-CSSFILES=""
-JSFILES=""
+ARCHIVE=
+REPOSITORY=
+REWRITE=
+COMBINE=
+CSSFILES=
+JSFILES=
+REWRITE=
 
 ARGS=$(getopt -s bash --options $SHORTOPTS  \
   --longoptions $LONGOPTS --name $PROGNAME -- "$@" )
@@ -144,6 +144,10 @@ while true ; do
                     shift 2
                     ;;
             esac
+            ;;
+        -h|--help)
+            usage
+            shift
             ;;
         --)
             shift ;
@@ -331,7 +335,7 @@ strip_comments() {
 minify_html() {
     echo "Stripping coments, including Dreamweaver Template commands"
     find . -type f -name "*.html" | sudo xargs -I {} \
-        java -jar $TO/htmlcompressor-0.9.3.jar --type html -o {} {}
+        java -jar $TO/htmlcompressor-0.9.3.jar --type html --compress-js --nomunge -o {} {}
         # --remove-intertag-spaces  --remove-quotes (mgatto: "yuck!")
 }
 minify_css() {
@@ -345,16 +349,97 @@ minify_js() {
         java -jar $TO/yuicompressor-2.4.2.jar --type js {} -o {} --charset utf-8  --line-break 0
 }
 
-# depends on pngcrush
+# Optimize PNG file in place
+# More information on PNG optimization techniques:
+# http://optipng.sourceforge.net/pngtech/optipng.html
+do_png () {
+  # $1 is filename
+
+  # advpng, part of AdvanceCOMP, is available here:
+  # http://advancemame.sourceforge.net/comp-download.html
+  #advpng -z -4 -q "$1"
+
+  # OptiPNG is available here:
+  # http://optipng.sourceforge.net/
+  optipng -q -zc1-9 -zm1-9 -zs0-3 -f0-5 "$1"
+
+  # pngout is available here (binaries only):
+  # http://www.jonof.id.au/index.php?p=kenutils
+  # pngout "$1" $TMPF -q -y
+  # Sometimes (not always) pngout appends ".PNG" to output filename
+  if [ -f "$TMPF.PNG" ]; then
+    mv -f $TMPF.PNG $TMPF
+  fi
+
+  return 0
+}
+
+# Optimize JPEG file in place
+# (edit here to add/remove JPEG optimizing steps or change parameters)
+do_jpeg () {
+  # $1 is filename
+  TMPJ=`mktemp -t tmp.XXXXXX` || return 1
+
+  # jpegtran is part of libjpeg (almost surely already on your system).
+  # If not, it's here:
+  # http://www.ijg.org/
+  jpegtran -copy none -optimize -outfile $TMPJ "$1" && mv -f $TMPJ "$1"
+
+  # jfifremove is included with this script, be sure to compile and install
+  # jfifremove < "$1" > $TMPJ && mv -f $TMPJ "$1"
+
+  return 0
+}
+
+# Optimize file, only replace original if optimized version is smaller
+do_file () {
+  # $1 is name of file
+  if [ -w "$1" ]; then
+    # Copy file to tmp file and optimize in place
+    cp -f "$1" $TMPF
+    case "$1" in
+      *.[Pp][Nn][Gg] )
+          do_png $TMPF
+          ;;
+      *.[Jj][Pp][Ee][Gg] )
+          do_jpeg $TMPF
+          ;;
+      *.[Jj][Pp][Gg] )
+      do_jpeg $TMPF
+          ;;
+          * )
+      echo "$1 could not be identified, please rename to .jpg or .png"
+      return 1
+      ;;
+    esac
+
+    # If optimized file is smaller, copy it over original
+    BEFORE=`ls -la "$1" | awk '{print $5}'`
+    AFTER=`ls -la $TMPF | awk '{print $5}'`
+    let REDUCED=$BEFORE-$AFTER
+    if [ $AFTER -lt $BEFORE ]; then
+      cp -f $TMPF $1
+      echo "$1 reduced $REDUCED bytes to $AFTER bytes"
+    else
+      echo "$1 unchanged at $BEFORE bytes"
+    fi
+
+    return 0
+  else
+    echo "$1 is not writable, skipping"
+    return 1
+  fi
+}
+
 optimize_img() {
-    find . -type f -name "*.png" | sudo xargs -I {} \
-        optipng -o6
+    TMPF=`mktemp tmp.XXXXXX` || exit 1
+    RETURNVAL=1
 
-
-    find . -type f -name "*.jpg" | sudo xargs -I {} \
-        jpegtran -optimize -progressive -copy none < original.jpg > optimized.jpg
-        # try not to strip copyright data from the image -copy = all
-
+    find . -type f /( -name "*.png" -o -name "*.jpg" -o -name "*.jpeg" \) | sudo xargs -I {} \
+        do_file {};
+        #if [ "$RETURNVAL" != "0" ]; then
+        #    RETURNVAL=$?
+        #fi
 }
 
 #error() {}
@@ -367,7 +452,6 @@ usage()
                $PROGNAME -o <version> -c
 
         Deploy a static HTML website, and optionally optimize it.
-
 
         Options:
 EO
@@ -420,7 +504,7 @@ if [ -d "$VERSION" ]; then
 fi
 
 # Get the web files from a source
-if [ $ZIP -eq 1 ]; then
+if [ $ZIP -eq 1 ]; then # [ -z $ZIP ]
     if [ $ARCHIVE != "" ]; then
         get_from_zip $ARCHIVE
     else
@@ -439,7 +523,7 @@ else
 fi
 
 # Shall we rewrite links and src?
-if [ $REWRITE != "no" ]; then
+if [ -z $REWRITE ]; then #!= "no"
     rewrite_links $REWRITE
 fi
 
@@ -458,5 +542,10 @@ minify_html
 # symlink must come before set_owner_and_group so the htdocs symlink ist't stuck as owned by root
 symlink
 set_owner_and_group www-data www-data
+
+# clean up temp
+if [ -d $TO/temp/ ]; then
+    rm -rf $TO/temp/*
+fi
 
 echo "Deployed!"
