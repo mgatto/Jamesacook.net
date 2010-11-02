@@ -38,6 +38,8 @@
 		<!-- TemplateParam name="meta_description" type="text" value="" -->
 		<!-- TemplateParam name="name" type="text" value="" -->
 		<!-- TemplateParam name="video_src" type="text" value="" -->
+		<!-- TemplateParam name="has_next" type="boolean" value="true" -->
+		<!-- TemplateParam name="has_prev" type="boolean" value="true" -->
 		<!-- TemplateParam name="next" type="text" value="" -->
 		<!-- TemplateParam name="prev" type="text" value="" -->
     </head>
@@ -71,10 +73,10 @@
 			
 			<div class="span-24 last">
 				<div id="prev" class="span-2">
-					<a href="@@(prev)@@">&laquo; Previous</a>
+					<!-- TemplateBeginIf cond="has_prev" --><a href="@@(prev)@@">&laquo; Previous</a><!-- TemplateEndIf -->
 				</div>
 				<div id="next" class="span-2 prepend-20 last">
-					<a href="@@(next)@@">Next &raquo;</a>
+					<!-- TemplateBeginIf cond="has_next" --><a href="@@(next)@@">Next &raquo;</a><!-- TemplateEndIf -->
 				</div>
 			</div>
 			

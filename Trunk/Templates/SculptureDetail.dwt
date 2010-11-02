@@ -23,8 +23,8 @@
 		<link rel="first" title="First in Collection" href="/sculpture/philosophy-of-tides.html" />
 		<link rel="last" title="Last in Collection" href="/sculpture/ox-hearding-no-3.html" />
 		<!-- TemplateBeginEditable name="links" -->
-		<link rel="next" title="Next in Collection" href="/sculpture/" />
 		<link rel="prev" title="Previous in Collection" href="/sculpture/" />
+		<link rel="next" title="Next in Collection" href="/sculpture/" />
         <!-- TemplateEndEditable -->
         
         <!-- Stylesheets -->
@@ -46,6 +46,10 @@
 		<!-- TemplateParam name="another_view_2_src" type="text" value="" -->
 		<!-- TemplateParam name="video" type="boolean" value="false" -->
 		<!-- TemplateParam name="video_src" type="text" value="" -->
+		<!-- TemplateParam name="has_prev" type="boolean" value="true" -->
+		<!-- TemplateParam name="has_next" type="boolean" value="true" -->
+		<!-- TemplateParam name="prev" type="text" value="" -->
+		<!-- TemplateParam name="next" type="text" value="" -->
     </head>
 	<body class="sculpture">
     	<div id="body" class="container">
@@ -73,7 +77,18 @@
 					<a href="/spiel/index.html" title="About James A. Cook and Contact Information">Spiel</a>
 				</li>
             </ul>
-			<!-- #EndLibraryItem --><div class="span-23 prepend-1 prepend-top last">
+			<!-- #EndLibraryItem -->
+			
+			<div class="span-24 last">
+				<div id="prev" class="span-2">
+					<!-- TemplateBeginIf cond="has_prev" --><a href="@@(prev)@@">&laquo; Previous</a><!-- TemplateEndIf -->
+				</div>
+				<div id="next" class="span-2 prepend-20 last">
+					<!-- TemplateBeginIf cond="has_next" --><a href="@@(next)@@">Next &raquo;</a><!-- TemplateEndIf -->
+				</div>
+			</div>
+			
+			<div class="span-23 prepend-1 prepend-top last">
                 <div id="text" class="span-8">
 					<h2>@@(name)@@</h2>
 					<p class="materials"><!-- TemplateBeginEditable name="materials" --> <!-- TemplateEndEditable --></p>
