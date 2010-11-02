@@ -1,3 +1,6 @@
+# Speeds rendering time by far in most all browsers!
+AddDefaultCharset	UTF-8
+
 ## No file robbery
 #RewriteEngine on
 # Options +FollowSymlinks
