@@ -1,4 +1,4 @@
-#! /bin/bash -x
+#! /bin/bash
 
 #In a compound test, even quoting the string variable might not suffice. [ -n
 #"$string" -o "$a" = "$b" ] may cause an error with some versions of Bash if
@@ -12,8 +12,8 @@ if [ ! "`whoami`" = "root" ]; then
 fi
 
 PROGNAME="$0"
-SHORTOPTS="f:t:c::d:v:h"
-LONGOPTS="from:,to:,conf::,repository::,archive::,domain:,version:,rewrite,reverse-rewrite,combine-css::,combine-js::help"
+SHORTOPTS="f::t::c::d::v::h"
+LONGOPTS="from::,to::,conf::,repository::,archive::,domain::,version::,rewrite,reverse-rewrite,combine-css::,combine-js::help"
 SVN=
 ZIP=
 TO="$PWD"
@@ -28,7 +28,7 @@ REWRITE=
 COMBINE=
 CSSFILES=
 JSFILES=
-REWRITE=
+REWRITE=0
 
 ARGS=$(getopt -s bash --options $SHORTOPTS  \
   --longoptions $LONGOPTS --name $PROGNAME -- "$@" )
@@ -41,36 +41,65 @@ eval set -- "$ARGS"
 while true ; do
     case "$1" in
         -f|--from)
-            echo "Option -f|--from, argument \`$2'" ;
             case "$2" in
-                "svn")
-                    SVN=1 ;
+                "")
                     shift 2
                     ;;
-                "zip")
-                    ZIP=1 ;
+                *)
+                    echo "Option -f|--from, argument \`$2'" ;
+                    case "$2" in
+                        "svn")
+                            SVN=1
+                            shift 2
+                            ;;
+                        "zip")
+                            ZIP=1
+                            shift 2
+                            ;;
+                         *)
+                            echo "No other formats are supported" ;
+                            exit 1
+                            ;;
+                    esac
                     shift 2
-                    ;;
-                 *)
-                    echo "No other formats are supported" ;
-                    exit 1
                     ;;
             esac
             ;;
         -t|--to)
-            echo "Option -t|--to, argument \`$2'" ;
-            TO="$2" ;
-            shift 2
+            case "$2" in
+                "")
+                    shift 2
+                    ;;
+                *)
+                    echo "Option -t|--to, argument \`$2'" ;
+                    TO="$2" ;
+                    shift 2
+                    ;;
+            esac
             ;;
         -d|--domain)
-            echo "Option -d|--domain, argument \`$2'" ;
-            DOMAIN="$2"
-            shift 2
+            case "$2" in
+                "")
+                    shift 2
+                    ;;
+                *)
+                    echo "Option -d|--domain, argument \`$2'" ;
+                    DOMAIN="$2"
+                    shift 2
+                    ;;
+            esac
             ;;
         -v|--version)
-            echo "Option -v|--version, argument \`$2'" ;
-            VERSION="$2"
-            shift 2
+            case "$2" in
+                "")
+                    shift 2
+                    ;;
+                *)
+                    echo "Option -v|--version, argument \`$2'" ;
+                    VERSION="$2"
+                    shift 2
+                    ;;
+            esac
             ;;
         -c|--conf)
             case "$2" in
@@ -78,7 +107,7 @@ while true ; do
                     shift 2
                     ;;
                 *)
-                    CONF="$2" ;
+                    CONF="$2"
                     if [ -r "$2" ]; then
                         source $CONF
                     fi
@@ -160,7 +189,6 @@ while true ; do
     esac
 done
 
-
 # usage: set_owner user group
 set_owner_and_group() {
     USER=$1
@@ -171,14 +199,16 @@ set_owner_and_group() {
     chown "$USER:$GROUP" . -R
 }
 
+##
 symlink() {
     echo "Symlinking"
     # symlink htdocs
     ln -sfn $VERSION htdocs
 }
 
-
+##
 get_from_svn() {
+    echo "Getting files from Subversion Repository"
     # --non-interactive  --native-eol LF
     BASE=$1
     TO=$2
@@ -187,14 +217,17 @@ get_from_svn() {
 
     # Get the videos which are not under VC
     echo "Importing video files"
-    if [ -d ./htdocs/media/video/ ]; then
-        cp ./htdocs/media/video/*.f4v ./$VERSION/media/video/
+    if [ -d $TO/htdocs/media/video/ ]; then
+        cp $TO/htdocs/media/video/*.f4v $TO/$VERSION/media/video/
     else
         echo "Videos not found; please copy them manually"
     fi
 }
 
+##
 get_from_zip() {
+    echo "Deploying from a Zip archive"
+
     # check signature; gpg returns 0 if all is well, 1 for bad sig.
     echo "Checking signature of Jamesacook.net-$VERSION.zip"
     if [ $(gpg --verify $ARCHIVE.sig $ARCHIVE) -ne 0 ];
@@ -203,14 +236,23 @@ get_from_zip() {
       exit 1
     fi
 
-    #unzip it; -a converts windows EOL -> UNIX; but, it thinks jpg and flv are text
+    #unzip it;
+    # -a converts windows EOL -> UNIX; but, it thinks jpg and flv are text
     unzip "$ARCHIVE" -d ./
+
+    # Get the videos which are no longer stored in the ZIP file since it takes 238MB / 248MB
+    if [ -d $TO/htdocs/media/video/ ]; then
+            cp $TO/htdocs/media/video/*.f4v $TO/$VERSION/media/video/
+        else
+            echo "Videos not found; please copy them manually"
+    fi
 }
 
 #get_from_hg() {}
 #get_from_tbz2() {}
 #get_from_tar.bz2() {} #alias of get_from_tbz2()
 
+##
 rewrite_links() {
     # rewrite links to add in the domain so the url is as such:
     # [http://dev.example.com] /$DOMAIN/index.html
@@ -240,7 +282,6 @@ rewrite_links() {
                 -e "s|src: '/$DOMAIN/|src: '/|g" \
                 -e "s|url: '/$DOMAIN/|url: '/|g";
             ;;
-
         * )
             ;;
     esac
@@ -248,6 +289,8 @@ rewrite_links() {
 
 # Remove VCS and Editor Templates and artifacts
 cleanup_files() {
+    echo "Deleting VCS, DW Notes, Templates, Build and Library files"
+
     # Delete Templates, Library and Build
     rm -rf ./Templates
     rm -rf ./Library
@@ -261,12 +304,13 @@ cleanup_files() {
     find . -name "_notes" -type d -exec rm -rf {} \;
 }
 
+##
 check_spelling() {
     find . -type f -name "*.html" | sudo xargs -I {} \
         apsell {}
 }
 
-#make sure everything is UTF-8
+## Make sure everything is UTF-8
 encode() {
     # this might not be a good idea:
 
@@ -278,7 +322,6 @@ encode() {
 #    --- then you may get something worse ... neither UTF-8 and nor ISO-8859-1 ...
     #hence make sure your OLD file IS in OLD charset before running the tool !!
 
-
     find . -type f \( -name "*.html" -o -name "*.css" -o -name "*.js" \) |  sudo xargs -I {} \
         iconv -c -t UTF-8 -o {} {}
         # recode understands HTML entities!
@@ -286,13 +329,6 @@ encode() {
         # -c omits invalid characters from output
 }
 
-strip_comments() {
-    echo "Stripping coments, including Dreamweaver Template commands"
-    find . -type f \( -name "*.html" -o -name "*.css" -o -name "*.js" \) | xargs sed -i \
-        -e 's|<!--.*-->||g';
-}
-
-# minify JS
 # filenames are provided as a list as a CLI argument or from conf file
 #combine_js() {
 #    NAME="scripts-$VERSION.min.css"
@@ -442,7 +478,11 @@ optimize_img() {
         #fi
 }
 
-#error() {}
+error() {
+    echo $1
+    exit 1
+}
+
 #version() {}
 
 usage()
@@ -476,14 +516,53 @@ EO
 # say hello to the world
 #logger_info "Hello, world!"
 
+## Check for values:
+echo "Checking for inputs"
+
+#We *always* need $VERSION
+if [ -z $VERSION ]; then
+    read -p "Which version are we deploying?" VERSION || exit 1;
+    #error "You must specify a version to deploy"
+    #exit 1
+fi
+
+if [ -z $TO ]; then
+    error "You must specify a destination to deploy to"
+    exit 1
+fi
+
+if [ -z $DOMAIN ]; then
+    error "You must specify a domain for which you are deploying"
+    exit 1
+fi
+
+if [ -z $FROM ]; then
+    error "You must specify a source to deploy from"
+    exit 1
+else
+    # We must have either SVN & REPOSITORY or ZIP and ARCHIVE
+    case $FROM in
+        "svn")
+            SVN=1
+            if [ -z $REPOSITORY ]; then
+                error "You must specify a repository when deploying from Subversion"
+            fi
+        ;;
+        "zip")
+            ZIP=1
+            if [ -z $ARCHIVE ]; then
+                error "You must specify a Zip archive file to deploy from"
+            fi
+        ;;
+    esac
+fi
+
+# if conf, we don't need others
+
 echo "Preparing to build."
 echo "Current Directory: $PWD"
 echo "Changing to: $TO"
 cd "$TO"
-
-if [ -z $VERSION ]; then
-    read -p "Which version are we deploying?" VERSION || exit 1;
-fi
 
 # does the VERSION dir already exist?
 if [ -d "$VERSION" ]; then
@@ -504,14 +583,14 @@ if [ -d "$VERSION" ]; then
 fi
 
 # Get the web files from a source
-if [ $ZIP -eq 1 ]; then # [ -z $ZIP ]
-    if [ $ARCHIVE != "" ]; then
+if [ $ZIP -eq 1 ]; then
+    if [ -n "$ARCHIVE" ]; then
         get_from_zip $ARCHIVE
     else
         echo "No archive for unzip was specified"
     fi
 elif [ $SVN -eq 1 ]; then
-    if [ $REPOSITORY != "" ]; then
+    if [ -n "$REPOSITORY" ]; then
         get_from_svn $REPOSITORY $TO $VERSION
     else
         echo "No repository for SVN was specified"
@@ -523,7 +602,7 @@ else
 fi
 
 # Shall we rewrite links and src?
-if [ -z $REWRITE ]; then #!= "no"
+if [ $REWRITE != 0 ]; then #!= "no"
     rewrite_links $REWRITE
 fi
 
@@ -534,10 +613,12 @@ if [ $COMBINE != "no" ]; then
 fi
 
 cleanup_files
-# strip_comments
+echo "Minifying HTML, CSS & JS fles"
 minify_js
 minify_css
 minify_html
+echo "Optimizing PMGs & JPGs"
+optimize_img
 
 # symlink must come before set_owner_and_group so the htdocs symlink ist't stuck as owned by root
 symlink
