@@ -1,64 +1,69 @@
 # Speeds rendering time by far in most all browsers!
 AddDefaultCharset	UTF-8
 
-## No file robbery
-#RewriteEngine on
-# Options +FollowSymlinks
-#RewriteCond "%{HTTP_REFERER}" !=""
-#RewriteCond "%{HTTP_REFERER}" "!^http://([^/]*\.]?jamesacook.net/.*$" [NC]
-#RewriteRule \.(jpg|gif|png)$ - [F]
-
-# you probably want www.example.com to forward to example.com -- shorter URLs are sexier.
-#   no-www.org/faq.php?q=class_b
 <IfModule mod_rewrite.c>
   RewriteEngine On
+  ## No file robbery
+  #Options +FollowSymlinks -Indexes
+  #RewriteCond "%{HTTP_REFERER}" !=""
+  #RewriteCond "%{HTTP_REFERER}" "!^http://([^/]*\.]?jamesacook.net/.*$" [NC]
+  #RewriteRule \.(jpg|gif|png)$ - [F]
+
+  ##Block hotlinking of font files
+  #RewriteCond %{HTTP_REFERER} !^http://(www\.)?jamesacook\.net/.*$ [NC]
+  #RewriteRule \.(woff|eot|otf|ttf)$ - [F,NC,L]
+
+  # you probably want www.example.com to forward to example.com -- shorter URLs are sexier.
+  #   no-www.org/faq.php?q=class_b
   RewriteCond %{HTTPS} !=on
   RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
   RewriteRule ^(.*)$ http://%1/$1 [R=301,L]
 </IfModule>
 
-
+## Video
 #DO NOT CACHE SWF; FLOWPLAYER WON'T WORK! BUT F4V/FLV CACHING IS FINE.
 
-AddType video/x-f4v	.f4v
+# AddType video/x-f4v	.f4v
 AddType video/x-flv	.flv
 
-# Webfonts
-Addtype font/opentype .otf
+## Webfonts
 # Addtype font/eot .eot
+# AddType application/octet-stream .otf .ttf
+# AddType font/woff woff
+Addtype font/opentype .otf
 AddType application/vnd.ms-fontobject eot
 Addtype font/truetype .ttf
-# AddType application/octet-stream .otf .ttf
-# AddType application/x-woff .woff 
-AddType font/woff woff
+AddType application/x-woff .woff 
 ## Proper svg serving. Required for svg webfonts on iPad:
 ##     twitter.com/FontSquirrel/status/14855840545
 AddType     image/svg+xml             svg svgz 
 AddEncoding gzip                      svgz
 
-AddOutputFilterByType DEFLATE font/opentype font/truetype font/eot
-
+## Compression
 # html, txt, css, js, json, xml:
 AddOutputFilterByType DEFLATE text/html text/plain text/css application/json
 AddOutputFilterByType DEFLATE text/javascript application/javascript application/x-javascript 
 AddOutputFilterByType DEFLATE text/xml application/xml
+AddOutputFilterByType DEFLATE font/opentype font/truetype font/eot application/vnd.ms-fontobject
+
+## Caching
+
+FileETag None
 
 <IfModule mod_expires.c>
   Header set Cache-Control "public"
   ExpiresActive on
-
-# Perhaps better to whitelist expires rules? Perhaps.
-#  ExpiresDefault                          "access plus 1 month"
-## mgatto: YES, whitelisting is better!
-
+  
+# Better to whitelist expires rules rather than set a default
+# ExpiresDefault                          "access plus 1 month"
   ExpiresByType text/html                 "access plus 0 seconds"
 
-# data
+## data
   ExpiresByType text/xml                  "access plus 0 seconds"
   ExpiresByType application/xml           "access plus 0 seconds"
   ExpiresByType application/json          "access plus 0 seconds"
 
-# rss feed
+## rss feed
   ExpiresByType application/rss+xml       "access plus 1 hour"
 
 # favicon (cannot be renamed)
@@ -80,6 +85,8 @@ AddOutputFilterByType DEFLATE text/xml application/xml
   ExpiresByType font/woff                 "access plus 1 month"
   ExpiresByType image/svg+xml             "access plus 1 month"
   ExpiresByType application/vnd.ms-fontobject "access plus 1 month"
+  ExpiresByType font/eot "access plus 1 month"
+  ExpiresByType application/x-woff "access plus 1 month"
     
 # css and javascript
   ExpiresByType text/css                  "access plus 1 month"
@@ -87,27 +94,10 @@ AddOutputFilterByType DEFLATE text/xml application/xml
   ExpiresByType text/javascript           "access plus 1 month"
 </IfModule>
 
-FileETag None
-
-# custom 404 page
-ErrorDocument 404 /404.html
-
-
-
-# use utf-8 encoding for anything served text/plain or text/html
-AddDefaultCharset utf-8
-# force utf-8 for a number of file formats
-AddCharset utf-8 .html .css .js .xml .json .rss
-
-
-
-# We don't need to tell everyone we're apache.
-ServerSignature Off
-
 # Cache Headers
 <ifmodule mod_headers.c>
   # Cache specified files for 31 days
-  <filesmatch "\.(ico|flv|jpg|jpeg|png|gif|css|swf)$">
+  <filesmatch "\.(ico|jpg|jpeg|png|gif|css)$"> #flv|swf
   Header set Cache-Control "max-age=2678400, public"
   </filesmatch>
   # Cache HTML files for a couple hours
@@ -123,3 +113,14 @@ ServerSignature Off
   Header set Cache-Control "max-age=2678400, private"
   </filesmatch>
 </ifmodule>
+
+# custom 404 page
+ErrorDocument 404 /404.html
+
+# use utf-8 encoding for anything served text/plain or text/html
+# AddDefaultCharset utf-8
+# force utf-8 for a number of file formats
+AddCharset utf-8 .html .css .js .xml .json .rss	.txt
+
+# We don't need to tell everyone we're apache.
+ServerSignature Off
