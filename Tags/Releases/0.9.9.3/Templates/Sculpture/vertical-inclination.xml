@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<templateItems template="/Templates/SculptureDetail.dwt" codeOutsideHTMLIsLocked="false">
+   	<parameter name="name" type="text" passthrough="false"><![CDATA[Vertical Inclination given Temporary Support by an Apparition of a scaffold in the Form of the Khufu Pyramid]]></parameter>
+   	<parameter name="meta_description" type="text" passthrough="false"><![CDATA[A old copper clad kettle appears to hover inches above the ground, supported by the long, extended rhizomes of bamboo.]]></parameter>
+   	<parameter name="main_image_src" type="text" passthrough="false"><![CDATA[/media/images/vertical-inclination-1.jpg]]></parameter>
+	<parameter name="another_view_1" type="boolean" passthrough="false">true</parameter>
+	<parameter name="another_view_1_src" type="text" passthrough="false"><![CDATA[/media/images/vertical-inclination-given-frontal-2.jpg]]></parameter>
+	<parameter name="another_view_2" type="boolean" passthrough="false">true</parameter>
+	<parameter name="another_view_2_src" type="text" passthrough="false"><![CDATA[/media/images/vertical-inclination-given-another-view-1.jpg]]></parameter>
+	<parameter name="video" type="boolean" passthrough="false">false</parameter>
+	<parameter name="video_src" type="text" passthrough="false"></parameter>
+   	<item name="materials"><![CDATA[
+   					red oak (1000&prime;), bronze, rope.<br />
+					<br />  
+					180&Prime; &times; 180&Prime; &times; 97&Prime; Installation.
+		]]></item>
+	<item name="description"><![CDATA[
+					<p class="description">This work hinges upon the differential between perceived strength or power of an entity and that which it actually embodies; it also addresses the impulse toward verticality that can be seen in most cultures with advent of agricultural economy and subsequent accumulated wealth.</p>
+                   <p class="description">Although the forms given verticality have varied historically and culturally&mdash;dolmans, obelisks, pyramids, ziggurats, and skyscrapers&mdash;they have the shared mythopoeic purpose to link things of the earth with the heavens and divine authority. And, as symbolic architecture, ranging from stone pyramids to corporate steel and glass towers, they have also served as links of identity for those in positions of political and economic power or religious authority. If this hierarchical disposition toward verticality implies stratification and separateness, then perhaps the horizontal resonates with communitas and egalitarian impulses.</p>
+		]]></item>
+   	<item name="head"><![CDATA[]]></item>
+</templateItems>
