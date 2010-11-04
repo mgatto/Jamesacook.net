@@ -61,7 +61,12 @@ Avoids IE6-8 erroneous HTTP request (and subsequent 404)
 	blockquote {margin:1.5em;padding:1em;font-style:italic;font-size:.9em;}
 	a:link, a:visited {background:transparent;font-weight:700;text-decoration:none;}
 	a:link:after, a:visited:after {content:" (" attr(href) ")";font-size:90%;}
-    #navigation, #skip, #footer ul, #media {display:none;}
+    #navigation, #skip, #footer ul, #media, #next, #prev {display:none;}
+	.span-4 {width:150px;}
+	div.span-13 > div.span-8 {width:310px;}
+	div.span-4 + div.span-4 {clear:right;}
+	div.span-13 > div.span-8, .span-4 {float:left;margin-right:10px;}
+	#footer {clear:both;width:100%;}
 }
 
 @media screen {
@@ -211,6 +216,7 @@ Avoids IE6-8 erroneous HTTP request (and subsequent 404)
 					/* parent styles were not cascading from div#text, so we repeat for h2 */
 					font-family:PaddingtonSCPlainSmallCapsRom,"Arial Bold",Arial;
 					font-size:1.2em;
+					font-weight: normal;
 					/*font-weight: bold; this doesn't look good at all bolded*/
 					color: #e3e3e3;
 				}
@@ -272,8 +278,8 @@ Avoids IE6-8 erroneous HTTP request (and subsequent 404)
 					border:1px solid #FC3;
 					padding:1px;				
 				}
-				.thumbnail > a:visited {
-					color:#B3B3B3;
+				.thumbnail > a:visited > img {
+					border:1px solid #CCA329;
 				}
 			/*div*/#footer {
 				font-family:PaddingtonSCPlainSmallCapsRom,"Arial Bold",Arial;
@@ -320,12 +326,12 @@ Avoids IE6-8 erroneous HTTP request (and subsequent 404)
 			#cboxTitle{position:absolute; top:-20px; left:0; color:#ccc;}
 			#cboxCurrent{position:absolute; top:-20px; right:0px; color:#ccc;}
 			#cboxSlideshow{position:absolute; top:-20px; right:90px; color:#fff;}
-			#cboxPrevious{position:absolute; top:50%; left:5px; margin-top:-32px; background:url(artwork/controls.png) top left no-repeat; width:28px; height:65px; text-indent:-9999px;}
+			#cboxPrevious{position:absolute; top:50%; left:5px; margin-top:-32px; background:url(/artwork/controls.png) top left no-repeat; width:28px; height:65px; text-indent:-9999px;}
 			#cboxPrevious.hover{background-position:bottom left;}
-			#cboxNext{position:absolute; top:50%; right:5px; margin-top:-32px; background:url(artwork/controls.png) top right no-repeat; width:28px; height:65px; text-indent:-9999px;}
+			#cboxNext{position:absolute; top:50%; right:5px; margin-top:-32px; background:url(/artwork/controls.png) top right no-repeat; width:28px; height:65px; text-indent:-9999px;}
 			#cboxNext.hover{background-position:bottom right;}
 			#cboxLoadingOverlay{background:#000;}
-			#cboxLoadingGraphic{background:url(artwork/loading.gif) center center no-repeat;}
-			#cboxClose{position:absolute; top:5px; right:5px; display:block; background:url(artwork/controls.png) top center no-repeat; width:38px; height:19px; text-indent:-9999px;}
+			#cboxLoadingGraphic{background:url(/artwork/loading.gif) center center no-repeat;}
+			#cboxClose{position:absolute; top:5px; right:5px; display:block; background:url(/artwork/controls.png) top center no-repeat; width:38px; height:19px; text-indent:-9999px;}
 			#cboxClose.hover{background-position:bottom center;}
 }
