@@ -28,7 +28,7 @@
         <!-- TemplateEndEditable -->
         
         <!-- Stylesheets -->
-        <link rel="stylesheet" href="/css/lib/screen.css" type="text/css" media="screen" />
+        
         <link rel="stylesheet" href="/css/main.css" type="text/css" media="screen" />
         <!--[if IE]>
         	<link rel="stylesheet" href="/css/lib/ie.css" type="text/css" media="screen" />
