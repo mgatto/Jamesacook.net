@@ -14,20 +14,8 @@
         
         <link rel="icon" href="/favicon.ico" type="image/vnd.microsoft.icon" />
         <link rel="shortcut icon" href="/favicon.ico" />
-        
-		<link rel="home" title="Home" href="/index.html" />
-		<link rel="up" title="List of Mediated Sculptures" href="/video/index.html" />
-		<link rel="index" title="List of Mediated Sculptures" href="/video/index.html" />
-		<link rel="start" title="First in Collection" href="/video/short-history.html" />
-		<link rel="first" title="First in Collection" href="/video/short-history.html" />
-		<link rel="last" title="Last in Collection" href="/video/walkabout.html" />
-		<!-- TemplateBeginEditable name="links" -->
-		<link rel="next" title="Next in Collection" href="/video/" />
-		<link rel="prev" title="Previous in Collection" href="/video/" />
-        <!-- TemplateEndEditable -->
 		
         <!-- Stylesheets -->
-        
         <link rel="stylesheet" href="/css/main-179.css" type="text/css" media="all" />
         <!--[if IE]>
         	<link rel="stylesheet" href="/css/ie.css" type="text/css" media="screen" />
