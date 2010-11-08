@@ -1,4 +1,4 @@
-#! /bin/bash
+#! /bin/bash -x
 
 #In a compound test, even quoting the string variable might not suffice. [ -n
 #"$string" -o "$a" = "$b" ] may cause an error with some versions of Bash if
@@ -29,6 +29,7 @@ COMBINE=
 CSSFILES=
 JSFILES=
 REWRITE=0
+TMP=temp
 
 usage() {
   cat <<EO
@@ -66,11 +67,11 @@ while true ; do
                     echo "Option -f|--from, argument \`$2'" ;
                     case "$2" in
                         "svn")
-                            SVN=1
+                            SVN=1 ;
                             shift 2
                             ;;
                         "zip")
-                            ZIP=1
+                            ZIP=1 ;
                             shift 2
                             ;;
                          *)
@@ -113,7 +114,7 @@ while true ; do
                     ;;
                 *)
                     echo "Option -v|--version, argument \`$2'" ;
-                    VERSION="$2"
+                    VERSION="$2" ;
                     shift 2
                     ;;
             esac
@@ -135,12 +136,12 @@ while true ; do
             ;;
         --rewrite)
             echo "Rewrite links to ADD_DOMAIN"
-            REWRITE="ADD_DOMAIN"
+            REWRITE="ADD_DOMAIN" ;
             shift
             ;;
         --reverse-rewrite)
             echo "Rewrite links to REMOVE_DOMAIN"
-            REWRITE="REMOVE_DOMAIN"
+            REWRITE="REMOVE_DOMAIN" ;
             shift
             ;;
         --combine-css)
@@ -234,8 +235,8 @@ get_from_svn() {
 
     # Get the videos which are not under VC
     echo "Importing video files"
-    if [ -d $TO/htdocs/media/video/ ]; then
-        cp $TO/htdocs/media/video/*.f4v $TO/$VERSION/media/video/
+    if [ -d $TO/htdocs/media/videos/ ]; then
+        cp $TO/htdocs/media/videos/*.f4v $TO/$VERSION/media/videos/
     else
         echo "Videos not found; please copy them manually"
     fi
@@ -258,10 +259,10 @@ get_from_zip() {
     unzip "$ARCHIVE" -d ./
 
     # Get the videos which are no longer stored in the ZIP file since it takes 238MB / 248MB
-    if [ -d $TO/htdocs/media/video/ ]; then
-            cp $TO/htdocs/media/video/*.f4v $TO/$VERSION/media/video/
-        else
-            echo "Videos not found; please copy them manually"
+    if [ -d $TO/htdocs/media/videos/ ]; then
+        cp $TO/htdocs/media/videos/*.f4v $TO/$VERSION/media/videos/
+    else
+        echo "Videos not found; please copy them manually"
     fi
 }
 
@@ -309,9 +310,11 @@ cleanup_files() {
     echo "Deleting VCS, DW Notes, Templates, Build and Library files"
 
     # Delete Templates, Library and Build
-    rm -rf ./Templates
-    rm -rf ./Library
-    rm -rf ./Build
+    rm -rf "$VERSION/Templates"
+    rm -rf "$VERSION/Library"
+    rm -rf "$VERSION/Build"
+    rm -rf "$VERSION/css/lib"
+    rm -rf "$VERSION/js/lib"
 
     #delete .svn Dreamweaver _notes dirs
     find . -name ".svn" -type d -exec rm -rf {} \;
@@ -388,18 +391,18 @@ encode() {
 minify_html() {
     echo "Stripping coments, including Dreamweaver Template commands"
     find . -type f -name "*.html" | sudo xargs -I {} \
-        java -jar $TO/htmlcompressor-0.9.3.jar --type html --compress-js --nomunge -o {} {}
+        java -jar $TO/htmlcompressor-0.9.3.jar --type html --remove-intertag-spaces --compress-js --nomunge -o {} {}
         # --remove-intertag-spaces  --remove-quotes (mgatto: "yuck!")
 }
 minify_css() {
     echo "Minifying CSS files"
     find . -type f -name "*.css" | sudo xargs -I {} \
-        java -jar $TO/yuicompressor-2.4.2.jar --type css {} -o {} --charset utf-8  --line-break 0
+        java -jar $TO/yuicompressor-2.4.2.jar --type css {} -o {} --charset utf-8  #--line-break 0
 }
 minify_js() {
     echo "Minifying Javascript files"
-    find . -type f \( -name "*.js" -a -not name "jquery*" \) | sudo xargs -I {} \
-        java -jar $TO/yuicompressor-2.4.2.jar --type js {} -o {} --charset utf-8  --line-break 0
+    find . -type f \( -name "*.js" \) | sudo xargs -I {} \
+        java -jar $TO/yuicompressor-2.4.2.jar --type js {} -o {} --charset utf-8  #--line-break 0
 }
 
 # Optimize PNG file in place
@@ -431,7 +434,7 @@ do_png () {
 # (edit here to add/remove JPEG optimizing steps or change parameters)
 do_jpeg () {
   # $1 is filename
-  TMPJ=`mktemp -t tmp.XXXXXX` || return 1
+  TMPJ=`mktemp -t $TMP/tmp.XXXXXX` || return 1
 
   # jpegtran is part of libjpeg (almost surely already on your system).
   # If not, it's here:
@@ -446,6 +449,7 @@ do_jpeg () {
 
 # Optimize file, only replace original if optimized version is smaller
 do_file () {
+  TMPF=`mktemp $TMP/tmp.XXXXXX` || exit 1
   # $1 is name of file
   if [ -w "$1" ]; then
     # Copy file to tmp file and optimize in place
@@ -485,14 +489,10 @@ do_file () {
 }
 
 optimize_img() {
-    TMPF=`mktemp tmp.XXXXXX` || exit 1
+    #TMPF=`mktemp tmp.XXXXXX` || exit 1
     RETURNVAL=1
 
-    find . -type f \( -name "*.png" -o -name "*.jpg" -o -name "*.jpeg" \) | sudo xargs -I {} \
-        do_file {};
-        #if [ "$RETURNVAL" != "0" ]; then
-        #    RETURNVAL=$?
-        #fi
+    find . -type f \( -name "*.jpg" -o -name "*.jpeg" -o -name "*.png" \) -print | while read i; do do_file "$i"; done
 }
 
 error() {
@@ -541,20 +541,22 @@ if [ -z $FROM ]; then
     exit 1
 else
     # We must have either SVN & REPOSITORY or ZIP and ARCHIVE
-    case $FROM in
-        "svn")
-            SVN=1
-            if [ -z $REPOSITORY ]; then
-                error "You must specify a repository when deploying from Subversion"
-            fi
-        ;;
-        "zip")
-            ZIP=1
-            if [ -z $ARCHIVE ]; then
-                error "You must specify a Zip archive file to deploy from"
-            fi
-        ;;
-    esac
+    echo "$FROM"
+
+    if [ "$FROM" == "svn" ]; then
+        SVN=1 ;
+        if [ -z $REPOSITORY ]; then
+            error "You must specify a repository when deploying from Subversion"
+        fi
+    elif [ "$FROM" == "zip" ]; then
+        ZIP=1 ;
+        if [ -z $ARCHIVE ]; then
+            error "You must specify a Zip archive file to deploy from"
+        fi
+    else
+        echo "From target not specified" ;
+        exit 1
+    fi
 fi
 
 # if conf, we don't need others
@@ -571,7 +573,7 @@ if [ -d "$VERSION" ]; then
 
     case $DELETE in
         [Yy]* )
-            rm -rf "./$VERSION"
+            rm -rf "./$VERSION" ;
             echo "Deleted $TO/$VERSION"
             ;;
         [Nn]* )
@@ -583,13 +585,13 @@ if [ -d "$VERSION" ]; then
 fi
 
 # Get the web files from a source
-if [ $ZIP -eq 1 ]; then
+if [ "$ZIP" == 1 ]; then
     if [ -n "$ARCHIVE" ]; then
         get_from_zip $ARCHIVE
     else
         echo "No archive for unzip was specified"
     fi
-elif [ $SVN -eq 1 ]; then
+elif [ "$SVN" == 1 ]; then
     if [ -n "$REPOSITORY" ]; then
         get_from_svn $REPOSITORY $TO $VERSION
     else
@@ -602,15 +604,15 @@ else
 fi
 
 # Shall we rewrite links and src?
-if [ $REWRITE != 0 ]; then #!= "no"
+if [ "$REWRITE" -ne 0 ]; then #!= "no"
     rewrite_links $REWRITE
 fi
 
 # Shall we minify js or css, or both? Images, too?
 # This should always come after Rewriting of links, if any.
-if [ $COMBINE != "no" ]; then
-    combine $COMBINE
-fi
+#if [ "$COMBINE" != "no" ]; then
+#    combine $COMBINE
+#fi
 
 cleanup_files
 echo "Minifying HTML, CSS & JS fles"
@@ -624,9 +626,13 @@ optimize_img
 symlink
 set_owner_and_group www-data www-data
 
+# or
+# TMPDIR=$(mktemp -d)
+#trap 'rm -rf "$TMPDIR"' EXIT
+
 # clean up temp
-if [ -d $TO/temp/ ]; then
-    rm -rf $TO/temp/*
+if [ -d $TO/$TMP/ ]; then
+    rm -rf $TO/$TMP/*
 fi
 
 echo "Deployed!"
