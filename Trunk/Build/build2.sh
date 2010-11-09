@@ -28,7 +28,6 @@ REWRITE=
 COMBINE=
 CSSFILES=
 JSFILES=
-REWRITE=0
 TMP=temp
 
 usage() {
@@ -434,7 +433,7 @@ do_png () {
 # (edit here to add/remove JPEG optimizing steps or change parameters)
 do_jpeg () {
   # $1 is filename
-  TMPJ=`mktemp -t $TMP/tmp.XXXXXX` || return 1
+  TMPJ=$(mktemp -t -p $TMP tmp.XXXXXX) || return 1
 
   # jpegtran is part of libjpeg (almost surely already on your system).
   # If not, it's here:
@@ -449,7 +448,7 @@ do_jpeg () {
 
 # Optimize file, only replace original if optimized version is smaller
 do_file () {
-  TMPF=`mktemp $TMP/tmp.XXXXXX` || exit 1
+  TMPF=$(mktemp -t -p $TMP tmp.XXXXXX) || exit 1
   # $1 is name of file
   if [ -w "$1" ]; then
     # Copy file to tmp file and optimize in place
@@ -489,9 +488,6 @@ do_file () {
 }
 
 optimize_img() {
-    #TMPF=`mktemp tmp.XXXXXX` || exit 1
-    RETURNVAL=1
-
     find . -type f \( -name "*.jpg" -o -name "*.jpeg" -o -name "*.png" \) -print | while read i; do do_file "$i"; done
 }
 
@@ -604,7 +600,7 @@ else
 fi
 
 # Shall we rewrite links and src?
-if [ "$REWRITE" -ne 0 ]; then #!= "no"
+if [ -n "$REWRITE" ]; then
     rewrite_links $REWRITE
 fi
 
