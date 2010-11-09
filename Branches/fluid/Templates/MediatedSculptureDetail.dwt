@@ -15,25 +15,13 @@
         
         <link rel="icon" href="/favicon.ico" type="image/vnd.microsoft.icon" />
         <link rel="shortcut icon" href="/favicon.ico" />
-        
-		<link rel="home" title="Home" href="/index.html" />
-		<link rel="up" title="List of Mediated Sculptures" href="/mediated-sculpture/index.html" />
-		<link rel="index" title="List of Mediated Sculptures" href="/mediated-sculpture/index.html" />
-		<link rel="start" title="First in Collection" href="/mediated-sculpture/mesa-installation.html" />
-		<link rel="first" title="First in Collection" href="/mediated-sculpture/mesa-installation.html" />
-		<link rel="last" title="Last in Collection" href="/mediated-sculpture/water-compass.html" />
-		<!-- TemplateBeginEditable name="links" -->
-		<link rel="next" title="Next in Collection" href="/mediated-sculpture/" />
-		<link rel="prev" title="Previous in Collection" href="/mediated-sculpture/" />
-        <!-- TemplateEndEditable -->
 		
         <!-- Stylesheets -->
-        <link rel="stylesheet" href="/css/lib/screen.css" type="text/css" media="screen" />
-        <link rel="stylesheet" href="/css/main.css" type="text/css" media="screen" />
+        <link rel="stylesheet" href="/css/main-179.css" type="text/css" media="all" />
         <!--[if IE]>
-        	<link rel="stylesheet" href="/css/lib/ie.css" type="text/css" media="screen" />
+        	<link rel="stylesheet" href="/css/ie.css" type="text/css" media="screen" />
         <![endif]-->
-        <link rel="stylesheet" href="/css/lib/colorbox.css" type="text/css" media="screen" />
+        
         <!-- TemplateBeginEditable name="head" -->
         <!-- TemplateEndEditable -->
 		<!-- TemplateParam name="meta_description" type="text" value="" -->
@@ -53,7 +41,7 @@
     <body class="mediated">
     	<div id="body" class="container">
         	<div id="banner" class="span-24 last">
-            	<h1>James A Cook</h1>
+            	<h1>Mediated Sculpture, by James A Cook</h1>
             </div>
 			<div id="skip">
 				<a href="#content" accesskey="7">Skip to Main Content</a>
@@ -146,15 +134,14 @@
         </div>
         
         <!-- Scripts -->
-        <script type="text/javascript" src="/js/lib/jquery-1.4.2.min.js"></script>
-        <script type="text/javascript" src="/js/lib/jquery.colorbox-min.js"></script>
-        <script type="text/javascript" src="/js/main.js"></script>
+
+        <script type="text/javascript" src="/js/main-180.js"></script>
 		<!-- TemplateBeginIf cond="video" --><!-- #BeginLibraryItem "/Library/Flowplayer JS.lbi" -->		
-		<script type="text/javascript" src="/js/lib/flowplayer-3.2.4.min.js"></script>
+		<script type="text/javascript" src="/js/flowplayer-3.2.4.min.js"></script>
 		<script type="text/javascript">		
 			$(document).ready(function() {
 				flowplayer("player", {
-					src: '/media/flash/lib/flowplayer-3.2.5.swf', 
+					src: '/flash/lib/flowplayer-3.2.5.swf', 
 					wmode: 'opaque',
 					cachebusting: false,
 					// we need at least this Flash version
@@ -174,11 +161,11 @@
 					},
 					plugins: {
 						controls: {	
-							url: '/media/flash/lib/flowplayer.controls-3.2.3.swf',
+							url: '/flash/lib/flowplayer.controls-3.2.3.swf',
 							bottom: 0
 						},
 						gatracker: {
-							url: '/media/flash/lib/flowplayer.analytics-3.2.1.swf',
+							url: '/flash/lib/flowplayer.analytics-3.2.1.swf',
 							trackingMode: "Bridge",
 							googleId: "UA-10459598-5"
 						}

@@ -11,16 +11,17 @@
 		<meta name="description" content="@@(meta_description)@@" />
 		<meta name="language" content="en" />
 		<link rel="canonical" href="http://jamesacook.net" />
+		
 		<link rel="icon" href="/favicon.ico" type="image/vnd.microsoft.icon" />
 		<link rel="shortcut icon" href="/favicon.ico" />
 
 		<!-- Stylesheets -->
-		<link rel="stylesheet" href="/css/lib/screen.css" type="text/css" media="screen" />
-		<link rel="stylesheet" href="/css/main.css" type="text/css" media="screen" />
+		<link rel="stylesheet" href="/css/main-179.css" type="text/css" media="all" />
 		<!--[if IE]>
-			<link rel="stylesheet" href="/css/lib/ie.css" type="text/css" media="screen" />
+			<link rel="stylesheet" href="/css/ie.css" type="text/css" media="screen" />
 		<![endif]-->
 		<!-- TemplateBeginEditable name="head" -->
+		<link rel="profile" href="http://microformats.org/profile/hcard" />
 		<!-- TemplateEndEditable -->
 		<!-- TemplateParam name="meta_description" type="text" value="" -->
 		<!-- TemplateParam name="name" type="text" value="" -->
@@ -28,7 +29,7 @@
 	<body class="spiel">
 		<div id="body" class="container">
 			<div id="banner" class="span-24 last">
-				<h1>James A Cook</h1>
+				<h1>About James A Cook</h1>
 			</div>
 			<div id="skip">
 				<a href="#content" accesskey="7">Skip to Main Content</a>
@@ -88,9 +89,8 @@
 		</div>
 
 		<!-- Scripts -->
-		<script type="text/javascript" src="/js/lib/jquery-1.4.2.min.js"></script>
-		<script type="text/javascript" src="/js/lib/jquery.nospam.js"></script>
-		<script type="text/javascript" src="/js/main.js"></script>
+		<script type="text/javascript" src="/js/main-180.js"></script>
+		<script type="text/javascript" src="/js/jquery.nospam.js"></script>
 		<script type="text/javascript">
 			$(document).ready(function(){
 				$('a.email').nospam({
