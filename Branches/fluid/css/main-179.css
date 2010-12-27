@@ -136,7 +136,7 @@ Avoids IE6-8 erroneous HTTP request (and subsequent 404)
 		
 	body {
 		background-color: #666;
-		color: #e4e4e4;
+		color: #e6e6e6;
 		font-family:PaddingtonSCPlainSmallCapsRom, Arial, sans-serif;
 		letter-spacing:1px;
 		font-weight:normal;
@@ -160,12 +160,12 @@ Avoids IE6-8 erroneous HTTP request (and subsequent 404)
 				width:auto; 
 				height:auto; 
 				text-decoration:none;
-				border-bottom:1px dotted #e4e4e4;
-				color:#e4e4e4;
+				border-bottom:1px dotted #e6e6e6;
+				color:#e6e6e6;
 			}
 		/*ul*/#navigation {
-			border-top: 1px solid #e4e4e4;
-			border-bottom: 1px solid #e4e4e4;
+			border-top: 1px solid #e6e6e6;
+			border-bottom: 1px solid #e6e6e6;
 			padding-top: 5px;
 			padding-bottom: 5px;
 			background-color:#666;
@@ -175,16 +175,16 @@ Avoids IE6-8 erroneous HTTP request (and subsequent 404)
 			#navigation li{
 				list-style-type:none;
 				text-align:left;
-				border-left: 1px solid #e4e4e4;
+				border-left: 1px solid #e6e6e6;
 			}
 				#navigation li a {
-					color:#e4e4e4  /*#B3B3B3*/;
+					color:#e6e6e6  /*#B3B3B3*/;
 					font-size:1.2em;
 					text-decoration:none;
 					/*font-variant:small-caps;*/
 					/* without arulentsans-smallcaps, this borks the @font-face in Webkit: http://mwhenry.com/blog/2010/04/ugly-font-variant-bug/ */
 					display:block;
-					border-left: 1px solid #e4e4e4;
+					border-left: 1px solid #e6e6e6;
 					margin-left:1.3em;
 					padding-left:.8em;
 				}
@@ -206,7 +206,7 @@ Avoids IE6-8 erroneous HTTP request (and subsequent 404)
 				text-align:right;
 			}
 				#next a, #prev a {
-					color:#e4e4e4  /*#B3B3B3*/;
+					color:#e6e6e6  /*#B3B3B3*/;
 					font-size:0.8em;
 					text-decoration:none;
 				}
@@ -218,13 +218,13 @@ Avoids IE6-8 erroneous HTTP request (and subsequent 404)
 					font-size:1.2em;
 					font-weight: normal;
 					/*font-weight: bold; this doesn't look good at all bolded*/
-					color: #e4e4e4;
+					color: #e6e6e6;
 				}
 				#text ul {
 					padding-left:1.3em;
 				}
 				thead th {
-					background:#e4e4e4;
+					background:#e6e6e6;
 					color:#666;
 					vertical-align:top;
 					text-align:left;
@@ -233,7 +233,7 @@ Avoids IE6-8 erroneous HTTP request (and subsequent 404)
 					font-family:PaddingtonSCPlainSmallCapsRom,"Arial Bold",Arial;
 					font-size:1.2em;
 					font-weight: normal;
-					color: #e4e4e4;
+					color: #e6e6e6;
 				}
 				/*#text p.materials {}*/
 				/* http://webtypography.net/Rhythm_and_Proportion/Blocks_and_Paragraphs/2.3.2/ */
@@ -243,8 +243,8 @@ Avoids IE6-8 erroneous HTTP request (and subsequent 404)
 				}
 				#text a {
 					text-decoration:none;
-					border-bottom:1px dotted #e4e4e4;
-					color:#e4e4e4;
+					border-bottom:1px dotted #e6e6e6;
+					color:#e6e6e6;
 				}
 				#text a:visited {}
 				#text blockquote {
@@ -292,8 +292,8 @@ Avoids IE6-8 erroneous HTTP request (and subsequent 404)
 				}
 				#footer a {
 					text-decoration:none;
-					border-bottom:1px dotted #e4e4e4;
-					color:#e4e4e4;
+					border-bottom:1px dotted #e6e6e6;
+					color:#e6e6e6;
 				} 
 				#footer a:visited {
 					color:#B3B3B3;
