@@ -26,18 +26,35 @@ AddDefaultCharset	UTF-8
 # AddType video/x-f4v	.f4v
 AddType video/x-flv	.flv
 
+AddType video/ogg .ogv 
+AddType video/mp4 .mp4 
+AddType video/webm .webm
+
+## For ogg media to help Firefox; set one for each ogv file; the long way, but reduces HTTP requests
+## Use oggz-info to find the duration
+<Files "elephant.ogv">
+Header set X-Content-Duration "653.791"
+</Files>
+
 ## Webfonts
+
+# AddType application/vnd.bw-fontobject .eot
+# AddType application/x-font-ttf .ttf
 # Addtype font/eot .eot
 # AddType application/octet-stream .otf .ttf
 # AddType font/woff woff
+
 Addtype font/opentype .otf
 AddType application/vnd.ms-fontobject eot
 Addtype font/truetype .ttf
+
+## must be application/x-woff and not font/woff else FF will download it twice
 AddType application/x-woff .woff 
+
 ## Proper svg serving. Required for svg webfonts on iPad:
 ##     twitter.com/FontSquirrel/status/14855840545
-AddType     image/svg+xml             svg svgz 
-AddEncoding gzip                      svgz
+AddType     image/svg+xml             .svg .svgz 
+AddEncoding gzip                      .svgz
 
 ## Compression
 # html, txt, css, js, json, xml:
@@ -74,8 +91,8 @@ FileETag None
   ExpiresByType image/png                 "access plus 1 month"
   ExpiresByType image/jpg                 "access plus 1 month"
   ExpiresByType image/jpeg                "access plus 1 month"
-  ExpiresByType video/ogg                 "access plus 1 month"
   ExpiresByType audio/ogg                 "access plus 1 month"
+  ExpiresByType video/ogg                 "access plus 1 month"
   ExpiresByType video/mp4                 "access plus 1 month"
   ExpiresByType video/webm                "access plus 1 month"
   
@@ -101,7 +118,7 @@ FileETag None
   Header set Cache-Control "max-age=2678400, public"
   </filesmatch>
   # Cache HTML files for a couple hours
-  <filesmatch "\.(html|htm)$">
+  <filesmatch "\.(html|htm|shtml)$">
   Header set Cache-Control "max-age=7200, private, must-revalidate"
   </filesmatch>
   # Cache PDFs for a day
