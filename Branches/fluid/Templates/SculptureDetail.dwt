@@ -141,7 +141,7 @@
 			$(document).ready(function() {
 				flowplayer("player", {
 					src: '/flash/lib/flowplayer-3.2.5.swf', 
-					wmode: 'opaque',
+					wmode: 'window', //'opague' produces serious choppiness in IE.
 					cachebusting: false,
 					// we need at least this Flash version
 					version: [9, 115],

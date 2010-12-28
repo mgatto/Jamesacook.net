@@ -15,11 +15,21 @@
 		<link rel="icon" href="/favicon.ico" type="image/vnd.microsoft.icon" />
 		<link rel="shortcut icon" href="/favicon.ico" />
 		
-		<!-- Need this for the html5 shim -->
-		<script src="js/lib/jquery-1.4.4.min.js"></script>
+		<!-- Facebook and others will use the following data to represent your site
+when it is shared (<meta>s are strictly for Facebook).
+Facebook documentation (includes info on sharing more specific media types): http://developers.facebook.com/docs/share -->
+	    <meta property="og:title" content="" />
+    	<meta property="og:description" content="" />
+	    <meta property="og:image" content="" />
+    	<link rel="image_src" href="" />
 		
+		<!-- Need this for the html5 shim?? -->
+		<script src="/js/lib/jquery-1.4.4.min.js"></script>
+		<script src="/js/lib/css_browser_selector.js" type="text/javascript"></script>
 		<!--[if lt IE 9]>
-			<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+			<script src="/js/lib/selectivizr.js"></script>
+			<script src="/js/lib/html5.js"></script>
+			<script src="/js/lib/css3-mediaqueries.js"></script>
 		<![endif]-->
 		
 		<!-- Stylesheets -->
@@ -29,7 +39,7 @@
 	</head>
 	<body class="index">
 		<div id="body" class="container">
-			<div id="banner" class="row">
+			<header class="row">
 				<div class="twelvecol last">
 					<h1>James A Cook</h1>
 				
@@ -37,14 +47,15 @@
 						<a href="#content" accesskey="7">Skip to Main Content</a>
 					</div>
 	            </div>			
-			</div>
+			</header>
 			
-			<div class="row">
+			<nav class="row">
 				<ul id="navigation" class="twelvecol last">
-					<li class="twocol">
-						<a href="/index.html" title="Home Page" accesskey="1">James A. Cook</a>
+					<li class="onecol" style="border-left:0">&nbsp;</li>
+					<li class="twocol active">
+						<a href="/index.html" title="Home Page" accesskey="1" class="active-link">James A. Cook</a>
 					</li>
-					<li class="threecol">
+					<li class="twocol">
 						<a href="/mediated-sculpture/index.html" title="Gallery of mediated sculptures by James A. Cook">Mediated Sculpture</a>
 					</li>
 					<li class="twocol">
@@ -57,10 +68,11 @@
 						<a href="/spiel/index.html" title="About James A. Cook and Contact Information">Spiel</a>
 					</li>
 				</ul>
-			</div>
+			</nav>
 			
 			<div class="row">
-				<div id="text" class="threecol">
+				<div class="onecol">&nbsp;</div>
+				<div id="text" class="fourcol">
                 	<h2>&quot;Vertical Inclination given Temporary Support by an Apparition of a scaffold in the Form of the Khufu Pyramid&quot;</h2>
           
                     <p class="materials">
@@ -70,16 +82,16 @@
 					</p>
                 </div>
 				
-				<div class="twocol">&nbsp;</div>
+				<!--<div class="onecol">&nbsp;</div>-->
 				
-                <div id="media" class="sixcol last">
+                <div id="media" class="sevencol last">
 					<div class="image">
 	                	<img src="media/images/vertical-inclination-1.jpg" alt="Vertical Inclination given Temporary Support by an Apparition of a scaffold in the Form of the Khufu Pyramid" title="Vertical Inclination given Temporary Support by an Apparition of a scaffold in the Form of the Khufu Pyramid" />
 					</div>
                 </div>
 			</div>
 				
-			<div id="footer" class="row">			
+			<footer class="row">			
 				<ul class="eightcol last">
 					<li class="onecol">
 						<a href="/index.html" accesskey="1">Home</a>
@@ -99,15 +111,15 @@
 				</ul>
 				
 				<p id="attribution" class="row">
-					&copy; 2010, James A Cook
+					<small>&copy; 2010, James A Cook</small>
 				</p>
 				
 				<p id="designed_by" class="row">
-					<a href="http://boeltsdesign.com/" rel="designer">Design by: Boelts Design, Inc</a>
+					<small><a href="http://boeltsdesign.com/" rel="designer">Design by: Boelts Design, Inc</a>
 					<br />
-					<a href="http://www.lisantra.com/" rel="programmer">Programming by: Lisantra Technologies, LLC</a>
+					<a href="http://www.lisantra.com/" rel="programmer">Programming by: Lisantra Technologies, LLC</a></small>
 				</p>
-			</div>
+			</footer>
 		</div>
 
 		<!-- Scripts -->

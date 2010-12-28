@@ -13,7 +13,7 @@ fi
 
 PROGNAME="$0"
 SHORTOPTS="f::t::c::d::v::h"
-LONGOPTS="from::,to::,conf::,repository::,archive::,domain::,version::,rewrite,reverse-rewrite,combine-css::,combine-js::help"
+LONGOPTS="from::,to::,conf::,repository::,archive::,domain::,version::,rewrite,reverse-rewrite,combine-css::,combine-js::,help"
 SVN=
 ZIP=
 TO="$PWD"
@@ -29,6 +29,23 @@ COMBINE=
 CSSFILES=
 JSFILES=
 REWRITE=0
+
+usage() {
+  cat <<EO
+        Usage: $PROGNAME [options]
+
+        Deploy a static HTML website, and optionally optimize it.
+
+        Options:
+EO
+  cat <<EO | column -s\& -t
+
+        -h|--help & show this output
+        -V|--version & show version information
+EO
+exit 0
+}
+
 
 ARGS=$(getopt -s bash --options $SHORTOPTS  \
   --longoptions $LONGOPTS --name $PROGNAME -- "$@" )
@@ -371,18 +388,18 @@ encode() {
 minify_html() {
     echo "Stripping coments, including Dreamweaver Template commands"
     find . -type f -name "*.html" | sudo xargs -I {} \
-        java -jar $TO/htmlcompressor-0.9.3.jar --type html --compress-js --nomunge -o {} {}
-        # --remove-intertag-spaces  --remove-quotes (mgatto: "yuck!")
+        java -jar $TO/htmlcompressor-0.9.7.jar --type html --remove-intertag-spaces --compress-js --nomunge -o {} {}
+        #  --remove-quotes (mgatto: "yuck!")
 }
 minify_css() {
     echo "Minifying CSS files"
     find . -type f -name "*.css" | sudo xargs -I {} \
-        java -jar $TO/yuicompressor-2.4.2.jar --type css {} -o {} --charset utf-8  --line-break 0
+        java -jar $TO/yuicompressor-2.4.4.jar --type css {} -o {} --charset utf-8  #--line-break 0
 }
 minify_js() {
     echo "Minifying Javascript files"
-    find . -type f \( -name "*.js" -a -not name "jquery*" \) | sudo xargs -I {} \
-        java -jar $TO/yuicompressor-2.4.2.jar --type js {} -o {} --charset utf-8  --line-break 0
+    find . -type f \( -name "*.js" \) | sudo xargs -I {} \
+        java -jar $TO/yuicompressor-2.4.4.jar --type js {} -o {} --charset utf-8  #--line-break 0
 }
 
 # Optimize PNG file in place
@@ -471,7 +488,7 @@ optimize_img() {
     TMPF=`mktemp tmp.XXXXXX` || exit 1
     RETURNVAL=1
 
-    find . -type f /( -name "*.png" -o -name "*.jpg" -o -name "*.jpeg" \) | sudo xargs -I {} \
+    find . -type f \( -name "*.png" -o -name "*.jpg" -o -name "*.jpeg" \) | sudo xargs -I {} \
         do_file {};
         #if [ "$RETURNVAL" != "0" ]; then
         #    RETURNVAL=$?
@@ -484,23 +501,6 @@ error() {
 }
 
 #version() {}
-
-usage()
-{
-  cat << EO
-        Usage: $PROGNAME [options]
-               $PROGNAME -o <version> -c
-
-        Deploy a static HTML website, and optionally optimize it.
-
-        Options:
-EO
-  cat <<EO | column -s\& -t
-
-        -h|--help & show this output
-        -V|--version & show version information
-EO
-}
 
 #logging requires log4sh
 #if [ -r log4sh ]; then

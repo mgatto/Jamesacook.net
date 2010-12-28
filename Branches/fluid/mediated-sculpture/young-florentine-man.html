@@ -141,14 +141,13 @@
         
         <!-- Scripts -->
 
-        <script type="text/javascript" src="/js/main-180.js"></script>
-		<!-- #BeginLibraryItem "/Library/Flowplayer JS.lbi" -->		
+        <script type="text/javascript" src="/js/main-180.js"></script><!-- #BeginLibraryItem "/Library/Flowplayer JS.lbi" -->		
 		<script type="text/javascript" src="/js/flowplayer-3.2.4.min.js"></script>
 		<script type="text/javascript">		
 			$(document).ready(function() {
 				flowplayer("player", {
 					src: '/flash/lib/flowplayer-3.2.5.swf', 
-					wmode: 'opaque',
+					wmode: 'window', //'opague' produces serious choppiness in IE.
 					cachebusting: false,
 					// we need at least this Flash version
 					version: [9, 115],
