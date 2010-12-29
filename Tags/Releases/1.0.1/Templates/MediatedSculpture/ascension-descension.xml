@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<templateItems template="/Templates/MediatedSculptureDetail.dwt" codeOutsideHTMLIsLocked="false">
+   	<parameter name="name" type="text" passthrough="false"><![CDATA[Ascension / Descension]]></parameter>
+   	<parameter name="meta_description" type="text" passthrough="false"><![CDATA[The sculpture has a strong verticality, a feeling of ascendancy. Two forelegs of a horse hover above a waterless font on a porcelain mount, all of which is fixed to a simple wooden box.]]></parameter>
+   	<parameter name="main_image_src" type="text" passthrough="false"><![CDATA[/media/images/ascension-descension-1.jpg]]></parameter>
+	<parameter name="another_view_1" type="boolean" passthrough="false">true</parameter>
+	<parameter name="another_view_1_src" type="text" passthrough="false"><![CDATA[/media/images/ascension-descension-2.jpg]]></parameter>
+	<parameter name="another_view_2" type="boolean" passthrough="false">true</parameter>
+	<parameter name="another_view_2_src" type="text" passthrough="false"><![CDATA[/media/images/ascension-descension-detail-4.jpg]]></parameter>
+	<parameter name="video" type="boolean" passthrough="false">true</parameter>
+	<parameter name="video_src" type="text" passthrough="false"><![CDATA[/media/videos/xyz-640.f4v]]></parameter>
+   	<item name="materials"><![CDATA[
+					Bronze, wood, steel, cast iron, DVD player, speakers, LCD monitor, video recording  
+					<br />
+					92&Prime; &times; 32&Prime; &times; 32&Prime;
+		]]></item>
+	<item name="description"><![CDATA[
+                    <p class="description">Years ago I visited a slaughterhouse. After men with knives separated most of a steer from its hide, a wench with hook methodically pulled the animal up from the floor. At a certain point, quite unexpectedly, the hide ripped away from the carcass, which slapped down onto the concrete. The separation between the hide and the body was for me a searing moment. 
+The implications regarding our own transition at death&mdash;including ubiquitous systems offering comfort and cosmologic accountability and our general aversion to the ideas of death--were latent in this moment of abrupt separation.</p>
+					<p class="description">The sculpture has a strong verticality, a feeling of ascendancy. Two forelegs of a horse hover above a waterless font on a porcelain mount, all of which is fixed to a simple wooden box. The two legs are filled with hollow reed shafts, running out from the hooves below, and out from the top flanks of each leg. A small opening on the top of the box reveals a video depicting the flaying of a horse and the subsequent wrenching of hide from carcass.</p>
+		]]></item>
+   	<item name="head"><![CDATA[]]></item>
+</templateItems>
