@@ -8,7 +8,7 @@
 	<parameter name="another_view_2" type="boolean" passthrough="false">true</parameter>
 	<parameter name="another_view_2_src" type="text" passthrough="false"><![CDATA[/media/images/ascension-descension-detail-4.jpg]]></parameter>
 	<parameter name="video" type="boolean" passthrough="false">true</parameter>
-	<parameter name="video_src" type="text" passthrough="false"><![CDATA[/media/videos/xyz-640.f4v]]></parameter>
+	<parameter name="video_src" type="text" passthrough="false"><![CDATA[/media/videos/asc-desc-640.f4v]]></parameter>
    	<item name="materials"><![CDATA[
 					Bronze, wood, steel, cast iron, DVD player, speakers, LCD monitor, video recording  
 					<br />
