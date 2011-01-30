@@ -389,18 +389,18 @@ encode() {
 # Remove extra spaces and comments from HTML
 minify_html() {
     echo "Stripping coments, including Dreamweaver Template commands"
-    find . -type f -name "*.html" | sudo xargs -I {} \
-        java -jar $TO/htmlcompressor-0.9.7.jar --type html --remove-intertag-spaces --compress-js --nomunge -o {} {}
+    find ./$VERSION -type f -name "*.html" | sudo xargs -I {} \
+        java -jar $TO/htmlcompressor-0.9.8.jar --type html --remove-intertag-spaces --compress-js --nomunge -o {} {}
         # --remove-intertag-spaces  --remove-quotes (mgatto: "yuck!")
 }
 minify_css() {
     echo "Minifying CSS files"
-    find . -type f -name "*.css" | sudo xargs -I {} \
+    find ./$VERSION -type f -name "*.css" | sudo xargs -I {} \
         java -jar $TO/yuicompressor-2.4.4.jar --type css {} -o {} --charset utf-8  #--line-break 0
 }
 minify_js() {
     echo "Minifying Javascript files"
-    find . -type f \( -name "*.js" \) | sudo xargs -I {} \
+    find ./$VERSION -type f \( -name "*.js" \) | sudo xargs -I {} \
         java -jar $TO/yuicompressor-2.4.4.jar --type js {} -o {} --charset utf-8  #--line-break 0
 }
 
@@ -488,7 +488,7 @@ do_file () {
 }
 
 optimize_img() {
-    find . -type f \( -name "*.jpg" -o -name "*.jpeg" -o -name "*.png" \) -print | while read i; do do_file "$i"; done
+    find ./$VERSION -type f \( -name "*.jpg" -o -name "*.jpeg" -o -name "*.png" \) -print | while read i; do do_file "$i"; done
 }
 
 error() {
