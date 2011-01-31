@@ -1,0 +1,448 @@
+@charset "utf-8";
+
+/*
+workaround from Paul Irish's normal bulletproof syntax to make it work for GTK-webkit
+<!--[if IE]>
+<style>
+  @font-face {
+	font-family: 'PaddingtonSCPlainSmallCapsRom';
+	src: url('/assets/fonts/paddingtonsc-webfont.eot');
+	font-weight: normal;
+	font-style: normal;
+  }
+</style>
+<![endif]-->
+*/
+@font-face {
+	font-family: 'PaddingtonSCPlainSmallCapsRom';
+  	src: url(//:) format("no404"),
+    url("/assets/fonts/paddingtonsc-webfont.woff") format("woff"),
+    url("/assets/fonts/paddingtonsc-webfont.ttf") format("truetype"),
+    url("/assets/fonts/paddingtonsc-webfont.svg#webfontCykG2Qou") format("svg");
+	font-weight: normal;
+	font-style: normal;	
+}
+
+/*usualy Paul Irish bulletproof way:
+
+@font-face {
+	font-family: 'PaddingtonSCPlainSmallCapsRom';
+	src: url('/assets/fonts/paddingtonsc-webfont.eot');
+	src: local('☺'), url('/assets/fonts/paddingtonsc-webfont.woff') format('woff'), url('/assets/fonts/paddingtonsc-webfont.ttf') format('truetype'), url('/assets/fonts/paddingtonsc-webfont.svg#webfontCykG2Qou') format('svg');
+	font-weight: normal;
+	font-style: normal;	*/
+	/*font-variant:small-caps; is unneccesary with this font.*/
+	/* font-variant: normal; don't include this since webkit will ignore the whole rule: https://bugs.webkit.org/show_bug.cgi?id=25000 */
+/*}*/
+
+@media print {
+	@page { margin: 0.5in; }
+	body {line-height:1.5;font-family:"Helvetica Neue", Arial, Helvetica, sans-serif;color:#000;background:none;font-size:10pt;}
+	.container {background:none;}
+	hr {background:#ccc;color:#ccc;width:100%;height:2px;margin:2em 0;padding:0;border:none;}
+	h1, h2, h3, h4 {font-family:"Helvetica Neue", Arial, "Lucida Grande", sans-serif;}
+	p, h2, h3 { orphans: 3; widows: 3; }
+	h2, h3{ page-break-after: avoid; }
+	code {font:.9em "Courier New", Monaco, Courier, monospace;}
+	a img {border:none;}
+	blockquote {margin:1.5em;padding:1em;font-style:italic;font-size:.9em;}
+	a:link, a:visited {background:transparent;font-weight:700;text-decoration:none;}
+	a:link:after, a:visited:after {content:" (" attr(href) ")";font-size:90%;}
+    nav, #skip, footer, #next, #prev, #player,.onecol {display:none;}
+	#text {width:100%;padding:0 1.6%;}
+	#media {width:100%;display:block;}
+	.thumbnail {width:100%;height:100%;/*max-height:4in;overflow:hidden;*/}
+	img {float:left;width:30%;margin:1.6%;/*margin-bottom:1.5em;width:65%;max-height:9in;overflow:hidden;*/}
+	/*footer {clear:both;width:100%;text-align:center;margin-top:4em;}*/
+	#media:after {content:".";display:block;height:0;clear:both;visibility:hidden;font-size:0;}
+	/*div {border:1px solid black; }*/
+}
+
+@media screen {
+	/* www.hicksdesign.co.uk/journal/forcing-scrollbars-now-even-better */
+html {margin:0;padding:0;border:0; font-size:100.01%;height:100%;margin-bottom:1px;}
+/*html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,address,cite,code,del,dfn,em,img,ins,q,small,strong,sub,sup,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{border:0;margin:0;padding:0}a img{border:0}figure{position:relative}figure img{width:100%}*/
+
+body, div, span, object, iframe, h1, h2, h3, h4, /*h5, h6,*/ p, blockquote, pre, a, abbr, acronym, address, code, /*del, dfn,*/ em, img, q, dl, dt, dd, ol, ul, li/*, fieldset, form, label, legend*/ {margin:0;padding:0;border:0;font-weight:inherit;font-style:inherit;font-size:100%;font-family:inherit;vertical-align:baseline;}
+body {line-height:1.5;background:white;}
+article,aside,figure,figure img,figcaption,hgroup,footer,header,nav,section,video,object{display:block}
+a img{border:0}
+.container {padding-left: 20px;padding-right: 20px;}
+.row {width: 100%;max-width: 1140px;margin: 0 auto;overflow: hidden;}
+.onecol, .twocol, .threecol, .fourcol, .fivecol, .sixcol, .sevencol, .eightcol, .ninecol, .tencol, .elevencol {margin-right: 3.8%;float: left;}
+.onecol {width: 4.85%;}
+.twocol {width: 13.5%;}
+.threecol {width: 22.15%;}
+.fourcol {width: 30.8%;}
+.fivecol {width: 39.45%;}
+.sixcol {width: 48.1%;}
+.sevencol {width: 56.75%;}
+.eightcol {width: 65.4%;}
+.ninecol {width: 74.05%;}
+.tencol {width: 82.7%;}
+.elevencol {width: 91.35%;}
+.twelvecol {width: 100%;float: left;}
+.last {margin-right: 0px;}
+img, object, embed {max-width: 100%;margin-bottom: 20px;position: relative;}
+a img {
+display: block;		/* Stops image links getting text link styles */
+margin-bottom: 20px;
+}
+
+h1,h2,h3,p, ul, ol, blockquote {
+margin-bottom: 1em;	/* Changing this will break the baseline grid. */
+}
+
+body {
+	/* only color: #F8F8F8; and  background-color: #555; = contrast 7:1 and passing WCAG 2.0 AAA for less than 18pt*/
+	background-color: #666;
+	color: #e6e6e6;
+	font-family:PaddingtonSCPlainSmallCapsRom, Arial, sans-serif;
+	letter-spacing:1px;
+	font-weight:normal;
+	font-size: 75%;
+	line-height: 1.5em;		/* Changing this will break the baseline grid. */
+	-webkit-text-size-adjust: none;		/* Stops the iPhone scalling type up */
+}
+	/* hack to mitigate FOUT */
+	.download-me {
+		font-family:PaddingtonSCPlainSmallCapsRom, Arial, sans-serif;
+		line-height:1px;
+	}
+/*div#body {}*/
+		header {
+				height:36px; 
+		}
+			h1 {
+				margin-left:-9999em;
+				line-height: 36px;/* Changing this will break the baseline grid. */
+			}
+			#skip a, #skip a:hover, #skip a:visited { 
+				position:absolute; 
+				left:0px; 
+				top:-500px; 
+				width:1px; 
+				height:1px; 
+				overflow:hidden;
+			}
+			#skip a:active, #skip a:focus { 
+				position:static; 
+				width:auto; 
+				height:auto; 
+				text-decoration:none;
+				border-bottom:1px dotted #e6e6e6;
+				color:#e6e6e6;
+			}
+			/*ul*/#navigation {
+				border-top: 1px solid #e6e6e6;
+				border-bottom: 1px solid #e6e6e6;
+				padding-top: 5px;
+				padding-bottom: 5px;
+				background-color:#666;
+				color:#FFF;
+			}
+				#navigation li{
+					list-style-type:none;
+					text-align:left;
+					border-left: 1px solid #e6e6e6;
+				}
+					#navigation li a {
+						color:#e6e6e6  /*#B3B3B3*/;
+						font-size:1.2em;
+						text-decoration:none;
+						/*font-variant:small-caps;*/
+						/* without arulentsans-smallcaps, this borks the @font-face in Webkit: http://mwhenry.com/blog/2010/04/ugly-font-variant-bug/ */
+						display:block;
+						border-left: 1px solid #e6e6e6;
+						margin-left:.5em;
+						padding-left:.5em;
+						line-height: 1.5em;
+					}
+					/*li*/.active {
+						border-left: 1px solid #FC3 !important;
+					}
+					/*a*/.active-link {
+						color: #FFF !important;
+						margin-left:0em !important;
+						border-left: 0.5em solid #FC3 !important;
+						
+					}
+					#navigation li a:visited {
+						color:#B3B3B3;
+					}
+				#prev {
+					text-align:left;
+				}
+				#next {
+					text-align:right;
+				}
+					#next a:link, #prev a:link {
+						color:#e6e6e6  /*#B3B3B3*/;
+						font-size:0.8em;
+						text-decoration:none;
+						border-bottom:1px solid #b3b3b3;
+						padding-bottom: 2px;
+					}
+					#next a:visited, #prev a:visited {
+						color:#e6e6e6  /*#B3B3B3*/;
+						font-size:0.8em;
+						text-decoration:none;
+						border-bottom:1px solid #b3b3b3;
+						padding-bottom: 2px;
+					}			
+			div#content {
+				/*margin-bottom:0.5em;*/
+				margin-top: 24px;
+			}
+				/*div#text {}*/
+				#text h2, #text h3, #text h4/*, #text h5*/ {
+					/* parent styles were not cascading from div#text, so we repeat for h2 */
+					font-family:PaddingtonSCPlainSmallCapsRom,"Arial Bold",Arial;
+					font-weight: normal;
+					/*font-weight: bold; this doesn't look good at all bolded*/
+					color: #e6e6e6;
+					font-size: 1.2em;	
+					margin-bottom: 24px;	/* Changing this will break the baseline grid. */
+					width:95%;
+				}
+				#text ul {
+					padding-left:1em;
+				}
+				thead th {
+					background:#e6e6e6;
+					color:#666;
+					vertical-align:top;
+					text-align:left;
+				}
+				#text p, #text li {
+					font-family:PaddingtonSCPlainSmallCapsRom,"Arial Bold",Arial;
+					font-size:1.2em;
+					font-weight: normal;
+					color: #eee; /*#e6e6e6*/
+				}
+				#text p {
+					width:100%;
+					/*min-width:25em;*/
+					max-width:35em;
+				}
+				/*#text p.materials {}*/
+				/* http://webtypography.net/Rhythm_and_Proportion/Blocks_and_Paragraphs/2.3.2/ */
+				p.description + p.description, .index p + p, .spiel p + p {
+					text-indent:2em;
+					/*font-variant:normal;*/
+				}
+				#text a {
+					text-decoration:none;
+					border-bottom:1px solid #e6e6e6;
+					color:#e6e6e6;
+				}
+				#text a:visited {
+					color:#B3B3B3;
+					border-bottom:1px solid #B3B3B3;
+				}
+				#text blockquote {
+					margin-top:0;
+					margin-bottom:0;
+					font-style:normal;
+					padding-left: 15px;
+					margin-left: -15px;
+					border-left: 1px solid #e6e6e6;
+				}
+				/*div*/#media {
+					text-align:right;
+					/*padding-left:1.3em;*/
+				}
+				/*#media img, #media video {}*/
+					/*div*/.thumbnail {
+						border:1px solid #FC3;
+						padding:1px;
+						color: #e6e6e6;
+						overflow: hidden;
+						position:relative; /*for ie 7/8: http://snook.ca/archives/html_and_css/position_relative_overflow_ie/*/
+					}
+						.thumbnail img {
+							max-width:125%;
+							min-height:100%;
+							/* www.456bereastreet.com/archive/201002/specify_a_text_colour_for_img_elements/ */
+							color: #e6e6e6;
+						}
+							.bigger {
+								margin-left:4.1%;
+								width:99%;
+								/*max-*/height:400px;
+								overflow:hidden;
+							}
+							.smaller {
+								margin-bottom:4.1%;
+								/*max-*/height: 195px;
+								width: 98% !important;
+								overflow:hidden;
+						}
+					/*video {}*/
+					/*video*/#player {
+						display:block;
+						width:98% !important;
+						margin-left:2.4%;
+						color: #e6e6e6;
+					}
+					/*#player_video, #player_displayarea {left:11% !important;}*/
+			footer {
+				padding-top:1em;
+				font-family:PaddingtonSCPlainSmallCapsRom,"Arial Bold",Arial;
+				font-weight:normal;
+				font-size:10px;
+				margin-bottom:4em;
+				margin-top:1em !important;
+			} 
+				small {font-size:100%;}
+				footer ul {
+					list-style-type:none;
+					margin-left:30%;
+				}
+				#designed_by, #attribution {
+					text-align:center;
+					text-indent:0;
+					margin:1em 0;
+				}
+				footer a:link {
+					text-decoration:none;
+					border-bottom:1px solid #e6e6e6;
+					color:#e6e6e6;
+				} 
+				footer a:visited {
+					text-decoration:none;
+					border-bottom:1px solid #B3B3B3;
+					color:#B3B3B3;
+				}
+				
+				/*
+		ColorBox Core Style
+		The following rules are the styles that are consistant between themes.
+		Avoid changing this area to maintain compatability with future versions of ColorBox.
+	*/
+	#colorbox, #cboxOverlay, #cboxWrapper{position:absolute; top:0; left:0; z-index:9999; overflow:hidden;}
+	#cboxOverlay{position:fixed; width:100%; height:100%;}
+	#cboxMiddleLeft, #cboxBottomLeft{clear:left;}
+	#cboxContent{position:relative;}
+	#cboxLoadedContent{overflow:auto;}
+	#cboxLoadedContent iframe{display:block; width:100%; height:100%; border:0;}
+	#cboxTitle{margin:0;}
+	#cboxLoadingOverlay, #cboxLoadingGraphic{position:absolute; top:0; left:0; width:100%;}
+	#cboxPrevious, #cboxNext, #cboxClose, #cboxSlideshow{cursor:pointer;}
+	
+	/* 
+		ColorBox example user style
+		The following rules are ordered and tabbed in a way that represents the
+		order/nesting of the generated HTML, so that the structure easier to understand.
+	*/
+	#cboxOverlay{background:#000;}
+	
+	#colorbox{}
+		#cboxContent{margin-top:20px;}
+			#cboxLoadedContent{background:#000; padding:5px;}
+			#cboxTitle{position:absolute; top:-20px; left:0; color:#ccc;}
+			#cboxCurrent{position:absolute; top:-20px; right:0px; color:#ccc;}
+			#cboxSlideshow{position:absolute; top:-20px; right:90px; color:#fff;}
+			#cboxPrevious{position:absolute; top:50%; left:5px; margin-top:-32px; background:url(/assets/artwork/controls.png) top left no-repeat; width:28px; height:65px; text-indent:-9999px;}
+			#cboxPrevious.hover{background-position:bottom left;}
+			#cboxNext{position:absolute; top:50%; right:5px; margin-top:-32px; background:url(/assets/artwork/controls.png) top right no-repeat; width:28px; height:65px; text-indent:-9999px;}
+			#cboxNext.hover{background-position:bottom right;}
+			#cboxLoadingOverlay{background:#000;}
+			#cboxLoadingGraphic{background:url(/assets/artwork/loading.gif) center center no-repeat;}
+			#cboxClose{position:absolute; top:5px; right:5px; display:block; background:url(/assets/artwork/controls.png) top center no-repeat; width:38px; height:19px; text-indent:-9999px;}
+			#cboxClose.hover{background-position:bottom center;}
+}
+
+@media only screen and (max-width: 1023px) {
+	body {
+		/*font-size: 0.8em;*/ /* Makes type a bit smaller at 1024 so layout doesn't look unbalanced */
+		/*line-height: 1.5em;*/	/* As above */
+	}
+	.onecol {width: 0;margin-right: 0;}
+	.fourcol {width: 37%;}
+	.sixcol {width: 55%;margin-right: 0;}
+	.eightcol {width: 59%}
+	.tencol {width:100%;}
+	#text {width:41%}
+	footer {margin-top:1em;}
+	footer .onecol, .twocol, .threecol, .eightcol {margin-right: 3.8%;float: left;}
+	footer .onecol {width: 4.85%;}
+	footer .twocol {width: 13.5%;}
+	footer .threecol {width: 22.15%;}
+	footer .eightcol {width: 90%;}
+	footer ul {margin-left: 22%;}
+}
+
+/*@media only screen and (max-width: 767px) and (min-width: 480px) {}*/
+/* @media only screen and (max-width: 479px) {} */
+
+@media only screen and (max-width: 767px) {	/*or max-device-width: 480px*/
+	.row, .body, .container {
+		width: 100%;
+		margin-left: 0px;
+		margin-right: 0px;
+		padding-left: 0px;
+		padding-right: 0px;
+	}
+	
+	.onecol, .twocol, .threecol, .fourcol, .fivecol, .sixcol, .sevencol, .eightcol, .ninecol, .tencol, .elevencol, .twelvecol, footer .onecol, footer .twocol, footer .threecol, footer .eightcol  {
+		width: auto;
+		float: none;
+		margin-left: 0px;
+		margin-right: 0px;
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+	
+	.row {
+		width: 100%;
+	}
+	header {height:0;}
+	body {
+		/*font-size: 0.8em;*/ /* Makes type a bit smaller at 1024 so layout doesn't look unbalanced */
+		/*line-height: 1.5em;*/	/* As above */
+		/*font-size: 16px;
+		line-height: 24px;*/
+	}
+	nav {margin-top:0.5em;}
+	nav > .onecol, div > .onecol {display:none; height:0;}
+	#text {width:90%; }
+	/*#text h2 {}*/
+	#text p {width:100%;}
+	#media .fourcol, #media .eightcol {
+		padding-left: 0;
+		padding-right: 0;
+	}
+	
+					#navigation li a {
+						margin-left:0.5em;
+						padding-left:.5em;
+					}
+					
+					/*#media {}*/
+				#footer ul {
+					margin-left:0;
+					text-align:center;
+				}
+				.thumbnail {max-width:35em;}
+				.thumbnail > a, .thumbnail > a > img {
+							width: 100%;
+							/* www.456bereastreet.com/archive/201002/specify_a_text_colour_for_img_elements/ */
+							color: #e6e6e6; 
+							margin-bottom:0;
+						}
+							.bigger {
+								margin-left: 0;
+								margin-bottom: 1em;
+    							height: auto;
+							    overflow:visible;
+							    width: 100% !important;
+							}
+							.smaller {
+								margin-left: 0;
+								margin-bottom: 1em;
+    							height: auto;
+								overflow: visible;
+								width: 100% !important;
+						}
+}
