@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en"><!-- InstanceBegin template="/Templates/MediatedSculptureDetail.dwt" codeOutsideHTMLIsLocked="false" -->
+<html lang="en">
 	<head>
 		<!-- Meta data -->
 		<!-- uses hMedia, hCard and CWDA Lite for work of art microformat -->
@@ -8,8 +8,8 @@
 		<meta charset="utf-8"/>
 		<meta name="language" content="en" />
 		
-		<title>As Above, So Below (Seven, Interpretations from the Ten Ox Herding Pictures) &middot; James A. Cook &middot; Tucson Artist</title>
-		<meta name="description" content="This wall piece consists of low-relief stone-like topography, cast in bronze, enclosed by a vintage wooden frame. There is a subtle horizon line spanning across the upper quadrant, separating earth and space." />
+		<title>@@(name)@@ &middot; James A. Cook &middot; Tucson Artist</title>
+		<meta name="description" content="@@(meta_description)@@" />
 		<meta name="robots" content="index, follow" />
         
 		<link rel="canonical" href="http://jamesacook.net" />
@@ -34,21 +34,21 @@
 		<!-- Stylesheets -->
 		<link rel="stylesheet" href="/assets/css/styles-1.1.0-min.css" type="text/css" media="all" />
 		
-        <!-- InstanceBeginEditable name="head" --><!-- InstanceEndEditable -->
-		<!-- InstanceParam name="meta_description" type="text" value="This wall piece consists of low-relief stone-like topography, cast in bronze, enclosed by a vintage wooden frame. There is a subtle horizon line spanning across the upper quadrant, separating earth and space." -->
-		<!-- InstanceParam name="name" type="text" value="As Above, So Below (Seven, Interpretations from the Ten Ox Herding Pictures)" -->
-		<!-- InstanceParam name="main_image_src" type="URL" value="/assets/images/as-above-so-below-1.jpg" -->
-		<!-- InstanceParam name="another_view_1" type="boolean" value="true" -->
-		<!-- InstanceParam name="another_view_1_src" type="text" value="/assets/images/as-above-so-below-2.jpg" -->
-		<!-- InstanceParam name="another_view_2" type="boolean" value="false" -->
-		<!-- InstanceParam name="another_view_2_src" type="text" value="" -->
-		<!-- InstanceParam name="video" type="boolean" value="true" -->
-		<!-- InstanceParam name="video_src" type="text" value="/assets/videos/as-above-so-below.mp4" -->
-		<!-- InstanceParam name="video_poster" type="text" value="/assets/images/as-above-so-below-frame.jpg" -->
-		<!-- InstanceParam name="has_next" type="boolean" value="true" -->
-		<!-- InstanceParam name="next" type="text" value="ascension-descension.html" -->
-		<!-- InstanceParam name="has_prev" type="boolean" value="false" -->
-		<!-- InstanceParam name="prev" type="text" value="" -->
+        <!-- TemplateBeginEditable name="head" --> <!-- TemplateEndEditable -->
+		<!-- TemplateParam name="meta_description" type="text" value="" -->
+		<!-- TemplateParam name="name" type="text" value="" -->
+		<!-- TemplateParam name="main_image_src" type="URL" value="" -->
+		<!-- TemplateParam name="another_view_1" type="boolean" value="true" -->
+		<!-- TemplateParam name="another_view_1_src" type="text" value="" -->
+		<!-- TemplateParam name="another_view_2" type="boolean" value="true" -->
+		<!-- TemplateParam name="another_view_2_src" type="text" value="" -->
+		<!-- TemplateParam name="video" type="boolean" value="false" -->
+		<!-- TemplateParam name="video_src" type="text" value="" -->
+		<!-- TemplateParam name="video_poster" type="text" value="" -->
+		<!-- TemplateParam name="has_next" type="boolean" value="true" -->
+		<!-- TemplateParam name="next" type="text" value="" -->
+		<!-- TemplateParam name="has_prev" type="boolean" value="true" -->
+		<!-- TemplateParam name="prev" type="text" value="" -->
 	</head>
 	<body class="mediated-sculpture">
 		<div id="body" class="container cdwalite">
@@ -79,10 +79,10 @@
 				<div class="onecol">&nbsp;</div>
 				
 				<div id="prev" class="fivecol">
-					&nbsp;
+					<!-- TemplateBeginIf cond="has_prev" --><a href="@@(prev)@@">&laquo; Previous</a><!-- TemplateEndIf -->&nbsp;
 				</div>
 				<div id="next" class="fivecol last">
-					&nbsp;<a href="ascension-descension.html">Next &raquo;</a>
+					&nbsp;<!-- TemplateBeginIf cond="has_next" --><a href="@@(next)@@">Next &raquo;</a><!-- TemplateEndIf -->
 				</div>
 				
 				<div class="onecol">&nbsp;</div>
@@ -92,40 +92,44 @@
 				<div class="onecol">&nbsp;</div>
 				
 				<div id="text" class="fourcol">
-                	<h2 class="title">As Above, So Below (Seven, Interpretations from the Ten Ox Herding Pictures)</h2>
+                	<h2 class="title">@@(name)@@</h2>
           
-                    <p class="materials"><!-- InstanceBeginEditable name="materials" -->Bronze, wood, LCD monitor, DVD player, video<!-- InstanceEndEditable --></p>
-					<p class="dimensions"><!-- InstanceBeginEditable name="dimensions" -->32x&Prime; &times; 16&Prime; &times; 2&Prime;<!-- InstanceEndEditable --></p>
+                    <p class="materials"><!-- TemplateBeginEditable name="materials" --> <!-- TemplateEndEditable --></p>
+					<p class="dimensions"><!-- TemplateBeginEditable name="dimensions" --> <!-- TemplateEndEditable --></p>
 					<!--<span class="style"></span>
 					<span class="location"></span>-->
-					<!-- InstanceBeginEditable name="description" -->
-                    <p class="description">This wall piece consists of low-relief stone-like topography, cast in bronze, enclosed by a vintage wooden frame. There is a subtle horizon line spanning across the upper quadrant, separating earth and space. Through an opening on the horizon line is a video narrative of another horizon&mdash;that of desert mountains and early evening sky filled with clouds, rain, and flashes of lightening. The rumble of thunder is heard and rain continues as night falls. The horizon is gradually obscured in darkness to conjoin heaven and earth.</p>
-		<!-- InstanceEndEditable -->
+					<!-- TemplateBeginEditable name="description" --> <!-- TemplateEndEditable -->
                 </div>
 				
                 <div id="media" class="sixcol hmedia">
 					<div class="eightcol">
 						<div class="thumbnail bigger">
-							<a rel="enclosure" type="image/jpeg" href="/assets/images/as-above-so-below-1.jpg">
-								<img src="/assets/images/as-above-so-below-1.jpg" class="photo" alt="Main view of the sculpture" title="Main View" />
+							<a rel="enclosure" type="image/jpeg" href="@@(_document['main_image_src'])@@">
+								<img src="@@(_document['main_image_src'])@@" class="photo" alt="Main view of the sculpture" title="Main View" />
 							</a>
 						</div>
 					</div>
 					
 					<div class="fourcol last">
-						
+						<!-- TemplateBeginIf cond="another_view_1" -->
 						<div class="thumbnail smaller">
-							<a rel="enclosure" type="image/jpeg" href="/assets/images/as-above-so-below-2.jpg">
-								<img src="/assets/images/as-above-so-below-2.jpg" class="photo" alt="Detail view of the sculpture" title="Detail View" />
+							<a rel="enclosure" type="image/jpeg" href="@@(another_view_1_src)@@">
+								<img src="@@(another_view_1_src)@@" class="photo" alt="Detail view of the sculpture" title="Detail View" />
 							</a>
 						</div>
-						
-						
+						<!-- TemplateEndIf -->
+						<!-- TemplateBeginIf cond="another_view_2" -->
+						<div class="thumbnail smaller">
+							<a rel="enclosure" type="image/jpeg" href="@@(another_view_2_src)@@">
+								<img src="@@(another_view_2_src)@@" class="photo" alt="Detail view of the sculpture" title="Detail View" />
+							</a>
+						</div>
+						<!-- TemplateEndIf -->
 					</div>
-					
+					<!-- TemplateBeginIf cond="video" -->
 					<div class="twelvecol last">
-						<video id="player" class="player" preload="none" poster="/assets/images/as-above-so-below-frame.jpg" controls>
-							<source src="/assets/videos/as-above-so-below.mp4" type="video/mp4" /><!-- ; codecs="avc1.42E01E, mp4a.40.2 -->
+						<video id="player" class="player" preload="none" poster="@@(video_poster)@@" controls>
+							<source src="@@(video_src)@@" type="video/mp4" /><!-- ; codecs="avc1.42E01E, mp4a.40.2 -->
 							<!--<source src="short-history.webm" type="video/webm" /> --><!-- ; codecs="vp8, vorbis -->
 							<!--<source src="walkabout.ogv" type="video/ogg" /> --><!--; codecs="vorbis, theora -->
 							
@@ -136,7 +140,7 @@
 							
 							<ul>
  								<li>
-									<a rel="enclosure" type="video/mp4" title="Download the original source file for this movie" href="/assets/videos/as-above-so-below.mp4">
+									<a rel="enclosure" type="video/mp4" title="Download the original source file for this movie" href="@@(video_src)@@">
 										<!--<img src="/assets/images/short-history-poster.jpg" />-->
 										Original (MP4)
 									</a>
@@ -154,7 +158,7 @@
 							<p></p>-->
 						</video>
 					</div>
-					
+					<!-- TemplateEndIf -->
                 </div>
 				
 				<div class="onecol last">&nbsp;</div>
@@ -192,7 +196,7 @@
 					players: [
 						{ type: "html5" },
 						{ type: "flash", src: "/assets/flash/player.swf" },
-						{ type: "download", src: "/assets/images/as-above-so-below-frame.jpg"}
+						{ type: "download", src: "@@(video_poster)@@"}
 					]
 				});
 				<!-- TemplateEndIf -->
@@ -216,7 +220,7 @@
 							players: [
 								{ type: "html5" },
 								{ type: "flash", src: "/assets/flash/player.swf" },
-								{ type: "download", src: "/assets/images/as-above-so-below-frame.jpg"}
+								{ type: "download", src: "@@(video_poster)@@"}
 							]
 						});
 					}
@@ -239,4 +243,4 @@
 		</script>
 	<!-- #EndLibraryItem -->
 	</body>
-<!-- InstanceEnd --></html>
+</html>

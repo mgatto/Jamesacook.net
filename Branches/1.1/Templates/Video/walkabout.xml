@@ -2,7 +2,12 @@
 <templateItems template="/Templates/VideoDetail.dwt" codeOutsideHTMLIsLocked="false">
    	<parameter name="name" type="text" passthrough="false"><![CDATA[Walkabout]]></parameter>
    	<parameter name="meta_description" type="text" passthrough="false"><![CDATA[]]></parameter>
-	<parameter name="video_src" type="text" passthrough="false"><![CDATA[/media/videos/walkabout-640.f4v]]></parameter>
+	<parameter name="video_src" type="text" passthrough="false"><![CDATA[/assets/videos/walkabout.mp4]]></parameter>
+	<parameter name="video_poster" type="text" passthrough="false"><![CDATA[/assets/images/walkabout-frame.jpg]]></parameter>
+	<parameter name="has_prev" type="boolean" passthrough="false">true</parameter>
+	<parameter name="has_next" type="boolean" passthrough="false">false</parameter>
+	<parameter name="prev" type="text" passthrough="false"><![CDATA[tokyo-bardo.html]]></parameter>
+	<parameter name="next" type="text" passthrough="false"><![CDATA[]]></parameter>
    	<item name="materials"><![CDATA[
 					Single-channel video
 		]]></item>

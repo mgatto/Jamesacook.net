@@ -2,7 +2,12 @@
 <templateItems template="/Templates/VideoDetail.dwt" codeOutsideHTMLIsLocked="false">
    	<parameter name="name" type="text" passthrough="false"><![CDATA[Tap Dance of Shiva]]></parameter>
    	<parameter name="meta_description" type="text" passthrough="false"><![CDATA[]]></parameter>
-	<parameter name="video_src" type="text" passthrough="false"><![CDATA[tap-dance-of-siva-640.f4v]]></parameter>
+	<parameter name="video_src" type="text" passthrough="false"><![CDATA[/assets/videos/tap-dance-of-siva.mp4]]></parameter>
+	<parameter name="video_poster" type="text" passthrough="false"><![CDATA[/assets/images/tap-dance-frame.jpg]]></parameter>
+	<parameter name="has_prev" type="boolean" passthrough="false">true</parameter>
+	<parameter name="has_next" type="boolean" passthrough="false">true</parameter>
+	<parameter name="prev" type="text" passthrough="false"><![CDATA[short-history.html]]></parameter>
+	<parameter name="next" type="text" passthrough="false"><![CDATA[tokyo-bardo.html]]></parameter>
    	<item name="materials"><![CDATA[
 					 Three Channel Video (Time Hammer, Taps, Pashupatinath)
 		]]></item>

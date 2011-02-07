@@ -1,91 +1,89 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-	<html lang="en">
+<!doctype html>
+<html lang="en">
 	<head>
-		<title><!-- TemplateBeginEditable name="name" --><!-- TemplateEndEditable --> | James A. Cook | Tucson Artist</title>
-
 		<!-- Meta data -->
+		<!-- uses hMedia, hCard and CWDA Lite for work of art microformat -->
 		<!-- Place charset at top per: 
 			 http://www.kylescholz.com/blog/2010/01/performance_implications_of_charset.html -->
-		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-		<meta http-equiv="Content-language" content="en" />
-		<meta name="description" content="@@(meta_description)@@" />
+		<meta charset="utf-8"/>
 		<meta name="language" content="en" />
-		<meta name="robots" content="index, follow" />
-		<link rel="canonical" href="http://jamesacook.net" />
 		
+		<title><!-- TemplateBeginEditable name="name" --> <!-- TemplateEndEditable --> &middot; James A. Cook &middot; Artist, Tucson Arizona</title>
+		<meta name="description" content="@@(meta_description)@@" />
+		<meta name="robots" content="index, follow" />
+        
+		<link rel="canonical" href="http://jamesacook.net" />
 		<link rel="icon" href="/favicon.ico" type="image/vnd.microsoft.icon" />
 		<link rel="shortcut icon" href="/favicon.ico" />
 		
-		<!-- Stylesheets -->
-		<link rel="stylesheet" href="/css/main-179.css" type="text/css" media="all" />
-		<!--[if IE]>
-			<link rel="stylesheet" href="/css/ie.css" type="text/css" media="screen" />
+		<!-- Facebook's Open Graph: http://ogp.me/ http://developers.facebook.com/docs/share -->
+	    <!--<meta property="og:title" content="" />
+	    <meta property="og:type" content="profile" />
+    	<meta property="og:description" content="" />
+	    <meta property="og:image" content="" />
+    	<meta property="og:url" content="http://jamesacook.net" />	
+    	<meta property="og:email" content="" />-->	
+		
+		<!-- Must be first so IE5-8 can correctly apply the stylesheets to the HTML5 elements -->
+		<!--[if lt IE 9]>
+			<script src="/assets/js/html5.min.js"></script>		
+			<!-- For IE 5-8 (also Firefox 1-3.0 and Safari 2-3, but we kind of don't care about those in 2011...) -->
+			<script src="/assets/js/css3-mediaqueries.min.js"></script>
 		<![endif]-->
-        <!-- TemplateBeginEditable name="head" -->
-        <!-- TemplateEndEditable -->
+		
+		<!-- Stylesheets -->
+		<link rel="stylesheet" href="/assets/css/styles-1.1.0-min.css" type="text/css" media="all" />
+		
+        <!-- TemplateBeginEditable name="head" --> <!-- TemplateEndEditable -->
 		<!-- TemplateParam name="meta_description" type="text" value="" -->
 		<!-- TemplateParam name="name" type="text" value="" -->
 	</head>
-	<body class="listing">
-		<div id="body" class="container">
-			<div id="banner" class="span-24 last">
-				<h1><!-- TemplateBeginEditable name="page_title" --><!-- TemplateEndEditable -->, by James A Cook</h1>
-			</div>
-			<div id="skip">
-				<a href="#content" accesskey="7">Skip to Main Content</a>
-			</div><!-- #BeginLibraryItem "/Library/Navigation.lbi" -->
-            
-			<ul id="navigation" class="span-22 prepend-1 append-1 prepend-top last">
-                <li class="span-4 first">
-					<a href="/index.html" title="Home Page" accesskey="1">James A. Cook</a>
-				</li>
-                <li class="span-5">
-					<a href="/mediated-sculpture/index.html" title="Gallery of mediated sculptures by James A. Cook">Mediated Sculpture</a>
-				</li>
-				<li class="span-4">
-					<a href="/sculpture/index.html" title="Gallery of sculptures by James A. Cook">Sculpture</a>
-				</li>
-                <li class="span-4">
-					<a href="/video/index.html" title="Gallery of videos by James A. Cook">Video</a>
-				</li>
-                <li class="span-4 last">
-					<a href="/spiel/index.html" title="About James A. Cook and Contact Information">Spiel</a>
-				</li>
-            </ul>
-			<!-- #EndLibraryItem --><!-- TemplateBeginEditable name="BodyText" --><!-- TemplateEndEditable -->
+	<body class="mediated-sculpture">
+		<div id="body" class="container cdwalite">
+			<header class="row">
+				<div class="twelvecol last">
+					<h1 class="creator"><!-- TemplateBeginEditable name="page_title" --><!-- TemplateEndEditable -->, by James Cook</h1>
 				
-			<div id="footer" class="span-24 prepend-top"><!-- #BeginLibraryItem "/Library/Footer HTML.lbi" -->
-				<ul class="span-17 prepend-5 last">
-					<li class="span-2" style="margin-left:0em;">
-						<a href="/index.html" accesskey="1">Home</a>
-					</li>
-					<li class="span-3">
-						<a href="/about-site.html" accesskey="5">About this Site</a>
-					</li>
-					<li class="span-2">
-						<a href="/sitemap.html" accesskey="3">Sitemap</a>
-					</li>
-					<li class="span-2">
-						<a href="/spiel/index.html#contact" accesskey="9">Contact</a>
-					</li>
-					<li class="span-4 last">
-						<a href="/accessibility-statement.html" accesskey="0">Accessibility Statement</a>
-					</li>
+					<div id="skip">
+						<a href="#content" accesskey="7">Skip to Main Content</a>
+					</div>
+	            </div>			
+			</header>
+			<!-- #BeginLibraryItem "/Library/Navigation.lbi" -->
+			<nav class="row">
+				<div class="onecol">&nbsp;</div>
+				<ul id="navigation" class="tencol">
+					<li class="twocol"> <a href="/index.html" title="Home Page" accesskey="1">James Cook</a> </li>
+					<li class="threecol"> <a href="/mediated-sculpture/index.html" title="Gallery of mediated sculptures by James A. Cook">Mediated Sculpture</a> </li>
+					<li class="twocol"> <a href="/sculpture/index.html" title="Gallery of sculptures by James A. Cook">Sculpture</a> </li>
+					<li class="twocol"> <a href="/video/index.html" title="Gallery of videos by James A. Cook">Video</a> </li>
+					<li class="onecol last"> <a href="/spiel/index.html" title="About James A. Cook and Contact Information">Spiel</a> </li>
 				</ul>
+				<div class="onecol last">&nbsp;</div>
+			</nav>
+			<!-- #EndLibraryItem -->
 				
-				<p id="attribution" class="span-23 last">
-					&copy; 2010, James A Cook
-				</p>
-				<p id="designed_by" class="span-23 last">
-					<a href="http://boeltsdesign.com/" rel="designer">Design by: Boelts Design, Inc</a>
-					<br />
-					<a href="http://www.lisantra.com/" rel="programmer">Programming by: Lisantra Technologies, LLC</a>
-				</p><!-- #EndLibraryItem --></div>
+			<!-- TemplateBeginEditable name="BodyText" --> <!-- TemplateEndEditable -->
+			
+			<!-- #BeginLibraryItem "/Library/Footer HTML.lbi" -->
+			<footer class="row">
+				<ul class="eightcol last">
+					<li class="onecol"> <a href="/index.html" accesskey="1">Home</a> </li>
+					<li class="twocol"> <a href="/about-site.html" accesskey="5">About this Site</a> </li>
+					<li class="onecol"> <a href="/sitemap.html" accesskey="3">Sitemap</a> </li>
+					<li class="onecol"> <a href="/spiel/index.html#contact" accesskey="9">Contact</a> </li>
+					<li class="threecol last"> <a href="/accessibility-statement.html" accesskey="0">Accessibility Statement</a> </li>
+				</ul>
+				<p id="attribution" class="row"> <small> &copy; 2011, <span id="hcard-James-A-Cook" class="vcard"> <span class="fn n"> <span class="given-name">James</span> <span class="additional-name">A</span> <span class="family-name">Cook</span> </span> <span class="adr"> <span class="locality">Tucson</span>, <span class="region">AZ</span> </span> <a rel="jcook1//email/arizona/edu" class="email">Email</a> </span> </small> </p>
+				<p id="designed_by" class="row"> <small><a href="http://boeltsdesign.com/" rel="designer">Design by: Boelts Design, Inc</a> <br />
+					<a href="http://www.lisantra.com/" rel="programmer">Programming by: Lisantra Technologies, Llc</a></small> </p>
+			</footer>
+		<!-- #EndLibraryItem -->
 		</div>
 
 		<!-- Scripts -->
-	
-	<script type="text/javascript" src="/js/main-180.js"></script><!-- #BeginLibraryItem "/Library/Google Analytics JS.lbi" -->		
+		<script src="/assets/js/script-1.1.0-min.js"></script>
+		<!-- #BeginLibraryItem "/Library/Google Analytics JS.lbi" -->
 		<script type="text/javascript">	
 			<!--// Google Analytics -->
 			var _gaq = _gaq || [];
@@ -98,5 +96,6 @@
 				var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
 			})();
 		</script>
-<!-- #EndLibraryItem --></body>
+	<!-- #EndLibraryItem -->
+	</body>
 </html>

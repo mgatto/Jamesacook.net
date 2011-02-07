@@ -2,15 +2,21 @@
 <templateItems template="/Templates/MediatedSculptureDetail.dwt" codeOutsideHTMLIsLocked="false">
    	<parameter name="name" type="text" passthrough="false"><![CDATA[PIVOT]]></parameter>
    	<parameter name="meta_description" type="text" passthrough="false"><![CDATA[The impetus to combine manipulated objets trouves with electronic media stems from my commitment to the idea that the former have a high potential to resonate poetically, while the electronic media generate a psychological/emotional immediacy that can be effectively used when planted in this poetic field.]]></parameter>
-   	<parameter name="main_image_src" type="text" passthrough="false"><![CDATA[/media/images/mesa-installation-1.jpg]]></parameter>
+   	<parameter name="main_image_src" type="text" passthrough="false"><![CDATA[/assets/images/mesa-installation-1.jpg]]></parameter>
 	<parameter name="another_view_1" type="boolean" passthrough="false">true</parameter>
-	<parameter name="another_view_1_src" type="text" passthrough="false"><![CDATA[/media/images/mesa-installation-1.jpg]]></parameter>
+	<parameter name="another_view_1_src" type="text" passthrough="false"><![CDATA[/assets/images/mesa-installation-1.jpg]]></parameter>
 	<parameter name="another_view_2" type="boolean" passthrough="false">true</parameter>
-	<parameter name="another_view_2_src" type="text" passthrough="false"><![CDATA[/media/images/mesa-installation-1.jpg]]></parameter>
+	<parameter name="another_view_2_src" type="text" passthrough="false"><![CDATA[/assets/images/mesa-installation-1.jpg]]></parameter>
 	<parameter name="video" type="boolean" passthrough="false">false</parameter>
 	<parameter name="video_src" type="text" passthrough="false"></parameter>
+	<parameter name="video_poster" type="text" passthrough="false"><![CDATA[]]></parameter>
+	<parameter name="has_next" type="boolean" passthrough="false">true</parameter>
+	<parameter name="has_prev" type="boolean" passthrough="false">true</parameter>
+	<parameter name="next" type="text" passthrough="false"><![CDATA[not-here.html]]></parameter>
+	<parameter name="prev" type="text" passthrough="false"><![CDATA[little-boy-prayer-wheel.html]]></parameter>
+	<item name="dimensions"><![CDATA[]]></item>
    	<item name="materials"><![CDATA[
-					3 exhibition views
+				   3 exhibition views
 				   <br />
 				   Mesa Contemporary Art Center 
 		]]></item>
