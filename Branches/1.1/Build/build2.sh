@@ -124,6 +124,7 @@ while true ; do
                     shift 2
                     ;;
                 *)
+                    echo "Option -c|--conf, argument \`$2'" ;
                     CONF="$2"
                     if [ -r "$2" ]; then
                         source $CONF
@@ -390,7 +391,7 @@ encode() {
 minify_html() {
     echo "Stripping coments, including Dreamweaver Template commands"
     find ./$VERSION -type f -name "*.html" | sudo xargs -I {} \
-        java -jar $TO/htmlcompressor-0.9.8.jar --type html --remove-intertag-spaces --compress-js --nomunge -o {} {}
+        java -jar $TO/htmlcompressor-0.9.9.jar --type html --remove-intertag-spaces --compress-js --nomunge -o {} {}
         # --remove-intertag-spaces  --remove-quotes (mgatto: "yuck!")
 }
 minify_css() {
