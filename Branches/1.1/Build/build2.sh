@@ -234,8 +234,8 @@ get_from_svn() {
 
     # Get the videos which are not under VC
     echo "Importing video files"
-    if [ -d $TO/htdocs/media/videos/ ]; then
-        cp $TO/htdocs/media/videos/*.f4v $TO/$VERSION/media/videos/
+    if [ -d $TO/htdocs/assets/videos/ ]; then
+        cp $TO/htdocs/assets/videos/*.f4v $TO/$VERSION/assets/videos/
     else
         echo "Videos not found; please copy them manually"
     fi
@@ -258,8 +258,8 @@ get_from_zip() {
     unzip "$ARCHIVE" -d ./
 
     # Get the videos which are no longer stored in the ZIP file since it takes 238MB / 248MB
-    if [ -d $TO/htdocs/media/videos/ ]; then
-        cp $TO/htdocs/media/videos/*.f4v $TO/$VERSION/media/videos/
+    if [ -d $TO/htdocs/assets/videos/ ]; then
+        cp $TO/htdocs/assets/videos/*.f4v $TO/$VERSION/assets/videos/
     else
         echo "Videos not found; please copy them manually"
     fi
@@ -312,8 +312,8 @@ cleanup_files() {
     rm -rf "$VERSION/Templates"
     rm -rf "$VERSION/Library"
     rm -rf "$VERSION/Build"
-    rm -rf "$VERSION/css/lib"
-    rm -rf "$VERSION/js/lib"
+    rm -rf "$VERSION/assets/css/lib"
+    rm -rf "$VERSION/assets/js/lib"
 
     #delete .svn Dreamweaver _notes dirs
     find . -name ".svn" -type d -exec rm -rf {} \;
