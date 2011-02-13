@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<templateItems template="/Templates/SculptureDetail.dwt" codeOutsideHTMLIsLocked="false">
+   	<parameter name="name" type="text" passthrough="false"><![CDATA[American Book of the Dead: The Mechanics of Prayer]]></parameter>
+   	<parameter name="meta_description" type="text" passthrough="false"><![CDATA[The Mechanics of Prayer invites one to turn a large pulley wheel using a modified treadle.]]></parameter>
+   	<parameter name="main_image_src" type="text" passthrough="false"><![CDATA[/assets/images/abod-mechanics-of-prayer-1.jpg]]></parameter>
+	<parameter name="another_view_1" type="boolean" passthrough="false">true</parameter>
+	<parameter name="another_view_1_src" type="text" passthrough="false"><![CDATA[ /assets/images/abod-mechanics-of-prayer-detail-2.jpg]]></parameter>
+	<parameter name="another_view_2" type="boolean" passthrough="false">true</parameter>
+	<parameter name="another_view_2_src" type="text" passthrough="false"><![CDATA[/assets/images/abod-mechanics-of-prayer-detail-3.jpg]]></parameter>
+	<parameter name="video" type="boolean" passthrough="false">true</parameter>
+	<parameter name="video_src" type="text" passthrough="false"><![CDATA[/assets/videos/the-mechanics-of-prayer.mp4]]></parameter>
+	<parameter name="video_poster" type="text" passthrough="false"><![CDATA[/assets/images/the-mechanics-of-prayer-frame.jpg]]></parameter>
+	<parameter name="has_prev" type="boolean" passthrough="false">true</parameter>
+	<parameter name="has_next" type="boolean" passthrough="false">true</parameter>
+	<parameter name="prev" type="text" passthrough="false"><![CDATA[supplicant-ii.html]]></parameter>
+	<parameter name="next" type="text" passthrough="false"><![CDATA[theatre-of-annointment.html]]></parameter>
+   	<item name="materials"><![CDATA[cast iron, steel, wood, mirror, copper, gold, rope]]></item>
+	<item name="dimensions"><![CDATA[122&Prime; &times; 103&Prime; &times; 38&Prime;]]></item>
+	<item name="description"><![CDATA[
+					<p class="description">The Mechanics of Prayer invites one to turn a large pulley wheel using a modified treadle. This activates a series of smaller pulleys and linkages within an old cast iron sewing table. A white hand mechanically arcs to and fro in front of a mirror, forming a prayerful gesture as it meets its own reflection. A gold-leafed rod is also activated, repeatedly sliding up and down. As this rod reaches the apogee of its motion, it contacts another rod that arches over the space between the treadle wheel and the prayer table. The grazing of these two rods results in a small shower of sparks above the prayer machine as it completes&ndash;and short circuits&ndash;the charge to ground.</p>
+                    <p class="description"><em>This absurd machine references the difficulties of our attempt to bridge to esoteric experience with rational strategies and empty, mechanically performed rituals.</em></p>
+		]]></item>
+   	<item name="head"><![CDATA[]]></item>
+</templateItems>

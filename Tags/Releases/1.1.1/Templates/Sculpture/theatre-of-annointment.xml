@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<templateItems template="/Templates/SculptureDetail.dwt" codeOutsideHTMLIsLocked="false">
+   	<parameter name="name" type="text" passthrough="false"><![CDATA[Theatre of Annointment]]></parameter>
+   	<parameter name="meta_description" type="text" passthrough="false"><![CDATA[This vertically inclined assemblage of functional objects alludes to figure and gesturally opens to reveal a framed silver pitcher tilting and pouring from above.]]></parameter>
+   	<parameter name="main_image_src" type="text" passthrough="false"><![CDATA[/assets/images/theatre-of-annointment-1.jpg]]></parameter>
+	<parameter name="another_view_1" type="boolean" passthrough="false">true</parameter>
+	<parameter name="another_view_1_src" type="text" passthrough="false"><![CDATA[/assets/images/theatre-of-annointment-detail-2.jpg]]></parameter>
+	<parameter name="another_view_2" type="boolean" passthrough="false">true</parameter>
+	<parameter name="another_view_2_src" type="text" passthrough="false"><![CDATA[/assets/images/theatre-of-annointment-side-view-3.jpg]]></parameter>
+	<parameter name="video" type="boolean" passthrough="false">false</parameter>
+	<parameter name="video_src" type="text" passthrough="false"></parameter>
+	<parameter name="video_poster" type="text" passthrough="false"><![CDATA[]]></parameter>
+	<parameter name="has_prev" type="boolean" passthrough="false">true</parameter>
+	<parameter name="has_next" type="boolean" passthrough="false">true</parameter>
+	<parameter name="prev" type="text" passthrough="false"><![CDATA[the-mechanics-of-prayer.html]]></parameter>
+	<parameter name="next" type="text" passthrough="false"><![CDATA[tsu-fifty-five.html]]></parameter>
+   	<item name="materials"><![CDATA[Bronze, wood, silver, steel]]></item>
+	<item name="dimensions"><![CDATA[25&Prime; &times; 23&Prime; &times; 86&Prime;]]></item>
+	<item name="description"><![CDATA[
+					<p class="description">This vertically inclined assemblage of functional objects (19<sup>th</sup> c. fence post mallet, oak staved barrel, stout dining table leg) alludes to figure and gesturally opens to reveal a framed silver pitcher tilting and pouring from above&hellip;grace over the miraculous ordinary conditions of life and work.</p>
+		]]></item>
+   	<item name="head"><![CDATA[]]></item>
+</templateItems>
