@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<templateItems template="/Templates/SculptureDetail.dwt" codeOutsideHTMLIsLocked="false">
+   	<parameter name="name" type="text" passthrough="false"><![CDATA[Ox Herding / No. 3 (Salt in Water)]]></parameter>
+   	<parameter name="meta_description" type="text" passthrough="false"><![CDATA[Each piece within this series references the traditional wood block prints of zen philosophy.]]></parameter>
+   	<parameter name="main_image_src" type="text" passthrough="false"><![CDATA[/assets/images/oxherding-sea-of-teeth-salt-in-water-3.jpg]]></parameter>
+	<parameter name="another_view_1" type="boolean" passthrough="false">false</parameter>
+	<parameter name="another_view_1_src" type="text" passthrough="false"></parameter>
+	<parameter name="another_view_2" type="boolean" passthrough="false">false</parameter>
+	<parameter name="another_view_2_src" type="text" passthrough="false"></parameter>
+	<parameter name="video" type="boolean" passthrough="false">false</parameter>
+	<parameter name="video_src" type="text" passthrough="false"></parameter>
+	<parameter name="video_poster" type="text" passthrough="false"><![CDATA[]]></parameter>
+	<parameter name="has_prev" type="boolean" passthrough="false">true</parameter>
+	<parameter name="has_next" type="boolean" passthrough="false">true</parameter>
+	<parameter name="prev" type="text" passthrough="false"><![CDATA[ox-hearding-no-2.html]]></parameter>
+	<parameter name="next" type="text" passthrough="false"><![CDATA[oxherding-sea-of-teeth.html]]></parameter>
+   	<item name="materials"><![CDATA[Bronze, beeswax, wood, pigment]]></item>
+	<item name="dimensions"><![CDATA[18&Prime; &times; 22&Prime; &times; 9&Prime;]]></item>
+	<item name="description"><![CDATA[
+                    <p class="description">Each piece within this series references the traditional wood block prints of zen philosophy. There are ten developmental stages depicted in this series, ranging from the unfettered, unconscious mind to the experience of clear conscious participation in the present.</p>
+		]]></item>
+   	<item name="head"><![CDATA[]]></item>
+</templateItems>
