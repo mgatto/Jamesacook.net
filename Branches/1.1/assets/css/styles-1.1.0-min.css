@@ -338,7 +338,7 @@ workaround from Paul Irish's normal bulletproof syntax to make it work for GTK-w
                 } 
                     small {
 						font-size:100%;
-						line-height:1.65em;
+						line-height:1.75em;
 					}
                     footer ul {
                         list-style-type:none;
