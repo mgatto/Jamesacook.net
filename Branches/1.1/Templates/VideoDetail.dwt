@@ -44,8 +44,8 @@
 		<!-- TemplateParam name="has_prev" type="boolean" value="true" -->
 		<!-- TemplateParam name="prev" type="text" value="" -->
 	</head>
-	<body class="mediated-sculpture">
-		<div id="body" class="container cdwalite">
+	<body class="video">
+		<div id="body" class="container">
 			<header class="row">
 				<div class="twelvecol last">
 					<h1 class="creator">Mediated Sculpture, by James Cook</h1>

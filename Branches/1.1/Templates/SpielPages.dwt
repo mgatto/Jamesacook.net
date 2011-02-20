@@ -40,8 +40,8 @@
 		<!-- TemplateParam name="meta_description" type="text" value="" -->
 		<!-- TemplateParam name="name" type="text" value="" -->
 	</head>
-	<body class="mediated-sculpture">
-		<div id="body" class="container cdwalite">
+	<body class="spiel">
+		<div id="body" class="container">
 			<header class="row">
 				<div class="twelvecol last">
 					<h1 class="creator">About James Cook</h1>

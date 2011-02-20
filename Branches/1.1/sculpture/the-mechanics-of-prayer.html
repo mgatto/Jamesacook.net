@@ -50,7 +50,7 @@
 		<!-- InstanceParam name="has_prev" type="boolean" value="true" -->
 		<!-- InstanceParam name="prev" type="text" value="supplicant-ii.html" -->
 	</head>
-	<body class="mediated-sculpture">
+	<body class="sculpture">
 		<div id="body" class="container cdwalite">
 			<header class="row">
 				<div class="twelvecol last">
@@ -224,44 +224,10 @@
 		<!-- Scripts -->
 		<script src="/assets/js/script-1.1.0-min.js"></script>
 		<script>
-			$(document).ready(function() {		
-				jwplayer("player").setup({	
-					skin: "/assets/jwplayer/lulu.zip",
-					stretching: 'uniform',
-					smoothing: true,
-					//= "window" fixes severe choppiness in IE 7-8. Do not set to opaque, nor anything else.
-					//However, this fix breaks Colorbox only in Flash mode! and not in HTML5 video mode.
-					// = "transparent fixes flash overlay, but makes video really choppy and almost unwatchable
-					wmode: "window",
-					//http://stackoverflow.com/questions/886864/differences-between-using-wmodetransparent-opaque-window-for-an-embedded 
-					players: [
-						{ type: "html5" },
-						{ type: "flash", src: "/assets/flash/player.swf" },
-						{ type: "download", src: "@@(video_poster)@@"}
-					]
-				});
-				
+			$(document).ready(function() {				
 				$("a[rel='enclosure']").colorbox({
 					photo:true, 
-					transition: 'fade',
-					onOpen:function() {
-						//change wmode of jwplayer to opaque
-						jwplayer("player").remove();
-					},
-					onClosed:function() {					
-						//change wmode of jwplayer back to window
-						jwplayer("player").setup({	
-							skin: "/assets/jwplayer/lulu.zip",
-							stretching: 'uniform',
-							smoothing: true,
-							wmode: "window",
-							players: [
-								{ type: "html5" },
-								{ type: "flash", src: "/assets/flash/player.swf" },
-								{ type: "download", src: "@@(video_poster)@@"}
-							]
-						});
-					}		
+					transition: 'fade'
 				});		
 			});
 		</script>
