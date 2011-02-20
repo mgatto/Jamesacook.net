@@ -412,6 +412,8 @@ workaround from Paul Irish's normal bulletproof syntax to make it work for GTK-w
 	.eightcol {width: 59%}
 	.tencol {width:100%;}
 	#text {width:41%}
+	.about #text {width:100%;}
+	.front-page {margin-left: 0;}
 	footer {margin-top:1em;}
 	footer .onecol, .twocol, .threecol, .eightcol {margin-right: 3.8%;float: left;}
 	footer .onecol {width: 4.85%;}
@@ -457,16 +459,24 @@ workaround from Paul Irish's normal bulletproof syntax to make it work for GTK-w
 	}
 	nav {margin-top:0.5em;}
 	nav > .onecol, div > .onecol {display:none; height:0;}
-	#text {width:90%; }
-	/*#text h2 {}*/
+	#text {width:90%;}	
+	#text h2 {max-width:35em;}
 	#text p {width:100%;}
-	#media .fourcol, #media .eightcol {
+	#media .twocol, #media .fourcol, #media .eightcol {
 		padding-left: 0;
 		padding-right: 0;
 	}
+	.listing .twocol {
+		padding-left: 0;
+		padding-right: 0;
+		width:inherit;
+		float: left;
+		margin-right:3.4%;
+	}
 			#player {
                 margin-left:0;
-				max-width:35em !important;
+				width:100% !important;
+				padding:0;
              }
 	
 					#navigation li a {
@@ -479,25 +489,28 @@ workaround from Paul Irish's normal bulletproof syntax to make it work for GTK-w
 					margin-left:0;
 					text-align:center;
 				}
-				.thumbnail {max-width:35em;}
+				#player, .thumbnail {max-width:40em;}
+				/* .listing .thumbnail {}*/
 				.thumbnail > a, .thumbnail > a > img {
-							width: 100%;
+							width: auto;
 							/* www.456bereastreet.com/archive/201002/specify_a_text_colour_for_img_elements/ */
 							color: #e6e6e6; 
 							margin-bottom:0;
 						}
 							.bigger {
+								max-height:100%;
 								margin-left: 0;
-								margin-bottom: 1em;
-    							height: auto;
-							    overflow:visible;
+								margin-bottom: 18px;
+    							/*height: auto;
+							    overflow:visible;*/
 							    width: 100% !important;
 							}
 							.smaller {
 								margin-left: 0;
-								margin-bottom: 1em;
-    							height: auto;
-								overflow: visible;
+								margin-bottom: 18px;
+    							max-height:100%;
+								/*height: auto;
+								overflow: visible;*/
 								width: 100% !important;
 						}
 }
