@@ -406,6 +406,8 @@ workaround from Paul Irish's normal bulletproof syntax to make it work for GTK-w
 		/*line-height: 1.5em;*/	/* As above */
 	}
 	.onecol {width: 0;margin-right: 0;}
+	.listing .threecol{width:13.5%;} /*takes on twocol's width since onecol =0 => subtract one col width*/
+	.listing .fourcol {width:19%;}
 	.fourcol {width: 37%;}
 	.fivecol {width: 48.1%}
 	.sixcol {width: 55%;margin-right: 0;}
