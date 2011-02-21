@@ -47,10 +47,10 @@ Addtype font/opentype .otf
 AddType application/vnd.ms-fontobject .eot
 Addtype font/truetype .ttf
 
-# AddType font/woff .woff
+AddType font/woff .woff
 ## must be application/x-woff and not font/woff else FF will download it twice;
 ## However Chrome complains its the wrong type, perhaps expecting font/woff
-AddType application/x-woff .woff 
+# AddType application/x-woff .woff 
 
 ## Proper svg serving. Required for svg webfonts on iPad:
 ##     twitter.com/FontSquirrel/status/14855840545
@@ -112,11 +112,11 @@ AddOutputFilterByType DEFLATE font/opentype font/truetype font/eot application/v
 
 # Cache Headers
 <IfModule mod_headers.c>
-	Header unset Last-Modified
-	Header unset ETag
+	# Header unset Last-Modified
+	# Header unset ETag
 
     # Cache image files for 30 days
-	<FilesMatch "\.(png|jp?g|gif|ico)$">
+	<FilesMatch "\.(png|jpg|gif|ico)$">
 		Header set Cache-Control "max-age=2592000, public"
 	</FilesMatch>
 	
