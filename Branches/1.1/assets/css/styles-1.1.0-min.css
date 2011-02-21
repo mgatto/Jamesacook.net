@@ -258,7 +258,7 @@ workaround from Paul Irish's normal bulletproof syntax to make it work for GTK-w
                     }
                     /*#text p.materials {}*/
                     /* http://webtypography.net/Rhythm_and_Proportion/Blocks_and_Paragraphs/2.3.2/ */
-                    p.description + p.description, .index p + p, .spiel p + p {
+                    p.description + p.description, .about p + p, .spiel p + p {
                         text-indent:2em;
                         /*font-variant:normal;*/
                     }
