@@ -46,8 +46,8 @@
 		<!-- InstanceParam name="another_view_2" type="boolean" value="true" -->
 		<!-- InstanceParam name="another_view_2_src" type="text" value="/assets/images/conundrum-adobe-abode-detail-3.jpg" -->
 		<!-- InstanceParam name="video" type="boolean" value="true" -->
-		<!-- InstanceParam name="video_src" type="text" value="/assets/videos/conundrum-abode-adobe.mp4" -->
-		<!-- InstanceParam name="video_poster" type="text" value="/assets/images/conundrum-abode-adobe-frame.jpg" -->
+		<!-- InstanceParam name="video_src" type="text" value="/assets/videos/conundrum-adobe-abode.mp4" -->
+		<!-- InstanceParam name="video_poster" type="text" value="/assets/images/conundrum-adobe-abode-frame.jpg" -->
 		<!-- InstanceParam name="has_next" type="boolean" value="true" -->
 		<!-- InstanceParam name="next" type="text" value="conundrum-stumped.html" -->
 		<!-- InstanceParam name="has_prev" type="boolean" value="true" -->
@@ -143,8 +143,8 @@
 					</div>
 					
 					<div class="twelvecol last">
-						<video id="player" class="player" preload="none" poster="/assets/images/conundrum-abode-adobe-frame.jpg" controls>
-							<source src="/assets/videos/conundrum-abode-adobe.mp4" type="video/mp4" /><!-- ; codecs="avc1.42E01E, mp4a.40.2 -->
+						<video id="player" class="player" preload="none" poster="/assets/images/conundrum-adobe-abode-frame.jpg" controls width="520" height="384">
+							<source src="/assets/videos/conundrum-adobe-abode.mp4" type="video/mp4" /><!-- ; codecs="avc1.42E01E, mp4a.40.2 -->
 							<!--<source src="short-history.webm" type="video/webm" /> --><!-- ; codecs="vp8, vorbis -->
 							<!--<source src="walkabout.ogv" type="video/ogg" /> --><!--; codecs="vorbis, theora -->
 							
@@ -155,7 +155,7 @@
 							
 							<ul>
  								<li>
-									<a rel="enclosure" type="video/mp4" title="Download the original source file for this movie" href="/assets/videos/conundrum-abode-adobe.mp4">
+									<a rel="enclosure" type="video/mp4" title="Download the original source file for this movie" href="/assets/videos/conundrum-adobe-abode.mp4">
 										<!--<img src="/assets/images/short-history-poster.jpg" />-->
 										Original (MP4)
 									</a>
@@ -226,30 +226,27 @@
 		<!-- Scripts -->
 		<script src="/assets/js/script-1.1.0-min.js"></script>
 		<script>
+			//stackoverflow.com/questions/886864/differences-between-using-wmodetransparent-opaque-window-for-an-embedded 
+			//= "window" fixes severe choppiness in IE 7-8. Do not set to opaque, nor anything else.
+			//However, this fix breaks Colorbox only in Flash mode! and not in HTML5 video mode.
+			// = "transparent fixes flash overlay, but makes video really choppy and almost unwatchable
+					
 			$(document).ready(function() {
-			<!-- TemplateBeginIf cond="video" -->
 				jwplayer("player").setup({	
 					skin: "/assets/jwplayer/lulu.zip",
 					stretching: 'uniform',
 					smoothing: true,
-					//= "window" fixes severe choppiness in IE 7-8. Do not set to opaque, nor anything else.
-					//However, this fix breaks Colorbox only in Flash mode! and not in HTML5 video mode.
-					// = "transparent fixes flash overlay, but makes video really choppy and almost unwatchable
 					wmode: "window",
-					//http://stackoverflow.com/questions/886864/differences-between-using-wmodetransparent-opaque-window-for-an-embedded 
 					players: [
-						{ type: "html5" },
-						{ type: "flash", src: "/assets/flash/player.swf" },
-						{ type: "download", src: "/assets/images/conundrum-abode-adobe-frame.jpg"}
+						{type: "html5"},
+						{type: "flash", src: "/assets/flash/player.swf"},
+						{type: "download", src: "/assets/images/conundrum-adobe-abode-frame.jpg"}
 					]
 				});
-				<!-- TemplateEndIf -->
 				
 				$("a[rel='enclosure']").colorbox({
 					photo:true, 
-					transition: 'fade'			
-					<!-- TemplateBeginIf cond="video" -->
-					,
+					transition: 'fade',
 					onOpen:function() {
 						//change wmode of jwplayer to opaque
 						jwplayer("player").remove();
@@ -262,13 +259,12 @@
 							smoothing: true,
 							wmode: "window",
 							players: [
-								{ type: "html5" },
-								{ type: "flash", src: "/assets/flash/player.swf" },
-								{ type: "download", src: "/assets/images/conundrum-abode-adobe-frame.jpg"}
+								{type: "html5"},
+								{type: "flash", src: "/assets/flash/player.swf"},
+								{type: "download", src: "/assets/images/conundrum-adobe-abode-frame.jpg"}
 							]
 						});
 					}
-					<!-- TemplateEndIf -->
 				});		
 			});
 		</script>
