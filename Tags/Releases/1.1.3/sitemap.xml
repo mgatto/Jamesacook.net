@@ -1,0 +1,616 @@
+<?xml version="1.0" encoding="utf-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>http://jamesacook.net/video/walkabout.html</loc>
+  </url>
+  <url>
+    <loc>http://jamesacook.net/video/short-history.html</loc>
+  </url>
+  <url>
+    <loc>http://jamesacook.net/mediated-sculpture/paravak.html</loc>
+    <image:image>
+      <image:loc>http://jamesacook.net/media/images/paravak-1.jpg</image:loc>
+      <image:title>Main View</image:title>
+      <image:caption>Main view of the mediated sculpture</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>http://jamesacook.net/media/images/paravak-2.jpg</image:loc>
+      <image:title>Detail View</image:title>
+      <image:caption>Detail view of the mediated sculpture</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>http://jamesacook.net/sculpture/ox-hearding-no-2.html</loc>
+    <image:image>
+      <image:loc>http://jamesacook.net/media/images/oxherding-sea-of-teeth-2.jpg</image:loc>
+      <image:title>Main View</image:title>
+      <image:caption>Main view of the sculpture</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>http://jamesacook.net/sculpture/economics-of-vertical-inclination.html</loc>
+    <image:image>
+      <image:loc>http://jamesacook.net/media/images/economics-of-vertical-inclination-1.jpg</image:loc>
+      <image:title>Main View</image:title>
+      <image:caption>Main view of the sculpture</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>http://jamesacook.net/media/images/economics-of-vertical-inclination-detail-2.jpg</image:loc>
+      <image:title>Detail View</image:title>
+      <image:caption>Detail view of the sculpture</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>http://jamesacook.net/media/images/economics-of-vertical-inclination-detail-3.jpg</image:loc>
+      <image:title>Detail View</image:title>
+      <image:caption>Detail view of the sculpture</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>http://jamesacook.net/sculpture/cartesian-oar.html</loc>
+    <image:image>
+      <image:loc>http://jamesacook.net/media/images/cartesian-oar-for-lao-tsu-stream-1.jpg</image:loc>
+      <image:title>Main View</image:title>
+      <image:caption>Main view of the sculpture</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>http://jamesacook.net/media/images/cartesian-oar-for-lao-tsu-stream-detail-2.jpg</image:loc>
+      <image:title>Detail View</image:title>
+      <image:caption>Detail view of the sculpture</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>http://jamesacook.net/sculpture/american-book-of-the-dead.html</loc>
+    <image:image>
+      <image:loc>http://jamesacook.net/media/images/abod-nike-sans-une-trace-1.jpg</image:loc>
+      <image:title>Main View</image:title>
+      <image:caption>Main view of the sculpture</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>http://jamesacook.net/media/images/abod-nike-sans-une-trace-2.jpg</image:loc>
+      <image:title>Detail View</image:title>
+      <image:caption>Detail view of the sculpture</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>http://jamesacook.net/mediated-sculpture/young-florentine-man.html</loc>
+    <image:image>
+      <image:loc>http://jamesacook.net/media/images/young-florentine-man-1.jpg</image:loc>
+      <image:title>Main View</image:title>
+      <image:caption>Main view of the mediated sculpture</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>http://jamesacook.net/media/images/young-florentine-man-2.jpg</image:loc>
+      <image:title>Detail View</image:title>
+      <image:caption>Detail view of the mediated sculpture</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>http://jamesacook.net/media/images/young-florentine-man-detail-5.jpg</image:loc>
+      <image:title>Detail View</image:title>
+      <image:caption>Detail view of the mediated sculpture</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>http://jamesacook.net/sculpture/ox-hearding-no-3.html</loc>
+    <image:image>
+      <image:loc>http://jamesacook.net/media/images/oxherding-sea-of-teeth-salt-in-water-3.jpg</image:loc>
+      <image:title>Main View</image:title>
+      <image:caption>Main view of the sculpture</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>http://jamesacook.net/mediated-sculpture/red-nimbus.html</loc>
+    <image:image>
+      <image:loc>http://jamesacook.net/media/images/red-nimbus-detail-3.jpg</image:loc>
+      <image:title>Detail View</image:title>
+      <image:caption>Detail view of the mediated sculpture</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>http://jamesacook.net/media/images/red-nimbus-2.jpg</image:loc>
+      <image:title>Detail View</image:title>
+      <image:caption>Detail view of the mediated sculpture</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>http://jamesacook.net/media/images/red-nimbus-1.jpg</image:loc>
+      <image:title>Main View</image:title>
+      <image:caption>Main view of the mediated sculpture</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>http://jamesacook.net/sculpture/immanent-in-a-minute.html</loc>
+    <image:image>
+      <image:loc>http://jamesacook.net/media/images/immanent-in-a-minute-1.jpg</image:loc>
+      <image:title>Main View</image:title>
+      <image:caption>Main view of the sculpture</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>http://jamesacook.net/media/images/immanent-in-a-minute-detail-2.jpg</image:loc>
+      <image:title>Detail View</image:title>
+      <image:caption>Detail view of the sculpture</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>http://jamesacook.net/media/images/immanent-in-a-minute-detail-3.jpg</image:loc>
+      <image:title>Detail View</image:title>
+      <image:caption>Detail view of the sculpture</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>http://jamesacook.net/mediated-sculpture/not-here.html</loc>
+    <image:image>
+      <image:loc>http://jamesacook.net/media/images/not-here-1.jpg</image:loc>
+      <image:title>Main View</image:title>
+      <image:caption>Main view of the mediated sculpture</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>http://jamesacook.net/media/images/not-here-detail-2.jpg</image:loc>
+      <image:title>Detail View</image:title>
+      <image:caption>Detail view of the mediated sculpture</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>http://jamesacook.net/media/images/not-here-detail-3.jpg</image:loc>
+      <image:title>Detail View</image:title>
+      <image:caption>Detail view of the mediated sculpture</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>http://jamesacook.net/mediated-sculpture/mesa-installation.html</loc>
+    <image:image>
+      <image:loc>http://jamesacook.net/media/images/mesa-installation-1.jpg</image:loc>
+      <image:title>Detail View</image:title>
+      <image:caption>Detail view of the mediated sculpture</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>http://jamesacook.net/mediated-sculpture/little-boy-prayer-wheel.html</loc>
+    <image:image>
+      <image:loc>http://jamesacook.net/media/images/little-boy-prayer-wheel-1.jpg</image:loc>
+      <image:title>Main View</image:title>
+      <image:caption>Main view of the mediated sculpture</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>http://jamesacook.net/media/images/little-boy-prayer-wheel-3.jpg</image:loc>
+      <image:title>Detail View</image:title>
+      <image:caption>Detail view of the mediated sculpture</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>http://jamesacook.net/media/images/little-boy-prayer-wheel-4.jpg</image:loc>
+      <image:title>Detail View</image:title>
+      <image:caption>Detail view of the mediated sculpture</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>http://jamesacook.net/mediated-sculpture/like-voices-passing-in-the-night.html</loc>
+    <image:image>
+      <image:loc>http://jamesacook.net/media/images/like-voices-passing-in-the-night-2.jpg</image:loc>
+      <image:title>Detail View</image:title>
+      <image:caption>Detail view of the mediated sculpture</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>http://jamesacook.net/media/images/like-voices-passing-in-the-night-1.jpg</image:loc>
+      <image:title>Detail View</image:title>
+      <image:caption>Detail view of the mediated sculpture</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>http://jamesacook.net/mediated-sculpture/conundrum-stumped.html</loc>
+    <image:image>
+      <image:loc>http://jamesacook.net/media/images/conundrum-stumped-1.jpg</image:loc>
+      <image:title>Main View</image:title>
+      <image:caption>Main view of the mediated sculpture</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>http://jamesacook.net/media/images/conundrum-stumped-2.jpg</image:loc>
+      <image:title>Detail View</image:title>
+      <image:caption>Detail view of the mediated sculpture</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>http://jamesacook.net/media/images/conundrum-stumped-3.jpg</image:loc>
+      <image:title>Detail View</image:title>
+      <image:caption>Detail view of the mediated sculpture</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>http://jamesacook.net/mediated-sculpture/water-compass.html</loc>
+    <image:image>
+      <image:loc>http://jamesacook.net/media/images/water-compass-atelier-2.jpg</image:loc>
+      <image:title>Main View</image:title>
+      <image:caption>Main view of the mediated sculpture</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>http://jamesacook.net/media/images/water-compass-atelier-3.jpg</image:loc>
+      <image:title>Detail View</image:title>
+      <image:caption>Detail view of the mediated sculpture</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>http://jamesacook.net/media/images/water-compass-atelier-4.jpg</image:loc>
+      <image:title>Detail View</image:title>
+      <image:caption>Detail view of the mediated sculpture</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>http://jamesacook.net/sculpture/philosophy-of-tides.html</loc>
+    <image:image>
+      <image:loc>http://jamesacook.net/media/images/philosophy-of-tides-1.jpg</image:loc>
+      <image:title>Main View</image:title>
+      <image:caption>Main view of the sculpture</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>http://jamesacook.net/media/images/philosophy-of-tides-upper-detail-3.jpg</image:loc>
+      <image:title>Detail View</image:title>
+      <image:caption>Detail view of the sculpture</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>http://jamesacook.net/media/images/philosophy-of-tides-lower-detail-2.jpg</image:loc>
+      <image:title>Detail View</image:title>
+      <image:caption>Detail view of the sculpture</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>http://jamesacook.net/sculpture/supplicant-ii.html</loc>
+    <image:image>
+      <image:loc>http://jamesacook.net/media/images/supplicant-II-1.jpg</image:loc>
+      <image:title>Main View</image:title>
+      <image:caption>Main view of the sculpture</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>http://jamesacook.net/media/images/supplicant-II-another-view-2.jpg</image:loc>
+      <image:title>Detail View</image:title>
+      <image:caption>Detail view of the sculpture</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>http://jamesacook.net/sculpture/the-mechanics-of-prayer.html</loc>
+    <image:image>
+      <image:loc>http://jamesacook.net/media/images/abod-mechanics-of-prayer-1.jpg</image:loc>
+      <image:title>Main View</image:title>
+      <image:caption>Main view of the sculpture</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>http://jamesacook.net/media/images/abod-mechanics-of-prayer-detail-2.jpg</image:loc>
+      <image:title>Detail View</image:title>
+      <image:caption>Detail view of the sculpture</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>http://jamesacook.net/media/images/abod-mechanics-of-prayer-detail-3.jpg</image:loc>
+      <image:title>Detail View</image:title>
+      <image:caption>Detail view of the sculpture</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>http://jamesacook.net/sculpture/theatre-of-annointment.html</loc>
+    <image:image>
+      <image:loc>http://jamesacook.net/media/images/theatre-of-annointment-1.jpg</image:loc>
+      <image:title>Main View</image:title>
+      <image:caption>Main view of the sculpture</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>http://jamesacook.net/media/images/theatre-of-annointment-side-view-3.jpg</image:loc>
+      <image:title>Detail View</image:title>
+      <image:caption>Detail view of the sculpture</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>http://jamesacook.net/media/images/theatre-of-annointment-detail-2.jpg</image:loc>
+      <image:title>Detail View</image:title>
+      <image:caption>Detail view of the sculpture</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>http://jamesacook.net/sculpture/tsu-fifty-five.html</loc>
+    <image:image>
+      <image:loc>http://jamesacook.net/media/images/tsu-fifty-five-1.jpg</image:loc>
+      <image:title>Main View</image:title>
+      <image:caption>Main view of the sculpture</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>http://jamesacook.net/media/images/tsu-fifty-five-detail-2.jpg</image:loc>
+      <image:title>Detail View</image:title>
+      <image:caption>Detail view of the sculpture</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>http://jamesacook.net/sculpture/tsus-bridge.html</loc>
+    <image:image>
+      <image:loc>http://jamesacook.net/media/images/tsus-bridge-1.jpg</image:loc>
+      <image:title>Main View</image:title>
+      <image:caption>Main view of the sculpture</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>http://jamesacook.net/media/images/tsus-bridge-2.jpg</image:loc>
+      <image:title>Detail View</image:title>
+      <image:caption>Detail view of the sculpture</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>http://jamesacook.net/sculpture/untitled-body-box.html</loc>
+    <image:image>
+      <image:loc>http://jamesacook.net/media/images/untitled-another-view-1.jpg</image:loc>
+      <image:title>Main View</image:title>
+      <image:caption>Main view of the sculpture</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>http://jamesacook.net/media/images/untitled-body-box-2.jpg</image:loc>
+      <image:title>Detail View</image:title>
+      <image:caption>Detail view of the sculpture</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>http://jamesacook.net/sculpture/vertical-inclination.html</loc>
+    <image:image>
+      <image:loc>http://jamesacook.net/media/images/vertical-inclination-1.jpg</image:loc>
+      <image:title>Main View</image:title>
+      <image:caption>Main view of the sculpture</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>http://jamesacook.net/media/images/vertical-inclination-given-frontal-2.jpg</image:loc>
+      <image:title>Detail View</image:title>
+      <image:caption>Detail view of the sculpture</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>http://jamesacook.net/media/images/vertical-inclination-given-another-view-1.jpg</image:loc>
+      <image:title>Detail View</image:title>
+      <image:caption>Detail view of the sculpture</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>http://jamesacook.net/sculpture/oxherding-sea-of-teeth.html</loc>
+    <image:image>
+      <image:loc>http://jamesacook.net/media/images/oxherding-sea-of-teeth-1.jpg</image:loc>
+      <image:title>Main View</image:title>
+      <image:caption>Main view of the sculpture</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>http://jamesacook.net/sculpture/dulcet-baggage.html</loc>
+    <image:image>
+      <image:loc>http://jamesacook.net/media/images/dulcet-baggage-1.jpg</image:loc>
+      <image:title>Main View</image:title>
+      <image:caption>Main view of the sculpture</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>http://jamesacook.net/media/images/dulcet-baggage-detail-2.jpg</image:loc>
+      <image:title>Detail View</image:title>
+      <image:caption>Detail view of the sculpture</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>http://jamesacook.net/video/tap-dance-of-shiva.html</loc>
+  </url>
+  <url>
+    <loc>http://jamesacook.net/mediated-sculpture/as-above-so-below.html</loc>
+    <image:image>
+      <image:loc>http://jamesacook.net/media/images/as-above-so-below-1.jpg</image:loc>
+      <image:title>Main View</image:title>
+      <image:caption>Main view of the mediated sculpture</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>http://jamesacook.net/media/images/as-above-so-below-2.jpg</image:loc>
+      <image:title>Detail View</image:title>
+      <image:caption>Detail view of the mediated sculpture</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>http://jamesacook.net/mediated-sculpture/ascension-descension.html</loc>
+    <image:image>
+      <image:loc>http://jamesacook.net/media/images/ascension-descension-1.jpg</image:loc>
+      <image:title>Main View</image:title>
+      <image:caption>Main view of the mediated sculpture</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>http://jamesacook.net/media/images/ascension-descension-2.jpg</image:loc>
+      <image:title>Detail View</image:title>
+      <image:caption>Detail view of the mediated sculpture</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>http://jamesacook.net/media/images/ascension-descension-detail-4.jpg</image:loc>
+      <image:title>Detail View</image:title>
+      <image:caption>Detail view of the mediated sculpture</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>http://jamesacook.net/mediated-sculpture/conundrum-adobe-abode.html</loc>
+    <image:image>
+      <image:loc>http://jamesacook.net/media/images/conundrum-adobe-abode-1.jpg</image:loc>
+      <image:title>Main View</image:title>
+      <image:caption>Main view of the mediated sculpture</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>http://jamesacook.net/media/images/conundrum-adobe-abode-2.jpg</image:loc>
+      <image:title>Detail View</image:title>
+      <image:caption>Detail view of the mediated sculpture</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>http://jamesacook.net/media/images/conundrum-adobe-abode-detail-3.jpg</image:loc>
+      <image:title>Detail View</image:title>
+      <image:caption>Detail view of the mediated sculpture</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>http://jamesacook.net/spiel/essay.html</loc>
+  </url>
+  <url>
+    <loc>http://jamesacook.net/spiel/statements.html</loc>
+  </url>
+  <url>
+    <loc>http://jamesacook.net/spiel/icons-of-worship.html</loc>
+  </url>
+  <url>
+    <loc>http://jamesacook.net/spiel/index.html</loc>
+  </url>
+  <url>
+    <loc>http://jamesacook.net/video/index.html</loc>
+    <image:image>
+      <image:loc>http://jamesacook.net/media/images/short-history-frame.jpg</image:loc>
+      <image:title>Short History of the Human Race &amp;ndash; Video</image:title>
+      <image:caption>Short History of the Human Race (Proceed to detailed images and description)</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>http://jamesacook.net/media/images/tap-dance-of-siva-frame.jpg</image:loc>
+      <image:title>Tap Dance of Siva &amp;ndash; Video</image:title>
+      <image:caption>Tap Dance of Siva (Proceed to detailed images and description)</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>http://jamesacook.net/media/images/walkabout-frame.jpg</image:loc>
+      <image:title>Walkabout &amp;ndash; Video</image:title>
+      <image:caption>Walkabout (Proceed to detailed images and description)</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>http://jamesacook.net/mediated-sculpture/index.html</loc>
+    <image:image>
+      <image:loc>http://jamesacook.net/media/images/water-compass-thumb.jpg</image:loc>
+      <image:title>Water Compass &amp;ndash; Mediated Sculpture</image:title>
+      <image:caption>Water Compass (Proceed to detailed images and description)</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>http://jamesacook.net/media/images/paravak-thumb.jpg</image:loc>
+      <image:title>Paravak &amp;ndash; Mediated Sculpture</image:title>
+      <image:caption> Paravak Sculpture (Proceed to detailed images and description)</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>http://jamesacook.net/media/images/mesa-installation-thumb.jpg</image:loc>
+      <image:title>Mesa Installation &amp;ndash; Mediated Sculpture</image:title>
+      <image:caption>Mesa Installation (Proceed to detailed images and description)</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>http://jamesacook.net/media/images/red-nimbus-thumb.jpg</image:loc>
+      <image:title>Red Nimbus &amp;ndash; Mediated Sculpture</image:title>
+      <image:caption>Red Nimbus (Proceed to detailed images and description)</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>http://jamesacook.net/media/images/young-florentine-man-thumb.jpg</image:loc>
+      <image:title>Young Florentine Man &amp;ndash; Mediated Sculpture</image:title>
+      <image:caption>Young Florentine Man (Proceed to detailed images and description)</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>http://jamesacook.net/media/images/little-boy-prayer-wheel-thumb.jpg</image:loc>
+      <image:title>Little Boy Prayer Wheel &amp;ndash; Mediated Sculpture</image:title>
+      <image:caption>Little Boy Prayer Wheel (Proceed to detailed images and description)</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>http://jamesacook.net/media/images/ascension-descension-thumb.jpg</image:loc>
+      <image:title>Ascension-Descension &amp;ndash; Mediated Sculpture</image:title>
+      <image:caption>Ascension-Descension (Proceed to detailed images and description)</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>http://jamesacook.net/media/images/conundrum-adobe-abode-thumb.jpg</image:loc>
+      <image:title>Conundrum Adobe (Abode) &amp;ndash; Mediated Sculpture</image:title>
+      <image:caption>Conundrum Adobe (Abode) (Proceed to detailed images and description)</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>http://jamesacook.net/media/images/not-here-thumb.jpg</image:loc>
+      <image:title>Not Here &amp;ndash; Mediated Sculpture</image:title>
+      <image:caption>Not Here (Proceed to detailed images and description)</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>http://jamesacook.net/media/images/as-above-so-below-thumb.jpg</image:loc>
+      <image:title>As Above, So Below &amp;ndash; Mediated Sculpture</image:title>
+      <image:caption>As Above, So Below (Proceed to detailed images and description)</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>http://jamesacook.net/media/images/conundrum-stumped-thumb.jpg</image:loc>
+      <image:title>Conundrum Stumped &amp;ndash; Mediated Sculpture</image:title>
+      <image:caption>Conundrum Stumped (Proceed to detailed images and description)</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>http://jamesacook.net/media/images/like-voices-passing-in-the-night-thumb.jpg</image:loc>
+      <image:title>Like Voices Passing in the Night &amp;ndash; Mediated Sculpture</image:title>
+      <image:caption>Like Voices Passing in the Night (Proceed to detailed images and description)</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>http://jamesacook.net/sculpture/index.html</loc>
+    <image:image>
+      <image:loc>http://jamesacook.net/media/images/immanent-in-a-minute-1-thumb.jpg</image:loc>
+      <image:title>"</image:title>
+      <image:caption>"</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>http://jamesacook.net/media/images/philosophy-of-tides-1-thumb.jpg</image:loc>
+      <image:title>Philosophy of Tides &amp;ndash; Sculpture</image:title>
+      <image:caption>Philosophy of Tides (Proceed to detailed images and description)</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>http://jamesacook.net/media/images/abod-nike-sans-une-trace-1-thumb.jpg</image:loc>
+      <image:title>American Book of the Dead: Nike sans Une Trace &amp;ndash; Sculpture</image:title>
+      <image:caption>American Book of the Dead: Nike sans Une Trace (Proceed to detailed images and description)</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>http://jamesacook.net/media/images/abod-mechanics-of-prayer-1-thumb.jpg</image:loc>
+      <image:title>American Book of the Dead: The Mechanics of Prayer &amp;ndash; Sculpture</image:title>
+      <image:caption>American Book of the Dead: The Mechanics of Prayer (Proceed to detailed images and description)</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>http://jamesacook.net/media/images/vertical-inclination-1-thumb.jpg</image:loc>
+      <image:title>Vertical Inclination given Temporary Support by an Apparition of a scaffold in the Form of the Khufu Pyramid &amp;ndash; Sculpture</image:title>
+      <image:caption>Vertical Inclination given Temporary Support by an Apparition of a scaffold in the Form of the Khufu Pyramid (Proceed to detailed images and description)</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>http://jamesacook.net/media/images/supplicant-II-1-thumb.jpg</image:loc>
+      <image:title>Supplicant II &amp;ndash; Sculpture</image:title>
+      <image:caption>Supplicant II (Proceed to detailed images and description)</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>http://jamesacook.net/media/images/tsu-fifty-five-1-thumb.jpg</image:loc>
+      <image:title>"</image:title>
+      <image:caption>"</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>http://jamesacook.net/media/images/untitled-body-box-2-thumb.jpg</image:loc>
+      <image:title>Untitled (BodyBox) &amp;ndash; Sculpture</image:title>
+      <image:caption>Untitled (BodyBox) (Proceed to detailed images and description)</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>http://jamesacook.net/media/images/economics-of-vertical-inclination-1-thumb.jpg</image:loc>
+      <image:title>"</image:title>
+      <image:caption>"</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>http://jamesacook.net/media/images/theatre-of-annointment-1-thumb.jpg</image:loc>
+      <image:title>Theatre of Annointment &amp;ndash; Sculpture</image:title>
+      <image:caption>Theatre of Annointment (Proceed to detailed images and description)</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>http://jamesacook.net/media/images/dulcet-baggage-1-thumb.jpg</image:loc>
+      <image:title>Dulcet Baggage &amp;ndash; Sculpture</image:title>
+      <image:caption>Dulcet Baggage (Proceed to detailed images and description)</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>http://jamesacook.net/media/images/tsus-bridge-1-thumb.jpg</image:loc>
+      <image:title>"</image:title>
+      <image:caption>"</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>http://jamesacook.net/media/images/oxherding-sea-of-teeth-1-thumb.jpg</image:loc>
+      <image:title>Ox Herding / Sea of Teeth &amp;ndash; Sculpture</image:title>
+      <image:caption>Ox Herding / Sea of Teeth (Proceed to detailed images and description)</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>http://jamesacook.net/media/images/oxherding-2-thumb.jpg</image:loc>
+      <image:title>Ox Herding / No. 2</image:title>
+      <image:caption>Ox Herding / No.2 (Proceed to detailed images and description)</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>http://jamesacook.net/media/images/oxherding-3-thumb.jpg</image:loc>
+      <image:title>Ox Herding / No. 3 (Salt in Water)</image:title>
+      <image:caption>Ox Herding / No.3 (Salt in Water) (Proceed to detailed images and description)</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>http://jamesacook.net/media/images/cartesian-oar-for-lao-tsu-stream-1-thumb.jpg</image:loc>
+      <image:title>Cartesian Oar for Lao Tsu's Stream &amp;ndash; Sculpture</image:title>
+      <image:caption>Cartesian Oar for Lao Tsu's Stream (Proceed to detailed images and description)</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>http://jamesacook.net/sitemap.html</loc>
+  </url>
+  <url>
+    <loc>http://jamesacook.net/index.html</loc>
+    <image:image>
+      <image:loc>http://jamesacook.net/media/images/vertical-inclination-1.jpg</image:loc>
+      <image:title>Vertical Inclination given Temporary Support by an Apparition of a scaffold in the Form of the Khufu Pyramid</image:title>
+      <image:caption>Vertical Inclination given Temporary Support by an Apparition of a scaffold in the Form of the Khufu Pyramid</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>http://jamesacook.net/about-site.html</loc>
+  </url>
+</urlset>
