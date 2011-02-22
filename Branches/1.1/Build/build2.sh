@@ -436,7 +436,7 @@ do_jpeg () {
   # $1 is filename
   TMPJ=$(mktemp -t -p $TMP tmp.XXXXXX) || return 1
 
-  convert -quality 60 "$1" $TMPJ && mv -f $TMPJ "$1"
+  # convert -quality 60 "$1" $TMPJ && mv -f $TMPJ "$1"
 
   # jpegtran is part of libjpeg (almost surely already on your system).
   # If not, it's here:
