@@ -29,6 +29,7 @@ COMBINE=
 CSSFILES=
 JSFILES=
 TMP=temp
+PRECOMPRESS=
 
 usage() {
   cat <<EO
@@ -192,6 +193,18 @@ while true ; do
                     ;;
             esac
             ;;
+        --precompress)
+            echo "Option --precompress, argument \`$2'" ;
+            case "$2" in
+                "")
+                    shift 2
+                    ;;
+                *)
+                    PRECOMPRESS="GZIP" ;
+                    shift 2
+                    ;;
+            esac
+            ;;
         -h|--help)
             usage
             shift
@@ -278,7 +291,7 @@ rewrite_links() {
     # rewrite links if necessary
     case $REWRITE in
         "ADD_DOMAIN" )
-            echo "rewriting links to ADD the domain name"
+            echo "rewriting links to ADD the domain name: $DOMAIN"
             find . -type f \( -name "*.html" -o -name "*.css" -o -name "*.js" \) | xargs sed -i \
                 -e "s|href=\"/|href=\"/$DOMAIN/|g" \
                 -e "s|src=\"/|src=\"/$DOMAIN/|g" \
@@ -290,7 +303,7 @@ rewrite_links() {
             ;;
         "REMOVE_DOMAIN" )
             # reverse the link rewriting...
-            echo "rewriting links to REMOVE the domain name"
+            echo "rewriting links to REMOVE the domain name: $DOMAIN"
             find . -type f \( -name "*.html" -o -name "*.css" -o -name "*.js" \) | xargs sed -i \
                 -e "s|href=\"/$DOMAIN/|href=\"/|g" \
                 -e "s|src=\"/$DOMAIN/|src=\"/|g" \
@@ -332,21 +345,27 @@ check_spelling() {
 
 ## Make sure everything is UTF-8
 encode() {
-    # this might not be a good idea:
-
 #    ONLY convert file that really are in old charset to new charset
 #    - if you convert a file that was already in the new charset format
 #    or that you converted manually before
-#    or inserted text components in new charset inbetween old text components
+#    or inserted text components in new charset in between old text components
 #
 #    --- then you may get something worse ... neither UTF-8 and nor ISO-8859-1 ...
     #hence make sure your OLD file IS in OLD charset before running the tool !!
 
-    find . -type f \( -name "*.html" -o -name "*.css" -o -name "*.js" \) |  sudo xargs -I {} \
-        iconv -c -t UTF-8 -o {} {}
-        # recode understands HTML entities!
-        # recode -v ..h4..utf-8 {}
-        # -c omits invalid characters from output
+    # get the current encoding
+    ENCODING = enconv -g -i -L none "$1"
+    echo "$1 is $ENCODING"
+
+    # if string UTF-8 is not in string, the convert
+    # iconv must be run as root in order to overwrite files without a segfault!
+    if [ $ENCODING != "UTF-8" ]
+        iconv -f $ENCODING -t UTF-8 -o "$1" "$1"
+    fi
+
+    # recode understands HTML entities!
+    # recode -v ..h4..utf-8 {}
+    # -c omits invalid characters from output
 }
 
 # filenames are provided as a list as a CLI argument or from conf file
@@ -391,18 +410,19 @@ encode() {
 minify_html() {
     echo "Stripping coments, including Dreamweaver Template commands"
     find ./$VERSION -type f -name "*.html" | sudo xargs -I {} \
-        java -jar $TO/htmlcompressor-0.9.9.jar --type html --remove-intertag-spaces --compress-js --nomunge -o {} {}
-        # --remove-intertag-spaces  --remove-quotes (mgatto: "yuck!")
+        java -jar $TO/htmlcompressor-0.9.9.jar --type html --charset UTF-8 --remove-intertag-spaces --compress-js --nomunge -o {} {}
+        #  --remove-quotes (mgatto: "yuck!")
 }
 minify_css() {
     echo "Minifying CSS files"
+    # line breaks help to not anger bad proxies and filters which remove long-string js, especially and sometimes css
     find ./$VERSION -type f -name "*.css" | sudo xargs -I {} \
-        java -jar $TO/yuicompressor-2.4.4.jar --type css {} -o {} --charset utf-8  #--line-break 0
+        java -jar $TO/yuicompressor-2.4.4.jar --type css {} -o {} --charset utf-8 --line-break 400
 }
 minify_js() {
     echo "Minifying Javascript files"
     find ./$VERSION -type f \( -name "*.js" \) | sudo xargs -I {} \
-        java -jar $TO/yuicompressor-2.4.4.jar --type js {} -o {} --charset utf-8  #--line-break 0
+        java -jar $TO/yuicompressor-2.4.4.jar --type js {} -o {} --charset utf-8 --line-break 400
 }
 
 # Optimize PNG file in place
@@ -492,6 +512,10 @@ do_file () {
 
 optimize_img() {
     find ./$VERSION -type f \( -name "*.jpg" -o -name "*.jpeg" -o -name "*.png" \) -print | while read i; do do_file "$i"; done
+}
+
+precompress() {
+    find ./$VERSION -type f \( -name "*.html" -o -name "*.css" -o -name "*.js" -o name "*.ttf" -o name "*.eot" \) -print | while read i; do gzip -c "$i" > "$i.gz"; done
 }
 
 error() {
@@ -614,12 +638,21 @@ fi
 #fi
 
 cleanup_files
+
+# ensure UTF-8
+find . -type f \( -name "*.html" -o -name "*.css" -o -name "*.js" \) |  sudo xargs -I {} \
+    encode {}
+
 echo "Minifying HTML, CSS & JS fles"
 minify_js
 minify_css
 minify_html
 echo "Optimizing PMGs & JPGs"
 optimize_img
+
+if [ -n "$PRECOMPRESS" ]
+    precompress
+fi
 
 # symlink must come before set_owner_and_group so the htdocs symlink ist't stuck as owned by root
 symlink
