@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<templateItems template="/Templates/MediatedSculptureDetail.dwt" codeOutsideHTMLIsLocked="false">
+   	<parameter name="name" type="text" passthrough="false"><![CDATA[Red Nimbus]]></parameter>
+   	<parameter name="meta_description" type="text" passthrough="false"><![CDATA[The plaster torso might be a lost hero, warrior or philosopher, perhaps even a Greek bust of Plato? This plaster sculpture, which has literally lost its head, bears instead the porcelain doll’s head of a child, producing a marriage of mismatched scales and consciousness. ]]></parameter>
+   	<parameter name="main_image_src" type="text" passthrough="false"><![CDATA[/assets/images/red-nimbus-1.jpg]]></parameter>
+	<parameter name="another_view_1" type="boolean" passthrough="false">true</parameter>
+	<parameter name="another_view_1_src" type="text" passthrough="false"><![CDATA[/assets/images/red-nimbus-2.jpg]]></parameter>
+	<parameter name="another_view_2" type="boolean" passthrough="false">true</parameter>
+	<parameter name="another_view_2_src" type="text" passthrough="false"><![CDATA[/assets/images/red-nimbus-detail-3.jpg]]></parameter>
+	<parameter name="video" type="boolean" passthrough="false">true</parameter>
+	<parameter name="video_src" type="text" passthrough="false"><![CDATA[/assets/videos/red-nimbus.mp4]]></parameter>
+	<parameter name="video_poster" type="text" passthrough="false"><![CDATA[/assets/images/red-nimbus-frame.jpg]]></parameter>
+	<parameter name="has_next" type="boolean" passthrough="false">true</parameter>
+	<parameter name="has_prev" type="boolean" passthrough="false">true</parameter>
+	<parameter name="next" type="text" passthrough="false"><![CDATA[water-compass-atelier.html]]></parameter>
+	<parameter name="prev" type="text" passthrough="false"><![CDATA[paravak.html]]></parameter>
+	<item name="dimensions"><![CDATA[74&Prime; &times; 32&Prime; &times; 23&Prime;]]></item>
+   	<item name="materials"><![CDATA[Plaster, porcelain, wood, LCD monitor, DVD player, audio speakers, video montage, speakers]]></item>
+	<item name="description"><![CDATA[
+                    <p class="description">The plaster torso might be a lost hero, warrior or philosopher, perhaps even a Greek bust of Plato? This plaster sculpture, which has literally lost its head, bears instead the porcelain doll’s head of a child, producing a marriage of mismatched scales and consciousness. The top of the doll’s head originally designed to receive hair remains open, above which hovers a gold and red halo. The doll’s eyes shine with fluctuating light that projects from a digital screen buried in the head of this young hero-saint.</p>
+                    <p class="description">This sacred figure oversees the proceedings, while at the same time its eyes are the subject of scrutiny. By peering through these open slots one can view a series filmic images of a martial Peking Opera mixed with a military documentary of the Hiroshima aftermath, Nazi Youth rallies, and adolescent counseling films.</p>
+		]]></item>
+   	<item name="head"><![CDATA[]]></item>
+</templateItems>
