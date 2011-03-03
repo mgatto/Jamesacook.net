@@ -1,49 +1,42 @@
 <IfModule mod_rewrite.c>
-  RewriteEngine On
+  #RewriteEngine On
   
   ## Pre-compressed files
-  AddEncoding x-gzip .gz
+#    AddEncoding x-gzip .gz
   # RemoveType application/x-gzip .gz
 
   # If client accepts compressed files
-  RewriteCond %{HTTP:Accept-Encoding} .*gzip.* 
-  # and if compressed file exists
-  RewriteCond %{REQUEST_FILENAME}.gz -s
+  # RewriteCond %{HTTP:Accept-Encoding} .*gzip.* 
+  # RewriteCond %{REQUEST_FILENAME}.gz -s
   ## -s is a readable file with size GT zero
-  # send .html.gz instead of .html
-  RewriteRule ^(.+\.html|.+\.css|.+\.js)$ /$1.gz [L]
+  ## send .html.gz instead of .html
+  # RewriteRule ^(.+\.html|.+\.css|.+\.js)$ /$1.gz [L]
 
-  <IfModule mod_mime.c>
-    <FilesMatch .*\.css.gz>
-      ForceType text/css
-  	  <IfModule mod_headers.c>
-	  	Header set Content-Encoding: deflate
-	  </IfModule>
-    </FilesMatch>
+  #<IfModule mod_mime.c>
+  #  <FilesMatch .*\.css.gz>
+  #    ForceType text/css
+  #	  <IfModule mod_headers.c>
+  #  	Header set Content-Encoding: deflate
+#	  </IfModule>
+#    </FilesMatch>
 
-    <FilesMatch .*\.js.gz>
-      ForceType text/javascript
-  	  <IfModule mod_headers.c>
-		Header set Content-Encoding: deflate
-  	  </IfModule>
-    </FilesMatch>
+#    <FilesMatch .*\.js.gz>
+#      ForceType text/javascript
+#  	  <IfModule mod_headers.c>
+#		Header set Content-Encoding: deflate
+#  	  </IfModule>
+#    </FilesMatch>
 
-    <FilesMatch .*\.html.gz>
-      ForceType text/html
-	  <IfModule mod_headers.c>
-		Header set Content-Encoding: deflate
-	  </IfModule>
-    </FilesMatch>
+#    <FilesMatch .*\.html.gz>
+#      ForceType text/html
+#	  <IfModule mod_headers.c>
+#		Header set Content-Encoding: deflate
+#	  </IfModule>
+#    </FilesMatch>
 
-    <Files "*.gz">
-  	  AddEncoding gzip .gz
-    </Files>
-  </IfModule>
-  
-  <IfModule mod_headers.c>
-    <FilesMatch "\.(html|js|css|xml|gz)$">
-      Header append Vary Accept-Encoding
-    </FilesMatch>
+#    <Files "*.gz">
+#  	  AddEncoding gzip .gz
+#    </Files>
   </IfModule>
   
   ## No file robbery
@@ -69,9 +62,9 @@
 # AddType video/x-f4v	.f4v
 # AddType video/x-flv	.flv
 
-AddType video/ogg .ogv 
+# AddType video/ogg .ogv 
 AddType video/mp4 .mp4 
-AddType video/webm .webm
+# AddType video/webm .webm
 
 ## For ogg media to help Firefox; set one for each ogv file; the long way, but reduces HTTP requests
 ## Use oggz-info to find the duration
@@ -157,7 +150,11 @@ AddEncoding gzip                      .svgz
 <IfModule mod_headers.c>
 	# Header unset Last-Modified
 	# Header unset ETag
-
+  
+    <FilesMatch "\.(html|js|css|xml|gz)$">
+      Header append Vary Accept-Encoding
+    </FilesMatch>
+	
     # Cache image files for 30 days
 	<FilesMatch "\.(png|jpg|gif|ico)$">
 		Header set Cache-Control "max-age=2592000, public"
