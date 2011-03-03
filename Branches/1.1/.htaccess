@@ -1,8 +1,51 @@
-# Speeds rendering time by far in most all browsers!
-# AddDefaultCharset	UTF-8
-
 <IfModule mod_rewrite.c>
-  # RewriteEngine On
+  RewriteEngine On
+  
+  ## Pre-compressed files
+  AddEncoding x-gzip .gz
+  # RemoveType application/x-gzip .gz
+
+  # If client accepts compressed files
+  RewriteCond %{HTTP:Accept-Encoding} .*gzip.* 
+  # and if compressed file exists
+  RewriteCond %{REQUEST_FILENAME}.gz -s
+  ## -s is a readable file with size GT zero
+  # send .html.gz instead of .html
+  RewriteRule ^(.+\.html|.+\.css|.+\.js)$ /$1.gz [L]
+
+  <IfModule mod_mime.c>
+    <FilesMatch .*\.css.gz>
+      ForceType text/css
+  	  <IfModule mod_headers.c>
+	  	Header set Content-Encoding: deflate
+	  </IfModule>
+    </FilesMatch>
+
+    <FilesMatch .*\.js.gz>
+      ForceType text/javascript
+  	  <IfModule mod_headers.c>
+		Header set Content-Encoding: deflate
+  	  </IfModule>
+    </FilesMatch>
+
+    <FilesMatch .*\.html.gz>
+      ForceType text/html
+	  <IfModule mod_headers.c>
+		Header set Content-Encoding: deflate
+	  </IfModule>
+    </FilesMatch>
+
+    <Files "*.gz">
+  	  AddEncoding gzip .gz
+    </Files>
+  </IfModule>
+  
+  <IfModule mod_headers.c>
+    <FilesMatch "\.(html|js|css|xml|gz)$">
+      Header append Vary Accept-Encoding
+    </FilesMatch>
+  </IfModule>
+  
   ## No file robbery
   #Options +FollowSymlinks -Indexes
   #RewriteCond "%{HTTP_REFERER}" !=""
@@ -23,8 +66,8 @@
 ## Video
 #DO NOT CACHE SWF; FLOWPLAYER WON'T WORK! BUT F4V/FLV CACHING IS FINE.
 
-AddType video/x-f4v	.f4v
-AddType video/x-flv	.flv
+# AddType video/x-f4v	.f4v
+# AddType video/x-flv	.flv
 
 AddType video/ogg .ogv 
 AddType video/mp4 .mp4 
@@ -32,9 +75,9 @@ AddType video/webm .webm
 
 ## For ogg media to help Firefox; set one for each ogv file; the long way, but reduces HTTP requests
 ## Use oggz-info to find the duration
-<Files "elephant.ogv">
-Header set X-Content-Duration "653.791"
-</Files>
+# <Files "elephant.ogv">
+# Header set X-Content-Duration "653.791"
+# </Files>
 
 ## Webfonts
 
@@ -59,10 +102,10 @@ AddEncoding gzip                      .svgz
 
 ## Compression
 # html, txt, css, js, json, xml:
-AddOutputFilterByType DEFLATE text/html text/plain text/css application/json
-AddOutputFilterByType DEFLATE text/javascript application/javascript application/x-javascript 
-AddOutputFilterByType DEFLATE text/xml application/xml
-AddOutputFilterByType DEFLATE font/opentype font/truetype font/eot application/vnd.ms-fontobject
+# AddOutputFilterByType DEFLATE text/html text/plain text/css application/json
+# AddOutputFilterByType DEFLATE text/javascript application/javascript application/x-javascript 
+# AddOutputFilterByType DEFLATE text/xml application/xml
+# AddOutputFilterByType DEFLATE font/opentype font/truetype font/eot application/vnd.ms-fontobject
 
 ## Caching
 # FileETag None
@@ -151,9 +194,9 @@ AddOutputFilterByType DEFLATE font/opentype font/truetype font/eot application/v
 ErrorDocument 404 /404.html
 
 # use utf-8 encoding for anything served text/plain or text/html
-# AddDefaultCharset utf-8
+AddDefaultCharset UTF-8
 # force utf-8 for a number of file formats
-AddCharset utf-8 .html .css .js .xml .json .rss	.txt
+AddCharset UTF-8 .html .css .js .xml .json .rss	.txt .gz
 
 # Save some bytes from the header
 ServerSignature Off

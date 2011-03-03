@@ -13,7 +13,7 @@ fi
 
 PROGNAME="$0"
 SHORTOPTS="f::t::c::d::v::h"
-LONGOPTS="from::,to::,conf::,repository::,archive::,domain::,version::,rewrite,reverse-rewrite,combine-css::,combine-js::,help"
+LONGOPTS="from::,to::,conf::,repository::,archive::,domain::,version::,rewrite,reverse-rewrite,combine-css::,combine-js::,help,precompress"
 SVN=
 ZIP=
 TO="$PWD"
@@ -194,17 +194,11 @@ while true ; do
             esac
             ;;
         --precompress)
-            echo "Option --precompress, argument \`$2'" ;
-            case "$2" in
-                "")
-                    shift 2
-                    ;;
-                *)
-                    PRECOMPRESS="GZIP" ;
-                    shift 2
-                    ;;
-            esac
+            echo "Option --precompress" ;
+            PRECOMPRESS="GZIP" ;
+            shift
             ;;
+
         -h|--help)
             usage
             shift
@@ -359,7 +353,7 @@ encode() {
 
     # if string UTF-8 is not in string, the convert
     # iconv must be run as root in order to overwrite files without a segfault!
-    if [ $ENCODING != "UTF-8" ]
+    if [ $ENCODING != "UTF-8" ]; then
         iconv -f $ENCODING -t UTF-8 -o "$1" "$1"
     fi
 
@@ -410,8 +404,8 @@ encode() {
 minify_html() {
     echo "Stripping coments, including Dreamweaver Template commands"
     find ./$VERSION -type f -name "*.html" | sudo xargs -I {} \
-        java -jar $TO/htmlcompressor-0.9.9.jar --type html --charset UTF-8 --remove-intertag-spaces --compress-js --nomunge -o {} {}
-        #  --remove-quotes (mgatto: "yuck!")
+        java -jar $TO/htmlcompressor-0.9.9.jar --type html --charset UTF-8 --remove-intertag-spaces --compress-js --compress-css --nomunge -o {} {}
+        #  --remove-quotes = is still valid html5!
 }
 minify_css() {
     echo "Minifying CSS files"
@@ -461,7 +455,7 @@ do_jpeg () {
   # jpegtran is part of libjpeg (almost surely already on your system).
   # If not, it's here:
   # http://www.ijg.org/
-  jpegtran -copy none -optimize -outfile $TMPJ "$1" && mv -f $TMPJ "$1"
+  jpegtran -copy none -optimize -progressive -perfect -outfile $TMPJ "$1" && mv -f $TMPJ "$1"
 
   # jfifremove is included with this script, be sure to compile and install
   # jfifremove < "$1" > $TMPJ && mv -f $TMPJ "$1"
@@ -515,7 +509,7 @@ optimize_img() {
 }
 
 precompress() {
-    find ./$VERSION -type f \( -name "*.html" -o -name "*.css" -o -name "*.js" -o name "*.ttf" -o name "*.eot" \) -print | while read i; do gzip -c "$i" > "$i.gz"; done
+    find ./$VERSION -type f \( -name "*.html" -o -name "*.css" -o -name "*.js" \) -print | while read i; do gzip -9 -c "$i" > "$i.gz"; done
 }
 
 error() {
@@ -650,7 +644,7 @@ minify_html
 echo "Optimizing PMGs & JPGs"
 optimize_img
 
-if [ -n "$PRECOMPRESS" ]
+if [ -n "$PRECOMPRESS" ]; then
     precompress
 fi
 
