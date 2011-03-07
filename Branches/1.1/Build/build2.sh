@@ -509,6 +509,7 @@ optimize_img() {
 }
 
 precompress() {
+    ## Warning! http://stackoverflow.com/questions/1235116/safari-and-gzip
     find ./$VERSION -type f \( -name "*.html" -o -name "*.css" -o -name "*.js" \) -print | while read i; do gzip -9 -c "$i" > "$i.gz"; done
 }
 
