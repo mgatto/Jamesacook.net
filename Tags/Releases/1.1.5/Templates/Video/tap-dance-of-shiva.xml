@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<templateItems template="/Templates/VideoDetail.dwt" codeOutsideHTMLIsLocked="false">
+   	<parameter name="name" type="text" passthrough="false"><![CDATA[Tap Dance of Shiva]]></parameter>
+   	<parameter name="meta_description" type="text" passthrough="false"><![CDATA[]]></parameter>
+	<parameter name="video_src" type="text" passthrough="false"><![CDATA[/assets/videos/tap-dance-of-siva.mp4]]></parameter>
+	<parameter name="video_poster" type="text" passthrough="false"><![CDATA[/assets/images/tap-dance-frame.jpg]]></parameter>
+	<parameter name="has_prev" type="boolean" passthrough="false">true</parameter>
+	<parameter name="has_next" type="boolean" passthrough="false">true</parameter>
+	<parameter name="prev" type="text" passthrough="false"><![CDATA[short-history.html]]></parameter>
+	<parameter name="next" type="text" passthrough="false"><![CDATA[tokyo-bardo.html]]></parameter>
+   	<item name="materials"><![CDATA[
+					 Three Channel Video (Time Hammer, Taps, Pashupatinath)
+		]]></item>
+	<item name="description"><![CDATA[
+					 <p class="description">This three-channel video presents a diversity of moving images from my archives of films and curiosities. Throughout, the juxtaposition of moving scenarios record time&mdash;on the right is a Hindu burial ritual over a funerary pyre, accompanied by the sound of a slow raga with the cadence of tablas. The center panel is dominated by a tap dancer rigorously repeating the same movements over and over, and to the left of this screen are seated figures waiting endlessly on benches interspersed with construction buckets being lowered and raised. However the title &quot;Dance of Shiva&quot; invokes the destruction of all illusions past and present.</p>
+		]]></item>
+   	<item name="head"><![CDATA[]]></item>
+</templateItems>
