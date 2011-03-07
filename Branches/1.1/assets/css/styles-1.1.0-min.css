@@ -164,7 +164,7 @@ workaround from Paul Irish's normal bulletproof syntax to make it work for GTK-w
                         text-align:left;
                         border-left: 1px solid #e6e6e6;
                     }
-                        #navigation li a {
+                        #navigation /*li*/ a {
                             color:#e6e6e6  /*#B3B3B3*/;
                             font-size:1.2em;
                             text-decoration:none;
@@ -186,7 +186,7 @@ workaround from Paul Irish's normal bulletproof syntax to make it work for GTK-w
                             border-left: 0.5em solid #FC3 !important;
                             
                         }
-                        #navigation li a:visited {
+                        #navigation /*li*/ a:visited {
                             color:#B3B3B3;
                         }
 					#links {margin-bottom:18px;}
@@ -481,7 +481,7 @@ workaround from Paul Irish's normal bulletproof syntax to make it work for GTK-w
 				padding:0;
              }
 	
-					#navigation li a {
+					#navigation /*li*/ a {
 						margin-left:0.5em;
 						padding-left:.5em;
 					}
