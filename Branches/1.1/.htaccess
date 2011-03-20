@@ -93,6 +93,8 @@ AddType application/x-woff .woff
 AddType     image/svg+xml             .svg .svgz 
 AddEncoding gzip                      .svgz
 
+AddType	image/x-icon	.ico
+
 ## Compression
 # html, txt, css, js, json, xml:
 AddOutputFilterByType DEFLATE text/html text/plain text/css application/json
@@ -119,7 +121,7 @@ AddOutputFilterByType DEFLATE font/opentype font/truetype font/eot application/v
   ExpiresByType application/json          "access plus 0 seconds"
 
 # favicon (cannot be renamed)
-  ExpiresByType image/vnd.microsoft.icon  "access plus 1 month" 
+  ExpiresByType image/x-icon              "access plus 1 month"
   
 # media: images, video, audio
   ExpiresByType image/gif                 "access plus 1 month"
