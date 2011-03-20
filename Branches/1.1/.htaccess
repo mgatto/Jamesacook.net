@@ -37,7 +37,7 @@
 #    <Files "*.gz">
 #  	  AddEncoding gzip .gz
 #    </Files>
-  </IfModule>
+ # </IfModule>
   
   ## No file robbery
   #Options +FollowSymlinks -Indexes
@@ -83,10 +83,10 @@ Addtype font/opentype .otf
 AddType application/vnd.ms-fontobject .eot
 Addtype font/truetype .ttf
 
-AddType font/woff .woff
+# AddType font/woff .woff
 ## must be application/x-woff and not font/woff else FF will download it twice;
 ## However Chrome complains its the wrong type, perhaps expecting font/woff
-# AddType application/x-woff .woff 
+AddType application/x-woff .woff 
 
 ## Proper svg serving. Required for svg webfonts on iPad:
 ##     twitter.com/FontSquirrel/status/14855840545
@@ -95,10 +95,10 @@ AddEncoding gzip                      .svgz
 
 ## Compression
 # html, txt, css, js, json, xml:
-# AddOutputFilterByType DEFLATE text/html text/plain text/css application/json
-# AddOutputFilterByType DEFLATE text/javascript application/javascript application/x-javascript 
-# AddOutputFilterByType DEFLATE text/xml application/xml
-# AddOutputFilterByType DEFLATE font/opentype font/truetype font/eot application/vnd.ms-fontobject
+AddOutputFilterByType DEFLATE text/html text/plain text/css application/json
+AddOutputFilterByType DEFLATE text/javascript application/javascript application/x-javascript 
+AddOutputFilterByType DEFLATE text/xml application/xml
+AddOutputFilterByType DEFLATE font/opentype font/truetype font/eot application/vnd.ms-fontobject
 
 ## Caching
 # FileETag None
