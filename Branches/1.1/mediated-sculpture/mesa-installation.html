@@ -12,7 +12,6 @@
 		<meta name="description" content="The impetus to combine manipulated objets trouves with electronic media stems from my commitment to the idea that the former have a high potential to resonate poetically, while the electronic media generate a psychological/emotional immediacy that can be effectively used when planted in this poetic field." />
 		<meta name="robots" content="index, follow" />
         
-		<link rel="canonical" href="http://jamesacook.net" />
 		<link rel="icon" href="/favicon.ico" type="image/vnd.microsoft.icon" />
 		<link rel="shortcut icon" href="/favicon.ico" />
 		
@@ -207,10 +206,40 @@
 			//However, this fix breaks Colorbox only in Flash mode! and not in HTML5 video mode.
 			// = "transparent fixes flash overlay, but makes video really choppy and almost unwatchable
 					
-			$(document).ready(function() {				
+			$(document).ready(function() {
+				jwplayer("player").setup({	
+					skin: "/assets/jwplayer/lulu.zip",
+					stretching: 'uniform',
+					smoothing: true,
+					wmode: "window",
+					players: [
+						{type: "html5"},
+						{type: "flash", src: "/assets/flash/player.swf"},
+						{type: "download", src: ""}
+					]
+				});
+				
 				$("a[rel='enclosure']").colorbox({
 					photo:true, 
-					transition: 'fade'
+					transition: 'fade',
+					onOpen:function() {
+						//change wmode of jwplayer to opaque
+						jwplayer("player").remove();
+					},
+					onClosed:function() {					
+						//change wmode of jwplayer back to window
+						jwplayer("player").setup({	
+							skin: "/assets/jwplayer/lulu.zip",
+							stretching: 'uniform',
+							smoothing: true,
+							wmode: "window",
+							players: [
+								{type: "html5"},
+								{type: "flash", src: "/assets/flash/player.swf"},
+								{type: "download", src: ""}
+							]
+						});
+					}
 				});		
 			});
 		</script>
