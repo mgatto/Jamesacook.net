@@ -1,0 +1,24 @@
+/* the humans responsible & colophon */
+/* humanstxt.org */
+
+
+/* TEAM */
+  Designer: Jackson Boelts
+  
+  Site: boeltsdesign.com
+  Location: Tucson, AZ
+   
+  HTML & CSS Crafter, Content Adapter: Michael Gatto
+  
+  Site: lisantra.com
+  Twitter: lisantra.technologies
+  Location: Tucson, AZ
+
+/* THANKS */
+  Paul Irish, Mark Pilgrim, the guys and gals at An Event Apart
+
+/* SITE */
+  Standards: HTML5, CSS3, Ecmascript, MP4 Video
+  Components: jQuery, JW Player
+  Software: Plain vanilla HTML, Subversion VCS, Unix Bash Shell for build script, Java for pre-compression classes, Apache to serve it all, Ubuntu Server 9.10 as the development/testing servers with SSH for access.
+  IDE: Dreamweaver CS4
