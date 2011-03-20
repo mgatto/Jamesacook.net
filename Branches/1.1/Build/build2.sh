@@ -452,6 +452,12 @@ do_jpeg () {
 
   # convert -quality 60 "$1" $TMPJ && mv -f $TMPJ "$1"
 
+  # smart sharpening:  convert -adaptive-sharpening
+  # convert -filter Lanczos -resize 25% -adaptive-sharpen 2x3 -quality 95 -sampling-factor 2x1
+  ## 0x.6 seems better for thumbnails
+  # convert -filter Lanczos -resize 25% -adaptive-sharpen 0x.6 -quality 95 -sampling-factor 2x1
+
+
   # jpegtran is part of libjpeg (almost surely already on your system).
   # If not, it's here:
   # http://www.ijg.org/
