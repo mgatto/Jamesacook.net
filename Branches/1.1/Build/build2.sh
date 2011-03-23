@@ -243,7 +243,7 @@ get_from_svn() {
     # Get the videos which are not under VC
     echo "Importing video files"
     if [ -d $TO/htdocs/assets/videos/ ]; then
-        cp $TO/htdocs/assets/videos/*.f4v $TO/$VERSION/assets/videos/
+        cp $TO/htdocs/assets/videos/*.* $TO/$VERSION/assets/videos/
     else
         echo "Videos not found; please copy them manually"
     fi
@@ -267,7 +267,7 @@ get_from_zip() {
 
     # Get the videos which are no longer stored in the ZIP file since it takes 238MB / 248MB
     if [ -d $TO/htdocs/assets/videos/ ]; then
-        cp $TO/htdocs/assets/videos/*.f4v $TO/$VERSION/assets/videos/
+        cp $TO/htdocs/assets/videos/*.* $TO/$VERSION/assets/videos/
     else
         echo "Videos not found; please copy them manually"
     fi
@@ -404,7 +404,7 @@ encode() {
 minify_html() {
     echo "Stripping coments, including Dreamweaver Template commands"
     find ./$VERSION -type f -name "*.html" | sudo xargs -I {} \
-        java -jar $TO/htmlcompressor-0.9.9.jar --type html --charset UTF-8 --remove-intertag-spaces --compress-js --compress-css --nomunge -o {} {}
+        java -jar $TO/htmlcompressor-1.0.0.jar --type html --charset UTF-8 --remove-intertag-spaces --compress-js --compress-css --nomunge -o {} {}
         #  --remove-quotes = is still valid html5!
 }
 minify_css() {
