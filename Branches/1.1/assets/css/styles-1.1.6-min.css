@@ -53,7 +53,7 @@ workaround from Paul Irish's normal bulletproof syntax to make it work for GTK-w
 
 @media print {
 	@page { margin: 0.5in; }
-	body {line-height:1.5;font-family:"Helvetica Neue", Arial, Helvetica, sans-serif;color:#000;background:none;font-size:10pt;}
+	body {font: normal normal normal 10pt/1.5 "Helvetica Neue", Arial, Helvetica, sans-serif;color:#000;background:none;} /*saved only 4 bytes from long-hand since I should include 'normal normal normal' to prevent browser misinterpretation */
 	.container {background:none;}
 	hr {background:#ccc;color:#ccc;width:100%;height:2px;margin:2em 0;padding:0;border:none;}
 	h1, h2, h3, h4 {font-family:"Helvetica Neue", Arial, "Lucida Grande", sans-serif;}
@@ -64,6 +64,7 @@ workaround from Paul Irish's normal bulletproof syntax to make it work for GTK-w
 	blockquote {margin:1.5em;padding:1em;font-style:italic;font-size:.9em;}
 	a:link, a:visited {background:transparent;font-weight:700;text-decoration:none;}
 	a:link:after, a:visited:after {content:" (" attr(href) ")";font-size:90%;}
+	.listing a:link:after, .listing a:visited:after {content:" " !important;}/* prevent layout-busting and needless url printing for listing pages */
     nav, #skip, footer, #next, #prev, #player,.onecol {display:none;}
 	#text {width:100%;padding:0 1.6%;}
 	#media {width:100%;display:block;}
@@ -81,14 +82,14 @@ workaround from Paul Irish's normal bulletproof syntax to make it work for GTK-w
 	*/
 	
 	/* www.hicksdesign.co.uk/journal/forcing-scrollbars-now-even-better */
-    html {margin:0;padding:0;border:0; font-size:100.01%;height:100%;margin-bottom:1px;}
+    html {margin:0 0 1px 0;padding:0;border:0;font-size:100.01%;height:100%;}
     /*html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,address,cite,code,del,dfn,em,img,ins,q,small,strong,sub,sup,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{border:0;margin:0;padding:0}a img{border:0}figure{position:relative}figure img{width:100%}*/
 
-    body, div, span, object, iframe, h1, h2, h3, h4, /*h5, h6,*/ p, blockquote, pre, a, abbr, acronym, address, code, /*del, dfn,*/ em, img, q, dl, dt, dd, ol, ul, li/*, fieldset, form, label, legend*/ {margin:0;padding:0;border:0;font-weight:inherit;font-style:inherit;font-size:100%;font-family:inherit;vertical-align:baseline;}
+    body, div, span, object, iframe, h1, h2, h3, h4, /*h5, h6,*/ p, blockquote, pre, a, abbr, acronym, address, code, /*del, dfn,*/ em, img, q, dl, dt, dd, ol, ul, li/*, fieldset, form, label, legend*/ {margin:0;padding:0;border:0;font: inherit inherit inherit 100% inherit;/*  font-weight:inherit;font-style:inherit;font-size:100%;font-family:inherit;*/vertical-align:baseline;}
     body {line-height:1.5;background:white;}
     article,aside,figure,figure img,figcaption,hgroup,footer,header,nav,section,video,object{display:block}
     a img{border:0;display: block; /* Stops image links getting text link styles */}
-    .container {padding-left: 20px;padding-right: 20px;}
+    .container {padding: inherit 20px;/*padding-left: 20px;padding-right: 20px;*/}
     .row {width: 100%;max-width: 1140px;margin: 0 auto;overflow: hidden;}
     .onecol, .twocol, .threecol, .fourcol, .fivecol, .sixcol, .sevencol, .eightcol, .ninecol, .tencol, .elevencol {margin-right: 3.8%;float: left;}
     .onecol {width: 4.85%;}
@@ -110,11 +111,7 @@ workaround from Paul Irish's normal bulletproof syntax to make it work for GTK-w
         /* only color: #F8F8F8; and  background-color: #555; = contrast 7:1 and passing WCAG 2.0 AAA for less than 18pt*/
         background-color: #666;
         color: #e6e6e6;
-        font-family:PaddingtonSCPlainSmallCapsRom, Arial, sans-serif;
-        /*letter-spacing:1px;*/
-        font-weight:normal;
-        font-size: 75%;
-        line-height: 1.5em;
+		font: normal 75%/1.5em PaddingtonSCPlainSmallCapsRom, Arial, sans-serif;
         -webkit-text-size-adjust: none;		/* Stops the iPhone scalling type up */
     }
 	html>body {
@@ -218,12 +215,9 @@ workaround from Paul Irish's normal bulletproof syntax to make it work for GTK-w
                     /*div#text {}*/
                     #text h2, #text h3, #text h4/*, #text h5*/ {
                         /* parent styles were not cascading from div#text, so we repeat for h2 */
-                        font-family:PaddingtonSCPlainSmallCapsRom,"Arial Bold",Arial;
-                        font-weight: normal;
-                        /*font-weight: bold; this doesn't look good at all bolded*/
+						font: /*normal*/ 1.2em/1.25em PaddingtonSCPlainSmallCapsRom,"Arial Bold",Arial;
+						/*font-weight: bold; this doesn't look good at all bolded*/
                         color: #fff;
-                        font-size: 1.2em;	
-						line-height: 1.25em;
                         margin-bottom: 1.25em;
 						margin-top: 0;
                         width:95%;
@@ -243,9 +237,7 @@ workaround from Paul Irish's normal bulletproof syntax to make it work for GTK-w
                         text-align:left;
                     }
                     #text p, #text li {
-                        font-family:PaddingtonSCPlainSmallCapsRom,"Arial Bold",Arial;
-                        font-size:1.2em;
-						line-height: 1.25em;
+						font: /*normal*/ 1.2em/1.25em PaddingtonSCPlainSmallCapsRom,"Arial Bold",Arial;
                         margin-bottom: 1.25em;
 						/*margin-top: 1.25em;*/
                         /*font-weight: normal;*/
@@ -274,7 +266,7 @@ workaround from Paul Irish's normal bulletproof syntax to make it work for GTK-w
                     #text blockquote {
                         margin-top:0;
                         margin-bottom:0;
-                        font-style:normal;
+                        /*font-style:normal;*/
                         padding-left: 15px;
                         margin-left: 36px;
                         border-left: 1px dotted #e6e6e6;
@@ -329,10 +321,7 @@ workaround from Paul Irish's normal bulletproof syntax to make it work for GTK-w
                         }
                 footer {
                     /*padding-top:1em;*/
-                    font-family:PaddingtonSCPlainSmallCapsRom,"Arial Bold",Arial;
-                    font-weight:normal;
-                    font-size:12px;
-					line-height:18px;
+					font: /*normal*/ 12px/18px PaddingtonSCPlainSmallCapsRom,"Arial Bold",Arial;
                     margin-bottom:1.5em !important;
                     margin-top:3.5em !important;
                 } 
@@ -362,42 +351,42 @@ workaround from Paul Irish's normal bulletproof syntax to make it work for GTK-w
 						line-height:18px;
                     }
 				
-/*
-    ColorBox Core Style:
-    The following CSS is consistent between example themes and should not be altered.
-*/
-#colorbox, #cboxOverlay, #cboxWrapper{position:absolute; top:0; left:0; z-index:9999; overflow:hidden;}
-#cboxOverlay{position:fixed; width:100%; height:100%;}
-#cboxMiddleLeft, #cboxBottomLeft{clear:left;}
-#cboxContent{position:relative;}
-#cboxLoadedContent{overflow:auto;}
-#cboxTitle{margin:0;}
-#cboxLoadingOverlay, #cboxLoadingGraphic{position:absolute; top:0; left:0; width:100%;}
-#cboxPrevious, #cboxNext, #cboxClose, #cboxSlideshow{cursor:pointer;}
-.cboxPhoto{float:left; margin:auto; border:0; display:block;}
-.cboxIframe{width:100%; height:100%; display:block; border:0;}
+	/*
+    	ColorBox Core Style:
+	    The following CSS is consistent between example themes and should not be altered.
+	*/
+	#colorbox, #cboxOverlay, #cboxWrapper{position:absolute; top:0; left:0; z-index:9999; overflow:hidden;}
+	#cboxOverlay{position:fixed; width:100%; height:100%;}
+	#cboxMiddleLeft, #cboxBottomLeft{clear:left;}
+	#cboxContent{position:relative;}
+	#cboxLoadedContent{overflow:auto;}
+	#cboxTitle{margin:0;}
+	#cboxLoadingOverlay, #cboxLoadingGraphic{position:absolute; top:0; left:0; width:100%;}
+	#cboxPrevious, #cboxNext, #cboxClose, #cboxSlideshow{cursor:pointer;}
+	.cboxPhoto{float:left; margin:auto; border:0; display:block;}
+	.cboxIframe{width:100%; height:100%; display:block; border:0;}
 
-/* 
-    User Style:
-    Change the following styles to modify the appearance of ColorBox.  They are
-    ordered & tabbed in a way that represents the nesting of the generated HTML.
-*/
-#cboxOverlay{background:#000;}
-#colorbox{}
-    #cboxContent{margin-top:20px;}
-        #cboxError{padding:50px; border:1px solid #ccc;}
-        #cboxLoadedContent{background:#fff; border:5px solid #000;}
-        #cboxTitle{position:absolute; top:-20px; left:0; color:#ccc;}
-        #cboxCurrent{position:absolute; top:-20px; right:0px; color:#ccc;}
-        #cboxSlideshow{position:absolute; top:-20px; right:90px; color:#fff;}
-        #cboxPrevious{position:absolute; top:50%; left:5px; margin-top:-32px; background:url(/assets/artwork/controls.png) no-repeat top left; width:28px; height:65px; text-indent:-9999px;}
-        #cboxPrevious.hover{background-position:bottom left;}
-        #cboxNext{position:absolute; top:50%; right:5px; margin-top:-32px; background:url(/assets/artwork/controls.png) no-repeat top right; width:28px; height:65px; text-indent:-9999px;}
-        #cboxNext.hover{background-position:bottom right;}
-        #cboxLoadingOverlay{background:#000;}
-        #cboxLoadingGraphic{background:url(/assets/artwork/loading.gif) no-repeat center center;}
-        #cboxClose{position:absolute; top:5px; right:5px; display:block; background:url(/assets/artwork/controls.png) no-repeat top center; width:38px; height:19px; text-indent:-9999px;}
-        #cboxClose.hover{background-position:bottom center;}
+	/* 
+    	User Style:
+	    Change the following styles to modify the appearance of ColorBox.  They are
+    	ordered & tabbed in a way that represents the nesting of the generated HTML.
+	*/
+	#cboxOverlay{background:#000;}
+	#colorbox{}
+    	#cboxContent{margin-top:20px;}
+        	#cboxError{padding:50px; border:1px solid #ccc;}
+	        #cboxLoadedContent{background:#fff; border:5px solid #000;}
+    	    #cboxTitle{position:absolute; top:-20px; left:0; color:#ccc;}
+        	#cboxCurrent{position:absolute; top:-20px; right:0px; color:#ccc;}
+	        #cboxSlideshow{position:absolute; top:-20px; right:90px; color:#fff;}
+    	    #cboxPrevious{position:absolute; top:50%; left:5px; margin-top:-32px; background:url(/assets/artwork/controls.png) no-repeat top left; width:28px; height:65px; text-indent:-9999px;}
+        	#cboxPrevious.hover{background-position:bottom left;}
+        	#cboxNext{position:absolute; top:50%; right:5px; margin-top:-32px; background:url(/assets/artwork/controls.png) no-repeat top right; width:28px; height:65px; text-indent:-9999px;}
+	        #cboxNext.hover{background-position:bottom right;}
+    	    #cboxLoadingOverlay{background:#000;}
+        	#cboxLoadingGraphic{background:url(/assets/artwork/loading.gif) no-repeat center center;}
+	        #cboxClose{position:absolute; top:5px; right:5px; display:block; background:url(/assets/artwork/controls.png) no-repeat top center; width:38px; height:19px; text-indent:-9999px;}
+    	    #cboxClose.hover{background-position:bottom center;}
 }
 
 @media only screen and (max-width: 1023px) {
@@ -431,19 +420,23 @@ workaround from Paul Irish's normal bulletproof syntax to make it work for GTK-w
 @media only screen and (max-width: 767px) {	/*or max-device-width: 480px*/
 	.row, .body, .container {
 		width: 100%;
-		margin-left: 0px;
-		margin-right: 0px;
-		padding-left: 0px;
-		padding-right: 0px;
+		margin: inherit 0;
+		/*margin-left: 0px;
+		margin-right: 0px;*/
+		padding:inherit 0;
+		/*padding-left: 0px;
+		padding-right: 0px;*/
 	}
 	
 	.onecol, .twocol, .threecol, .fourcol, .fivecol, .sixcol, .sevencol, .eightcol, .ninecol, .tencol, .elevencol, .twelvecol, footer .onecol, footer .twocol, footer .threecol, footer .eightcol  {
 		width: auto;
 		float: none;
-		margin-left: 0px;
-		margin-right: 0px;
-		padding-left: 20px;
-		padding-right: 20px;
+		margin: inherit 0;
+		/*margin-left: 0px;
+		margin-right: 0px;*/
+		padding:inherit 20px;
+		/*padding-left: 20px;
+		padding-right: 20px;*/
 	}
 	.twelvecol {
 		padding-left:0;
@@ -465,12 +458,14 @@ workaround from Paul Irish's normal bulletproof syntax to make it work for GTK-w
 	#text h2 {max-width:35em;}
 	#text p {width:100%;}
 	#media .twocol, #media .fourcol, #media .eightcol {
-		padding-left: 0;
-		padding-right: 0;
+		padding:inherit 0;
+		/*padding-left: 0;
+		padding-right: 0;*/
 	}
 	.listing .twocol {
-		padding-left: 0;
-		padding-right: 0;
+		padding:inherit 0;
+		/*padding-left: 0;
+		padding-right: 0;*/
 		width:inherit;
 		float: left;
 		margin-right:3.4%;
