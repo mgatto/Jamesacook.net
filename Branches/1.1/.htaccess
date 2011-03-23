@@ -1,3 +1,25 @@
+# ----------------------------------------------------------------------
+# Better website experience for IE users
+# ----------------------------------------------------------------------
+
+# Force the latest IE version, in various cases when it may fall back to IE7 mode
+# github.com/rails/rails/commit/123eb25#commitcomment-118920
+
+<IfModule mod_setenvif.c>
+  <IfModule mod_headers.c>
+    BrowserMatch MSIE ie
+    Header set X-UA-Compatible "IE=Edge" env=ie
+  </IfModule>
+</IfModule>
+
+<IfModule mod_headers.c>
+# Because X-UA-Compatible isn't sent to non-IE (to save header bytes),
+# We need to inform proxies that content changes based on UA
+  Header append Vary User-Agent
+# Cache control is set only if mod_headers is enabled, so that's unncessary to declare
+</IfModule>
+
+
 <IfModule mod_rewrite.c>
   #RewriteEngine On
   
@@ -59,12 +81,15 @@
 ## Video
 #DO NOT CACHE SWF; FLOWPLAYER WON'T WORK! BUT F4V/FLV CACHING IS FINE.
 
-# AddType video/x-f4v	.f4v
-# AddType video/x-flv	.flv
+# AddType video/x-f4v	f4v
+# AddType video/x-flv	flv
 
-# AddType video/ogg .ogv 
-AddType video/mp4 .mp4 
-# AddType video/webm .webm
+AddType video/mp4	mp4 
+# AddType video/ogg	ogv 
+# AddType video/webm	webm
+
+# "Exotic" image types
+# AddType image/webp	webp
 
 ## For ogg media to help Firefox; set one for each ogv file; the long way, but reduces HTTP requests
 ## Use oggz-info to find the duration
@@ -74,33 +99,46 @@ AddType video/mp4 .mp4
 
 ## Webfonts
 
-# AddType application/vnd.bw-fontobject .eot
-# AddType application/x-font-ttf .ttf
-# Addtype font/eot .eot
-# AddType application/octet-stream .otf .ttf
+# AddType application/vnd.bw-fontobject eot
+# AddType application/x-font-ttf ttf
+# Addtype font/eot eot
+# AddType application/octet-stream otf ttf
 
-Addtype font/opentype .otf
-AddType application/vnd.ms-fontobject .eot
-Addtype font/truetype .ttf
+Addtype font/opentype otf
+AddType application/vnd.ms-fontobject eot
+Addtype font/truetype ttf
 
-# AddType font/woff .woff
+# AddType font/woff woff
 ## must be application/x-woff and not font/woff else FF will download it twice;
 ## However Chrome complains its the wrong type, perhaps expecting font/woff
-AddType application/x-woff .woff 
+AddType application/x-font-woff  woff 
 
 ## Proper svg serving. Required for svg webfonts on iPad:
 ##     twitter.com/FontSquirrel/status/14855840545
-AddType     image/svg+xml             .svg .svgz 
-AddEncoding gzip                      .svgz
+AddType     image/svg+xml             svg svgz 
+AddEncoding gzip                      svgz
 
-AddType	image/x-icon	.ico
+AddType	image/x-icon	ico
 
-## Compression
-# html, txt, css, js, json, xml:
-AddOutputFilterByType DEFLATE text/html text/plain text/css application/json
-AddOutputFilterByType DEFLATE text/javascript application/javascript application/x-javascript 
-AddOutputFilterByType DEFLATE text/xml application/xml
-AddOutputFilterByType DEFLATE font/opentype font/truetype font/eot application/vnd.ms-fontobject
+# ----------------------------------------------------------------------
+# gzip compression
+# ----------------------------------------------------------------------
+<IfModule mod_deflate.c>
+
+  # force deflate for mangled headers developer.yahoo.com/blogs/ydn/posts/2010/12/pushing-beyond-gzipping/
+  <IfModule mod_setenvif.c>
+  	<IfModule mod_headers.c>
+	    SetEnvIfNoCase ^(Accept-EncodXng|X-cept-Encoding|X{15}|~{15}|-{15})$ ^((gzip|deflate)\s,?\s(gzip|deflate)?|X{4,13}|~{4,13}|-{4,13})$ HAVE_Accept-Encoding
+	    RequestHeader append Accept-Encoding "gzip,deflate" env=HAVE_Accept-Encoding
+	  </IfModule>
+	</IfModule>
+
+	# html, txt, css, js, json, xml:
+	AddOutputFilterByType DEFLATE text/html text/plain text/css application/json
+	AddOutputFilterByType DEFLATE text/javascript application/javascript application/x-javascript 
+	AddOutputFilterByType DEFLATE text/xml application/xml
+	AddOutputFilterByType DEFLATE font/opentype font/truetype font/eot application/vnd.ms-fontobject
+</IfModule>
 
 ## Caching
 # FileETag None
@@ -136,11 +174,10 @@ AddOutputFilterByType DEFLATE font/opentype font/truetype font/eot application/v
 # webfonts
   ExpiresByType font/truetype             "access plus 1 month"
   ExpiresByType font/opentype             "access plus 1 month"
-  ExpiresByType font/woff                 "access plus 1 month"
   ExpiresByType image/svg+xml             "access plus 1 month"
   ExpiresByType application/vnd.ms-fontobject "access plus 1 month"
-  ExpiresByType font/eot "access plus 1 month"
-  ExpiresByType application/x-woff "access plus 1 month"
+  ExpiresByType font/eot 				  "access plus 1 month"
+  ExpiresByType application/x-font-woff	  "access plus 1 month"
     
 # css and javascript
   ExpiresByType text/css                  "access plus 1 month"
@@ -200,6 +237,46 @@ AddCharset UTF-8 .html .css .js .xml .json .rss	.txt .gz
 # Save some bytes from the header
 ServerSignature Off
 # ServerTokens Prod
+
+# ----------------------------------------------------------------------
+# Suppress or force the "www." at the beginning of URLs
+# ----------------------------------------------------------------------
+
+# The same content should never be available under two different URLs - especially not with and
+# without "www." at the beginning, since this can cause SEO problems (duplicate content).
+# That's why you should choose one of the alternatives and redirect the other one.
+
+# By default option 1 (no "www.") is activated. Remember: Shorter URLs are sexier.
+# no-www.org/faq.php?q=class_b
+
+# If you rather want to use option 2, just comment out all option 1 lines
+# and uncomment option 2.
+# IMPORTANT: NEVER USE BOTH RULES AT THE SAME TIME!
+
+# ----------------------------------------------------------------------
+
+# Option 1:
+# Rewrite "www.domain.com -> domain.com"
+
+#<IfModule mod_rewrite.c>
+#  RewriteCond %{HTTPS} !=on
+#  RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
+#  RewriteRule ^(.*)$ http://%1/$1 [R=301,L]
+#</IfModule>
+
+# ----------------------------------------------------------------------
+
+# Option 2:
+# To rewrite "domain.com -> www.domain.com" uncomment the following lines.
+# Be aware that the following rule might not be a good idea if you
+# use "real" subdomains for certain parts of your website.
+
+# <IfModule mod_rewrite.c>
+# RewriteCond %{HTTPS} !=on
+# RewriteCond %{HTTP_HOST} !^www\..+$ [NC]
+# RewriteCond %{HTTP_HOST} (.+)$ [NC]
+# RewriteRule ^(.*)$ http://www.%1/$1 [R=301,L]
+# </IfModule>
 
 ### DISABLE .HTACCESS IN LOWER DIRECTORIES...
 #<DIRECTORY "/sculpture">
