@@ -9,7 +9,6 @@
 		
 		<title>@@(name)@@ &middot; James A. Cook &middot; Tucson Artist</title>
 		<meta name="description" content="@@(meta_description)@@" />
-		<meta name="robots" content="index, follow" />
 		
 		<link type="text/plain" rel="author" href="http://www.jamesacook.net/humans.txt" />
         

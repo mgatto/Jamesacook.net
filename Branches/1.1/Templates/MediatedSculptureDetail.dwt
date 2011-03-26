@@ -10,7 +10,6 @@
 		
 		<title>@@(name)@@ &middot; James A. Cook &middot; Tucson Artist</title>
 		<meta name="description" content="@@(meta_description)@@" />
-		<meta name="robots" content="index, follow" />
 		
 		<link type="text/plain" rel="author" href="http://www.jamesacook.net/humans.txt" />
         
@@ -142,7 +141,7 @@
 					</div>
 					<!-- TemplateBeginIf cond="video" -->
 					<div class="twelvecol last">
-						<video id="player" class="player" preload="none" poster="@@(video_poster)@@" controls width="520" height="384">
+						<video id="player" class="player" preload="none" poster="@@(video_poster)@@" controls width="520" height="400">
 							<source src="@@(video_src)@@" type="video/mp4" /><!-- ; codecs="avc1.42E01E, mp4a.40.2 -->
 							<!--<source src="short-history.webm" type="video/webm" /> --><!-- ; codecs="vp8, vorbis -->
 							<!--<source src="walkabout.ogv" type="video/ogg" /> --><!--; codecs="vorbis, theora -->
