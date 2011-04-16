@@ -27,7 +27,7 @@
 		<![endif]-->
 		
 		<!-- Stylesheets -->
-		<link rel="stylesheet" href="/assets/css/styles-1.1.6-min.css" media="all" />
+		<link rel="stylesheet" href="/assets/css/styles-1.1.7-min.css" media="all" />
 		
         <!-- TemplateBeginEditable name="head" --> <!-- TemplateEndEditable -->
 		<!-- TemplateParam name="meta_description" type="text" value="" -->
@@ -214,7 +214,7 @@
 		</footer><!-- #EndLibraryItem --></div>
 
 		<!-- Scripts -->
-		<script src="/assets/js/script-1.1.6-min.js"></script>
+		<script src="/assets/js/script-1.1.7-min.js"></script>
 		<script>
 			$(document).ready(function() {				
 				$("a[rel='enclosure']").colorbox({
