@@ -404,19 +404,19 @@ encode() {
 minify_html() {
     echo "Stripping coments, including Dreamweaver Template commands"
     find ./$VERSION -type f -name "*.html" | sudo xargs -I {} \
-        java -jar $TO/htmlcompressor-1.0.0.jar --type html --charset UTF-8 --remove-intertag-spaces --compress-js --compress-css --nomunge -o {} {}
+        java -jar $TO/htmlcompressor-1.2.jar --type html --charset UTF-8 --remove-intertag-spaces --compress-js --compress-css --nomunge -o {} {}
         #  --remove-quotes = is still valid html5!
 }
 minify_css() {
     echo "Minifying CSS files"
     # line breaks help to not anger bad proxies and filters which remove long-string js, especially and sometimes css
     find ./$VERSION -type f -name "*.css" | sudo xargs -I {} \
-        java -jar $TO/yuicompressor-2.4.4.jar --type css {} -o {} --charset utf-8 --line-break 400
+        java -jar $TO/yuicompressor-2.4.5.jar --type css {} -o {} --charset utf-8 --line-break 400
 }
 minify_js() {
     echo "Minifying Javascript files"
     find ./$VERSION -type f \( -name "*.js" \) | sudo xargs -I {} \
-        java -jar $TO/yuicompressor-2.4.4.jar --type js {} -o {} --charset utf-8 --line-break 400
+        java -jar $TO/yuicompressor-2.4.5.jar --type js {} -o {} --charset utf-8 --line-break 400
 }
 
 # Optimize PNG file in place
