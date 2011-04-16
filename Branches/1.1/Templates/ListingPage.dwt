@@ -123,9 +123,8 @@
 		</footer><!-- #EndLibraryItem --></div>
 
 		<!-- Scripts -->
-		<script src="/assets/js/script-1.1.6-min.js"></script>
-		<!-- #BeginLibraryItem "/Library/Google Analytics JS.lbi" -->
-		<script type="text/javascript">	
+		<script src="/assets/js/script-1.1.6-min.js"></script><!-- #BeginLibraryItem "/Library/Google Analytics JS.lbi" -->		
+		<script>	
 			<!--// Google Analytics -->
 			var _gaq = _gaq || [];
 			_gaq.push(['_setAccount', 'UA-10459598-5']);
@@ -137,6 +136,5 @@
 				var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
 			})();
 		</script>
-	<!-- #EndLibraryItem -->
-	</body>
+<!-- #EndLibraryItem --></body>
 </html>
