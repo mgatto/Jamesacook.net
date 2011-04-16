@@ -82,7 +82,8 @@ workaround from Paul Irish's normal bulletproof syntax to make it work for GTK-w
 	*/
 	
 	/* www.hicksdesign.co.uk/journal/forcing-scrollbars-now-even-better */
-    html {margin:0 0 1px 0;padding:0;border:0;font-size:100.01%;height:100%;}
+	/* force a vertical scrollbar to prevent a jumpy page */
+    html {margin:0 0 1px 0;padding:0;border:0;font-size:100.01%;height:100%;overflow-y:scroll;}
     /*html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,address,cite,code,del,dfn,em,img,ins,q,small,strong,sub,sup,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{border:0;margin:0;padding:0}a img{border:0}figure{position:relative}figure img{width:100%}*/
 
     body, div, span, object, iframe, h1, h2, h3, h4, /*h5, h6,*/ p, blockquote, pre, a, abbr, acronym, address, code, /*del, dfn,*/ em, img, q, dl, dt, dd, ol, ul, li/*, fieldset, form, label, legend*/ {margin:0;padding:0;border:0;font: inherit inherit inherit 100% inherit;/*  font-weight:inherit;font-style:inherit;font-size:100%;font-family:inherit;*/vertical-align:baseline;}
