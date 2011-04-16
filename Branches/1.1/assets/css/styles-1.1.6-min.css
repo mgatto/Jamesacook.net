@@ -90,7 +90,7 @@ workaround from Paul Irish's normal bulletproof syntax to make it work for GTK-w
     article,aside,figure,figure img,figcaption,hgroup,footer,header,nav,section,video,object{display:block}
     a img{border:0;display: block; /* Stops image links getting text link styles */}
     .container {padding: inherit 20px;/*padding-left: 20px;padding-right: 20px;*/}
-    .row {width: 100%;max-width: 1140px;margin: 0 auto;overflow: hidden;}
+    .row {width: 100%;max-width: 1140px;margin: 0 /*auto*/;overflow: hidden;}
     .onecol, .twocol, .threecol, .fourcol, .fivecol, .sixcol, .sevencol, .eightcol, .ninecol, .tencol, .elevencol {margin-right: 3.8%;float: left;}
     .onecol {width: 4.85%;}
     .twocol {width: 13.5%;}
