@@ -134,9 +134,9 @@
 					<!-- TemplateBeginIf cond="video" -->
 					<div class="twelvecol last">
 						<video id="player" class="player" preload="none" poster="@@(video_poster)@@" controls>
-							<source src="@@(video_src)@@" type="video/mp4" /><!-- ; codecs="avc1.42E01E, mp4a.40.2 -->
-							<!--<source src="short-history.webm" type="video/webm" /> --><!-- ; codecs="vp8, vorbis -->
-							<!--<source src="walkabout.ogv" type="video/ogg" /> --><!--; codecs="vorbis, theora -->
+							<source src="@@(video_src)@@" type="video/mp4" />
+							<!--<source src="short-history.webm" type="video/webm" /> -->
+							<!--<source src="walkabout.ogv" type="video/ogg" /> -->
 							
 							<!-- Download links provided for devices that can't play video in the browser. -->
 			    			<p id="no-video">
@@ -217,6 +217,7 @@
 
 		<!-- Scripts -->
 		<script src="/assets/js/script-1.1.7-min.js"></script>
+		<!-- TemplateBeginIf cond="video==false" -->
 		<script>
 			$(document).ready(function() {				
 				$("a[rel='enclosure']").colorbox({
@@ -224,7 +225,53 @@
 					transition: 'fade'
 				});		
 			});
-		</script><!-- #BeginLibraryItem "/Library/Google Analytics JS.lbi" -->		
+		</script>
+		<!-- TemplateEndIf -->
+		<!-- TemplateBeginIf cond="video" -->
+		<script>
+			//stackoverflow.com/questions/886864/differences-between-using-wmodetransparent-opaque-window-for-an-embedded 
+			//= "window" fixes severe choppiness in IE 7-8. Do not set to opaque, nor anything else.
+			//However, this fix breaks Colorbox only in Flash mode! and not in HTML5 video mode.
+			// = "transparent fixes flash overlay, but makes video really choppy and almost unwatchable
+					
+			$(document).ready(function() {
+				jwplayer("player").setup({	
+					skin: "/assets/jwplayer/lulu.zip",
+					stretching: 'uniform',
+					smoothing: true,
+					wmode: "window",
+					modes: [
+						{type: "html5"},
+						{type: "flash", src: "/assets/flash/player.swf"},
+						{type: "download", src: "@@(video_poster)@@"}
+					]
+				});
+				
+				$("a[rel='enclosure']").colorbox({
+					photo:true, 
+					transition: 'fade',
+					onOpen:function() {
+						//change wmode of jwplayer to opaque
+						jwplayer("player").remove();
+					},
+					onClosed:function() {					
+						//change wmode of jwplayer back to window
+						jwplayer("player").setup({	
+							skin: "/assets/jwplayer/lulu.zip",
+							stretching: 'uniform',
+							smoothing: true,
+							wmode: "window",
+							modes: [
+								{type: "html5"},
+								{type: "flash", src: "/assets/flash/player.swf"},
+								{type: "download", src: "@@(video_poster)@@"}
+							]
+						});
+					}
+				});		
+			});
+		</script>
+		<!-- TemplateEndIf --><!-- #BeginLibraryItem "/Library/Google Analytics JS.lbi" -->		
 		<script>	
 			<!--// Google Analytics -->
 			var _gaq = _gaq || [];

@@ -139,9 +139,9 @@
 					
 					<div class="twelvecol last">
 						<video id="player" class="player" preload="none" poster="/assets/images/as-above-so-below-frame.jpg" controls width="520" height="400">
-							<source src="/assets/videos/as-above-so-below.mp4" type="video/mp4" /><!-- ; codecs="avc1.42E01E, mp4a.40.2 -->
-							<!--<source src="short-history.webm" type="video/webm" /> --><!-- ; codecs="vp8, vorbis -->
-							<!--<source src="walkabout.ogv" type="video/ogg" /> --><!--; codecs="vorbis, theora -->
+							<source src="/assets/videos/as-above-so-below.mp4" type="video/mp4" />
+							<!--<source src="short-history.webm" type="video/webm" /> -->
+							<!--<source src="walkabout.ogv" type="video/ogg" /> -->
 							
 							<!-- Download links provided for devices that can't play video in the browser. -->
 			    			<p id="no-video">
@@ -234,7 +234,7 @@
 					stretching: 'uniform',
 					smoothing: true,
 					wmode: "window",
-					players: [
+					modes: [
 						{type: "html5"},
 						{type: "flash", src: "/assets/flash/player.swf"},
 						{type: "download", src: "/assets/images/as-above-so-below-frame.jpg"}
@@ -255,7 +255,7 @@
 							stretching: 'uniform',
 							smoothing: true,
 							wmode: "window",
-							players: [
+							modes: [
 								{type: "html5"},
 								{type: "flash", src: "/assets/flash/player.swf"},
 								{type: "download", src: "/assets/images/as-above-so-below-frame.jpg"}
