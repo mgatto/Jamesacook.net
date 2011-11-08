@@ -1,7 +1,7 @@
 @charset "utf-8";
-
-/* The new, new way for which we can remove the IE cond comment in the HTML and still accomodate linux browsers. Urrah:
-   http://www.fontspring.com/blog/the-new-bulletproof-font-face-syntax */
+/* Put one selector per line: makes diffing easier and the file more readable. */
+/* The new, new way for which we can remove the IE cond comment in the HTML and still accomodate linux browsers. Urrah: http://www.fontspring.com/blog/the-new-bulletproof-font-face-syntax */
+/*font-variant:small-caps; is unneccesary with this font.*/
 @font-face {
 	font-family: 'PaddingtonSCPlainSmallCapsRom';
 	src: url('/assets/fonts/paddingtonsc-webfont.eot?') format('eot'),
@@ -10,86 +10,117 @@
 		 url('/assets/fonts/paddingtonsc-webfont.svg#webfontCykG2Qou') format('svg');
 	font-weight: normal;
 	font-style: normal;
-	/*font-variant:small-caps; is unneccesary with this font.*/
 	/* font-variant: normal; don't include this since webkit will ignore the whole rule: https://bugs.webkit.org/show_bug.cgi?id=25000 */
 }
-
-/*
-workaround from Paul Irish's normal bulletproof syntax to make it work for GTK-webkit
-
-@font-face {
-	font-family: 'PaddingtonSCPlainSmallCapsRom';
-  	src: url(//:) format("no404"),
-	url("/assets/fonts/paddingtonsc-webfont.woff") format("woff"),
-    url("/assets/fonts/paddingtonsc-webfont.ttf") format("truetype"),
-    url("/assets/fonts/paddingtonsc-webfont.svg#webfontCykG2Qou") format("svg");
-	font-weight: normal;
-	font-style: normal;	
-}
-
-<!--[if IE]>
-<style>
-  @font-face {
-	font-family: 'PaddingtonSCPlainSmallCapsRom';
-	src: url('/assets/fonts/paddingtonsc-webfont.eot');
-	font-weight: normal;
-	font-style: normal;
-  }
-</style>
-<![endif]-->
-*/
-
-/*usualy Paul Irish bulletproof way:
-
-@font-face {
-	font-family: 'PaddingtonSCPlainSmallCapsRom';
-	src: url('/assets/fonts/paddingtonsc-webfont.eot');
-	src: local('☺'), url('/assets/fonts/paddingtonsc-webfont.woff') format('woff'), url('/assets/fonts/paddingtonsc-webfont.ttf') format('truetype'), url('/assets/fonts/paddingtonsc-webfont.svg#webfontCykG2Qou') format('svg');
-	font-weight: normal;
-	font-style: normal;	*/
-	/*font-variant:small-caps; is unneccesary with this font.*/
-	/* font-variant: normal; don't include this since webkit will ignore the whole rule: https://bugs.webkit.org/show_bug.cgi?id=25000 */
-/*}*/
 
 @media print {
-	@page { margin: 0.5in; }
-	body {font: normal normal normal 10pt/1.5 "Helvetica Neue", Arial, Helvetica, sans-serif;color:#000;background:none;} /*saved only 4 bytes from long-hand since I should include 'normal normal normal' to prevent browser misinterpretation */
+	@page { 
+		margin: 0.5in; 
+	}
+	body {
+		font: normal normal normal 10pt/1.5 "Helvetica Neue", Arial, Helvetica, sans-serif;
+		/*saved only 4 bytes from long-hand since I should include 'normal normal normal' to prevent browser misinterpretation */
+		color:#000;
+		background:none;
+	}
 	.container {background:none;}
 	hr {background:#ccc;color:#ccc;width:100%;height:2px;margin:2em 0;padding:0;border:none;}
 	h1, h2, h3, h4 {font-family:"Helvetica Neue", Arial, "Lucida Grande", sans-serif;}
-	p, h2, h3 { orphans: 3; widows: 3; }
-	h2, h3{ page-break-after: avoid; }
-	code {font:.9em "Courier New", Monaco, Courier, monospace;}
-	a img {border:none;}
-	blockquote {margin:1.5em;padding:1em;font-style:italic;font-size:.9em;}
-	a:link, a:visited {background:transparent;font-weight:700;text-decoration:none;}
-	a:link:after, a:visited:after {content:" (" attr(href) ")";font-size:90%;}
-	.listing a:link:after, .listing a:visited:after {content:" " !important;}/* prevent layout-busting and needless url printing for listing pages */
-    nav, #skip, footer, #next, #prev, #player,.onecol {display:none;}
-	#text {width:100%;padding:0 1.6%;}
-	#media {width:100%;display:block;}
-	.thumbnail {width:100%;height:100%;/*max-height:4in;overflow:hidden;*/}
-	img {float:left;width:30%;margin:1.6%;/*margin-bottom:1.5em;width:65%;max-height:9in;overflow:hidden;*/}
-	/*footer {clear:both;width:100%;text-align:center;margin-top:4em;}*/
-	#media:after {content:".";display:block;height:0;clear:both;visibility:hidden;font-size:0;}
-	/*div {border:1px solid black; }*/
+	p, h2, h3 {
+		orphans: 3; 
+		widows: 3; 
+	}
+	h2, h3{
+		page-break-after: avoid; 
+	}
+	code {
+		font:.9em "Courier New", Monaco, Courier, monospace;
+	}
+	a img {
+		border:none;
+	}
+	blockquote {
+		margin:1.5em;
+		padding:1em;
+		font-style:italic;
+		font-size:.9em;
+	}
+	a:link, a:visited {
+		background:transparent;
+		font-weight:700;
+		text-decoration:none;
+	}
+	a:link:after, a:visited:after {
+		content:" (" attr(href) ")";
+		font-size:90%;
+	}
+	/* prevent layout-busting and needless url printing for listing pages */
+	.listing a:link:after, .listing a:visited:after {
+		content:" " !important;
+	}
+    nav, #skip, footer, #next, #prev, #player,.onecol {
+		display:none;
+	}
+	#text {
+		width:100%;
+		padding:0 1.6%;
+	}
+	#media {
+		width:100%;
+		display:block;
+	}
+	.thumbnail {
+		width:100%;
+		height:100%;
+	}
+	img {
+		float:left;
+		width:30%;
+		margin:1.6%;
+	}
+	#media:after {
+		content:".";
+		display:block;
+		height:0;
+		clear:both;
+		visibility:hidden;
+		font-size:0;
+	}
 }
 
 @media screen {
-	/* our vertical rhythm is 18px 
-	   all other vertical spacing should be a multiple of 18px or 1.5em
-	   if fonts are less than 1em; increase the line height proportionally so all lines still match up.
-	*/
-	
-	/* www.hicksdesign.co.uk/journal/forcing-scrollbars-now-even-better */
-	/* force a vertical scrollbar to prevent a jumpy page */
-    html {margin:0 0 1px 0;padding:0;border:0;font-size:100.01%;height:100%;overflow-y:scroll;}
-    /*html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,address,cite,code,del,dfn,em,img,ins,q,small,strong,sub,sup,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{border:0;margin:0;padding:0}a img{border:0}figure{position:relative}figure img{width:100%}*/
+	/* our vertical rhythm is 18px. All other vertical spacing should be a multiple of 18px or 1.5em.
+	   If fonts are less than 1em; increase the line height proportionally so all lines still match up. */
 
-    body, div, span, object, iframe, h1, h2, h3, h4, /*h5, h6,*/ p, blockquote, pre, a, abbr, acronym, address, code, /*del, dfn,*/ em, img, q, dl, dt, dd, ol, ul, li/*, fieldset, form, label, legend*/ {margin:0;padding:0;border:0;font: inherit inherit inherit 100% inherit;/*  font-weight:inherit;font-style:inherit;font-size:100%;font-family:inherit;*/vertical-align:baseline;}
-    body {line-height:1.5;background:white;}
-    article,aside,figure,figure img,figcaption,hgroup,footer,header,nav,section,video,object{display:block}
-    a img{border:0;display: block; /* Stops image links getting text link styles */}
+    html {
+		margin:0 0 1px 0;
+		padding:0;
+		border:0;
+		font-size:100.01%;
+		height:100%;
+		overflow-y:scroll;
+		/* force a vertical scrollbar to prevent a jumpy page: www.hicksdesign.co.uk/journal/forcing-scrollbars-now-even-better */
+	}
+
+    body, div, span, object, iframe, h1, h2, h3, h4, /*h5, h6,*/ p, blockquote, pre, a, abbr, acronym, address, code, /*del, dfn,*/ em, img, q, dl, dt, dd, ol, ul, li/*, fieldset, form, label, legend*/ {
+		margin:0;
+		padding:0;
+		border:0;
+		font: inherit inherit inherit 100% inherit;
+		/*  font-weight:inherit;font-style:inherit;font-size:100%;font-family:inherit;*/
+		vertical-align:baseline;
+	}
+    body {
+		line-height:1.5;
+		background:white;
+	}
+    article,aside,figure,figure img,figcaption,hgroup,footer,header,nav,section,video,object{
+		display:block
+	}
+    a img{
+		border:0;
+		display: block; /* Stops image links getting text link styles */
+	}
     .container {padding: inherit 20px;/*padding-left: 20px;padding-right: 20px;*/}
     .row {width: 100%;max-width: 1140px;margin: 0 /*auto*/;overflow: hidden;}
     .onecol, .twocol, .threecol, .fourcol, .fivecol, .sixcol, .sevencol, .eightcol, .ninecol, .tencol, .elevencol {margin-right: 3.8%;float: left;}
@@ -352,10 +383,8 @@ workaround from Paul Irish's normal bulletproof syntax to make it work for GTK-w
 						line-height:18px;
                     }
 				
-	/*
-    	ColorBox Core Style:
-	    The following CSS is consistent between example themes and should not be altered.
-	*/
+	/* ColorBox Core Style:
+	   The following CSS is consistent between example themes and should not be altered. */
 	#colorbox, #cboxOverlay, #cboxWrapper{position:absolute; top:0; left:0; z-index:9999; overflow:hidden;}
 	#cboxOverlay{position:fixed; width:100%; height:100%;}
 	#cboxMiddleLeft, #cboxBottomLeft{clear:left;}
@@ -367,11 +396,9 @@ workaround from Paul Irish's normal bulletproof syntax to make it work for GTK-w
 	.cboxPhoto{float:left; margin:auto; border:0; display:block;}
 	.cboxIframe{width:100%; height:100%; display:block; border:0;}
 
-	/* 
-    	User Style:
-	    Change the following styles to modify the appearance of ColorBox.  They are
-    	ordered & tabbed in a way that represents the nesting of the generated HTML.
-	*/
+	/* User Style:
+	   Change the following styles to modify the appearance of ColorBox.  
+	   They are ordered & tabbed in a way that represents the nesting of the generated HTML. */
 	#cboxOverlay{background:#000;}
 	#colorbox{}
     	#cboxContent{margin-top:20px;}
