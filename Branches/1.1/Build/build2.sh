@@ -404,8 +404,7 @@ encode() {
 minify_html() {
     echo "Stripping coments, including Dreamweaver Template commands"
     find ./$VERSION -type f -name "*.html" | sudo xargs -I {} \
-        java -jar $TO/htmlcompressor-1.2.jar --type html --charset UTF-8 --remove-intertag-spaces --compress-js --compress-css --nomunge -o {} {}
-        #  --remove-quotes = is still valid html5!
+        java -jar $TO/htmlcompressor-1.5.2.jar --type html --charset UTF-8 --remove-intertag-spaces --remove-quotes --compress-js --compress-css --nomunge -o {} {}
 }
 minify_css() {
     echo "Minifying CSS files"
