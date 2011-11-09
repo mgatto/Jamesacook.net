@@ -1,44 +1,45 @@
 <!doctype html>
 <html lang="en">
 	<head>
-	<!-- Meta data -->
-	<!-- uses hMedia, hCard and CWDA Lite for work of art microformat -->
-	<!-- Place charset at top per: 
-			 http://www.kylescholz.com/blog/2010/01/performance_implications_of_charset.html -->
-	<meta charset="utf-8"/>
-	<meta name="language" content="en" />
-	<title>
-	<!-- TemplateBeginEditable name="name" -->
-	<!-- TemplateEndEditable -->
-	&middot; James A. Cook &middot; Artist, Tucson Arizona</title>
-	<meta name="description" content="@@(meta_description)@@" />
-	<link type="text/plain" rel="author" href="http://www.jamesacook.net/humans.txt" />
-	<!--<link rel="icon" href="/favicon.ico" type="image/vnd.microsoft.icon" />
-		<link rel="shortcut icon" href="/favicon.ico" />-->
-	<!-- Facebook's Open Graph: http://ogp.me/ http://developers.facebook.com/docs/share -->
-	<!--<meta property="og:title" content="" />
-	    <meta property="og:type" content="profile" />
-    	<meta property="og:description" content="" />
-	    <meta property="og:image" content="" />
-    	<meta property="og:url" content="http://jamesacook.net" />	
-    	<meta property="og:email" content="" />-->
-	<!-- Must be first so IE5-8 can correctly apply the stylesheets to the HTML5 elements -->
-	<!-- For IE 5-8 (css3-mediaqueries.min.js also for Firefox 1-3.0 and Safari 2-3, but we kind of don't care about those in 2011...) -->
-	<!--[if lt IE 9]>
-			<script src="/assets/js/html5.min.js"></script>
-			<script src="/assets/js/css3-mediaqueries.min.js"></script>
+		<!-- Meta data -->
+		<!-- uses hMedia, hCard and CWDA Lite for work of art microformat -->
+		<!-- Place charset at top per: 
+				 http://www.kylescholz.com/blog/2010/01/performance_implications_of_charset.html -->
+		<meta charset="utf-8"/>
+		<meta name="language" content="en" />
+		<title>
+		<!-- TemplateBeginEditable name="name" -->
+		<!-- TemplateEndEditable -->
+		&middot; James A. Cook &middot; Artist, Tucson Arizona</title>
+		<meta name="description" content="@@(meta_description)@@" />
+		<link type="text/plain" rel="author" href="http://www.jamesacook.net/humans.txt" />
+		<!--<link rel="icon" href="/favicon.ico" type="image/vnd.microsoft.icon" />
+			<link rel="shortcut icon" href="/favicon.ico" />-->
+		<!-- Facebook's Open Graph: http://ogp.me/ http://developers.facebook.com/docs/share -->
+		<!--<meta property="og:title" content="" />
+		    <meta property="og:type" content="profile" />
+	    	<meta property="og:description" content="" />
+		    <meta property="og:image" content="" />
+	    	<meta property="og:url" content="http://jamesacook.net" />	
+	    	<meta property="og:email" content="" />-->
+		<!-- Must be first so IE5-8 can correctly apply the stylesheets to the HTML5 elements -->
+		<!--[if lt IE 9]>
 			<style>
                 nav {padding-bottom:1.5em;}
 			</style>
 		<![endif]-->
-	<!-- Stylesheets -->
-	<link rel="stylesheet" href="/assets/css/styles-1.1.7-min.css" media="all" />
-	<!-- TemplateBeginEditable name="head" -->
-	<!-- TemplateEndEditable -->
-	<!-- TemplateParam name="meta_description" type="text" value="" -->
-	<!-- TemplateParam name="name" type="text" value="" -->
-	<!-- TemplateParam name="class" type="text" value="about" -->
-</head>
+		<!-- Stylesheets -->
+		<link rel="stylesheet" href="/assets/css/styles-1.1.7-min.css" media="all" />
+		<!-- should come after the css to help prevent FOUC -->
+		<script src="/assets/js/modernizr-2.0.min.js"></script>
+		<script src="/assets/js/cssua.min.js"></script>
+		
+		<!-- TemplateBeginEditable name="head" -->
+		<!-- TemplateEndEditable -->
+		<!-- TemplateParam name="meta_description" type="text" value="" -->
+		<!-- TemplateParam name="name" type="text" value="" -->
+		<!-- TemplateParam name="class" type="text" value="about" -->
+	</head>
 	<body class="@@(_document['class'])@@">
 		<div id="body" class="container">
 			<header class="row">

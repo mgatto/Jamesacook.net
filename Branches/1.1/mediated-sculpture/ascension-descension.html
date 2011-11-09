@@ -24,11 +24,7 @@
     	<meta property="og:url" content="http://jamesacook.net" />	
     	<meta property="og:email" content="" />-->	
 		
-		<!-- Must be first so IE5-8 can correctly apply the stylesheets to the HTML5 elements -->
-		<!-- For IE 5-8 (css3-mediaqueries.min.js also for Firefox 1-3.0 and Safari 2-3, but we kind of don't care about those in 2011...) -->
 		<!--[if lt IE 9]>
-			<script src="/assets/js/html5.min.js"></script>
-			<script src="/assets/js/css3-mediaqueries.min.js"></script>
 			<style>
                 nav {padding-bottom:1.5em;}
 			</style>
@@ -36,6 +32,9 @@
 		
 		<!-- Stylesheets -->
 		<link rel="stylesheet" href="/assets/css/styles-1.1.7-min.css" media="all" />
+		<!-- should come after the css to help prevent FOUC -->
+		<script src="/assets/js/modernizr-2.0.min.js"></script>
+		<script src="/assets/js/cssua.min.js"></script>
 		
         <!-- InstanceBeginEditable name="head" --><!-- InstanceEndEditable -->
 		<!-- InstanceParam name="meta_description" type="text" value="The sculpture has a strong verticality, a feeling of ascendancy. Two forelegs of a horse hover above a waterless font on a porcelain mount, all of which is fixed to a simple wooden box." -->
@@ -146,7 +145,7 @@ The implications regarding our own transition at death&mdash;including ubiquitou
 					</div>
 					
 					<div class="twelvecol last">
-						<video id="player" class="player" preload="none" poster="/assets/images/asc-desc-frame.jpg" controls width="520" height="400">
+						<video id="player" class="player" preload="none" poster="/assets/images/asc-desc-frame.jpg" controls width="520" height="388">
 							<source src="/assets/videos/asc-desc.mp4" type="video/mp4" />
 							<!--<source src="short-history.webm" type="video/webm" /> -->
 							<!--<source src="walkabout.ogv" type="video/ogg" /> -->
@@ -246,7 +245,8 @@ The implications regarding our own transition at death&mdash;including ubiquitou
 						{type: "html5"},
 						{type: "flash", src: "/assets/flash/player.swf"},
 						{type: "download", src: "/assets/images/asc-desc-frame.jpg"}
-					]
+					],
+					'controlbar.idlehide': true
 				});
 				
 				$("a[rel='enclosure']").colorbox({
@@ -267,7 +267,8 @@ The implications regarding our own transition at death&mdash;including ubiquitou
 								{type: "html5"},
 								{type: "flash", src: "/assets/flash/player.swf"},
 								{type: "download", src: "/assets/images/asc-desc-frame.jpg"}
-							]
+							],
+							'controlbar.idlehide': true
 						});
 					}
 				});		

@@ -16,11 +16,7 @@
 		<!--<link rel="icon" href="/favicon.ico" type="image/vnd.microsoft.icon" />
 		<link rel="shortcut icon" href="/favicon.ico" />-->
 		
-		<!-- Must be first so IE5-8 can correctly apply the stylesheets to the HTML5 elements -->
-		<!-- For IE 5-8 (css3-mediaqueries.min.js also for Firefox 1-3.0 and Safari 2-3, but we kind of don't care about those in 2011...) -->
 		<!--[if lt IE 9]>
-			<script src="/assets/js/html5.min.js"></script>
-			<script src="/assets/js/css3-mediaqueries.min.js"></script>
 			<style>
                 nav {padding-bottom:1.5em;}
 			</style>
@@ -28,6 +24,9 @@
 		
 		<!-- Stylesheets -->
 		<link rel="stylesheet" href="/assets/css/styles-1.1.7-min.css" media="all" />
+		<!-- should come after the css to help prevent FOUC -->
+		<script src="/assets/js/modernizr-2.0.min.js"></script>
+		<script src="/assets/js/cssua.min.js"></script>
 		
         <!-- InstanceBeginEditable name="head" --><!-- InstanceEndEditable -->
 		<!-- InstanceParam name="meta_description" type="text" value="The Mechanics of Prayer invites one to turn a large pulley wheel using a modified treadle." -->
@@ -105,7 +104,7 @@
 					<span class="location"></span>-->
 					<!-- InstanceBeginEditable name="description" -->
 					<p class="description">The Mechanics of Prayer invites one to turn a large pulley wheel using a modified treadle. This activates a series of smaller pulleys and linkages within an old cast iron sewing table. A white hand mechanically arcs to and fro in front of a mirror, forming a prayerful gesture as it meets its own reflection. A gold-leafed rod is also activated, repeatedly sliding up and down. As this rod reaches the apogee of its motion, it contacts another rod that arches over the space between the treadle wheel and the prayer table. The grazing of these two rods results in a small shower of sparks above the prayer machine as it completes&ndash;and short circuits&ndash;the charge to ground.</p>
-                    <p class="description"><em>This absurd machine references the difficulties of our attempt to bridge to esoteric experience with rational strategies and empty, mechanically performed rituals.</em></p>
+                    <p class="description">This absurd machine references the difficulties of our attempt to bridge to esoteric experience with rational strategies and empty, mechanically performed rituals.</p>
 		<!-- InstanceEndEditable -->
                 </div>
 				
@@ -136,7 +135,7 @@
 					</div>
 					
 					<div class="twelvecol last">
-						<video id="player" class="player" preload="none" poster="/assets/images/the-mechanics-of-prayer-frame.jpg" controls>
+						<video id="player" class="player" preload="none" poster="/assets/images/the-mechanics-of-prayer-frame.jpg" controls width="520" height="390">
 							<source src="/assets/videos/the-mechanics-of-prayer.mp4" type="video/mp4" />
 							<!--<source src="short-history.webm" type="video/webm" /> -->
 							<!--<source src="walkabout.ogv" type="video/ogg" /> -->
@@ -238,7 +237,8 @@
 						{type: "html5"},
 						{type: "flash", src: "/assets/flash/player.swf"},
 						{type: "download", src: "/assets/images/the-mechanics-of-prayer-frame.jpg"}
-					]
+					],
+					'controlbar.idlehide': true
 				});
 				
 				$("a[rel='enclosure']").colorbox({
@@ -259,7 +259,8 @@
 								{type: "html5"},
 								{type: "flash", src: "/assets/flash/player.swf"},
 								{type: "download", src: "/assets/images/the-mechanics-of-prayer-frame.jpg"}
-							]
+							],
+							'controlbar.idlehide': true
 						});
 					}
 				});		

@@ -1,5 +1,6 @@
 <!doctype html>
-<html lang="en"><!-- InstanceBegin template="/Templates/VideoDetail.dwt" codeOutsideHTMLIsLocked="false" --><head>
+<html lang="en"><!-- InstanceBegin template="/Templates/VideoDetail.dwt" codeOutsideHTMLIsLocked="false" -->
+	<head>
 		<!-- Meta data -->
 		<!-- uses hMedia, hCard and CWDA Lite for work of art microformat -->
 		<!-- Place charset at top per: 
@@ -22,12 +23,7 @@
 	    <meta property="og:image" content="" />
     	<meta property="og:url" content="http://jamesacook.net" />	
     	<meta property="og:email" content="" />-->	
-		
-		<!-- Must be first so IE5-8 can correctly apply the stylesheets to the HTML5 elements -->
-		<!-- For IE 5-8 (css3-mediaqueries.min.js also for Firefox 1-3.0 and Safari 2-3, but we kind of don't care about those in 2011...) -->
 		<!--[if lt IE 9]>
-			<script src="/assets/js/html5.min.js"></script>
-			<script src="/assets/js/css3-mediaqueries.min.js"></script>
 			<style>
                 nav {padding-bottom:1.5em;}
 			</style>
@@ -35,7 +31,9 @@
 		
 		<!-- Stylesheets -->
 		<link rel="stylesheet" href="/assets/css/styles-1.1.7-min.css" media="all" />
-		
+		<!-- should come after the css to help prevent FOUC -->
+		<script src="/assets/js/modernizr-2.0.min.js"></script>
+		<script src="/assets/js/cssua.min.js"></script>		
         <!-- InstanceBeginEditable name="head" --><!-- InstanceEndEditable -->
 		<!-- InstanceParam name="meta_description" type="text" value="" -->
 		<!-- InstanceParam name="name" type="text" value="Walkabout" -->
@@ -206,11 +204,12 @@
 					// = "transparent fixes flash overlay, but makes video really choppy and almost unwatchable
 					wmode: "window",
 					//http://stackoverflow.com/questions/886864/differences-between-using-wmodetransparent-opaque-window-for-an-embedded 
-					mode: [
+					modes: [
 						{ type: "html5" },
 						{ type: "flash", src: "/assets/flash/player.swf" },
 						{ type: "download", src: "/assets/images/walkabout-frame.jpg"}
-					]
+					],
+					'controlbar.idlehide': true
 				});
 			});
 		</script><!-- #BeginLibraryItem "/Library/Google Analytics JS.lbi" -->		
