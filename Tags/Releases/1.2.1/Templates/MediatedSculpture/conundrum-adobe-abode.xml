@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<templateItems template="/Templates/MediatedSculptureDetail.dwt" codeOutsideHTMLIsLocked="false">
+   	<parameter name="name" type="text" passthrough="false"><![CDATA[Conundrum Abode (adobe)]]></parameter>
+   	<parameter name="meta_description" type="text" passthrough="false"><![CDATA[In this work a rational stability is suggested by the adobe block construction as an isolated individual attempts to advance without seeming to progress.]]></parameter>
+   	<parameter name="main_image_src" type="text" passthrough="false"><![CDATA[/assets/images/conundrum-adobe-abode-1.jpg]]></parameter>
+	<parameter name="another_view_1" type="boolean" passthrough="false">true</parameter>
+	<parameter name="another_view_1_src" type="text" passthrough="false"><![CDATA[/assets/images/conundrum-adobe-abode-2.jpg]]></parameter>
+	<parameter name="another_view_2" type="boolean" passthrough="false">true</parameter>
+	<parameter name="another_view_2_src" type="text" passthrough="false"><![CDATA[/assets/images/conundrum-adobe-abode-detail-3.jpg]]></parameter>
+	<parameter name="video" type="boolean" passthrough="false">true</parameter>
+	<parameter name="video_src" type="text" passthrough="false"><![CDATA[/assets/videos/conundrum-abode-adobe.mp4]]></parameter>
+	<parameter name="video_poster" type="text" passthrough="false"><![CDATA[/assets/images/conundrum-abode-adobe-frame.jpg]]></parameter>
+	<parameter name="has_next" type="boolean" passthrough="false">true</parameter>
+	<parameter name="has_prev" type="boolean" passthrough="false">true</parameter>
+	<parameter name="next" type="text" passthrough="false"><![CDATA[conundrum-stumped.html]]></parameter>
+	<parameter name="prev" type="text" passthrough="false"><![CDATA[ascension-descension.html]]></parameter>
+   	<item name="materials"><![CDATA[Adobe, steel, LCD monitor, DVD player, video recording]]></item>
+	<item name="dimensions"><![CDATA[48&Prime; &times; 22&Prime; &times; 22&Prime;]]></item>
+	<item name="description"><![CDATA[
+                    <p class="description">Our circumstance as human beings dictates that we must discover or construct our own cosmological meaning. Our decisions and actions at times bear fruit and at other moments seem bereft and leave us in states of relative isolation. It may be that we are at once both alone and connected. In this work a rational stability is suggested by the adobe block construction as an isolated individual attempts to advance without seeming to progress.</p>
+		]]></item>
+   	<item name="head"><![CDATA[]]></item>
+</templateItems>
