@@ -278,10 +278,9 @@
 				});
 			});
 		</script> 
-		<!-- TemplateEndIf -->
-		<!-- #BeginLibraryItem "/Library/Google Analytics JS.lbi" -->		<!-- GA optimizations: http://mathiasbynens.be/notes/async-analytics-snippet -->
-		<script>	
-			<!--// Google Analytics -->
+		<!-- TemplateEndIf --><!-- #BeginLibraryItem "/Library/Google Analytics JS.lbi" -->		
+		<!-- GA optimizations: http://mathiasbynens.be/notes/async-analytics-snippet -->
+		<script>
 			var _gaq = [['_setAccount', 'UA-10459598-5'], ['_trackPageview'],['_trackPageLoadTime']];		
 			(function(d, t) {
 			    var g = d.createElement(t),
@@ -291,6 +290,5 @@
 			    s.parentNode.insertBefore(g, s);
 			}(document, 'script'));
 		</script>
-<!-- #EndLibraryItem -->
-	</body>
+<!-- #EndLibraryItem --></body>
 </html>
