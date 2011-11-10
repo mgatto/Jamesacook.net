@@ -1,7 +1,8 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">		
 		<!-- GA optimizations: http://mathiasbynens.be/notes/async-analytics-snippet -->
 		<script>	
 			<!--// Google Analytics -->
-			var _gaq = [['_setAccount', 'UA-10459598-5'], ['_trackPageview']];		
+			var _gaq = [['_setAccount', 'UA-10459598-5'], ['_trackPageview'],['_trackPageLoadTime']];		
 			(function(d, t) {
 			    var g = d.createElement(t),
 			        s = d.getElementsByTagName(t)[0];

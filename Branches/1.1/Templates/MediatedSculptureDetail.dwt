@@ -35,19 +35,7 @@
 		<!-- should come after the css to help prevent FOUC -->
 		<script src="/assets/js/modernizr-2.0.min.js"></script>
 		<script src="/assets/js/cssua.min.js"></script>
-		<!-- #BeginLibraryItem "/Library/Google Analytics JS.lbi" -->		<!-- GA optimizations: http://mathiasbynens.be/notes/async-analytics-snippet -->
-		<script>	
-			<!--// Google Analytics -->
-			var _gaq = [['_setAccount', 'UA-10459598-5'], ['_trackPageview']];		
-			(function(d, t) {
-			    var g = d.createElement(t),
-			        s = d.getElementsByTagName(t)[0];
-				g.async = 1; //still needed for rather substantial FF3.6 users out there, even in Nov 2011.
-			    g.src = 'http://www.google-analytics.com/ga.js';
-			    s.parentNode.insertBefore(g, s);
-			}(document, 'script'));
-		</script>
-<!-- #EndLibraryItem -->
+		
         <!-- TemplateBeginEditable name="head" --> <!-- TemplateEndEditable -->
 		<!-- TemplateParam name="meta_description" type="text" value="" -->
 		<!-- TemplateParam name="name" type="text" value="" -->
@@ -288,5 +276,18 @@
 			});
 		</script> 
 		<!-- TemplateEndIf -->
+		<!-- #BeginLibraryItem "/Library/Google Analytics JS.lbi" -->		<!-- GA optimizations: http://mathiasbynens.be/notes/async-analytics-snippet -->
+		<script>	
+			<!--// Google Analytics -->
+			var _gaq = [['_setAccount', 'UA-10459598-5'], ['_trackPageview'],['_trackPageLoadTime']];		
+			(function(d, t) {
+			    var g = d.createElement(t),
+			        s = d.getElementsByTagName(t)[0];
+				g.async = 1; //still needed for rather substantial FF3.6 users out there, even in Nov 2011.
+			    g.src = 'http://www.google-analytics.com/ga.js';
+			    s.parentNode.insertBefore(g, s);
+			}(document, 'script'));
+		</script>
+<!-- #EndLibraryItem -->
 	</body>
 </html>

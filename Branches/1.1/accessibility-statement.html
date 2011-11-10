@@ -1,4 +1,4 @@
-<!doctype html>
+<!doctype html> 
 <html lang="en"><!-- InstanceBegin template="/Templates/IndexPages.dwt" codeOutsideHTMLIsLocked="false" -->
 	<head>
 		<!-- Meta data -->
@@ -32,19 +32,7 @@
 		<!-- should come after the css to help prevent FOUC -->
 		<script src="/assets/js/modernizr-2.0.min.js"></script>
 		<script src="/assets/js/cssua.min.js"></script>
-		<!-- #BeginLibraryItem "/Library/Google Analytics JS.lbi" -->		<!-- GA optimizations: http://mathiasbynens.be/notes/async-analytics-snippet -->
-		<script>	
-			<!--// Google Analytics -->
-			var _gaq = [['_setAccount', 'UA-10459598-5'], ['_trackPageview']];		
-			(function(d, t) {
-			    var g = d.createElement(t),
-			        s = d.getElementsByTagName(t)[0];
-				g.async = 1; //still needed for rather substantial FF3.6 users out there, even in Nov 2011.
-			    g.src = 'http://www.google-analytics.com/ga.js';
-			    s.parentNode.insertBefore(g, s);
-			}(document, 'script'));
-		</script>
-<!-- #EndLibraryItem -->
+		
 		<!-- InstanceBeginEditable name="head" -->
 		<!-- InstanceEndEditable -->
 		<!-- InstanceParam name="meta_description" type="text" value="A guide to this site's accessibility features" -->
@@ -236,5 +224,18 @@ Windows users will find that accesskeys take precedence over application command
 		<script>
 			$script('/assets/js/script-1.2-min.js');
 		</script>
+		<!-- #BeginLibraryItem "/Library/Google Analytics JS.lbi" -->		<!-- GA optimizations: http://mathiasbynens.be/notes/async-analytics-snippet -->
+		<script>	
+			<!--// Google Analytics -->
+			var _gaq = [['_setAccount', 'UA-10459598-5'], ['_trackPageview'],['_trackPageLoadTime']];		
+			(function(d, t) {
+			    var g = d.createElement(t),
+			        s = d.getElementsByTagName(t)[0];
+				g.async = 1; //still needed for rather substantial FF3.6 users out there, even in Nov 2011.
+			    g.src = 'http://www.google-analytics.com/ga.js';
+			    s.parentNode.insertBefore(g, s);
+			}(document, 'script'));
+		</script>
+<!-- #EndLibraryItem -->
 	</body>
 <!-- InstanceEnd --></html>
