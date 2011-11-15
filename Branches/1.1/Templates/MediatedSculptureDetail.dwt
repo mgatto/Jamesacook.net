@@ -141,7 +141,7 @@
 					</div>
 					<!-- TemplateBeginIf cond="video" -->
 					<div class="twelvecol last">
-						<video id="player" class="player" preload="none" poster="@@(video_poster)@@" controls width="520" height="388">
+						<video id="player" class="player" preload="none" poster="@@(video_poster)@@" controls width="535" height="400">
 							<source src="@@(video_src)@@" type="video/mp4" />
 							<!--<source src="short-history.webm" type="video/webm" /> -->
 							<!--<source src="walkabout.ogv" type="video/ogg" /> -->
