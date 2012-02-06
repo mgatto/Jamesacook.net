@@ -374,10 +374,6 @@
                             position:relative; /*for ie 7/8: http://snook.ca/archives/html_and_css/position_relative_overflow_ie/*/
                         }
 						.listing .thumbnail {
-							margin-bottom:30px;
-						}
-						.ua-ie-7 .listing .thumbnail {
-							/* fixes loss of bottom margins by ie7: http://retiredblog.gkaindl.com/2007/05/07/ie7-floatmargin-bottom-annoyance/ */
 							margin-top:30px;
 						}
 						/*div*/.bigger {
