@@ -101,7 +101,7 @@
 				<div class="onecol">&nbsp;</div>
 				
 				<div id="text" class="fourcol">
-                	<h2 class="title">@@(name)@@</h2>
+                	<h2 class="title">&ldquo;@@(name)@@&rdquo;</h2>
           
                     <p class="materials"><!-- TemplateBeginEditable name="materials" --> <!-- TemplateEndEditable --></p>
 					<!-- TemplateBeginEditable name="description" --> <!-- TemplateEndEditable -->
