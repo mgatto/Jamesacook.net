@@ -376,6 +376,10 @@
 						.listing .thumbnail {
 							margin-bottom:30px;
 						}
+						.ua-ie-7 .listing .thumbnail {
+							/* fixes loss of bottom margins by ie7: http://retiredblog.gkaindl.com/2007/05/07/ie7-floatmargin-bottom-annoyance/ */
+							margin-top:30px;
+						}
 						/*div*/.bigger {
                         	margin-left:16px; /*4.1%*/
                             width:96%;
