@@ -1,56 +1,48 @@
-<!doctype html> 
-<html lang="en">
+<!doctype html>
+<html lang="en"><!-- InstanceBegin template="/Templates/_Master.dwt" codeOutsideHTMLIsLocked="false" -->
 	<head>
+		<!-- InstanceParam name="meta_description" type="text" value="" passthrough="true" -->
+		<!-- InstanceParam name="name" type="text" value="" passthrough="true" -->
+		<!-- InstanceParam name="class" type="text" value="video" -->
+		<!-- InstanceParam name="page_title" type="text" value="Video" -->
 		<!-- Meta data -->
 		<!-- uses hMedia, hCard and CWDA Lite for work of art microformat -->
 		<!-- Place charset at top per: 
-			 http://www.kylescholz.com/blog/2010/01/performance_implications_of_charset.html -->
+				 http://www.kylescholz.com/blog/2010/01/performance_implications_of_charset.html -->
 		<meta charset="utf-8"/>
 		<meta name="language" content="en" />
+		<title>@@@(name)@@@ &middot; James A. Cook &middot; Sculptor &amp; Video Artist, Tucson Arizona</title>
+		<meta name="description" content="@@@(meta_description)@@@" />
 		
-		<title>@@(name)@@ &middot; James A. Cook &middot; Sculptor &amp; Video Artist, Tucson Arizona</title>
-		<meta name="description" content="@@(meta_description)@@" />
-		
-		<link type="text/plain" rel="author" href="http://www.jamesacook.net/humans.txt" />
-        
+		<!-- mobile enhancemets --> 
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<!--<link rel="icon" href="/favicon.ico" type="image/vnd.microsoft.icon" />
-		<link rel="shortcut icon" href="/favicon.ico" />-->
-		
-		<!-- Facebook's Open Graph: http://ogp.me/ http://developers.facebook.com/docs/share -->
-	    <!--<meta property="og:title" content="" />
-	    <meta property="og:type" content="profile" />
-    	<meta property="og:description" content="" />
-	    <meta property="og:image" content="" />
-    	<meta property="og:url" content="http://jamesacook.net" />	
-    	<meta property="og:email" content="" />-->	
-		<!--[if lt IE 9]>
-			<style>
-                nav {padding-bottom:1.5em;}
-			</style>
-		<![endif]-->
+			<link rel="shortcut icon" href="/favicon.ico" />-->
+			
+		<link type="text/plain" rel="author" href="http://www.jamesacook.net/humans.txt" />
 		
 		<!-- Stylesheets -->
+		<!--[if lt IE 9]>
+		<style>
+            nav {padding-bottom:1.5em;}
+		</style>
+		<![endif]-->
 		<link rel="stylesheet" href="/assets/css/styles-1.2-min.css" media="all" />
+		
+		<!-- Javascripts, part 1 -->
 		<!-- should come after the css to help prevent FOUC -->
 		<script src="/assets/js/modernizr-2.0.min.js"></script>
 		<script src="/assets/js/cssua.min.js"></script>
 		
-        <!-- TemplateBeginEditable name="head" --> <!-- TemplateEndEditable -->
-		<!-- TemplateParam name="meta_description" type="text" value="" -->
-		<!-- TemplateParam name="name" type="text" value="" -->
-		<!-- TemplateParam name="video" type="boolean" value="false" -->
-		<!-- TemplateParam name="video_src" type="text" value="" -->
-		<!-- TemplateParam name="video_poster" type="text" value="" -->
-		<!-- TemplateParam name="has_next" type="boolean" value="true" -->
-		<!-- TemplateParam name="next" type="text" value="" -->
-		<!-- TemplateParam name="has_prev" type="boolean" value="true" -->
-		<!-- TemplateParam name="prev" type="text" value="" -->
+		<!-- InstanceBeginEditable name="head" -->
+		<!-- TemplateBeginEditable name="head" --><!-- TemplateEndEditable -->
+		<!-- InstanceEndEditable -->
 	</head>
 	<body class="video">
 		<div id="body" class="container">
 			<header class="row">
 				<div class="twelvecol last">
-					<h1 class="creator">Mediated Sculpture, by James Cook</h1>
+					<h1 class="creator"><!-- InstanceBeginEditable name="page_title" --><!-- InstanceEndEditable -->, by James A. Cook</h1>
 				
 					<div id="skip">
 						<a href="#content" accesskey="7">Skip to Main Content</a>
@@ -81,7 +73,18 @@
 				
 				<div class="onecol last">&nbsp;</div>
 			</nav>
-			<!-- #EndLibraryItem --><div id="links" class="row last">
+			<!-- #EndLibraryItem -->
+				
+		<!-- InstanceBeginEditable name="BodyText" -->
+				<!-- TemplateParam name="video" type="boolean" value="false" -->
+				<!-- TemplateParam name="video_src" type="text" value="" -->
+				<!-- TemplateParam name="video_poster" type="text" value="" -->
+				<!-- TemplateParam name="has_next" type="boolean" value="true" -->
+				<!-- TemplateParam name="next" type="text" value="" -->
+				<!-- TemplateParam name="has_prev" type="boolean" value="true" -->
+				<!-- TemplateParam name="prev" type="text" value="" -->
+				
+			<div id="links" class="row last">
 				<div class="onecol">&nbsp;</div>
 				
 				<div id="prev" class="fivecol">
@@ -101,7 +104,6 @@
                 	<h2 class="title">@@(name)@@</h2>
           
                     <p class="materials"><!-- TemplateBeginEditable name="materials" --> <!-- TemplateEndEditable --></p>
-					<p class="dimensions"><!-- TemplateBeginEditable name="dimensions" --> <!-- TemplateEndEditable --></p>
 					<!-- TemplateBeginEditable name="description" --> <!-- TemplateEndEditable -->
                 </div>
 				
@@ -140,7 +142,10 @@
                 </div>
 				
 				<div class="onecol last">&nbsp;</div>
-			</div><!-- #BeginLibraryItem "/Library/Footer HTML.lbi" -->
+			</div>
+				<!-- InstanceEndEditable -->
+				
+			<!-- #BeginLibraryItem "/Library/Footer HTML.lbi" -->
 		<footer class="row">			
 			<nav class="twelvecol last">
 				<ul>
@@ -193,7 +198,12 @@
 		!function(a,b){typeof define=="function"?define(b):typeof module!="undefined"?module.exports=b():this[a]=b()}("$script",function(){function s(a,b,c){for(c=0,j=a.length;c<j;++c)if(!b(a[c]))return m;return 1}function t(a,b){s(a,function(a){return!b(a)})}function u(a,b,c){function o(a){return a.call?a():f[a]}function p(){if(!--m){f[l]=1,j&&j();for(var a in h)s(a.split("|"),o)&&!t(h[a],o)&&(h[a]=[])}}a=a[n]?a:[a];var e=b&&b.call,j=e?b:c,l=e?a.join(""):b,m=a.length;return setTimeout(function(){t(a,function(a){if(k[a])return l&&(g[l]=1),k[a]==2&&p();k[a]=1,l&&(g[l]=1),v(!d.test(a)&&i?i+a+".js":a,p)})},0),u}function v(a,d){var e=b.createElement("script"),f=m;e.onload=e.onerror=e[r]=function(){if(e[p]&&!/^c|loade/.test(e[p])||f)return;e.onload=e[r]=null,f=1,k[a]=2,d()},e.async=1,e.src=a,c.insertBefore(e,c.firstChild)}var a=this,b=document,c=b.getElementsByTagName("head")[0],d=/^https?:\/\//,e=a.$script,f={},g={},h={},i,k={},l="string",m=!1,n="push",o="DOMContentLoaded",p="readyState",q="addEventListener",r="onreadystatechange";return!b[p]&&b[q]&&(b[q](o,function w(){b.removeEventListener(o,w,m),b[p]="complete"},m),b[p]="loading"),u.get=v,u.order=function(a,b,c){(function d(e){e=a.shift(),a.length?u(e,d):u(e,b,c)})()},u.path=function(a){i=a},u.ready=function(a,b,c){a=a[n]?a:[a];var d=[];return!t(a,function(a){f[a]||d[n](a)})&&s(a,function(a){return f[a]})?b():!function(a){h[a]=h[a]||[],h[a][n](b),c&&c(d)}(a.join("|")),u},u.noConflict=function(){return a.$script=e,this},u})
 		</script>
 		<script>
-			$script('/assets/js/script-1.2-min.js', function() {
+			$script('/assets/js/script-1.2-min.js', 'all-scripts');
+		</script>
+		<!-- InstanceBeginEditable name="Scripts" -->
+		<!-- TemplateBeginEditable name="VideoScripts" -->
+		<script>
+			$script.ready('all-scripts', function() {
  				$(document).ready(function() {
 					jwplayer("player").setup({	
 						skin: "/assets/jwplayer/lulu.zip",
@@ -207,13 +217,16 @@
 						modes: [
 							{ type: "html5" },
 							{ type: "flash", src: "/assets/flash/player.swf" },
-							{ type: "download", src: "@@(video_poster)@@"}
+							{ type: "download", src: "/assets/images/short-history-frame.jpg"}
 						],
 						'controlbar.idlehide': true
 					});
 				});
 			});
-		</script><!-- #BeginLibraryItem "/Library/Google Analytics JS.lbi" -->		
+		</script>
+		<!-- TemplateEndEditable -->
+		<!-- InstanceEndEditable --> 
+		<!-- #BeginLibraryItem "/Library/Google Analytics JS.lbi" -->		
 		<!-- GA optimizations: http://mathiasbynens.be/notes/async-analytics-snippet -->
 		<script>
 			var _gaq = [['_setAccount', 'UA-10459598-5'], ['_trackPageview'],['_trackPageLoadTime']];		
@@ -226,4 +239,4 @@
 			}(document, 'script'));
 		</script>
 <!-- #EndLibraryItem --></body>
-</html>
+<!-- InstanceEnd --></html>

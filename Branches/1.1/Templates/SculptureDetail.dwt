@@ -1,54 +1,48 @@
 <!doctype html>
-<html lang="en">
+<html lang="en"><!-- InstanceBegin template="/Templates/_Master.dwt" codeOutsideHTMLIsLocked="false" -->
 	<head>
+		<!-- InstanceParam name="meta_description" type="text" value="" passthrough="true" -->
+		<!-- InstanceParam name="name" type="text" value="" passthrough="true" -->
+		<!-- InstanceParam name="class" type="text" value="sculpture" -->
+		<!-- InstanceParam name="page_title" type="text" value="" -->
 		<!-- Meta data -->
 		<!-- uses hMedia, hCard and CWDA Lite for work of art microformat -->
 		<!-- Place charset at top per: 
-			 http://www.kylescholz.com/blog/2010/01/performance_implications_of_charset.html -->
+				 http://www.kylescholz.com/blog/2010/01/performance_implications_of_charset.html -->
 		<meta charset="utf-8"/>
 		<meta name="language" content="en" />
+		<title>@@@(name)@@@ &middot; James A. Cook &middot; Sculptor &amp; Video Artist, Tucson Arizona</title>
+		<meta name="description" content="@@@(meta_description)@@@" />
 		
-		<title>@@(name)@@ &middot; James A. Cook &middot; Sculptor &amp; Video Artist, Tucson Arizona</title>
-		<meta name="description" content="@@(meta_description)@@" />
-		
-		<link type="text/plain" rel="author" href="http://www.jamesacook.net/humans.txt" />
-        
+		<!-- mobile enhancemets --> 
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<!--<link rel="icon" href="/favicon.ico" type="image/vnd.microsoft.icon" />
-		<link rel="shortcut icon" href="/favicon.ico" />-->
-		
-		<!--[if lt IE 9]>
-			<style>
-                nav {padding-bottom:1.5em;}
-			</style>
-		<![endif]-->
+			<link rel="shortcut icon" href="/favicon.ico" />-->
+			
+		<link type="text/plain" rel="author" href="http://www.jamesacook.net/humans.txt" />
 		
 		<!-- Stylesheets -->
+		<!--[if lt IE 9]>
+		<style>
+            nav {padding-bottom:1.5em;}
+		</style>
+		<![endif]-->
 		<link rel="stylesheet" href="/assets/css/styles-1.2-min.css" media="all" />
+		
+		<!-- Javascripts, part 1 -->
 		<!-- should come after the css to help prevent FOUC -->
 		<script src="/assets/js/modernizr-2.0.min.js"></script>
 		<script src="/assets/js/cssua.min.js"></script>
 		
-        <!-- TemplateBeginEditable name="head" --> <!-- TemplateEndEditable -->
-		<!-- TemplateParam name="meta_description" type="text" value="" -->
-		<!-- TemplateParam name="name" type="text" value="" -->
-		<!-- TemplateParam name="main_image_src" type="URL" value="" -->
-		<!-- TemplateParam name="another_view_1" type="boolean" value="true" -->
-		<!-- TemplateParam name="another_view_1_src" type="text" value="" -->
-		<!-- TemplateParam name="another_view_2" type="boolean" value="true" -->
-		<!-- TemplateParam name="another_view_2_src" type="text" value="" -->
-		<!-- TemplateParam name="video" type="boolean" value="false" -->
-		<!-- TemplateParam name="video_src" type="text" value="" -->
-		<!-- TemplateParam name="video_poster" type="text" value="" -->
-		<!-- TemplateParam name="has_next" type="boolean" value="true" -->
-		<!-- TemplateParam name="next" type="text" value="" -->
-		<!-- TemplateParam name="has_prev" type="boolean" value="true" -->
-		<!-- TemplateParam name="prev" type="text" value="" -->
+		<!-- InstanceBeginEditable name="head" -->
+		<!-- TemplateBeginEditable name="head" --><!-- TemplateEndEditable -->
+		<!-- InstanceEndEditable -->
 	</head>
 	<body class="sculpture">
-		<div id="body" class="container cdwalite">
+		<div id="body" class="container">
 			<header class="row">
 				<div class="twelvecol last">
-					<h1 class="creator">Sculpture, by James Cook</h1>
+					<h1 class="creator"><!-- InstanceBeginEditable name="page_title" --><!-- InstanceEndEditable -->James A. Cook</h1>
 				
 					<div id="skip">
 						<a href="#content" accesskey="7">Skip to Main Content</a>
@@ -79,94 +73,108 @@
 				
 				<div class="onecol last">&nbsp;</div>
 			</nav>
-			<!-- #EndLibraryItem --><div id="links" class="row last">
-				<div class="onecol">&nbsp;</div>
+			<!-- #EndLibraryItem -->
 				
-				<div id="prev" class="fivecol">
-					<!-- TemplateBeginIf cond="has_prev" --><a href="@@(prev)@@">&laquo; Previous</a><!-- TemplateEndIf -->&nbsp;
-				</div>
-				<div id="next" class="fivecol last">
-					&nbsp;<!-- TemplateBeginIf cond="has_next" --><a href="@@(next)@@">Next &raquo;</a><!-- TemplateEndIf -->
-				</div>
+			<!-- InstanceBeginEditable name="BodyText" -->
+				<!-- TemplateParam name="main_image_src" type="URL" value="" -->
+				<!-- TemplateParam name="another_view_1" type="boolean" value="true" -->
+				<!-- TemplateParam name="another_view_1_src" type="text" value="" -->
+				<!-- TemplateParam name="another_view_2" type="boolean" value="true" -->
+				<!-- TemplateParam name="another_view_2_src" type="text" value="" -->
+				<!-- TemplateParam name="video" type="boolean" value="false" -->
+				<!-- TemplateParam name="video_src" type="text" value="" -->
+				<!-- TemplateParam name="video_poster" type="text" value="" -->
+				<!-- TemplateParam name="has_next" type="boolean" value="true" -->
+				<!-- TemplateParam name="next" type="text" value="" -->
+				<!-- TemplateParam name="has_prev" type="boolean" value="true" -->
+				<!-- TemplateParam name="prev" type="text" value="" -->
 				
-				<div class="onecol">&nbsp;</div>
-			</div>
-			
-			<div id="content" class="row">
-				<div class="onecol">&nbsp;</div>
-				
-				<div id="text" class="fourcol">
-                	<h2 class="title">@@(name)@@</h2>
-          
-                    <p class="materials"><!-- TemplateBeginEditable name="materials" --> <!-- TemplateEndEditable --></p>
-					<p class="dimensions"><!-- TemplateBeginEditable name="dimensions" --> <!-- TemplateEndEditable --></p>
-					<!--<span class="style"></span>
-					<span class="location"></span>-->
-					<!-- TemplateBeginEditable name="description" --> <!-- TemplateEndEditable -->
-                </div>
-				
-                <div id="media" class="sixcol hmedia">
-					<div class="eightcol">
-						<div class="thumbnail bigger">
-							<a rel="enclosure" type="image/jpeg" href="@@(_document['main_image_src'])@@">
-								<img src="@@(_document['main_image_src'])@@" class="photo" alt="Main view of the sculpture" title="Main View" />
-							</a>
-						</div>
+				<div id="links" class="row last">
+					<div class="onecol">&nbsp;</div>
+					
+					<div id="prev" class="fivecol">
+						<!-- TemplateBeginIf cond="has_prev" --><a href="@@(prev)@@">&laquo; Previous</a><!-- TemplateEndIf -->&nbsp;
+					</div>
+					<div id="next" class="fivecol last">
+						&nbsp;<!-- TemplateBeginIf cond="has_next" --><a href="@@(next)@@">Next &raquo;</a><!-- TemplateEndIf -->
 					</div>
 					
-					<div class="fourcol last">
-						<!-- TemplateBeginIf cond="another_view_1" -->
-						<div class="thumbnail smaller">
-							<a rel="enclosure" type="image/jpeg" href="@@(another_view_1_src)@@">
-								<img src="@@(another_view_1_src)@@" class="photo" alt="Detail view of the sculpture" title="Detail View" />
-							</a>
-						</div>
-						<!-- TemplateEndIf -->
-						<!-- TemplateBeginIf cond="another_view_2" -->
-						<div class="thumbnail smaller">
-							<a rel="enclosure" type="image/jpeg" href="@@(another_view_2_src)@@">
-								<img src="@@(another_view_2_src)@@" class="photo" alt="Detail view of the sculpture" title="Detail View" />
-							</a>
-						</div>
-						<!-- TemplateEndIf -->
-					</div>
-					<!-- TemplateBeginIf cond="video" -->
-					<div class="twelvecol last">
-						<video id="player" class="player" preload="none" poster="@@(video_poster)@@" controls width="535" height="400">
-							<source src="@@(video_src)@@" type="video/mp4" />
-							<!--<source src="short-history.webm" type="video/webm" /> -->
-							<!--<source src="walkabout.ogv" type="video/ogg" /> -->
-							
-							<!-- Download links provided for devices that can't play video in the browser. -->
-			    			<p id="no-video">
-								Your browser cannot play HTML5 video, and Adobe Flash is either disabled, too old to play this, or just not installed. So, <strong>Download the video</strong> instead:
-				            </p>
-							
-							<ul>
- 								<li>
-									<a rel="enclosure" type="video/mp4" title="Download the original source file for this movie" href="@@(video_src)@@">
-										<!--<img src="/assets/images/short-history-poster.jpg" />-->
-										Original (MP4)
-									</a>
-								</li>
-								<!--<li>
-									<a rel="enclosure" type="video/ogv" title="Download the original source file for this movie"  href="short-history.ogv">Original (Ogg)</a>
-								</li>
-								<li>
-									<a rel="enclosure" type="video/webm" title="Download the original source file for this movie"  href="short-history.webm">Original (WebM)</a>
-								</li> -->
-							</ul>
-								
-							<!-- text description for accessibility (?) -->
-							<!--<h4>Text Description</h4>
-							<p></p>-->
-						</video>
-					</div>
-					<!-- TemplateEndIf -->
-                </div>
+					<div class="onecol">&nbsp;</div>
+				</div>
 				
-				<div class="onecol last">&nbsp;</div>
-			</div><!-- #BeginLibraryItem "/Library/Footer HTML.lbi" -->
+				<div id="content" class="row">
+					<div class="onecol">&nbsp;</div>
+					<div id="text" class="fourcol">
+                		<h2 class="title">@@(name)@@</h2>
+          
+                    	<p class="materials"><!-- TemplateBeginEditable name="materials" --> <!-- TemplateEndEditable --></p>
+						<p class="dimensions"><!-- TemplateBeginEditable name="dimensions" --> <!-- TemplateEndEditable --></p>
+						<!--<span class="style"></span>
+						<span class="location"></span>-->
+						<!-- TemplateBeginEditable name="description" --> <!-- TemplateEndEditable -->
+        	        </div>
+				
+            	    <div id="media" class="sixcol hmedia">
+						<div class="eightcol">
+							<div class="thumbnail bigger">
+								<a rel="enclosure" type="image/jpeg" href="@@(_document['main_image_src'])@@">
+									<img src="@@(_document['main_image_src'])@@" class="photo" alt="Main view of the sculpture" title="Main View" />
+								</a>
+							</div>
+						</div>
+						
+						<div class="fourcol last">
+							<!-- TemplateBeginIf cond="another_view_1" -->
+							<div class="thumbnail smaller">
+								<a rel="enclosure" type="image/jpeg" href="@@(another_view_1_src)@@">
+									<img src="@@(another_view_1_src)@@" class="photo" alt="Detail view of the sculpture" title="Detail View" />
+								</a>
+							</div>
+							<!-- TemplateEndIf -->
+							<!-- TemplateBeginIf cond="another_view_2" -->
+							<div class="thumbnail smaller">
+								<a rel="enclosure" type="image/jpeg" href="@@(another_view_2_src)@@">
+									<img src="@@(another_view_2_src)@@" class="photo" alt="Detail view of the sculpture" title="Detail View" />
+								</a>
+							</div>
+							<!-- TemplateEndIf -->
+						</div>
+						<!-- TemplateBeginIf cond="video" -->
+						<div class="twelvecol last">
+							<video id="player" class="player" preload="none" poster="@@(video_poster)@@" controls width="535" height="400">
+								<source src="@@(video_src)@@" type="video/mp4" />
+								<!--<source src="short-history.webm" type="video/webm" /> -->
+								<!-- Download links provided for devices that can't play video in the browser. -->
+				    			<p id="no-video">
+									Your browser cannot play HTML5 video, and Adobe Flash is either disabled, too old to play this, or just not installed. So, <strong>Download the video</strong> instead:
+					            </p>
+							
+								<ul>
+ 									<li>
+										<a rel="enclosure" type="video/mp4" title="Download the original source file for this movie" href="@@(video_src)@@">
+											<!--<img src="/assets/images/short-history-poster.jpg" />-->
+											Original (MP4)
+										</a>
+									</li>
+									<!--
+									<li>
+										<a rel="enclosure" type="video/webm" title="Download the original source file for this movie"  href="short-history.webm">Original (WebM)</a>
+									</li> -->
+								</ul>
+								
+								<!-- text description for accessibility (?) -->
+								<!--<h4>Text Description</h4>
+								<p></p>-->
+							</video>
+						</div>
+						<!-- TemplateEndIf -->
+	                </div>
+					
+					<div class="onecol last">&nbsp;</div>
+				</div>
+				<!-- InstanceEndEditable -->
+				
+			<!-- #BeginLibraryItem "/Library/Footer HTML.lbi" -->
 		<footer class="row">			
 			<nav class="twelvecol last">
 				<ul>
@@ -218,9 +226,13 @@
 		<script>
 		!function(a,b){typeof define=="function"?define(b):typeof module!="undefined"?module.exports=b():this[a]=b()}("$script",function(){function s(a,b,c){for(c=0,j=a.length;c<j;++c)if(!b(a[c]))return m;return 1}function t(a,b){s(a,function(a){return!b(a)})}function u(a,b,c){function o(a){return a.call?a():f[a]}function p(){if(!--m){f[l]=1,j&&j();for(var a in h)s(a.split("|"),o)&&!t(h[a],o)&&(h[a]=[])}}a=a[n]?a:[a];var e=b&&b.call,j=e?b:c,l=e?a.join(""):b,m=a.length;return setTimeout(function(){t(a,function(a){if(k[a])return l&&(g[l]=1),k[a]==2&&p();k[a]=1,l&&(g[l]=1),v(!d.test(a)&&i?i+a+".js":a,p)})},0),u}function v(a,d){var e=b.createElement("script"),f=m;e.onload=e.onerror=e[r]=function(){if(e[p]&&!/^c|loade/.test(e[p])||f)return;e.onload=e[r]=null,f=1,k[a]=2,d()},e.async=1,e.src=a,c.insertBefore(e,c.firstChild)}var a=this,b=document,c=b.getElementsByTagName("head")[0],d=/^https?:\/\//,e=a.$script,f={},g={},h={},i,k={},l="string",m=!1,n="push",o="DOMContentLoaded",p="readyState",q="addEventListener",r="onreadystatechange";return!b[p]&&b[q]&&(b[q](o,function w(){b.removeEventListener(o,w,m),b[p]="complete"},m),b[p]="loading"),u.get=v,u.order=function(a,b,c){(function d(e){e=a.shift(),a.length?u(e,d):u(e,b,c)})()},u.path=function(a){i=a},u.ready=function(a,b,c){a=a[n]?a:[a];var d=[];return!t(a,function(a){f[a]||d[n](a)})&&s(a,function(a){return f[a]})?b():!function(a){h[a]=h[a]||[],h[a][n](b),c&&c(d)}(a.join("|")),u},u.noConflict=function(){return a.$script=e,this},u})
 		</script>
+		<script>
+			$script('/assets/js/script-1.2-min.js', 'all-scripts');
+		</script>
+		<!-- InstanceBeginEditable name="Scripts" -->
 		<!-- TemplateBeginIf cond="video==false" -->
 		<script>
-			$script('/assets/js/script-1.2-min.js', function() {
+			$script.ready('all-scripts', function() {
 				$(document).ready(function() {				
 					$("a[rel='enclosure']").colorbox({
 						photo:true, 
@@ -232,7 +244,7 @@
 		<!-- TemplateEndIf -->
 		<!-- TemplateBeginIf cond="video" -->
 		<script>
-			$script('/assets/js/script-1.2-min.js', function() {				
+			$script.ready('all-scripts', function() {				
 				//stackoverflow.com/questions/886864/differences-between-using-wmodetransparent-opaque-window-for-an-embedded 
 				//= "window" fixes severe choppiness in IE 7-8. Do not set to opaque, nor anything else.
 				//However, this fix breaks Colorbox only in Flash mode! and not in HTML5 video mode.
@@ -268,7 +280,12 @@
 								wmode: "window",
 								modes: [
 									{type: "html5"},
-									{type: "flash", src: "/assets/flash/player.swf"},
+									{type: "flash", src: "/assets/flash/player.swf",
+										config: {
+											//for IE7?
+											type: 'video'
+										}
+									},
 									{type: "download", src: "@@(video_poster)@@"}
 								],
 								'controlbar.idlehide': true
@@ -278,7 +295,9 @@
 				});
 			});
 		</script> 
-		<!-- TemplateEndIf --><!-- #BeginLibraryItem "/Library/Google Analytics JS.lbi" -->		
+		<!-- TemplateEndIf -->
+		<!-- InstanceEndEditable --> 
+		<!-- #BeginLibraryItem "/Library/Google Analytics JS.lbi" -->		
 		<!-- GA optimizations: http://mathiasbynens.be/notes/async-analytics-snippet -->
 		<script>
 			var _gaq = [['_setAccount', 'UA-10459598-5'], ['_trackPageview'],['_trackPageLoadTime']];		
@@ -291,4 +310,4 @@
 			}(document, 'script'));
 		</script>
 <!-- #EndLibraryItem --></body>
-</html>
+<!-- InstanceEnd --></html>
