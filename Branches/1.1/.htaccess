@@ -1,17 +1,22 @@
-# ----------------------------------------------------------------------
-# Better website experience for IE users
-# ----------------------------------------------------------------------
 
+# these old urls keep showing up in the logs
 Redirect 301 /statement.html /spiel/statement.html
 Redirect 301 /resume.html /spiel/index.html
 
+# ----------------------------------------------------------------------
+# Better website experience for IE users
+# ----------------------------------------------------------------------
 # Force the latest IE version, in various cases when it may fall back to IE7 mode
 # github.com/rails/rails/commit/123eb25#commitcomment-118920
 
 <IfModule mod_setenvif.c>
   <IfModule mod_headers.c>
     BrowserMatch MSIE ie
-    Header set X-UA-Compatible "IE=Edge" env=ie
+    Header set X-UA-Compatible "IE=Edge,chrome=1" env=ie
+    # mod_headers can't match by content-type, but we don't want to send this header on *everything*
+    <filesmatch "\.(js|css|gif|png|jpe?g|pdf|xml|oga|ogg|m4a|ogv|mp4|m4v|webm|svg|svgz|eot|ttf|otf|woff|ico|webp|appcache|manifest|htc|crx|xpi|safariextz|vcf)$"="">
+      Header unset X-UA-Compatible
+    </filesmatch>
   </IfModule>
 </IfModule>
 
@@ -21,7 +26,6 @@ Redirect 301 /resume.html /spiel/index.html
   Header append Vary User-Agent
 # Cache control is set only if mod_headers is enabled, so that's unncessary to declare
 </IfModule>
-
 
 <IfModule mod_rewrite.c>
   #RewriteEngine On
@@ -140,7 +144,7 @@ AddType	image/x-icon	ico
 	AddOutputFilterByType DEFLATE text/html text/plain text/css application/json
 	AddOutputFilterByType DEFLATE text/javascript application/javascript application/x-javascript 
 	AddOutputFilterByType DEFLATE text/xml application/xml
-	AddOutputFilterByType DEFLATE font/opentype font/truetype font/eot application/vnd.ms-fontobject
+	AddOutputFilterByType DEFLATE image/x-icon font/opentype font/truetype font/eot application/vnd.ms-fontobject
 </IfModule>
 
 ## Caching
@@ -190,8 +194,11 @@ AddType	image/x-icon	ico
 
 # Cache Headers
 <IfModule mod_headers.c>
-	# Header unset Last-Modified
-	# Header unset ETag
+	# Since we're sending far-future expires, we don't need ETags for
+    # static content.
+    # developer.yahoo.com/performance/rules.html#etags
+	#Header unset ETag
+    #FileETag None
   
     <FilesMatch "\.(html|js|css|xml|gz)$">
       Header append Vary Accept-Encoding
