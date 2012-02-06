@@ -205,11 +205,12 @@
   						<span class="family-name">Cook</span>.
 					</span>						
 					<a rel="jcook1//email/arizona/edu" class="email"> Email</a>
-					<!--<br />			
+					<br />
+					<span class="role">Sculptor. Video Artist.</span>
  					<span class="adr">
   						<span class="locality">Tucson</span>, 
 		 				<span class="region">AZ</span>
- 					</span>-->
+ 					</span>
 				</small>
 			</p>
 			
