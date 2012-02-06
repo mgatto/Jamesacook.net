@@ -59,14 +59,6 @@
 		font-weight:700;
 		text-decoration:none;
 	}
-	a:link:after, a:visited:after {
-		content:" (" attr(href) ")";
-		font-size:90%;
-	}
-	/* prevent layout-busting and needless url printing for listing pages */
-	.listing a:link:after, .listing a:visited:after {
-		content:" " !important;
-	}
     nav, #skip, footer, #next, #prev, #player,.onecol {
 		display:none;
 	}
@@ -97,18 +89,19 @@
 	}
 }
 
-@media screen {
+@media screen {	
 	/* our vertical rhythm is 18px. All other vertical spacing should be a multiple of 18px or 1.5em.
 	   If fonts are less than 1em; increase the line height proportionally so all lines still match up. */
-
     html {
 		margin:0 0 1px 0;
 		padding:0;
 		border:0;
-		font-size:100.01%;
+		font-size:100.01%; /*Corrects text resizing oddly in IE6/7 when body font-size is set using em units: http://clagnut.com/blog/348/#c790 */
 		height:100%;
-		overflow-y:scroll;
-		/* force a vertical scrollbar to prevent a jumpy page: www.hicksdesign.co.uk/journal/forcing-scrollbars-now-even-better */
+		overflow-y:scroll; /* force a vertical scrollbar to prevent a jumpy page: www.hicksdesign.co.uk/journal/forcing-scrollbars-now-even-better */
+	    -webkit-text-size-adjust: 100%; /* Prevents iOS text size adjust after orientation change, without disabling user zoom: www.456bereastreet.com/archive/201012/controlling_text_size_in_safari_for_ios_without_disabling_user_zoom/
+	 */
+	    -ms-text-size-adjust: 100%; /* 3 */
 	}
 
     body, div, span, object, /*iframe,*/ h1, h2, h3, h4, /*h5, h6,*/ p, blockquote, /*pre,*/ a, abbr, acronym, address, /*code, del, dfn,*/ em, img, /*q, dl, dt, dd, ol,*/ ul, li/*, fieldset, form, label, legend*/ {
@@ -120,14 +113,25 @@
 		vertical-align:baseline;
 	}
     body {
-		line-height:1.5;
-		background:white;
-	}
+/*		line-height:1.5;*/
+        /* only color: #F8F8F8; and  background-color: #555; = contrast 7:1 and passing WCAG 2.0 AAA for less than 18pt*/
+        background-color: #666; /*#4A525A and color: #FFFFFF*/
+        color: #e6e6e6;
+		font: normal 75%/1.5em PaddingtonSCPlainSmallCapsRom, Arial, sans-serif;
+        -webkit-text-size-adjust: none;		/* Stops the iPhone scalling type up */
+    }
+	
+	/* Corrects block display not defined in IE6/7/8/9 & FF3 */
     article,aside,figure,figure img,figcaption,hgroup,footer,header,nav,section,video,object{
 		display:block
 	}
+	
+	img {
+	    border: 0; /* Removes border when inside 'a' element in IE6/7/8/9, FF3 */
+	    -ms-interpolation-mode: bicubic; /* Improves image quality when scaled in IE7: code.flickr.com/blog/2008/11/12/on-ui-quality-the-little-things-client-side-image-resizing/ */
+	}
     a img{
-		border:0;
+		/* border:0;*/
 		display: block; /* Stops image links getting text link styles */
 	}
     .container {
@@ -160,18 +164,37 @@
 		float: left;
 	}
     .last {margin-right: 0px;}
-    img, object, embed, video {
+	/*
+	 * Prevents sub and sup affecting line-height in all browsers
+	 * gist.github.com/413930
+	 */
+	sub,
+	sup {
+	    font-size: 75%;
+	    line-height: 0;
+	    position: relative;
+	    vertical-align: baseline;
+	}	
+	sup {
+	    top: -0.5em;
+	}	
+	sub {
+	    bottom: -0.25em;
+	}
+	
+	/*
+	 * Corrects inline-block display not defined in IE6/7/8/9 & FF3
+	 */
+	/*audio, canvas, */ video, object {
+	    display: inline-block;
+	    *display: inline;
+	    *zoom: 1;
+	}
+    img, object, embed, video /*, audio, canvas*/ {
 		max-width: 100%;
 		position: relative;
-	}/* width="137" height="137"*/
+	}
     h1,h2,h3,p, ul, ol, blockquote {margin-bottom: 1.5em;}
-    body {
-        /* only color: #F8F8F8; and  background-color: #555; = contrast 7:1 and passing WCAG 2.0 AAA for less than 18pt*/
-        background-color: #666;
-        color: #e6e6e6;
-		font: normal 75%/1.5em PaddingtonSCPlainSmallCapsRom, Arial, sans-serif;
-        -webkit-text-size-adjust: none;		/* Stops the iPhone scalling type up */
-    }
 	html>body {
 		font-size: 12px; 
 	}
@@ -187,7 +210,8 @@
                     height:36px; /* multiple of 18px! also = 3em */
             }
                 h1 {
-                    margin-left:-9999em;
+                    /*margin-left:-9999em;*/
+					visibility:hidden;
                     line-height: 36px;/* multiple of 18px! also = 3em */
                 }
                 #skip a, #skip a:hover, #skip a:visited { 
@@ -206,6 +230,7 @@
                     border-bottom:1px dotted #e6e6e6;
                     color:#e6e6e6;
                 }
+				.ua-ie-6 nav, .ua-ie-7 nav, .ua-ie-8 nav {padding-bottom:1.5em;}
                 /*ul*/#navigation {
                     border-top: 1px solid #e6e6e6;
                     border-bottom: 1px solid #e6e6e6;
@@ -349,7 +374,7 @@
                             position:relative; /*for ie 7/8: http://snook.ca/archives/html_and_css/position_relative_overflow_ie/*/
                         }
 						.listing .thumbnail {
-							margin-bottom:18px;
+							margin-bottom:30px;
 						}
 						/*div*/.bigger {
                         	margin-left:16px; /*4.1%*/
@@ -372,9 +397,9 @@
                             }
                         /*video {}*/
                         /*video*/#player {
-                            display:block;
-                            width:97% !important;
-                            margin-left:30px;
+                            /*display:block;*/
+                            /*width:97% !important;*/
+                            margin-left:16px;
                             color: #e6e6e6;
                         }
                 footer {
@@ -389,7 +414,7 @@
 						line-height:1.75em;
 					}
                     footer ul {
-                        margin-left:31%;
+                        margin-left:30%;
                     }
 					footer ul li {
 						display:inline; 
