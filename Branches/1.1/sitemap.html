@@ -22,10 +22,12 @@
 		<link type="text/plain" rel="author" href="http://www.jamesacook.net/humans.txt" />
 		
 		<!-- Stylesheets -->
+		<!--[if lt IE 9]>
+		<style>
+            nav {padding-bottom:1.5em;}
+		</style>
+		<![endif]-->
 		<link rel="stylesheet" href="/assets/css/styles-1.2-min.css" media="all" />
-
-		<!-- RSS -->
-		<link rel="alternate" type="application/rss+xml" title="Videos by James A. Cook" href="/videos.rss" />
 		
 		<!-- Javascripts, part 1 -->
 		<!-- should come after the css to help prevent FOUC -->
@@ -139,7 +141,9 @@
 				</div>
 				<div class="onecol last">&nbsp;</div>
 			</div>
-			<!-- InstanceEndEditable --><!-- #BeginLibraryItem "/Library/Footer HTML.lbi" -->
+			<!-- InstanceEndEditable -->
+				
+			<!-- #BeginLibraryItem "/Library/Footer HTML.lbi" -->
 		<footer class="row">			
 			<nav class="twelvecol last">
 				<ul>

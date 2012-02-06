@@ -22,10 +22,12 @@
 		<link type="text/plain" rel="author" href="http://www.jamesacook.net/humans.txt" />
 		
 		<!-- Stylesheets -->
+		<!--[if lt IE 9]>
+		<style>
+            nav {padding-bottom:1.5em;}
+		</style>
+		<![endif]-->
 		<link rel="stylesheet" href="/assets/css/styles-1.2-min.css" media="all" />
-
-		<!-- RSS -->
-		<link rel="alternate" type="application/rss+xml" title="Videos by James A. Cook" href="/videos.rss" />
 		
 		<!-- Javascripts, part 1 -->
 		<!-- should come after the css to help prevent FOUC -->
@@ -63,15 +65,13 @@
 						<a href="/video/index.html" title="Gallery of videos by James A. Cook">Video</a>
 					</li>
 					<li class="onecol last">
-						<a href="/spiel/index.html" title="About James A. Cook and Contact Information">Spiel</a>
+						<a href="/spiel/index.html" rel="author" title="About James A. Cook and Contact Information">Spiel</a>
 					</li>
 				</ul>
 				
 				<div class="onecol last">&nbsp;</div>
 			</nav>
-			<!-- #EndLibraryItem -->
-				
-			<!-- TemplateBeginEditable name="BodyText" --> <!-- TemplateEndEditable -->
+			<!-- #EndLibraryItem --><!-- TemplateBeginEditable name="BodyText" --> <!-- TemplateEndEditable -->
 				
 			<!-- #BeginLibraryItem "/Library/Footer HTML.lbi" -->
 		<footer class="row">			
@@ -104,12 +104,11 @@
   						<span class="family-name">Cook</span>.
 					</span>						
 					<a rel="jcook1//email/arizona/edu" class="email"> Email</a>
-					<br />
-					<span class="role">Sculptor. Video Artist.</span>
+					<!--<br />			
  					<span class="adr">
   						<span class="locality">Tucson</span>, 
 		 				<span class="region">AZ</span>
- 					</span>
+ 					</span>-->
 				</small>
 			</p>
 			
