@@ -14,9 +14,9 @@ Redirect 301 /resume.html /spiel/index.html
     BrowserMatch MSIE ie
     Header set X-UA-Compatible "IE=Edge,chrome=1" env=ie
     # mod_headers can't match by content-type, but we don't want to send this header on *everything*
-    <filesmatch "\.(js|css|gif|png|jpe?g|pdf|xml|oga|ogg|m4a|ogv|mp4|m4v|webm|svg|svgz|eot|ttf|otf|woff|ico|webp|appcache|manifest|htc|crx|xpi|safariextz|vcf)$"="">
-      Header unset X-UA-Compatible
-    </filesmatch>
+  <FilesMatch "\.(js|css|gif|png|jpe?g|pdf|xml|oga|ogg|m4a|ogv|mp4|m4v|webm|svg|svgz|eot|ttf|otf|woff|ico|webp|appcache|manifest|htc|crx|oex|xpi|safariextz|vcf)$" >
+    Header unset X-UA-Compatible
+  </FilesMatch>
   </IfModule>
 </IfModule>
 
