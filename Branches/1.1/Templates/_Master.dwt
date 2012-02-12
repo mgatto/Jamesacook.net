@@ -26,7 +26,8 @@
 		
 		<!-- Javascripts, part 1 -->
 		<!-- should come after the css to help prevent FOUC -->
-		<script src="/assets/js/modernizr-2.0.min.js"></script>
+		<script src="/assets/js/modernizr-2.5.min.js"></script>
+		<script src="/assets/js/respond.min.js"></script>
 		<script src="/assets/js/cssua.min.js"></script>
 		
 		<!-- TemplateBeginEditable name="head" --><!-- TemplateEndEditable -->
