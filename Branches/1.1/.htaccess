@@ -21,6 +21,13 @@ Redirect 301 /resume.html /spiel/index.html
 </IfModule>
 
 <IfModule mod_headers.c>
+  # eventual non-experimental header; less verbosely with default-src 'self';
+  Header set Content-Security-Policy: "allow 'self'; options inline-script; img-src 'self'; font-src 'self'; style-src 'self'; media-src 'self'; object-src 'self'; script-src 'self'
+  # For Firefox 4+ & IE10
+  Header set X-Content-Security-Policy: "allow 'self'; options inline-script; img-src 'self'; font-src 'self'; style-src 'self'; media-src 'self'; object-src 'self'; script-src 'self'
+  # For Chrome & Safari (webkit based)
+  Header set X-WebKit-CSP: "allow 'self'; options inline-script; img-src 'self'; font-src 'self'; style-src 'self'; media-src 'self'; object-src 'self'; script-src 'self'
+
 # Because X-UA-Compatible isn't sent to non-IE (to save header bytes),
 # We need to inform proxies that content changes based on UA
   Header append Vary User-Agent
