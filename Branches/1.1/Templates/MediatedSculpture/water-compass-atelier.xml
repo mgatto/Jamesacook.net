@@ -8,7 +8,7 @@
 	<parameter name="another_view_2" type="boolean" passthrough="false">true</parameter>
 	<parameter name="another_view_2_src" type="text" passthrough="false"><![CDATA[/assets/images/water-compass-atelier-4.jpg]]></parameter>
 	<parameter name="video" type="boolean" passthrough="false">true</parameter>
-	<parameter name="video_src" type="text" passthrough="false"><![CDATA[/assets/videos/water-compass.mp4]]></parameter>
+	<parameter name="video_src" type="text" passthrough="false"><![CDATA[/assets/videos/water-compass]]></parameter>
 	<parameter name="video_poster" type="text" passthrough="false"><![CDATA[/assets/images/water-compass-frame.jpg]]></parameter>
 	<parameter name="has_next" type="boolean" passthrough="false">true</parameter>
 	<parameter name="has_prev" type="boolean" passthrough="false">true</parameter>

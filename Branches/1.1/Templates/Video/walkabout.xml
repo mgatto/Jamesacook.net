@@ -2,7 +2,7 @@
 <templateItems template="/Templates/VideoDetail.dwt" codeOutsideHTMLIsLocked="false">
    	<parameter name="name" type="text" passthrough="false"><![CDATA[Walkabout]]></parameter>
    	<parameter name="meta_description" type="text" passthrough="false"><![CDATA[]]></parameter>
-	<parameter name="video_src" type="text" passthrough="false"><![CDATA[/assets/videos/walkabout.mp4]]></parameter>
+	<parameter name="video_src" type="text" passthrough="false"><![CDATA[/assets/videos/walkabout]]></parameter>
 	<parameter name="video_poster" type="text" passthrough="false"><![CDATA[/assets/images/walkabout-frame.jpg]]></parameter>
 	<parameter name="has_prev" type="boolean" passthrough="false">true</parameter>
 	<parameter name="has_next" type="boolean" passthrough="false">false</parameter>

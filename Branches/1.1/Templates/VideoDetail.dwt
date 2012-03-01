@@ -4,7 +4,7 @@
 		<!-- InstanceParam name="meta_description" type="text" value="" passthrough="true" -->
 		<!-- InstanceParam name="name" type="text" value="" passthrough="true" -->
 		<!-- InstanceParam name="class" type="text" value="video" -->
-		<!-- InstanceParam name="page_title" type="text" value="Video" -->
+		<!-- InstanceParam name="page_title" type="text" value="Video" passthrough="true" -->
 		<!-- Meta data -->
 		<!-- uses hMedia, hCard and CWDA Lite for work of art microformat -->
 		<!-- Place charset at top per: 
@@ -105,9 +105,8 @@
                 <div id="media" class="sixcol hmedia">		
 					<div class="twelvecol last">
 						<video id="player" class="player" preload="none" poster="@@(video_poster)@@" controls width="520" height="384">
-							<source src="@@(video_src)@@" type="video/mp4" />
-							<!--<source src="short-history.webm" type="video/webm" /> -->
-							<!--<source src="walkabout.ogv" type="video/ogg" /> -->
+							<source src="@@(video_src)@@.mp4" type="video/mp4" />
+							<source src="@@(video_src)@@.webm" type="video/webm" />
 							
 							<!-- Download links provided for devices that can't play video in the browser. -->
 			    			<p id="no-video">
@@ -116,17 +115,14 @@
 							
 							<ul>
  								<li>
-									<a rel="enclosure" type="video/mp4" title="Download the original source file for this movie" href="@@(video_src)@@">
-										<!--<img src="/assets/images/short-history-poster.jpg" />-->
+									<a rel="enclosure" type="video/mp4" title="Download the original source file for this movie" href="@@(video_src)@@.mp4">
+										<img src="@@(video_poster)@@" />
 										Original (MP4)
 									</a>
 								</li>
-								<!--<li>
-									<a rel="enclosure" type="video/ogv" title="Download the original source file for this movie"  href="short-history.ogv">Original (Ogg)</a>
-								</li>
 								<li>
-									<a rel="enclosure" type="video/webm" title="Download the original source file for this movie"  href="short-history.webm">Original (WebM)</a>
-								</li> -->
+									<a rel="enclosure" type="video/webm" title="Download the original source file for this movie"  href="@@(video_src)@@.webm">Original (WebM)</a>
+								</li>
 							</ul>
 								
 							<!-- text description for accessibility (?) -->

@@ -137,8 +137,8 @@
 						<!-- TemplateBeginIf cond="video" -->
 						<div class="twelvecol last">
 							<video id="player" class="player" preload="none" poster="@@(video_poster)@@" controls width="535" height="400">
-								<source src="@@(video_src)@@" type="video/mp4" />
-								<!--<source src="short-history.webm" type="video/webm" /> -->
+								<source src="@@(video_src)@@.mp4" type="video/mp4" />
+								<source src="@@(video_src)@@.webm" type="video/webm" />
 								<!-- Download links provided for devices that can't play video in the browser. -->
 				    			<p id="no-video">
 									Your browser cannot play HTML5 video, and Adobe Flash is either disabled, too old to play this, or just not installed. So, <strong>Download the video</strong> instead:
@@ -146,15 +146,14 @@
 							
 								<ul>
  									<li>
-										<a rel="enclosure" type="video/mp4" title="Download the original source file for this movie" href="@@(video_src)@@">
-											<!--<img src="/assets/images/short-history-poster.jpg" />-->
+									<a rel="enclosure" type="video/mp4" title="Download the original source file for this movie" href="@@(video_src)@@.mp4">
+										<img src="@@(video_poster)@@" />
 											Original (MP4)
 										</a>
 									</li>
-									<!--
 									<li>
-										<a rel="enclosure" type="video/webm" title="Download the original source file for this movie"  href="short-history.webm">Original (WebM)</a>
-									</li> -->
+									<a rel="enclosure" type="video/webm" title="Download the original source file for this movie"  href="@@(video_src)@@.webm">Original (WebM)</a>
+								</li>
 								</ul>
 								
 								<!-- text description for accessibility (?) -->
