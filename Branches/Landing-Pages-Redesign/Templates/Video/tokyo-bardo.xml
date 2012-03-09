@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<templateItems template="/Templates/VideoDetail.dwt" codeOutsideHTMLIsLocked="false">
+   	<parameter name="name" type="text" passthrough="false"><![CDATA[Tokyo Bardo]]></parameter>
+   	<parameter name="meta_description" type="text" passthrough="false"><![CDATA[]]></parameter>
+	<parameter name="video_src" type="text" passthrough="false"><![CDATA[/assets/videos/tokyo-bardo]]></parameter>
+	<parameter name="video_poster" type="text" passthrough="false"><![CDATA[/assets/images/tokyo-bardo-frame.jpg]]></parameter>
+	<parameter name="has_prev" type="boolean" passthrough="false">true</parameter>
+	<parameter name="has_next" type="boolean" passthrough="false">true</parameter>
+	<parameter name="prev" type="text" passthrough="false"><![CDATA[tap-dance-of-shiva.html]]></parameter>
+	<parameter name="next" type="text" passthrough="false"><![CDATA[walkabout.html]]></parameter>
+   	<item name="materials"><![CDATA[
+					 Single-channel video
+		]]></item>
+	<item name="description"><![CDATA[
+					 <p class="description">Within the context of our existential <em>unknowing</em>, humans have been drawn to strategies such as material gratification and societal status to construct identity and meaning-- despite the inherently transitory and insubstantial results. These long-standing patterns suggest that we are apt to find ourselves bound to endless rounds of such fleeting attachments.</p>
+					<p class="description">This video draws inspiration from noh theatre, Tibetan bardo states, and the narrow streets of Asakusa, where the original inhabitants of old Edo (Tokyo) lived. The soundtrack is extracted from the noh play, <em>Kayoi Komachi</em>. Common to the noh theatrical form is the co-mingling of the living with spirits of those who have passed, and with Shinto and Buddhist deities.</p>
+		]]></item>
+   	<item name="head"><![CDATA[]]></item>
+</templateItems>

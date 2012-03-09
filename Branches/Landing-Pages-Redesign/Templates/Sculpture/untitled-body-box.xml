@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<templateItems template="/Templates/SculptureDetail.dwt" codeOutsideHTMLIsLocked="false">
+   	<parameter name="name" type="text" passthrough="false"><![CDATA[Untitled (BodyBox)]]></parameter>
+   	<parameter name="meta_description" type="text" passthrough="false"><![CDATA[A old copper clad kettle appears to hover inches above the ground, supported by the long, extended rhizomes of bamboo.]]></parameter>
+   	<parameter name="main_image_src" type="text" passthrough="false"><![CDATA[/assets/images/untitled-another-view-1.jpg]]></parameter>
+	<parameter name="another_view_1" type="boolean" passthrough="false">true</parameter>
+	<parameter name="another_view_1_src" type="text" passthrough="false"><![CDATA[/assets/images/untitled-body-box-2.jpg]]></parameter>
+	<parameter name="another_view_2" type="boolean" passthrough="false">false</parameter>
+	<parameter name="another_view_2_src" type="text" passthrough="false"></parameter>
+	<parameter name="video" type="boolean" passthrough="false">false</parameter>
+	<parameter name="video_src" type="text" passthrough="false"></parameter>
+	<parameter name="video_poster" type="text" passthrough="false"><![CDATA[]]></parameter>
+	<parameter name="has_prev" type="boolean" passthrough="false">true</parameter>
+	<parameter name="has_next" type="boolean" passthrough="false">true</parameter>
+	<parameter name="prev" type="text" passthrough="false"><![CDATA[tsus-bridge.html]]></parameter>
+	<parameter name="next" type="text" passthrough="false"><![CDATA[vertical-inclination.html]]></parameter>
+   	<item name="materials"><![CDATA[Bronze, dessicated blood]]></item>
+	<item name="dimensions"><![CDATA[32&Prime; &times; 32&Prime; &times; 18&Prime;]]></item>
+	<item name="description"><![CDATA[
+					<p class="description">The cast bronze box whose sides relax out at the top to approach a state of disfunction is half-filled with dessicated blood, references body as vessel and life as ephemeral.</p>
+		]]></item>
+   	<item name="head"><![CDATA[]]></item>
+</templateItems>

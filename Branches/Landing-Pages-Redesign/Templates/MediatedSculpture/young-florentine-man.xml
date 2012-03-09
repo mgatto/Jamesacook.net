@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<templateItems template="/Templates/MediatedSculptureDetail.dwt" codeOutsideHTMLIsLocked="false">
+   	<parameter name="name" type="text" passthrough="false"><![CDATA[Young Florentine Man]]></parameter>
+   	<parameter name="meta_description" type="text" passthrough="false"><![CDATA[The Winged Victory (Nike) of Samothrace has been re-named and reconfigured to address the existential comingling of victory with death, as well as to elevate the idea of victory over death to a philosophic consideration.]]></parameter>
+   	<parameter name="main_image_src" type="text" passthrough="false"><![CDATA[/assets/images/young-florentine-man-1.jpg]]></parameter>
+	<parameter name="another_view_1" type="boolean" passthrough="false">true</parameter>
+	<parameter name="another_view_1_src" type="text" passthrough="false"><![CDATA[/assets/images/young-florentine-man-2.jpg]]></parameter>
+	<parameter name="another_view_2" type="boolean" passthrough="false">true</parameter>
+	<parameter name="another_view_2_src" type="text" passthrough="false"><![CDATA[/assets/images/young-florentine-man-detail-5.jpg]]></parameter>
+	<parameter name="video" type="boolean" passthrough="false">true</parameter>
+	<parameter name="video_src" type="text" passthrough="false"><![CDATA[/assets/videos/young-florentine-man]]></parameter>
+	<parameter name="video_poster" type="text" passthrough="false"><![CDATA[/assets/images/young-florentine-man-frame.jpg]]></parameter>
+	<parameter name="has_next" type="boolean" passthrough="false">false</parameter>
+	<parameter name="has_prev" type="boolean" passthrough="false">true</parameter>
+	<parameter name="next" type="text" passthrough="false"><![CDATA[]]></parameter>
+	<parameter name="prev" type="text" passthrough="false"><![CDATA[water-compass-atelier.html]]></parameter>
+	<item name="dimensions"><![CDATA[52&Prime; &times; 22&Prime; &times; 30&Prime;]]></item>
+   	<item name="materials"><![CDATA[Plaster, DVD player, video recording, DV projector, wood, steel]]></item>
+	<item name="description"><![CDATA[
+                    <p class="description">The face of an elderly gentleman is projected onto the sculpted bust of a young Florentine man. During the Italian Renaissance the privileged young men of promise were often depicted in painting and sculpture. This piece alludes to the inexorable continuum of transformation we experience as beings housed in physical bodies.</p>
+                    <p class="description">Over the span of corporal life some of our potentiality is realized and some is not. There is an implied continuum of aging within a single life in the space. The elderly gentleman, whose face is superimposed onto the young Florentines, sat nearly motionless for about 8 minutes, is a retired psychiatrist, and is in his nineties.</p>
+		]]></item>
+   	<item name="head"><![CDATA[]]></item>
+</templateItems>

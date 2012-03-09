@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<templateItems template="/Templates/VideoDetail.dwt" codeOutsideHTMLIsLocked="false">
+   	<parameter name="name" type="text" passthrough="false"><![CDATA[Walkabout]]></parameter>
+   	<parameter name="meta_description" type="text" passthrough="false"><![CDATA[]]></parameter>
+	<parameter name="video_src" type="text" passthrough="false"><![CDATA[/assets/videos/walkabout]]></parameter>
+	<parameter name="video_poster" type="text" passthrough="false"><![CDATA[/assets/images/walkabout-frame.jpg]]></parameter>
+	<parameter name="has_prev" type="boolean" passthrough="false">true</parameter>
+	<parameter name="has_next" type="boolean" passthrough="false">false</parameter>
+	<parameter name="prev" type="text" passthrough="false"><![CDATA[tokyo-bardo.html]]></parameter>
+	<parameter name="next" type="text" passthrough="false"><![CDATA[]]></parameter>
+   	<item name="materials"><![CDATA[
+					Single-channel video
+		]]></item>
+	<item name="description"><![CDATA[
+					<p class="description">This single-channel video references the edges of our experience in the physical world as it conflates with that which is less tangible&mdash;dream, trance, reverie, bardo states, and so on. We seek access and understanding to these realms through ritual practice, the mapping of psychic terrain, with specialized literature and practices. I did not embrace a narrative structure with this work; rather, it alludes to an out-of-time poetic lens by which to engage the conundrum of illuminating our existential circumstance.</p>
+		]]></item>
+   	<item name="head"><![CDATA[]]></item>
+</templateItems>

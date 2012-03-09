@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<templateItems template="/Templates/MediatedSculptureDetail.dwt" codeOutsideHTMLIsLocked="false">
+   	<parameter name="name" type="text" passthrough="false"><![CDATA[Like Voices Passing in the Night]]></parameter>
+   	<parameter name="meta_description" type="text" passthrough="false"><![CDATA[The Winged Victory (Nike) of Samothrace has been re-named and reconfigured to address the existential comingling of victory with death, as well as to elevate the idea of victory over death to a philosophic consideration.]]></parameter>
+   	<parameter name="main_image_src" type="text" passthrough="false"><![CDATA[/assets/images/like-voices-passing-in-the-night-1.jpg]]></parameter>
+	<parameter name="another_view_1" type="boolean" passthrough="false">true</parameter>
+	<parameter name="another_view_1_src" type="text" passthrough="false"><![CDATA[/assets/images/like-voices-passing-in-the-night-2.jpg]]></parameter>
+	<parameter name="another_view_2" type="boolean" passthrough="false">true</parameter>
+	<parameter name="another_view_2_src" type="text" passthrough="false"><![CDATA[/assets/images/like-voices-passing-in-the-night-1.jpg]]></parameter>
+	<parameter name="video" type="boolean" passthrough="false">true</parameter>
+	<parameter name="video_src" type="text" passthrough="false"><![CDATA[/assets/videos/voices-passing-in-the-night]]></parameter>
+	<parameter name="video_poster" type="text" passthrough="false"><![CDATA[/assets/images/voices-passing-in-the-night-frame.jpg]]></parameter>
+	<parameter name="has_next" type="boolean" passthrough="false">true</parameter>
+	<parameter name="has_prev" type="boolean" passthrough="false">true</parameter>
+	<parameter name="next" type="text" passthrough="false"><![CDATA[little-boy-prayer-wheel.html]]></parameter>
+	<parameter name="prev" type="text" passthrough="false"><![CDATA[conundrum-stumped.html]]></parameter>
+	<item name="dimensions"><![CDATA[49&prime; &times; 22&prime; &times; 18&prime;]]></item>
+   	<item name="materials"><![CDATA[Wood, porcelain, mercury, audio and electronic equipment]]></item>
+	<item name="description"><![CDATA[
+                    <p class="prepend-top description">In this audial sculpture the porcelain heads of two children are situated facing  one another within the space of an old wood radio. A mercury gauge is fixed to the top of the radio. One of heads, having the voice of a young girl, recites passages from the Sumerian epic, <em>Gilgamesh</em>. The other head, having an older male voice, recites from Sigfried Giedion's <em>Mechanization Takes Command</em>&mdash;ostensibly a discursive exchange between mythos and the applied-rational, but is experienced as competing, overlapping monologues.</p>
+		]]></item>
+   	<item name="head"><![CDATA[]]></item>
+</templateItems>

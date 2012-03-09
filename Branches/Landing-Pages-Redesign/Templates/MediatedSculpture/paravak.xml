@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<templateItems template="/Templates/MediatedSculptureDetail.dwt" codeOutsideHTMLIsLocked="false">
+   	<parameter name="name" type="text" passthrough="false"><![CDATA[Paravak]]></parameter>
+   	<parameter name="meta_description" type="text" passthrough="false"><![CDATA[The Winged Victory (Nike) of Samothrace has been re-named and reconfigured to address the existential comingling of victory with death, as well as to elevate the idea of victory over death to a philosophic consideration.]]></parameter>
+   	<parameter name="main_image_src" type="text" passthrough="false"><![CDATA[/assets/images/paravak-1.jpg]]></parameter>
+	<parameter name="another_view_1" type="boolean" passthrough="false">true</parameter>
+	<parameter name="another_view_1_src" type="text" passthrough="false"><![CDATA[/assets/images/paravak-2.jpg]]></parameter>
+	<parameter name="another_view_2" type="boolean" passthrough="false">false</parameter>
+	<parameter name="another_view_2_src" type="text" passthrough="false"></parameter>
+	<parameter name="video" type="boolean" passthrough="false">true</parameter>
+	<parameter name="video_src" type="text" passthrough="false"><![CDATA[/assets/videos/paravak]]></parameter>
+	<parameter name="video_poster" type="text" passthrough="false"><![CDATA[/assets/images/paravak-frame.jpg]]></parameter>
+	<parameter name="has_next" type="boolean" passthrough="false">true</parameter>
+	<parameter name="has_prev" type="boolean" passthrough="false">true</parameter>
+	<parameter name="next" type="text" passthrough="false"><![CDATA[red-nimbus.html]]></parameter>
+	<parameter name="prev" type="text" passthrough="false"><![CDATA[not-here.html]]></parameter>
+	<item name="dimensions"><![CDATA[]]></item>
+   	<item name="materials"><![CDATA[
+					Two 5.1 surround sound recordings (ocean surf and freeway traffic), 2 amplifiers and sound systems, 2 DVD players.
+		]]></item>
+	<item name="description"><![CDATA[
+                    <p class="description">Paravak <em>(Sanskrit-The vibratory movement of the Divine Mind that brings about manifestations; Logos; Cosmic Ideation)</em>.</p>
+					<p class="description">We are often sensorily dissuaded from being more fully present, as we fall prey to thoughts of past or future, or are distracted by noises, conversations, background media, or as we simply drift along a stream of thoughts or mental constructs. Paravak is a Sanskrit term referring to core movement at a cosmic level that gives rise to manifested vibration, or sound.</p>
+                    <p class="description">The Indian system of sound formulation, or mantram, has been employed for millennia to stimulate specific points and channels at subtle levels. This audial installation uses two sounds having similar resonance. However, they have very different sources: one is of the distant sound of freeway traffic and the other is that of ocean waves on the shore. One is associated with mechanization and tension, the other with natural, soothing rhythms. They are configured here to repeatedly cross through one another&mdash;an oppositional mantram.</p>
+		]]></item>
+   	<item name="head"><![CDATA[]]></item>
+</templateItems>
