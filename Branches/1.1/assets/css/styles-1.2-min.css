@@ -211,7 +211,12 @@
             }
                 h1 {
                     /*margin-left:-9999em;*/
-					visibility:hidden;
+					text-indent: 100%;
+					white-space:nowrap;
+					overflow:hidden;
+					
+					
+					/*visibility:hidden;*/
                     line-height: 36px;/* multiple of 18px! also = 3em */
                 }
                 #skip a, #skip a:hover, #skip a:visited { 
