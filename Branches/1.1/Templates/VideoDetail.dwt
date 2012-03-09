@@ -4,7 +4,7 @@
 		<!-- InstanceParam name="meta_description" type="text" value="" passthrough="true" -->
 		<!-- InstanceParam name="name" type="text" value="" passthrough="true" -->
 		<!-- InstanceParam name="class" type="text" value="video" -->
-		<!-- InstanceParam name="page_title" type="text" value="Video" passthrough="true" -->
+		<!-- InstanceParam name="page_title" type="text" value="" passthrough="true" -->
 		<!-- Meta data -->
 		<!-- uses hMedia, hCard and CWDA Lite for work of art microformat -->
 		<!-- Place charset at top per: 
@@ -19,7 +19,8 @@
 		<!--<link rel="icon" href="/favicon.ico" type="image/vnd.microsoft.icon" />
 			<link rel="shortcut icon" href="/favicon.ico" />-->
 			
-		<link type="text/plain" rel="author" href="http://www.jamesacook.net/humans.txt" />
+		<link type="text/plain" rel="author" href="/humans.txt" />
+		<link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml" />
 		
 		<!-- Stylesheets -->
 		<link rel="stylesheet" href="/assets/css/styles-1.2-min.css" media="all" />
@@ -38,7 +39,7 @@
 		<div id="body" class="container">
 			<header class="row">
 				<div class="twelvecol last">
-					<h1 class="creator"><!-- InstanceBeginEditable name="page_title" --><!-- InstanceEndEditable -->, by James A. Cook</h1>
+					<h1 class="creator"><!-- InstanceBeginEditable name="page_title" --><!-- InstanceEndEditable --><!-- TemplateBeginPassthroughIf cond="page_title" -->, by <!-- TemplateEndPassthroughIf -->James A. Cook</h1>
 				
 					<div id="skip">
 						<a href="#content" accesskey="7">Skip to Main Content</a>
