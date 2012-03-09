@@ -7,8 +7,8 @@ Fully Supported Browsers:
 -------------------------
 This means I actively test with these browsers:
 
-* Chrome 16
-* Firefox 8-10 (most users on these auto-updated versions)
+* Chrome 17
+* Firefox 10 (most users on these auto-updated versions)
 * Firefox 3.6 (still many users on this older standard)
 * IE9 (because IE10 = awesome but might be on Window 8 only)
 * IE8 (because all XP users cannot upgrade to IE9)
@@ -20,7 +20,7 @@ Support in Progress:
 --------------------
 This means I am testing with these beta version or very newly released browsers:
 
-* Chrome 17 Beta
+* Chrome 18 Beta
 * Firefox 11 Beta
 * IE 10 (when the beta is made available for Win7 users)
 * Opera Next (12.00a)
