@@ -33,6 +33,8 @@
 		
 		<!-- InstanceBeginEditable name="head" -->
 		<!-- TemplateBeginEditable name="head" --><!-- TemplateEndEditable -->
+		<!-- TemplateBeginIf cond="has_prev" --><link rel="prev" href="@@(prev)@@" /><!-- TemplateEndIf -->
+		<!-- TemplateBeginIf cond="has_next" --><link rel="next" href="@@(next)@@" /><!-- TemplateEndIf -->
 		<!-- InstanceEndEditable -->
 	</head>
 	<body class="video">
