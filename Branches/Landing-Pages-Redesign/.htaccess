@@ -3,6 +3,12 @@
 Redirect 301 /statement.html /spiel/statement.html
 Redirect 301 /resume.html /spiel/index.html
 
+<IfModule mod_mime.c>
+	## We've removed the lang meta tag in the pages, so let's ensure a lang header is sent
+	DefaultLanguage en 
+</IfModule>
+
+
 # ----------------------------------------------------------------------
 # Better website experience for IE users
 # ----------------------------------------------------------------------
@@ -21,24 +27,25 @@ Redirect 301 /resume.html /spiel/index.html
 </IfModule>
 
 <IfModule mod_headers.c>
-  # eventual non-experimental header; less verbosely with default-src 'self';
-  Header set Content-Security-Policy: "allow 'self'; options inline-script; img-src 'self'; font-src 'self'; style-src 'self'; media-src 'self'; object-src 'self'; script-src 'self'
-  # For Firefox 4+ & IE10
-  Header set X-Content-Security-Policy: "allow 'self'; options inline-script; img-src 'self'; font-src 'self'; style-src 'self'; media-src 'self'; object-src 'self'; script-src 'self'
-  # For Chrome & Safari (webkit based)
-  Header set X-WebKit-CSP: "allow 'self'; options inline-script; img-src 'self'; font-src 'self'; style-src 'self'; media-src 'self'; object-src 'self'; script-src 'self'
-
-# Because X-UA-Compatible isn't sent to non-IE (to save header bytes),
-# We need to inform proxies that content changes based on UA
-  Header append Vary User-Agent
-# Cache control is set only if mod_headers is enabled, so that's unncessary to declare
+    # ----------------------------------------------------------------------
+    # Set Keep-Alive Header
+    # ----------------------------------------------------------------------
+    
+    # Keep-Alive allows the server to send multiple requests through one
+    # TCP-connection. Be aware of possible disadvantages of this setting. Turn on
+    # if you serve a lot of static content.
+    Header set Connection Keep-Alive
+    
+	# Because X-UA-Compatible isn't sent to non-IE (to save header bytes),
+	# We need to inform proxies that content changes based on UA
+  	Header append Vary User-Agent
 </IfModule>
 
 <IfModule mod_rewrite.c>
   #RewriteEngine On
   
   ## Pre-compressed files
-#    AddEncoding x-gzip .gz
+  # AddEncoding x-gzip .gz
   # RemoveType application/x-gzip .gz
 
   # If client accepts compressed files
@@ -53,8 +60,8 @@ Redirect 301 /resume.html /spiel/index.html
   #    ForceType text/css
   #	  <IfModule mod_headers.c>
   #  	Header set Content-Encoding: deflate
-#	  </IfModule>
-#    </FilesMatch>
+  #	  </IfModule>
+  #  </FilesMatch>
 
 #    <FilesMatch .*\.js.gz>
 #      ForceType text/javascript
@@ -155,9 +162,6 @@ AddType	image/x-icon	ico
 </IfModule>
 
 ## Caching
-# FileETag None
-## Page speed wants to see this, but most recommend uncommenting it and letting there be no etags
-
 <IfModule mod_expires.c>
   ExpiresActive on
   
@@ -201,11 +205,11 @@ AddType	image/x-icon	ico
 
 # Cache Headers
 <IfModule mod_headers.c>
-	# Since we're sending far-future expires, we don't need ETags for
-    # static content.
+	# Since we're sending far-future expires, we don't need ETags for static content.
     # developer.yahoo.com/performance/rules.html#etags
-	#Header unset ETag
-    #FileETag None
+	# FileETag None is not enough for every server.
+	Header unset ETag
+    FileETag None
   
     <FilesMatch "\.(html|js|css|xml|gz)$">
       Header append Vary Accept-Encoding
@@ -246,10 +250,11 @@ AddType	image/x-icon	ico
 # custom 404 page
 ErrorDocument 404 /404.html
 
+# http://zoompf.com/2009/12/browser-performance-issues-with-charsets
 # use utf-8 encoding for anything served text/plain or text/html
-AddDefaultCharset UTF-8
+AddDefaultCharset utf-8
 # force utf-8 for a number of file formats
-AddCharset UTF-8 .html .css .js .xml .json .rss	.txt .gz
+AddCharset utf-8 .html .css .js .xml .json .rss .atom .vtt .txt .gz
 
 # Save some bytes from the header
 ServerSignature Off
