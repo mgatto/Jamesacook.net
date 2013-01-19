@@ -104,7 +104,7 @@
 	    -ms-text-size-adjust: 100%; /* 3 */
 	}
 
-    body, div, span, object, /*iframe,*/ h1, h2, h3, h4, /*h5, h6,*/ p, blockquote, /*pre,*/ a, abbr, acronym, address, /*code, del, dfn,*/ em, img, /*q, dl, dt, dd, ol,*/ ul, li/*, fieldset, form, label, legend*/ {
+    body, div, span, object, /*iframe,*/ h1, h2, h3, h4, /*h5, h6,*/ p, blockquote, /*pre,*/ a, abbr, acronym, address, /*code, del, dfn,*/ em, /*img, q, dl, dt, dd, ol,*/ ul, li/*, fieldset, form, label, legend*/ {
 		margin:0;
 		padding:0;
 		border:0;
@@ -129,6 +129,7 @@
 	img {
 	    border: 0; /* Removes border when inside 'a' element in IE6/7/8/9, FF3 */
 	    -ms-interpolation-mode: bicubic; /* Improves image quality when scaled in IE7: code.flickr.com/blog/2008/11/12/on-ui-quality-the-little-things-client-side-image-resizing/ */
+		vertical-align:middle;
 	}
     a img{
 		/* border:0;*/
@@ -164,6 +165,12 @@
 		float: left;
 	}
     .last {margin-right: 0px;}
+	
+	.center {
+		text-align: center;
+		
+	}
+	
 	/*
 	 * Prevents sub and sup affecting line-height in all browsers
 	 * gist.github.com/413930
@@ -181,6 +188,10 @@
 	sub {
 	    bottom: -0.25em;
 	}
+	/*
+	.small {font-size:.8em;margin-bottom:1.875em;line-height:1.875em;}
+	.large {font-size:1.2em;line-height:2.5em;margin-bottom:1.25em;}
+	*/
 	
 	/*
 	 * Corrects inline-block display not defined in IE6/7/8/9 & FF3
@@ -220,12 +231,16 @@
                     line-height: 36px;/* multiple of 18px! also = 3em */
                 }
                 #skip a, #skip a:hover, #skip a:visited { 
-                    position:absolute; 
+					text-indent: 100%;
+					white-space:nowrap;
+					overflow:hidden;
+					
+                    /*position:absolute; 
                     left:0px; 
                     top:-500px; 
                     width:1px; 
                     height:1px; 
-                    overflow:hidden;
+                    overflow:hidden;*/
                 }
                 #skip a:active, #skip a:focus { 
                     position:static; 
@@ -308,7 +323,7 @@
                         color: #fff;
                         margin-bottom: 1.25em;
 						margin-top: 0;
-                        width:95%;
+                        width: 100%;/*95%; changed to 100% makes it center in homepage boxes */
                     }
 					#text h3, #text h4{
                         margin-bottom: 0.5em;
@@ -334,7 +349,7 @@
                     #text p {
                         width:100%;
                         /*min-width:25em;*/
-                        max-width:35em;
+                        /*max-width:35em;*/
                     }
                     /*#text p.materials {}*/
                     /* http://webtypography.net/Rhythm_and_Proportion/Blocks_and_Paragraphs/2.3.2/ */
@@ -342,12 +357,12 @@
                         text-indent:2em;
                         /*font-variant:normal;*/
                     }
-                    #text a {
+                    #text a, a > h2 {
                         text-decoration:none;
-                        border-bottom:1px dotted #fc3;
+                        border-bottom:1px dotted #FC3;
                         color:#e6e6e6;
                     }
-                    #text a:visited {
+                    #text a:visited, a:visited > h2 {
                         color:#B3B3B3;
                         border-bottom:1px dotted #B3B3B3;
                     }
@@ -373,13 +388,17 @@
                     /*#media img, #media video {}*/
                         /*div*/.thumbnail {
                             border:1px solid #FC3;
+                            -webkit-box-shadow: 5px 5px 5px 2px rgba(0,0,0,0.25);
+                            -moz-box-shadow: 5px 5px 5px 2px rgba(0,0,0,0.25);
+                            box-shadow: 5px 5px 5px 2px rgba(0,0,0,0.25);
                             padding:1px;
+							margin-bottom: 10px;
                             color: #e6e6e6;
                             overflow: hidden;
                             position:relative; /*for ie 7/8: http://snook.ca/archives/html_and_css/position_relative_overflow_ie/*/
                         }
 						.listing .thumbnail {
-							margin-top:30px;
+							margin-top:10px;
 						}
 						/*div*/.bigger {
                         	margin-left:16px; /*4.1%*/
@@ -415,7 +434,7 @@
                 } 
 					nav {}
                     small {
-						font-size:100%;
+						/*font-size:100%;*/
 						line-height:1.75em;
 					}
                     footer ul {
