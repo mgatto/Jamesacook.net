@@ -181,7 +181,8 @@
 					</small>
 				</p>
 			</footer>
-<!-- #EndLibraryItem --></div><!-- #BeginLibraryItem "/Library/Javascript Loading.lbi" -->
+<!-- #EndLibraryItem --></div>
+		<!-- #BeginLibraryItem "/Library/Javascript Loading.lbi" -->
 		<!-- Scripts -->
 		<script>
 		!function(a,b){typeof define=="function"?define(b):typeof module!="undefined"?module.exports=b():this[a]=b()}("$script",function(){function s(a,b,c){for(c=0,j=a.length;c<j;++c)if(!b(a[c]))return m;return 1}function t(a,b){s(a,function(a){return!b(a)})}function u(a,b,c){function o(a){return a.call?a():f[a]}function p(){if(!--m){f[l]=1,j&&j();for(var a in h)s(a.split("|"),o)&&!t(h[a],o)&&(h[a]=[])}}a=a[n]?a:[a];var e=b&&b.call,j=e?b:c,l=e?a.join(""):b,m=a.length;
@@ -190,12 +191,11 @@
 		(a.join("|")),u},u.noConflict=function(){return a.$script=e,this},u})
 		</script>
 		<script>
-			$script('/assets/js/script-1.2-min.js', 'all-scripts');
+			$script('/assets/js/script-1.2-min.js', 'media');
 		</script>
 <!-- #EndLibraryItem -->
-		
 		<script>
-			$script.ready('all-scripts', function() {
+			$script.ready('media', function() {
 				$(document).ready(function() {				
 					$("a[rel='enclosure']").colorbox({
 						photo:true, 

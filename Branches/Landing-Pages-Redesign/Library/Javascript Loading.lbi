@@ -7,5 +7,5 @@
 		(a.join("|")),u},u.noConflict=function(){return a.$script=e,this},u})
 		</script>
 		<script>
-			$script('/assets/js/script-1.2-min.js', 'all-scripts');
+			$script('/assets/js/script-1.2-min.js', 'media');
 		</script>
