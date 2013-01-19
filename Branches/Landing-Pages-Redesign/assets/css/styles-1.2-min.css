@@ -374,17 +374,22 @@
                         margin-left: 36px;
                         border-left: 1px dotted #e6e6e6;
                     }
+					/*div*/#highlighted-work {
+						margin-top: 36px;
+					}
+					#highlighted-work #media {}
+					
                     /*div*/#media {
                         text-align:right;
                         /*padding-left:1.3em;*/
                     }
-						.front-page {
+						/*.front-page {
 							width:147%;
 							margin-left:1.5em;
 						}
 						.front-page img {
                          	width:125%;
-						}
+						}*/
                     /*#media img, #media video {}*/
                         /*div*/.thumbnail {
                             border:1px solid #FC3;
