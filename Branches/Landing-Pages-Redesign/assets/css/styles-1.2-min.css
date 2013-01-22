@@ -42,9 +42,9 @@
 	h2, h3{
 		page-break-after: avoid; 
 	}
-	code {
+	/*code {
 		font:.9em "Courier New", Monaco, Courier, monospace;
-	}
+	}*/
 	a img {
 		border:none;
 	}
@@ -108,7 +108,7 @@
 		margin:0;
 		padding:0;
 		border:0;
-		font: inherit inherit inherit 100% inherit;
+		/*font: inherit inherit inherit 100%;*/
 		/*  font-weight:inherit;font-style:inherit;font-size:100%;font-family:inherit;*/
 		vertical-align:baseline;
 	}
@@ -136,8 +136,9 @@
 		display: block; /* Stops image links getting text link styles */
 	}
     .container {
-		padding: inherit 20px;
-		/*padding-left: 20px;padding-right: 20px;*/
+		/* acording to https://developer.mozilla.org/en-US/docs/CSS/Shorthand_properties, I cannot use the inherit keyword for only a single value, but only for the whole! Thus, the firebug warnings that the declaration was dropped */
+		/*padding: inherit 20px; */
+		padding-left: 20px;padding-right: 20px;
 	}
     .row {
 		width: 100%;
@@ -148,6 +149,7 @@
     .onecol, .twocol, .threecol, .fourcol, .fivecol, .sixcol, .sevencol, .eightcol, .ninecol, .tencol, .elevencol {
 		margin-right: 3.8%;
 		float: left;
+		min-height: 1px;
 	}
     .onecol {width: 4.85%;}
     .twocol {width: 13.5%;}
@@ -162,7 +164,8 @@
     .elevencol {width: 91.35%;}
     .twelvecol {
 		width: 100%;
-		float: left;
+		/*float: left;*/
+	  	margin-right: 0;
 	}
     .last {margin-right: 0px;}
 	
@@ -394,7 +397,9 @@
                         /*div*/.thumbnail {
                             border:1px solid #FC3;
                             -webkit-box-shadow: 5px 5px 5px 2px rgba(0,0,0,0.25);
-                            -moz-box-shadow: 5px 5px 5px 2px rgba(0,0,0,0.25);
+                            /* -moz for box-shadow was dropped in FF13
+							-moz-box-shadow: 5px 5px 5px 2px rgba(0,0,0,0.25);
+							*/
                             box-shadow: 5px 5px 5px 2px rgba(0,0,0,0.25);
                             padding:2px;
 							margin-bottom: 10px;
@@ -402,6 +407,10 @@
                             overflow: hidden;
                             position:relative; /*for ie 7/8: http://snook.ca/archives/html_and_css/position_relative_overflow_ie/*/
                         }
+						/* a must for box-shadow to work in IE9+ */
+						.ie9 .thumbnail, .ie10 .thumbnail {
+							border-collapse:separate;
+						}
 						.listing .thumbnail {
 							margin-top:10px;
 						}
@@ -535,23 +544,19 @@
 @media only screen and (max-width: 767px) {	/*or max-device-width: 480px*/
 	.row, .body, .container {
 		width: 100%;
-		margin: inherit 0;
-		/*margin-left: 0px;
-		margin-right: 0px;*/
-		padding:inherit 0;
-		/*padding-left: 0px;
-		padding-right: 0px;*/
+		margin-left: 0px;
+		margin-right: 0px;
+		padding-left: 0px;
+		padding-right: 0px;
 	}
 	
 	.onecol, .twocol, .threecol, .fourcol, .fivecol, .sixcol, .sevencol, .eightcol, .ninecol, .tencol, .elevencol, .twelvecol, footer .onecol, footer .twocol, footer .threecol, footer .eightcol  {
 		width: auto;
 		float: none;
-		margin: inherit 0;
-		/*margin-left: 0px;
-		margin-right: 0px;*/
-		padding:inherit 20px;
-		/*padding-left: 20px;
-		padding-right: 20px;*/
+		margin-left: 0px;
+		margin-right: 0px;
+		padding-left: 20px;
+		padding-right: 20px;
 	}
 	.twelvecol {
 		padding-left:0;
@@ -573,14 +578,12 @@
 	#text h2 {max-width:35em;}
 	#text p {width:100%;}
 	#media .twocol, #media .fourcol, #media .eightcol {
-		padding:inherit 0;
-		/*padding-left: 0;
-		padding-right: 0;*/
+		padding-left: 0;
+		padding-right: 0;
 	}
 	.listing .twocol {
-		padding:inherit 0;
-		/*padding-left: 0;
-		padding-right: 0;*/
+		padding-left: 0;
+		padding-right: 0;
 		width:inherit;
 		float: left;
 		margin-right:3.4%;
