@@ -15,9 +15,9 @@
 	<parameter name="next" type="text" passthrough="false"><![CDATA[ascension-descension.html]]></parameter>
 	<parameter name="prev" type="text" passthrough="false"><![CDATA[]]></parameter>
    	<item name="materials"><![CDATA[Bronze, wood, LCD monitor, DVD player, video]]></item>
-	<item name="dimensions"><![CDATA[32x&Prime; &times; 16&Prime; &times; 2&Prime;]]></item>
+	<item name="dimensions"><![CDATA[32&Prime; &times; 16&Prime; &times; 2&Prime;]]></item>
 	<item name="description"><![CDATA[
-                    <p class="description">This wall piece consists of low-relief stone-like topography, cast in bronze, enclosed by a vintage wooden frame. There is a subtle horizon line spanning across the upper quadrant, separating earth and space. Through an opening on the horizon line is a video narrative of another horizon&mdash;that of desert mountains and early evening sky filled with clouds, rain, and flashes of lightening. The rumble of thunder is heard and rain continues as night falls. The horizon is gradually obscured in darkness to conjoin heaven and earth.</p>
+                    <p class="description">This wall piece consists of low-relief stone-like topography, cast in bronze, enclosed by a vintage wooden frame. There is a subtle horizon line spanning across the upper quadrant, separating earth and space. Through an opening on the horizon line is a video narrative of another horizon&mdash;that of desert mountains and early evening sky filled with clouds, rain, and flashes of lightning. The rumble of thunder is heard and rain continues as night falls. The horizon is gradually obscured in darkness to conjoin heaven and earth.</p>
 		]]></item>
    	<item name="head"><![CDATA[]]></item>
 </templateItems>
