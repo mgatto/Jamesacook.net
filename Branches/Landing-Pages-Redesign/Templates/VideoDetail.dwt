@@ -69,6 +69,7 @@
 				<div class="onecol last">&nbsp;</div>
 			</nav>
 			<!-- #EndLibraryItem -->
+            <main>
 			<!-- InstanceBeginEditable name="BodyText" -->
 				<!-- TemplateParam name="video" type="boolean" value="false" -->
 				<!-- TemplateParam name="video_src" type="text" value="" -->
@@ -133,7 +134,9 @@
 				
 				<div class="onecol last">&nbsp;</div>
 			</div>
-				<!-- InstanceEndEditable --><!-- #BeginLibraryItem "/Library/Footer HTML.lbi" -->
+				<!-- InstanceEndEditable -->
+            </main>
+			<!-- #BeginLibraryItem "/Library/Footer HTML.lbi" -->
 			<footer class="row">			
 				<nav class="twelvecol last">
 					<ul>

@@ -67,6 +67,7 @@
 				<div class="onecol last">&nbsp;</div>
 			</nav>
 			<!-- #EndLibraryItem -->
+            <main>
 			<!-- InstanceBeginEditable name="BodyText" -->
 				<!-- TemplateParam name="main_image_src" type="URL" value="" -->
 				<!-- TemplateParam name="another_view_1" type="boolean" value="true" -->
@@ -163,7 +164,9 @@
 					
 					<div class="onecol last">&nbsp;</div>
 				</div>
-				<!-- InstanceEndEditable --><!-- #BeginLibraryItem "/Library/Footer HTML.lbi" -->
+				<!-- InstanceEndEditable -->
+            </main>
+			<!-- #BeginLibraryItem "/Library/Footer HTML.lbi" -->
 			<footer class="row">			
 				<nav class="twelvecol last">
 					<ul>

@@ -67,7 +67,10 @@
 				<div class="onecol last">&nbsp;</div>
 			</nav>
 			<!-- #EndLibraryItem -->
-			<!-- InstanceBeginEditable name="BodyText" --><!-- InstanceEndEditable --><!-- #BeginLibraryItem "/Library/Footer HTML.lbi" -->
+            <main>
+			<!-- InstanceBeginEditable name="BodyText" --><!-- InstanceEndEditable -->
+            </main>
+			<!-- #BeginLibraryItem "/Library/Footer HTML.lbi" -->
 			<footer class="row">			
 				<nav class="twelvecol last">
 					<ul>

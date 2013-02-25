@@ -122,7 +122,7 @@
     }
 	
 	/* Corrects block display not defined in IE6/7/8/9 & FF3 */
-    article,aside,figure,figure img,figcaption,hgroup,footer,header,nav,section,video,object{
+    main,article,aside,figure,figure img,figcaption,hgroup,footer,header,nav,section,video,object{
 		display:block
 	}
 	
